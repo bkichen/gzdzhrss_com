@@ -1,0 +1,51 @@
+
+
+@import url(top.css);
+@import url(reset.css);
+@import url(foot.css);
+body{background-image: url(http://rsj.gzdaozhen.gov.cn/images/bg_02.jpg); background-repeat: no-repeat; background-position: center top; background-color: #FFF; overflow-x: hidden;}
+.content-main{width: 1180px;height: auto;background:#fff;overflow: hidden;padding:20px 10px 10px 10px;margin: 10px auto 0;}
+.dqwz{ height:55px; background:#fff; line-height:55px; color:#333; font-size:14px; padding-left:35px; background:url(dqwz.png) 15px  center  no-repeat #daf7fd;filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090, direction=120, strength=4);/*ie*/
+    -moz-box-shadow: 2px 2px 10px #909090;/*firefox*/ -webkit-box-shadow: 2px 2px 10px #909090;/*safari或chrome*/ box-shadow:2px 2px 10px #909090;/*opera或ie9*/ }
+
+.body_content { margin:10px auto 0 auto; overflow: hidden; background:#fff; border-bottom:#ccc solid 1px; padding:10px; color:#333; filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090, direction=120, strength=4);/*ie*/
+    -moz-box-shadow: 2px 2px 10px #909090;/*firefox*/ -webkit-box-shadow: 2px 2px 10px #909090;/*safari或chrome*/ box-shadow:2px 2px 10px #909090;/*opera或ie9*/ font-size:14px; line-height:30px; }
+.body_content p { margin:10px 0; }
+.body_content .title { height:auto; overflow:hidden;margin:0 auto;font-size:24px; color:#40b9f2; text-align:center; padding:20px 0; line-height:1.5;background: #daf7fd; margin-bottom:5px; }
+.body_content .title h2{ color: #666666; font-size: 22px;}
+.body_content .toolbar { margin-top:10px; font-size:12px; color:#333; text-align:center; line-height:30px; }
+.body_content .toolbar span { background: #40b9f2 none repeat scroll 0 0; border-radius: 3px; color: #fff; width:23px; height:23px; line-height:23px; cursor:pointer;  display:inline-table; margin:0 2px; }
+.body_content .toolbar .smallFont { font-size: 10px; }
+.body_content .toolbar .medFont { font-size: 14px; }
+.body_content .toolbar .largeFont { font-size: 16px; }
+.body_content .toolbar .curFont {background: #fe9844 none repeat scroll 0 0; border-radius: 3px; color: #fff; }
+.body_content .KeysList{ background:#F1FBFD; height:28px; padding:5px;}
+.body_content .KeysList .left { float:left; }
+.body_content .KeysList .right { float:right; }
+.body_content .KeysList .box_01 { background: #fff none repeat scroll 0 0; border-radius: 5px; color: #40b9f2; display: block; height: 28px; line-height: 28px; margin: 0 auto; padding: 0 15px; width: 80px; }
+.body_content .KeysList .box_02 { background: #40b9f2 none repeat scroll 0 0; border-radius: 5px; color: #fff; height: 28px; line-height: 28px; margin: 0 auto; padding: 3px 10px; }
+.body_content .KeysList .box_03 { background: #fe9844 none repeat scroll 0 0; border-radius: 5px; color: #fff; height: 28px; line-height: 28px; margin: 0 auto; padding: 3px 10px; }
+.body_content .page{ clear:both;}
+.body_content .page span{ width:auto; color:#fff; padding:0 15px; background:#40b9f2; display:inline-table;margin:2px 0; height:30px; line-height:30px;}
+.body_content .page a{ padding-left:10px;transition: all 0.3s ease-in 0s;-moz-transition: all 0.3s ease-in 0s;-webkit-transition: all 0.3s ease-in 0s;}
+.body_content .page .prevpage{ height:35px; line-height:32px; margin:2px 0; background:#eee;}
+.body_content .page .nextpage{ height:35px; line-height:32px; margin:2px 0; background:#eee;}
+.body_content .xgxx{background:#eee;width: 1170px;overflow: hidden;}
+.body_content .xgxx span{width:auto; color:#fff; padding:0 15px; background:#40b9f2; display:inline-table;margin:2px 0; height:40px; line-height:40px;}
+.body_content .xgxx ul{ padding:15px; background:#fff; }
+.body_content .xgxx ul li{ height:30px; line-height:30px;}
+.body_content .xgxx ul li i{ float:right; color:#666;*margin-top: -30px;}
+
+/*信息公开细缆新增*/
+.content .xxgk_xl{background: #fff; overflow: hidden; width: 984px;}
+.xxgk_xl .xxgk_xl_top{overflow: hidden;box-shadow: 0px 2px 5px #ECEBEB; border:1px solid #ECEBEB; margin-top:30px; margin-bottom:30px; margin-left:2px;}
+.xxgk_xl .xxgk_xl_top ul{overflow: hidden; width: 1042px; margin: 28px 30px 28px 30px;}
+.xxgk_xl .xxgk_xl_top ul li{float: left; width: 519px; height: 40px; background: #f3f3f3;}
+.xxgk_xl .xxgk_xl_top ul li a{width: 134px; height: 40px; display:block; float: left; background: url(http://rsj.gzdaozhen.gov.cn/images/xxgk_xl_mark.jpg) no-repeat; color: #fff; text-align: center; line-height: 40px;font-size: 16px; cursor: auto;}
+.xxgk_xl .xxgk_xl_top ul li span{background: #f3f3f3; width: 384px; height: 40px; display: block; float: left;color: #666666; line-height: 40px; text-indent: 20px;}
+.xxgk_xl .xxgk_xl_top ul li.w1042{width: 1042px;}
+.xxgk_xl .xxgk_xl_top ul li.w1042 span{width: 907px;}
+.xxgk_xl .xxgk_xl_top ul li.mt4{margin-top: 4px;}
+.xxgk_xl .xxgk_xl_top ul li.ml4{margin-left: 4px;}
+#Zoom table{cellspacing:0px;cellpadding:1px;border-spacing:1px;background:#909090;/* background:#ffffff; */}
+#Zoom table tr td{background:#ffffff;}

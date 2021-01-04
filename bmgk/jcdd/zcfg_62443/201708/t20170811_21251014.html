@@ -1,0 +1,468 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>贵州省建设工程务工人员工资支付保障金实施办法  贵州省人民政府令</title>
+		<link rel="stylesheet" href="../../../../images/nry.css">
+		<meta name="Keywords" content="道真人社局,道真县人力资源网,道真人事考试,道真县人力资源与社会保障,道真县人社局组织全体党员参加扫墓活动">
+<script type="text/javascript" src="../../../../images/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../../../images/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+    jQuery(function() {
+		jQuery('#j_search_btn').click(function() {
+			var str = jQuery("#keyword").val();
+			checks(str);
+		});
+	});
+	function checks(t) {
+		t = t.replace(/(^\s+)|(\s+$)/g, "");
+		if (t == "" || t == "请输入关键检索字") {
+			alert('请输入有效内容');
+			return false;
+		}
+		szMsg = "[#_%&'/",
+		";:=!^]";
+		alertStr = "";
+		for (i = 1; i < szMsg.length + 1; i++) {
+			if (t.indexOf(szMsg.substring(i - 1, i)) > -1) {
+				alertStr = "请勿包含非法字符如[#_%&'/",
+				";:=!^]";
+				alert(alertStr);
+				// break;
+				return false;
+			}
+		}
+		var key = document.getElementById("keyword").value;
+		window.location.href ="/search.html?keyword=" + key;
+		return true;
+	}
+function sub(){
+    window.location.href ="/search.shtml";
+}
+function AddFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle)
+    } catch (e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, "")
+        } catch (e) {
+            alert("加入收藏失败，请使用Ctrl+D进行添加")
+        }
+    }
+}
+function SetHome(obj, vrl) {
+    try {
+        obj.style.behavior = "url(#default#homepage)";
+        obj.setHomePage(vrl)
+    } catch (e) {
+        if (window.netscape) {
+            try {
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")
+            } catch (e) {
+                alert("此操作被浏览器拒绝！n请在浏览器地址栏输入\"about:config\"并回车n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。")
+            }
+            var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
+            prefs.setCharPref("browser.startup.homepage", vrl)
+        }
+    }
+}
+	//设为首页 
+	function SetHome(url){
+		if (document.all) {
+			document.body.style.behavior='url(#default#homepage)';
+			document.body.setHomePage(url);
+		}else{ 
+			alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+		}
+	}
+</script>
+<script type="text/javascript">
+      function GoTo() {
+          window.open("/syqt/wzjc/index.html?url=" + document.URL);
+      }
+</script>
+		<script type="text/javascript">
+			function fontResizer(smallFont,medFont,largeFont){
+				function clearSelected(){
+					$(".smallFont").removeClass("curFont");
+					$(".medFont").removeClass("curFont");
+					$(".largeFont").removeClass("curFont");
+				}
+				function saveState(curSize){
+					var date = new Date();
+					date.setTime(date.getTime()+(7*24*60*60*1000));
+					var expires = "; expires="+date.toGMTString();
+					document.cookie = "fontSizer"+"="+curSize+expires+"; path=/";
+				}
+			
+				$(".smallFont").click(function(){
+					$('#Zoom').css('font-size', smallFont);
+					$('#Zoom p').css('font-size', smallFont);
+					$('#Zoom span').css('font-size', smallFont);
+					$('#Zoom font').css('font-size', smallFont);
+					clearSelected();
+					$(".smallFont").addClass("curFont");
+					saveState(smallFont);
+				});
+			
+				$(".medFont").click(function(){
+					$('#Zoom').css('font-size', medFont);
+					$('#Zoom p').css('font-size', medFont);
+					$('#Zoom span').css('font-size', medFont);
+					$('#Zoom font').css('font-size', medFont);
+					clearSelected();
+					$(".medFont").addClass("curFont");
+					saveState(medFont);
+				});
+			
+				$(".largeFont").click(function(){
+					$('#Zoom').css('font-size', largeFont);
+					$('#Zoom p').css('font-size', largeFont);
+					$('#Zoom span').css('font-size', largeFont);
+					$('#Zoom font').css('font-size', largeFont);
+					$('#Zoom').css('line-height','40px');
+					clearSelected();
+					$(".largeFont").addClass("curFont");
+					saveState(largeFont);
+				});
+			
+				function getCookie(c_name){
+					if(document.cookie.length>0){
+						c_start=document.cookie.indexOf(c_name + "=");
+						if (c_start!=-1){
+							c_start=c_start + c_name.length+1;
+							c_end=document.cookie.indexOf(";",c_start); 
+							if(c_end==-1)c_end=document.cookie.length;
+							return unescape(document.cookie.substring(c_start,c_end));
+						}
+					} 
+					return "";
+				}
+			
+				var savedSize = getCookie('fontSizer');
+			
+				if(savedSize!=""){
+					$('#Zoom').css('font-size', savedSize);
+					switch(savedSize){
+						case smallFont: $(".smallFont").addClass("curFont");
+						break;
+						case medFont: $(".medFont").addClass("curFont");
+						break;
+						case largeFont: $(".largeFont").addClass("curFont");
+						break;
+						default: $(".medFont").addClass("curFont");
+					}
+				}else {
+					$('#Zoom').css('font-size', medFont);
+					$(".medFont").addClass("curFont");
+				}
+				
+			}
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				fontResizer('12px','16px','20px');
+			});
+		</script>
+		<script type="text/javascript">
+			function ChangeColor(ColorName){
+				$('#c').css('background', ColorName);
+				$('#Zoom p').css('background', ColorName);
+				$('#Zoom span').css('background', ColorName);
+				$('#Zoom font').css('background', ColorName);
+			}	
+		</script>
+	</head>
+	<body>
+		<!--天气js-->
+<script type="text/javascript">
+	function initArray() {
+		for (i = 0; i < initArray.arguments.length; i++)
+			this[i] = initArray.arguments[i];
+	}
+	var isnMonths = new initArray("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+	var isnDays = new initArray("  星期日", "  星期一", "  星期二", "  星期三", "  星期四", "  星期五", "  星期六", "  星期日");
+	today = new Date();
+	hrs = today.getHours();
+	min = today.getMinutes();
+	sec = today.getSeconds();
+	clckh = "" + ((hrs > 12) ? hrs - 12 : hrs);
+	clckm = ((min < 10) ? "0" : "") + min;
+	clcks = ((sec < 10) ? "0" : "") + sec;
+	clck = (hrs >= 12) ? "下午" : "上午";
+	var stnr = "";
+	var ns = "0123456789";
+	var a = "";
+
+	function getFullYear(d) {
+		yr = d.getYear();
+		if (yr < 1000)
+			yr += 1900;
+		return yr;
+	}
+</script>
+<div class="banner">
+	<!--顶部-->
+	<div class="dingb_bj">
+		<div class="dingb_nr">
+			<!--日期-->
+			<div class="riqi f_l">
+				<ul>
+					<li><span>今天是: </span>
+						<script type="text/javascript">
+							document.write("<div class='time'>" + getFullYear(today) + "年" + "" + isnMonths[today.getMonth()] + "月" + today.getDate() + "日" + isnDays[today.getDay()] + "</div>");
+						</script>
+					</li>
+				</ul>
+			</div>
+			<!--收藏-->
+			<div class="f_r ding_y">
+				<a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>|
+				<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>
+			</div>
+		</div>
+	</div>
+	<!--logo-->
+	<div class="logo_by" style="overflow: initial;">
+		<ul>
+			<li class="f_l"><a href="../../../../index.html"><img src="../../../../images/logo.png"></a></li>
+			<li class="f_r"><img src="../../../../images/biaoyu.png"></li>
+		</ul>
+	</div>
+	<!--导航-->
+	<div class="nav_bj">
+		<div class="nav f_l">
+			<ul>
+				<li><a href="../../../../index.html">网站首页</a></li>
+				<li><a href="../../../../gzdt/index.html">工作动态</a></li>
+				<li><a href="../../../../ywgz/index.html">业务工作</a></li>
+				<li><a href="../../../index.html">部门概况</a></li>
+				<li><a href="../../../../zwgk/index.html">政务公开</a></li>
+			</ul>
+		</div>
+		<!--搜索-->
+		<div class="sous f_r">
+    		<dl>
+				<dt><a href="javascript:void(0);" id="j_search_btn"><img src="../../../../images/sous.png"></a></dt>
+				<dd>
+					<input id="keyword" name="keyword" type="text" class="sous_sy" value="请输入关键字" style="color:#666666; line-height:40px; font-size: 14px;" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#000'}" onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#9e9e9e'}">
+				</dd>
+			</dl>
+    	</div>
+	</div>
+</div>
+		<div class="content-main">
+			<div class="dqwz">
+				您当前所在位置：<a href="../../../../index.html" title="首页" class="CurrChnlCls">首页</a>&nbsp;&raquo;&nbsp;<a href="../../../index.html" title="部门概况" class="CurrChnlCls">部门概况</a>&nbsp;&raquo;&nbsp;<a href="../../index.html" title="监察大队" class="CurrChnlCls">监察大队</a>&nbsp;&raquo;&nbsp;<a href="../index.html" title="政策法规" class="CurrChnlCls">政策法规</a>
+			</div>
+			<div class="body_content" id="c">
+    			<div class="title">
+        			<h1>贵州省建设工程务工人员工资支付保障金实施办法  贵州省人民政府令</h1>
+        			<script type="text/javascript">
+						var fbt='';
+						if(fbt!=''){
+							document.write('<h2>'+fbt+'</h2>');
+						}
+					</script>
+        			<div class="toolbar">
+						发布时间：
+						<script type="text/javascript">
+							var  pubdata='2017年08月11日';
+							if(pubdata!=''){
+								document.write(pubdata);
+							}
+						</script>
+
+            			字体：
+						<span class="smallFont">小</span>
+						<span class="medFont curFont">中</span>
+						<span class="largeFont curFont">大</span> 
+						<script type="text/javascript">
+							var wzly='';
+							if(wzly!=''){
+								document.write('文章来源：'+wzly+'&emsp;');
+							}
+						</script>
+						<script type="text/javascript">
+							var zz='';
+							if(zz!=''){
+								document.write('作者：'+zz+'&emsp;');
+							}
+						</script>
+						点击量：<script src="http://rsj.gzdaozhen.gov.cn/count/index?id=21251014&siteid=501731"></script>次
+						<a href="javascript:window.print();">打印本页</a>&emsp;
+						<a href="javascript:window.opener=null;window.close()">关闭本页</a>&emsp;&emsp;
+						<i style="padding-left:10px">
+							视力保护色： 
+							<input onclick="ChangeColor('#F9F6AF')" name="bgcolor" src="../../../../images/110827103140057.gif" type="image" align="absmiddle" height="13" width="13">
+							<input onclick="ChangeColor('#9DDBF4')" name="bgcolor22" src="../../../../images/110827103140099.gif" type="image" align="absmiddle" height="13" width="13">
+							<input onclick="ChangeColor('#DEDEDE')" name="bgcolor2" src="../../../../images/110827103140184.gif" type="image" align="absmiddle" height="13" width="13"> 
+							<input onclick="ChangeColor('#F9D1D9')" name="bgcolor2" src="../../../../images/110827103140215.gif" type="image" align="absmiddle" height="13" width="13"> 
+							<input onclick="ChangeColor('#E4C8F8')" name="bgcolor2" src="../../../../images/110827103140245.gif" type="image" align="absmiddle" height="13" width="13">	
+							<input onclick="ChangeColor('#ffffff')" name="bgcolor2" src="../../../../images/110827103140292.gif" type="image" align="absmiddle" height="13" width="13">
+						</i>
+					</div>
+				</div>
+    			<div class="content">
+        			<!--视频开始-->
+					
+						
+					
+					<!--视频结束-->
+					<font id="Zoom">
+						<h1 style="text-align: center;">贵州省建设工程务工人员工资支付保障金实施办法</h1><p style="TEXT-ALIGN: center"><span style="FONT-SIZE: 29px; FONT-FAMILY: 方正小标宋简体">贵州省人民政府令</span></p><p style="TEXT-ALIGN: center"><span style="FONT-SIZE: 21px; FONT-FAMILY: &#39;Times New Roman&#39;">第<span style="FONT-FAMILY: Times New Roman">151</span><span style="FONT-FAMILY: 仿宋_GB2312">号</span></span></p><p><span style="FONT-SIZE: 19px; FONT-FAMILY: 仿宋_GB2312"></span></p><p style="TEXT-INDENT: 38px"><span style="FONT-SIZE: 19px; FONT-FAMILY: &#39;Times New Roman&#39;">《贵州省建设工程务工人员工资支付保障金实施办法》已经<span style="FONT-FAMILY: Times New Roman">2013</span><span style="FONT-FAMILY: 仿宋_GB2312">年</span><span style="FONT-FAMILY: Times New Roman">12</span><span style="FONT-FAMILY: 仿宋_GB2312">月</span><span style="FONT-FAMILY: Times New Roman">18</span><span style="FONT-FAMILY: 仿宋_GB2312">日省人民政府第</span><span style="FONT-FAMILY: Times New Roman">19</span><span style="FONT-FAMILY: 仿宋_GB2312">次常务会议通过，现予公布，自</span><span style="FONT-FAMILY: Times New Roman">2014</span><span style="FONT-FAMILY: 仿宋_GB2312">年</span><span style="FONT-FAMILY: Times New Roman">3</span><span style="FONT-FAMILY: 仿宋_GB2312">月</span><span style="FONT-FAMILY: Times New Roman">1</span><span style="FONT-FAMILY: 仿宋_GB2312">日起施行。</span></span></p><p style="TEXT-INDENT: 38px"><span style="FONT-SIZE: 19px; FONT-FAMILY: 仿宋_GB2312"></span></p><p style="TEXT-INDENT: 38px"><span style="FONT-SIZE: 19px; FONT-FAMILY: 仿宋_GB2312"></span><span style="FONT-SIZE: 19px; FONT-FAMILY: &#39;Times New Roman&#39;">省长&nbsp;陈敏尔</span></p><p style="TEXT-INDENT: 38px"><span style="FONT-SIZE: 19px; FONT-FAMILY: 仿宋_GB2312"></span><span style="FONT-SIZE: 19px; FONT-FAMILY: &#39;Times New Roman&#39;">2014<span style="FONT-FAMILY: 仿宋_GB2312">年</span><span style="FONT-FAMILY: Times New Roman">1</span><span style="FONT-FAMILY: 仿宋_GB2312">月</span><span style="FONT-FAMILY: Times New Roman">7</span><span style="FONT-FAMILY: 仿宋_GB2312">日</span></span></p><p><span style="FONT-SIZE: 19px; FONT-FAMILY: 仿宋_GB2312"></span></p><p style="TEXT-ALIGN: center"><span style="FONT-SIZE: 29px; FONT-FAMILY: 方正小标宋简体; LETTER-SPACING: -1px">贵州省建设工程务工人员工资支付保障金实施办法</span></p><p><span style="FONT-SIZE: 19px; FONT-FAMILY: 仿宋_GB2312"></span></p><p style="TEXT-INDENT: 38px"><span style="FONT-SIZE: 19px; FONT-FAMILY: &#39;Times New Roman&#39;">第一条</span><span style="FONT-SIZE: 19px; FONT-FAMILY: 仿宋_GB2312"></span><span style="FONT-SIZE: 19px; FONT-FAMILY: &#39;Times New Roman&#39;">为规范建设工程项目施</span><span style="FONT-SIZE: 19px; FONT-FAMILY: &#39;Times New Roman&#39;">工单位支付务工人员工资行为，保障务工人员的合法权益，维护社会稳定，根据《贵州省劳动保障监察条例》的规定，制定本办法。<br>　　第二条&nbsp;本省行政区域内的建筑、交通运输、水利、电力、通讯、市政、矿山等建设工程项目施工单位(以下简称施工单位)务工人员工资支付保障金(以下简称工资保障金)的存储及其管理适用本办法。<br>　　第三条&nbsp;县级以上人民政府应当加强对工资保障金制度建设工作的领导，建立联席会议制度，研究解决工资保障金工作中的重大问题。<br>　　第四条&nbsp;县级以上人力资源和社会保障部门具体负责本级工资保障金的管理工作，住房城乡建设、交通运输、水利、国土资源、公安、工商、发展改革、经济和信息化、国资、环境保护、安全监管等有关部门和工会等社会组织协助工资保障金的管理工作。<br>　　属于政府投资建设的建设工程项目，发包单位应当代扣代存工资保障金。<br>　　第五条&nbsp;工资保障金实行专户存储，专项支取，任何单位或者个人不能挪作他用。<br>　　第六条&nbsp;县级以上住房城乡建设、交通运输、水利、国土资源、发展改革、经济和信息化、国资、环境保护、安全监管等部门应当在各自职责范围内督促施工单位在施工前依照规定预存工资保障金。<br>　　具有建设工程项目批准开工许可、备案、审查等权限的主管部门应当定期向同级人力资源和社会保障部门通报项目开工名单。<br>　　第七条&nbsp;县级以上人力资源和社会保障部门应当定期将施工单位拖欠或者克扣务工人员工资信息报送省人力资源和社会保障部门，省人力资源和社会保障部门汇总后通报给省工商行政管理部门，纳入企业信用信息管理和使用范围。<br>　　第八条&nbsp;施工单位应当按工程造价的2%向工资保障金专户存储工资保障金;工程造价超过5亿元不足10亿元的，超过部分按0.5%存储工资保障金;工程造价10亿元及以上的，超过部分按0.1%存储工资保障金。单个建设工程项目存储工资保障金不低于5万元。<br>　　第九条&nbsp;施工单位有下列情形之一的，应当自行为发生之日起1年内，按工程造价的3%-5%存储工资保障金。<br>　　(一)无故拖欠、克扣务工人员工资人数20人以上或者拖欠、克扣工资总额20万元以上的;<br>　　(二)因拖欠、克扣务工人员工资导致发生20人以上集体上访、集体停工、阻工等突发性事件或者造成其他严重后果的;<br>　　(三)支付务工人员工资低于当地最低工资标准的;<br>　　(四)经审核批准不需存储工资保障金后出现拖欠、克扣务工人员工资行为的。<br>　　第十条&nbsp;连续3年在全省范围内无失信记录的施工单位，经省人力资源和社会保障部门审核公示无异议后，不需存储工资保障金。<br>　　第十一条&nbsp;施工单位应当在签订施工合同后30日内，向有管辖权的人力资源和社会保障部门办理存储工资保障金的相关手续。<br>　　第十二条&nbsp;施工单位存储工资保障金，应当提供中标通知书或者建设工程项目备案表、建设施工合同原件进行审核，同时交存以下书面材料：<br>　　(一)中标通知书复印件或者建设工程项目备案表复印件;<br>　　(二)建设施工合同复印件;<br>　　(三)企业工商营业执照复印件;<br>　　(四)人力资源和社会保障部门可按规定从其存储的工资保障金中划支拖欠、克扣务工人员工资的承诺书。<br>　　申请不需存储工资保障金的，应当提供符合不需存储条件的相关证明材料。<br>　　第十三条&nbsp;县级以上人力资源和社会保障部门在审查施工单位提交的书面材料后，对符合要求的，应当当天出具到指定银行存储工资保障金的函。<br>　　第十四条&nbsp;施工单位向人力资源和社会保障部门出具工资保障金存储凭证，人力资源和社会保障部门应当向施工单位出具《施工单位存储工资保障金证明书》。<br>　　第十五条&nbsp;施工单位有下列行为之一的，人力资源和社会保障部门可以使用其存储的工资保障金用于支付务工人员工资。<br>　　(一)施工单位拖欠、克扣务工人员工资的;<br>　　(二)分包方拖欠、克扣务工人员工资的;<br>　　(三)其他依法应当支付而未支付务工人员工资的。<br>　　第十六条&nbsp;施工单位存储的工资保障金被依法用于支付务工人员工资的，施工单位应当在划支后30日内补足。<br>　　第十七条&nbsp;建设工程项目实行总承包的，由总承包单位负责存储工资保障金。<br>　　第十八条&nbsp;建设工程竣工验收合格后或者交通建设工程交工验收合格后，施工单位应当将务工人员工资支付情况在建设工程项目现场公示，公示时间不少于20日。<br>　　建设工程竣工验收合格或者交通建设工程交工验收合格60日后，施工单位申请返还工资保障金的，人力资源和社会保障部门应当在30日内审核完毕，未发现拖欠、克扣务工人员工资行为的，返还其存储的工资保障金及法定利息。<br>　　因工资争议进入劳动争议仲裁或者司法程序的，待有关机构作出裁决生效后，按前款规定办理工资保障金申请返还手续。<br>　　第十九条&nbsp;建设工程竣工后，非施工方原因，因故不能办理竣工验收手续的，自工程竣工1年后，未发现拖欠、克扣务工人员工资行为的，施工单位可以申请返还所存储工资保障金的80%;工程竣工2年后，未发现拖欠、克扣务工人员工资行为的，施工单位可以申请返还所存储工资保障金余额及法定利息。<br>　　第二十条&nbsp;申请返还工资保障金应当提供以下材料：<br>　　(一)返还工资保障金的书面申请;<br>　　(二)建设工程竣工验收报告或者交通建设工程交工验收合格报告;<br>　　(三)用工登记台帐;<br>　　(四)务工人员工资发放表;<br>　　(五)在施工现场公示的工资支付表照片;<br>　　(六)施工单位法定代表人授权委托书。<br>　　第二十一条&nbsp;人力资源和社会保障部门应当自受理工资保障金返还申请之日起10日内作出是否返还的决定。不符合返还条件的，应当书面说明理由。<br>　　第二十二条&nbsp;行业主管部门对施工单位未按本办法规定存储工资保障金而办理相关手续的，由行业主管部门负责务工人员工资清欠工作。<br>　　第二十三条&nbsp;施工单位未按本办法规定存储或者补足工资保障金的，由人力资源和社会保障部门责令限期存储，逾期仍不存储的，按应存数额5%以上10%以下的标准处以罚款;罚款金额不足5万元的，按5万元处罚。<br>　　第二十四条　省人力资源和社会保障部门每年通过省级媒体公布1次不需存储工资保障金的施工单位名单，接受社会监督。<br>　　第二十五条&nbsp;人力资源和社会保障部门和其他有关主管部门及其工作人员在工资保障金工作中有下列行为之一，尚不构成犯罪的，对直接负责的主管人员和其他直接责任人员依法给予行政处分：<br>　　(一)不依法履行职责，造成重大社会不稳定事件发生的;<br>　　(二)发现违法行为或者接到对违法行为的举报不予查处的;</span></p><p style="TEXT-INDENT: 38px"><span style="FONT-SIZE: 19px; FONT-FAMILY: &#39;Times New Roman&#39;">(三)泄露在履行职责过程中知悉的商业秘密的;<br>　　(四)泄露用人单位和个人信息的;<br>　　(五)其他滥用职权、玩忽职守、徇私舞弊行为的。<br>　　第二十六条&nbsp;本办法适用范围以外确需存储工资保障金的，由各市、州人民政府根据本地实际，制定实施细则，报省人民政府批准后实施。<br>　　第二十七条&nbsp;本办法自2014年3月1日起施行。</span></p><p><br></p><p><br></p><p><br></p>
+					</font>
+    			</div>
+   				<div class="KeysList" style="margin-top: 5px;">
+					<div class="jiathis_style">
+						<span class="jiathis_txt">分享到：</span>
+						<a class="jiathis_button_qzone" title="分享到QQ空间" href="javascript:;" onclick="jiathis_sendto('qzone');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_qzone">QQ空间</span>
+						</a>
+						<a class="jiathis_button_tsina" title="分享到微博" href="javascript:;" onclick="jiathis_sendto('tsina');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_tsina">新浪微博</span>
+						</a>
+						<a class="jiathis_button_tqq" title="分享到腾讯微博" href="javascript:;" onclick="jiathis_sendto('tqq');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_tqq">腾讯微博</span>
+						</a>
+						<a class="jiathis_button_renren" title="分享到人人网" href="javascript:;" onclick="jiathis_sendto('renren');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_renren">人人网</span>
+						</a>
+						<a href="javascript:;" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+						<a class="jiathis_counter_style">
+							<span class="jiathis_button_expanded jiathis_counter jiathis_bubble_style" id="jiathis_counter_36" title="累计分享0次">0</span>
+						</a>
+					</div>
+					<script type="text/javascript" src="../../../../code/jia.js" ></script>
+				</div>
+   				<div class="KeysList">
+					<div class="right">
+			  			<a href="javascript:;" target="_blank" class="box_02">我要推荐</a>&emsp;
+						<!--a class="box_02" href="/syqt/rssdy/" target="_blank">RSS定制</a>&emsp;-->
+			 			<a class="box_02" href="../../../../syqt/wzjc/index.html" target="_blank">网站纠错</a>&emsp;
+						<!--a class="box_02" href="#" target="_blank">返回顶部</a-->
+					</div>
+				</div>
+    			<div class="page">
+					<div id="prevpage">
+						<span>上一篇：</span><a href="javascript:;" id="no1">无</a>
+						
+							<script type="text/javascript">
+								var  str="";
+								var str_1 = "./t20170811_21251018.html";
+								var str_4 = '社会保险法';
+								if(str_4!="")
+								{
+									jQuery("#no1").hide();
+									if (str=="") {
+										document.write('<a  href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									} else {
+										document.write('<a  href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									}
+								}
+							</script>
+						
+					</div>
+					<div id="prevpage">
+						<span>下一篇：</span><a href="javascript:;" id="no2">无</a>
+						
+							<script type="text/javascript">
+								var  str="";
+								var str_1 = "./t20170811_21251004.html";
+								var str_4 = '最高人民法院关于审理工伤保险行政案件若干问题的规定 法释【2014】9号';
+								if(str_4!="")
+								{
+									jQuery("#no2").hide();
+									if (str=="") {
+										document.write('<a  href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									} else {
+										document.write('<a  href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									}
+								}
+							</script>
+						
+					</div>
+    			</div>
+   				<div class="xgxx">
+        			<h1><span>相关信息</span></h1>
+					<ul>
+						<script type="text/javascript">
+							var key="";
+							if(key!=''&&key!='null'){
+								
+							}else{
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "./t20170811_21251042.html";
+									var str_4 = '工伤保险条例';
+									var str_2 = '2017-08-11';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "./t20170811_21251018.html";
+									var str_4 = '社会保险法';
+									var str_2 = '2017-08-11';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "./t20170811_21251014.html";
+									var str_4 = '贵州省建设工程务工人员工资支付保障金实施办法  贵州省人民政府令';
+									var str_2 = '2017-08-11';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "./t20170811_21251004.html";
+									var str_4 = '最高人民法院关于审理工伤保险行政案件若干问题的规定 法释【2014】9号';
+									var str_2 = '2017-08-11';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+								
+							}
+						 </script>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="foot_bj">
+	<div class="foot_nr">
+		<p>
+			<a href="../../../../syqt/rssdy/index.html">RSS订阅</a>|
+			<a href="../../../../syqt/lxfs/index.html">联系方式</a>|
+			<a href="../../../../syqt/wzdt/index.html">网站地图</a>
+		</p>
+		<p>Copyright 2010 All Rights Reserved      主办：道真县人力资源网</p>
+		<p>电话：0851-25782065       技术支持：<a href="javascript:;" target="_blank">贵州多彩博虹科技有限公司</a></p>
+		<p>(建议使用1024×768分辨率 IE70以上版本浏览器) </p>
+		<p style="margin-top: 12px;">
+			<!--a target="_blank" href="http://bszs.conac.cn/sitename?method=show&id=04E0DEEC2DCA0288E053022819ACC535">
+				<img src="/images/dz_jg.png" /></a-->
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src=' http://dcs.conac.cn/js/24/356/2168/40584250/CA243562168405842500001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+		</p>
+	</div>
+</div>
+<script id="_trs_ta_js" src="../../../../c/js/ta-1290.js" async="async" defer="defer"></script>
+    </body>
+</html>

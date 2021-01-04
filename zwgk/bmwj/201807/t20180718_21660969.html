@@ -1,0 +1,480 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>关于做好2018年工程、农业、民营经济 系列职称申报评审工作的通知</title>
+		<link rel="stylesheet" href="../../../images/nry.css">
+		<meta name="Keywords" content="道真人社局,道真县人力资源网,道真人事考试,道真县人力资源与社会保障,道真县人社局组织全体党员参加扫墓活动">
+<script type="text/javascript" src="../../../images/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../../images/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+    jQuery(function() {
+		jQuery('#j_search_btn').click(function() {
+			var str = jQuery("#keyword").val();
+			checks(str);
+		});
+	});
+	function checks(t) {
+		t = t.replace(/(^\s+)|(\s+$)/g, "");
+		if (t == "" || t == "请输入关键检索字") {
+			alert('请输入有效内容');
+			return false;
+		}
+		szMsg = "[#_%&'/",
+		";:=!^]";
+		alertStr = "";
+		for (i = 1; i < szMsg.length + 1; i++) {
+			if (t.indexOf(szMsg.substring(i - 1, i)) > -1) {
+				alertStr = "请勿包含非法字符如[#_%&'/",
+				";:=!^]";
+				alert(alertStr);
+				// break;
+				return false;
+			}
+		}
+		var key = document.getElementById("keyword").value;
+		window.location.href ="/search.html?keyword=" + key;
+		return true;
+	}
+function sub(){
+    window.location.href ="/search.shtml";
+}
+function AddFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle)
+    } catch (e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, "")
+        } catch (e) {
+            alert("加入收藏失败，请使用Ctrl+D进行添加")
+        }
+    }
+}
+function SetHome(obj, vrl) {
+    try {
+        obj.style.behavior = "url(#default#homepage)";
+        obj.setHomePage(vrl)
+    } catch (e) {
+        if (window.netscape) {
+            try {
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")
+            } catch (e) {
+                alert("此操作被浏览器拒绝！n请在浏览器地址栏输入\"about:config\"并回车n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。")
+            }
+            var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
+            prefs.setCharPref("browser.startup.homepage", vrl)
+        }
+    }
+}
+	//设为首页 
+	function SetHome(url){
+		if (document.all) {
+			document.body.style.behavior='url(#default#homepage)';
+			document.body.setHomePage(url);
+		}else{ 
+			alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+		}
+	}
+</script>
+<script type="text/javascript">
+      function GoTo() {
+          window.open("/syqt/wzjc/index.html?url=" + document.URL);
+      }
+</script>
+		<script type="text/javascript">
+			function fontResizer(smallFont,medFont,largeFont){
+				function clearSelected(){
+					$(".smallFont").removeClass("curFont");
+					$(".medFont").removeClass("curFont");
+					$(".largeFont").removeClass("curFont");
+				}
+				function saveState(curSize){
+					var date = new Date();
+					date.setTime(date.getTime()+(7*24*60*60*1000));
+					var expires = "; expires="+date.toGMTString();
+					document.cookie = "fontSizer"+"="+curSize+expires+"; path=/";
+				}
+			
+				$(".smallFont").click(function(){
+					$('#Zoom').css('font-size', smallFont);
+					$('#Zoom p').css('font-size', smallFont);
+					$('#Zoom span').css('font-size', smallFont);
+					$('#Zoom font').css('font-size', smallFont);
+					clearSelected();
+					$(".smallFont").addClass("curFont");
+					saveState(smallFont);
+				});
+			
+				$(".medFont").click(function(){
+					$('#Zoom').css('font-size', medFont);
+					$('#Zoom p').css('font-size', medFont);
+					$('#Zoom span').css('font-size', medFont);
+					$('#Zoom font').css('font-size', medFont);
+					clearSelected();
+					$(".medFont").addClass("curFont");
+					saveState(medFont);
+				});
+			
+				$(".largeFont").click(function(){
+					$('#Zoom').css('font-size', largeFont);
+					$('#Zoom p').css('font-size', largeFont);
+					$('#Zoom span').css('font-size', largeFont);
+					$('#Zoom font').css('font-size', largeFont);
+					$('#Zoom').css('line-height','40px');
+					clearSelected();
+					$(".largeFont").addClass("curFont");
+					saveState(largeFont);
+				});
+			
+				function getCookie(c_name){
+					if(document.cookie.length>0){
+						c_start=document.cookie.indexOf(c_name + "=");
+						if (c_start!=-1){
+							c_start=c_start + c_name.length+1;
+							c_end=document.cookie.indexOf(";",c_start); 
+							if(c_end==-1)c_end=document.cookie.length;
+							return unescape(document.cookie.substring(c_start,c_end));
+						}
+					} 
+					return "";
+				}
+			
+				var savedSize = getCookie('fontSizer');
+			
+				if(savedSize!=""){
+					$('#Zoom').css('font-size', savedSize);
+					switch(savedSize){
+						case smallFont: $(".smallFont").addClass("curFont");
+						break;
+						case medFont: $(".medFont").addClass("curFont");
+						break;
+						case largeFont: $(".largeFont").addClass("curFont");
+						break;
+						default: $(".medFont").addClass("curFont");
+					}
+				}else {
+					$('#Zoom').css('font-size', medFont);
+					$(".medFont").addClass("curFont");
+				}
+				
+			}
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				fontResizer('12px','16px','20px');
+			});
+		</script>
+		<script type="text/javascript">
+			function ChangeColor(ColorName){
+				$('#c').css('background', ColorName);
+				$('#Zoom p').css('background', ColorName);
+				$('#Zoom span').css('background', ColorName);
+				$('#Zoom font').css('background', ColorName);
+			}	
+		</script>
+	</head>
+	<body>
+		<!--天气js-->
+<script type="text/javascript">
+	function initArray() {
+		for (i = 0; i < initArray.arguments.length; i++)
+			this[i] = initArray.arguments[i];
+	}
+	var isnMonths = new initArray("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+	var isnDays = new initArray("  星期日", "  星期一", "  星期二", "  星期三", "  星期四", "  星期五", "  星期六", "  星期日");
+	today = new Date();
+	hrs = today.getHours();
+	min = today.getMinutes();
+	sec = today.getSeconds();
+	clckh = "" + ((hrs > 12) ? hrs - 12 : hrs);
+	clckm = ((min < 10) ? "0" : "") + min;
+	clcks = ((sec < 10) ? "0" : "") + sec;
+	clck = (hrs >= 12) ? "下午" : "上午";
+	var stnr = "";
+	var ns = "0123456789";
+	var a = "";
+
+	function getFullYear(d) {
+		yr = d.getYear();
+		if (yr < 1000)
+			yr += 1900;
+		return yr;
+	}
+</script>
+<div class="banner">
+	<!--顶部-->
+	<div class="dingb_bj">
+		<div class="dingb_nr">
+			<!--日期-->
+			<div class="riqi f_l">
+				<ul>
+					<li><span>今天是: </span>
+						<script type="text/javascript">
+							document.write("<div class='time'>" + getFullYear(today) + "年" + "" + isnMonths[today.getMonth()] + "月" + today.getDate() + "日" + isnDays[today.getDay()] + "</div>");
+						</script>
+					</li>
+				</ul>
+			</div>
+			<!--收藏-->
+			<div class="f_r ding_y">
+				<a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>|
+				<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>
+			</div>
+		</div>
+	</div>
+	<!--logo-->
+	<div class="logo_by" style="overflow: initial;">
+		<ul>
+			<li class="f_l"><a href="../../../index.html"><img src="../../../images/logo.png"></a></li>
+			<li class="f_r"><img src="../../../images/biaoyu.png"></li>
+		</ul>
+	</div>
+	<!--导航-->
+	<div class="nav_bj">
+		<div class="nav f_l">
+			<ul>
+				<li><a href="../../../index.html">网站首页</a></li>
+				<li><a href="../../../gzdt/index.html">工作动态</a></li>
+				<li><a href="../../../ywgz/index.html">业务工作</a></li>
+				<li><a href="../../../bmgk/index.html">部门概况</a></li>
+				<li><a href="../../index.html">政务公开</a></li>
+			</ul>
+		</div>
+		<!--搜索-->
+		<div class="sous f_r">
+    		<dl>
+				<dt><a href="javascript:void(0);" id="j_search_btn"><img src="../../../images/sous.png"></a></dt>
+				<dd>
+					<input id="keyword" name="keyword" type="text" class="sous_sy" value="请输入关键字" style="color:#666666; line-height:40px; font-size: 14px;" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#000'}" onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#9e9e9e'}">
+				</dd>
+			</dl>
+    	</div>
+	</div>
+</div>
+		<div class="content-main">
+			<div class="dqwz">
+				您当前所在位置：<a href="../../../index.html" title="首页" class="CurrChnlCls">首页</a>&nbsp;&raquo;&nbsp;<a href="../../index.html" title="政务公开" class="CurrChnlCls">政务公开</a>&nbsp;&raquo;&nbsp;<a href="../index.html" title="部门文件" class="CurrChnlCls">部门文件</a>
+			</div>
+			<div class="body_content" id="c">
+    			<div class="title">
+        			<h1>关于做好2018年工程、农业、民营经济 系列职称申报评审工作的通知</h1>
+        			<script type="text/javascript">
+						var fbt='';
+						if(fbt!=''){
+							document.write('<h2>'+fbt+'</h2>');
+						}
+					</script>
+        			<div class="toolbar">
+						发布时间：
+						<script type="text/javascript">
+							var  pubdata='2018年07月18日';
+							if(pubdata!=''){
+								document.write(pubdata);
+							}
+						</script>
+
+            			字体：
+						<span class="smallFont">小</span>
+						<span class="medFont curFont">中</span>
+						<span class="largeFont curFont">大</span> 
+						<script type="text/javascript">
+							var wzly='';
+							if(wzly!=''){
+								document.write('文章来源：'+wzly+'&emsp;');
+							}
+						</script>
+						<script type="text/javascript">
+							var zz='';
+							if(zz!=''){
+								document.write('作者：'+zz+'&emsp;');
+							}
+						</script>
+						点击量：<script src="http://rsj.gzdaozhen.gov.cn/count/index?id=21660969&siteid=501731"></script>次
+						<a href="javascript:window.print();">打印本页</a>&emsp;
+						<a href="javascript:window.opener=null;window.close()">关闭本页</a>&emsp;&emsp;
+						<i style="padding-left:10px">
+							视力保护色： 
+							<input onclick="ChangeColor('#F9F6AF')" name="bgcolor" src="../../../images/110827103140057.gif" type="image" align="absmiddle" height="13" width="13">
+							<input onclick="ChangeColor('#9DDBF4')" name="bgcolor22" src="../../../images/110827103140099.gif" type="image" align="absmiddle" height="13" width="13">
+							<input onclick="ChangeColor('#DEDEDE')" name="bgcolor2" src="../../../images/110827103140184.gif" type="image" align="absmiddle" height="13" width="13"> 
+							<input onclick="ChangeColor('#F9D1D9')" name="bgcolor2" src="../../../images/110827103140215.gif" type="image" align="absmiddle" height="13" width="13"> 
+							<input onclick="ChangeColor('#E4C8F8')" name="bgcolor2" src="../../../images/110827103140245.gif" type="image" align="absmiddle" height="13" width="13">	
+							<input onclick="ChangeColor('#ffffff')" name="bgcolor2" src="../../../images/110827103140292.gif" type="image" align="absmiddle" height="13" width="13">
+						</i>
+					</div>
+				</div>
+    			<div class="content">
+        			<!--视频开始-->
+					
+						
+					
+					<!--视频结束-->
+					<font id="Zoom">
+						<p style="text-align:center;line-height:37px"><span style=";font-family:方正小标宋简体;font-size:29px"><span style="font-family:方正小标宋简体"><br></span></span></p><p style="text-indent: 171px; line-height: 40px; text-align: left;"><span style=";font-family:方正小标宋简体;font-size:29px"></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 道人社</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">通</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">〔</span></span><span style=";font-family:宋体;font-size:21px">2018</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">〕</span></span><span style=";font-family:宋体;font-size:21px">31</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">号</span></span></p><p style="line-height: 37px; text-align: center;"><span style=";font-family:方正小标宋简体;font-size:29px"><span style="font-family:方正小标宋简体">关于做好</span></span><span style=";font-family:方正小标宋简体;font-size:29px">2018</span><span style=";font-family:方正小标宋简体;font-size:29px"><span style="font-family:方正小标宋简体">年工程、农业、民营经济</span></span></p><p style="text-align:center;line-height:37px"><span style=";font-family:方正小标宋简体;font-size:29px"><span style="font-family:方正小标宋简体">系列职称申报评审工作的通知</span></span></p><p style="margin-left:0;text-indent:0;text-autospace:ideograph-numeric;text-align:justify;text-justify:inter-ideograph;line-height:37px"><br></p><p style="text-autospace:ideograph-other;line-height:36px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">各乡</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">(</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">镇</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">)</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">、县直有关单位、各民营经济组织：</span></span></p><p style="text-autospace:ideograph-other;line-height:36px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">根据贵州省人力资源和社会保障厅《关于做好</span></span><span style=";font-family:宋体;font-size:21px">2018</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">年职称工作有关问题的通知》（黔人社厅通〔</span></span><span style=";font-family:宋体;font-size:21px">2018</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">〕</span></span><span style=";font-family:宋体;font-size:21px">242</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">号）、《贵州省专业技术职务任职资格评审工作规则》、遵义市人力资源和社会保障局《关于做好</span></span><span style=";font-family:宋体;font-size:21px">2018</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">年工程、农业、民营经济系列中高级职称评审工作的通知》（遵市人社通〔</span></span><span style=";font-family:宋体;font-size:21px">2018</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">〕</span></span><span style=";font-family:宋体;font-size:21px">242</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">）、</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">《遵义市初级专业技术职务任职资格评定工作细则》（遵市人社发</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">〔</span></span><span style=";font-family:宋体;font-size:21px">2016</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">〕</span></span><span style=";font-family:宋体;font-size:21px">3</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">号）</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">文件精神，为做好</span></span><span style=";font-family:宋体;font-size:21px">2018</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">年全市工程、农业、民营经济系列中高级职称评审工作，现就有关事项通知如下：</span></span></p><p style="text-indent:43px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:黑体;font-size:21px"><span style="font-family:黑体">一、申报人员范围、资格和程序</span></span></p><p style="text-indent:42px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:楷体_GB2312;font-size:21px"><span style="font-family:楷体_GB2312">（一）人员范围</span></span></p><p style="text-indent:42px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">在我县各类企事业单位（不含参照公务员管理事业单位）专业技术岗位上从事专业技术工作且与申报专业一致，符合相应资格条件的人员（不含公务员和离退休人员）。有其他规定的按相应规定执行。</span></span></p><p style="text-indent:42px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:楷体_GB2312;font-size:21px"><span style="font-family:楷体_GB2312">（二）资格条件</span></span></p><p style="text-indent:42px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:仿宋_GB2312;font-size:21px">1.</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">为开展分类推进人才评价机制改革，进一步推进分类评价，今年已出台工程系列交通、林业、质量等专业分类评价标准。工程系列林业专业的申报评审条件执行省人社厅、省林业厅《关于印发</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">&lt;</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">贵州省工程系列林业专业技术职务任职资格申报评审条件（试行）</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">&gt;</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">的通知》（黔人社厅通〔</span></span><span style=";font-family:宋体;font-size:21px">2017</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">〕</span></span><span style=";font-family:宋体;font-size:21px">587</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">号）</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">,</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">质量技术专业评审条件执行省人社厅、省质监局《关于印发</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">&lt;</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">贵州省工程系列质量技术专业技术职务任职资格申报评审条件（试行）</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">&gt;</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">的通知》（黔人社厅通〔</span></span><span style=";font-family:宋体;font-size:21px">2017</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">〕</span></span><span style=";font-family:宋体;font-size:21px">588</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">号），交通运输专业执行省人社厅、省交通厅《关于印发</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">&lt;</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">贵州省工程系列交通运输专业技术职务任职资格申报评审条件（试行）的通知</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">&gt;</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">》（黔人社厅通〔</span></span><span style=";font-family:宋体;font-size:21px">2017</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">〕</span></span><span style=";font-family:宋体;font-size:21px">586</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">号），其余专业评审条件执行省人社厅《关于印发</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">&lt;</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">贵州省工程系列专业技术职务任职资格申报评审条件（试行）</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">&gt;</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">的通知》（黔人社厅通〔</span></span><span style=";font-family:宋体;font-size:21px">2014</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">〕</span></span><span style=";font-family:宋体;font-size:21px">753</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">号）。</span></span></p><p style="text-indent:42px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">农业系列的申报评审条件执行省人社厅《关于印发</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">&lt;</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">贵州省农业系列专业技术职务任职资格申报评审条件</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">(</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">试行</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">)</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">的通知</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">&gt;</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">》（黔人社厅通〔</span></span><span style=";font-family:宋体;font-size:21px">2014</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">〕</span></span><span style=";font-family:宋体;font-size:21px">760</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">号）。</span></span></p><p style="text-indent:42px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">民营经济系列</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">的申报评审条件执行省人社厅</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">《贵州省民营经济组织专业技术职务任职资格申报评审条件（试行）》</span></span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:21px"><span style="font-family:仿宋_GB2312">（黔人社厅通〔</span></span><span style=";font-family:宋体;font-size:21px">2013</span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:21px"><span style="font-family:仿宋_GB2312">〕</span></span><span style=";font-family:宋体;font-size:21px">325</span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:21px"><span style="font-family:仿宋_GB2312">号）</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">。</span></span></p><p style="text-indent:42px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:仿宋_GB2312;font-size:21px">2.</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">事业单位申报人员现任职受聘时间按照人社部门审批的岗位审核聘任表或工资审批表相应时间起算。</span></span></p><p style="text-indent:42px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:仿宋_GB2312;font-size:21px">3.</span><span style=";font-family:楷体_GB2312;font-size:21px"><span style="font-family:楷体_GB2312">按岗推荐。</span></span><span style=";font-family:宋体;font-size:21px">2018</span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:21px"><span style="font-family:仿宋_GB2312">年，事业单位专业技术人员职称评审按本单位高、中级专业技术岗位数的</span></span><span style=";font-family:宋体;font-size:21px">40%</span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:21px"><span style="font-family:仿宋_GB2312">内按岗推荐。对于单位中高级岗位空岗数只有</span></span><span style=";font-family:宋体;font-size:21px">1</span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:21px"><span style="font-family:仿宋_GB2312">个的，按</span></span><span style=";font-family:宋体;font-size:21px">100%</span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:21px"><span style="font-family:仿宋_GB2312">比例推荐。</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">各系列专业技术人员申请晋升上一职称等级，按岗推荐符合评审条件的优秀人员，填报《遵义市事业单位专业技术人员按岗推荐评聘职称审核情况表》。</span></span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:21px"><span style="font-family:仿宋_GB2312">对于单位中高级岗位已经满岗的情况下，单位引进的硕士、博士可不受单位岗位职数和结构比例限制直接申报中、高级专业技术职务。</span></span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:21px"><span style="font-family:仿宋_GB2312">不占岗位结构比例申报人员需在《</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">遵义市事业单位专业技术人员按岗推荐评聘职称审核情况表</span></span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:21px"><span style="font-family:仿宋_GB2312">》备注栏进行填写说明。</span></span></p><p style="text-indent:43px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:仿宋_GB2312;font-size:21px">4.</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">任职年限（聘任时间）终算时间为</span></span><span style=";font-family:宋体;font-size:21px">2018</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">年</span></span><span style=";font-family:宋体;font-size:21px">12</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">月</span></span><span style=";font-family:宋体;font-size:21px">31</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">日（年对年</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">、</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">月对月满规定的聘任年限）。业绩可从取得现任职资格时间起算。</span></span></p><p style="text-indent:43px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:楷体_GB2312;font-size:21px"><span style="font-family:楷体_GB2312">（三）申报程序</span></span></p><p style="text-indent:43px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">职称评审按照个人申报、单位推荐、主管部门和各级人社部门审核、政策性审查、评审委员会评审、职称工作机构审核公示并发文的程序进行。</span></span></p><p style="text-indent:43px;text-autospace:ideograph-other;line-height:36px"><strong><span style=";font-family:仿宋_GB2312;font-weight:bold;font-size:21px">1.</span></strong><strong><span style=";font-family:仿宋_GB2312;font-weight:bold;font-size:21px"><span style="font-family:仿宋_GB2312">个人申报。</span></span></strong><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">申报人填写《遵义市专业技术职务任职资格评审表》，签署《个人申报专业技术职务任职资格诚信承诺书》，按《遵义市专业技术职务任职资格申报材料目录与格式》的相关要求装订装入牛皮纸档案袋，方可按照职称申报程序报送。</span></span></p><p style="text-indent:43px;text-autospace:ideograph-other;line-height:36px"><strong><span style=";font-family:仿宋_GB2312;font-weight:bold;font-size:21px">2.</span></strong><strong><span style=";font-family:仿宋_GB2312;font-weight:bold;font-size:21px"><span style="font-family:仿宋_GB2312">组织审核。</span></span></strong><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">用人单位须核实申报人的学历、专业、任职年限、年度考核、继续教育等是否符合相关规定，相关证书、论文著作、业绩成果是否真实有效，符合相关评审条件，经公示无异议后出具《单位报送专业技术职务任职资格诚信承诺书》，报主管部门审核，主管部门填写《遵义市专业技术职务任职资格申报人员花名册》向本级人社部门推荐，人社部门审核后，按评审范围向职称工作机构分类汇总报送申报资料及《遵义市专业技术职务任职资格申报人员花名册》。</span></span></p><p style="text-indent:43px;text-autospace:ideograph-other;line-height:36px"><strong><span style=";font-family:仿宋_GB2312;font-weight:bold;font-size:21px">3.</span></strong><strong><span style=";font-family:仿宋_GB2312;font-weight:bold;font-size:21px"><span style="font-family:仿宋_GB2312">政策性审查。</span></span></strong><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">各地人社部门职称工作机构负责受理申报材料，并组织开展政策性审查工作。政策性审查主要是审查学历、专业、任职资格年限、聘任年限、按岗申报、年度考核、继续教育、论文检索证明、诚信承诺书、从事专业是否与申报专业一致、评审表是否符合规定。政策性审查结果向社会公示。政策性审查结果为不合格的申报人，须在公示期满后</span></span><span style=";font-family:宋体;font-size:21px">5</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">日内，提交经申报人所在单位核实的补充材料，逾期不再受理。补充材料经复核符合政策性审查条件的，报送遵义市人社局，反之不予报送。遵义市人社局将政策性审查通过人员送审相应评审委员会。</span></span></p><p style="text-indent:43px;text-autospace:ideograph-other;line-height:36px"><strong><span style=";font-family:仿宋_GB2312;font-weight:bold;font-size:21px">4.</span></strong><strong><span style=";font-family:仿宋_GB2312;font-weight:bold;font-size:21px"><span style="font-family:仿宋_GB2312">组织评审及办理任职资格手续。</span></span></strong><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">经上级人社部门审核同意后，各有关系列评委会组织评审，按业绩情况进行排名评级，评审结果进行公示，公示无异议后，按管理权限对评审结果进行审核行文、办理证书。</span></span></p><p style="text-indent:43px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:黑体;font-size:21px"><span style="font-family:黑体">二、改革措施</span></span></p><p style="text-indent:43px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:楷体_GB2312;color:rgb(0,0,0);font-size:21px"><span style="font-family:楷体_GB2312">（一）继续</span></span><span style=";font-family:楷体_GB2312;font-size:21px"><span style="font-family:楷体_GB2312">基层副高级职称评审认定。</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">根据《关于印发〈关于加强基层人才队伍建设的实施意见〉的通知》（黔人社厅通〔</span></span><span style=";font-family:宋体;font-size:21px">2013</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">〕</span></span><span style=";font-family:宋体;font-size:21px">334</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">号）文件精神，认真做好基层工程、农业系列副高级职称评审申报认定工作。申报人员除报送《基层认定人员工作年限证明》外，还要按照拟申报系列职称的社会化评审条件，报送相关材料，由评委会进行评审、答辩。各单位要将申报材料单独打包报送，并按不同系列填报《遵义市专业技术职务任职资格申报人员花名册》（纸质材料与</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">excel</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">电子版各</span></span><span style=";font-family:宋体;font-size:21px">1</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">份）。</span></span></p><p style="text-indent:43px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:楷体_GB2312;font-size:21px"><span style="font-family:楷体_GB2312">（二）</span></span><span style=";font-family:楷体_GB2312;color:rgb(0,0,0);font-size:21px"><span style="font-family:楷体_GB2312">建立专业技术人员服务基层长效机制。</span></span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:21px"><span style="font-family:仿宋_GB2312">市级农业机构专业技术人员晋升中级职称前，须到县级及以下单位累计服务</span></span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:21px">1</span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:21px"><span style="font-family:仿宋_GB2312">年以上，晋升高级职称前，须到县级及以下单位连续服务</span></span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:21px">1</span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:21px"><span style="font-family:仿宋_GB2312">年以上，累计服务</span></span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:21px">2</span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:21px"><span style="font-family:仿宋_GB2312">年；县级农业机构专业技术人员晋升中级职称前，须到乡镇累计服务满</span></span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:21px">1</span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:21px"><span style="font-family:仿宋_GB2312">年以上。</span></span></p><p style="text-indent:37px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:楷体_GB2312;font-size:21px"><span style="font-family:楷体_GB2312">（三）落实继续教育要求。</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">县及城关镇的专业技术人员继续教育近五年须完成</span></span><span style=";font-family:宋体;font-size:21px">360</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">学时。乡、镇（不含城关镇）和非公经济企业的专业技术人员继续教育要求条件可适当放宽，近五年须完成</span></span><span style=";font-family:宋体;font-size:21px">100</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">学时。经主管部门审核填报继续教育学时统计表。</span></span></p><p style="text-indent:37px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">今年省厅组织专业技术人员开展以</span>“大生态”为主题的公需科目培训，凡申报职称评审（含转评）的专业技术人员要按规定参加公需科目培训并完成相应学时，要提供人社部门验证的公需科目合格证。该项工作目前尚未启动，待省厅安排后进行。今年申报高、中、初级专业技术职务的人员在填写继续教育学时统计表时预留“大生态”公需科目的空白栏，待取得“大生态”公需科目合格证后交县人社局统一报送市局。</span></p><p style="text-indent:37px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:楷体_GB2312;font-size:21px"><span style="font-family:楷体_GB2312">（四）</span></span><span style=";font-family:楷体_GB2312;font-size:21px"><span style="font-family:楷体_GB2312">探索建立职称申报评审诚信档案制度。</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">完善诚信承诺和失信惩戒机制，实行学术造假</span>“一票否决制”，并记入诚信档案。对通过弄虚作假、暗箱操作等违纪违规行为取得的职称，一律予以撤销。</span></p><p style="text-indent:43px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:黑体;font-size:21px"><span style="font-family:黑体">三、工作安排</span></span></p><p style="text-indent:43px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:楷体_GB2312;font-size:21px"><span style="font-family:楷体_GB2312">（一）部署工作。</span></span><span style=";font-family:宋体;font-size:21px">7</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">月中下旬，人社局下发通知，部署</span></span><span style=";font-family:宋体;font-size:21px">2018</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">年专业技术任职资格评审工作</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">。</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">各地、</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">各单位要</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">认真贯彻落实，</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">按相关要求组织专业技术人员申报。</span></span></p><p style="text-indent:43px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:楷体_GB2312;font-size:21px"><span style="font-family:楷体_GB2312">（二）受理材料。</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">工程、农业系列职称申报，要以乡</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">(</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">镇</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">)</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">、县直行业主管部门为申报的主体单位，统一申报；民营经济系列职称申报，由县工商联审核后，统一收集资料、推荐到</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">县</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">人社</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">局</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">。各乡</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">(</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">镇</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">)</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">、县直行业主管部门于</span></span><span style=";font-family:宋体;font-size:21px">7</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">月</span></span><span style=";font-family:宋体;font-size:21px">30</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">日前报送填报汇总的《遵义市专业技术职务任职资格申报人员花名册》到县人社局，经审核相关项目无误后方可将申报材料送达县人社局。</span></span><strong><span style=";font-family:仿宋_GB2312;font-weight:bold;font-size:21px"><span style="font-family:仿宋_GB2312">县人社局</span>8月2日截止受理申报高、中级的职称申报材料（逾期未报送资料的视为自动放弃）</span></strong><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">，</span></span><span style=";font-family:宋体;font-size:21px">8</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">月</span></span><span style=";font-family:宋体;font-size:21px">3</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">日起完成政策性审查及公示，并于</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">8</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">月</span></span><span style=";font-family:宋体;font-size:21px">10</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">日前汇总报送市人社局。</span></span></p><p style="text-indent:43px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">试用期满初次申报职称的工程、农业、党校、群文等系列的事业单位专业技术人员，须由所在单位负责人事工作的同志统一按时到县人社局军转办办理试用期满转正手续后再申报职称。</span></span><strong><span style=";font-family:仿宋_GB2312;font-weight:bold;font-size:21px"><span style="font-family:仿宋_GB2312">时间要求：试用期满办理转正审批后及时申报职称资料到县人社局人事股。县人社局根据遵市人社发</span></span></strong><strong><span style=";font-family:仿宋_GB2312;font-weight:bold;font-size:21px"><span style="font-family:仿宋_GB2312">〔</span></span></strong><strong><span style=";font-family:仿宋_GB2312;font-weight:bold;font-size:21px">20</span></strong><strong><span style=";font-family:仿宋_GB2312;font-weight:bold;font-size:21px">16〕3号文件要求办理初评相关事项。</span></strong></p><p style="text-indent:43px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:楷体_GB2312;font-size:21px"><span style="font-family:楷体_GB2312">（三）组织评审。</span></span><span style=";font-family:宋体;font-size:21px">9</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">月底前，工程、农业、民营经济系列评委会组织完成评审工作。</span></span></p><p style="text-indent:43px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:楷体_GB2312;font-size:21px"><span style="font-family:楷体_GB2312">（四）公示批复。</span></span><span style=";font-family:宋体;font-size:21px">12</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">月底前，完成评审结果公示、批复工作。</span></span></p><p style="text-indent:43px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:黑体;font-size:21px"><span style="font-family:黑体">四</span></span><span style=";font-family:黑体;font-size:21px"><span style="font-family:黑体">、其他事项</span></span></p><p style="text-indent:43px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:楷体_GB2312;font-size:21px"><span style="font-family:楷体_GB2312">（一）直接申报。</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">对到企事业单位、民营经济组织工作的博士、硕士，可分别直接申报副高级、中级专业技术资格。取得一级建造师资格满</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">1</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">年后可直接申报工程高级专业技术资格，取得二级建造师资格满</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">1</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">年后可直接申报工程中级专业技术资格。</span></span></p><p style="text-indent:43px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:楷体_GB2312;font-size:21px"><span style="font-family:楷体_GB2312">（二）转评。</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">拟申报中、高级专业技术职务任职资格，现专业技术职务任职资格证书与拟申报专业不一致的，均需转评。转评后次年可按规定申报晋升高一级专业技术职务任职资格，转评前后的任职年限可以合并计算。</span></span></p><p style="text-indent:37px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:楷体_GB2312;font-size:21px"><span style="font-family:楷体_GB2312">（三）严格学历认证。</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">专业技术人员申报职称需装订本人学位、学历证书复印件，提供学信网查询本人学历认证的打印件，学信网无法查询学历的，应提供学籍档案复印件。</span></span></p><p style="text-indent:37px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:楷体_GB2312;font-size:21px"><span style="font-family:楷体_GB2312">（四）统一编号。</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">县人社</span></span><span style=";font-family:楷体_GB2312;font-size:21px"><span style="font-family:楷体_GB2312">局</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">受理申报材料后，按照填写的《遵义市专业技术职务任职资格申报人员花名册》自动生成的号码分职称系列按序编号，并张贴在档案袋封面对应处。</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">同时，按照《专业技术资格证照片采集表》格式统一收取所属地申报人员照片，单独报送市人社部门。</span></span></p><p style="margin-top:0;margin-bottom:0;text-indent:37px;text-autospace:ideograph-other;text-align:justify;text-justify:inter-ideograph;vertical-align:baseline;line-height:36px"><span style=";font-family:楷体_GB2312;font-size:21px"><span style="font-family:楷体_GB2312">（五）</span></span><span style=";font-family:楷体_GB2312;font-size:21px"><span style="font-family:楷体_GB2312">改进资格证书管理。</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">全市统一使用由省人力资源和社会保障厅监制的资格证书。从今年开始，各级人社部门不再进行专业技术资格证书年审，证书审核由用人单位自行开展。</span></span></p><p style="text-indent:42px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:楷体_GB2312;font-size:21px"><span style="font-family:楷体_GB2312">（六）资料下载。</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">相关文件表册均可在遵义人力资源和社会保障局官方网站业务导航的</span>“事业单位管理”栏目（网址：</span><span style="text-decoration:underline;"><span style=";font-family:仿宋_GB2312;text-underline:single;font-size:21px">http://www.zyrs.gov.cn/web/10220/index.html</span></span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:21px"><span style="font-family:仿宋_GB2312">）或者</span>“道真事业单位人事管”QQ群（群号：</span><span style=";font-family:宋体;font-size:21px">234139974</span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:21px"><span style="font-family:仿宋_GB2312">）查询和下载。</span></span></p><p style="text-indent:42px;text-autospace:ideograph-other;line-height:36px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">各单位要及时组织实施，严格把握申报条件，按时按要求申报材料，确保职称申报工作的公开公平公正、及时准确无误、政策落实到位</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">, </span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">不断提升职称工作科学性、客观性和社会公信度。</span></span></p><p style="text-autospace:ideograph-other;line-height:36px"><br></p><p style="text-indent:43px;line-height:37px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">附件</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">: </span><span style=";font-family:仿宋_GB2312;font-size:21px">1.</span><span style=";font-family:仿宋_GB2312;letter-spacing:-1px;font-size:21px"><span style="font-family:仿宋_GB2312">遵义市专业技术职务任职资格申报材料目录与格式</span></span></p><p style="text-indent:107px;line-height:37px"><span style=";font-family:仿宋_GB2312;font-size:21px">2.<a style="font-size:16px; color:#0066cc;" href="javascript:;" title="2018年工程 、农业、民营职称有关表册(模板）.zip" oldsrc="W020180718391341041332.zip">2018年工程 、农业、民营职称有关表册(模板）.zip</a></span></p><p style="text-indent:107px;line-height:37px"><span style=";font-family:仿宋_GB2312;font-size:21px">3.<a style="font-size:16px; color:#0066cc;" href="javascript:;" title="各系列评审文件.zip" oldsrc="W020180718391341050898.zip">各系列评审文件.zip</a></span></p><p style="line-height:37px"><br></p><p style="line-height:37px"><br></p><p style="text-indent:220px;line-height:37px"><span style=";font-family:仿宋_GB2312;font-size:20px"><span style="font-family:仿宋_GB2312">道真县人力资源网</span></span></p><p style="text-indent:331px;line-height:37px"><span style=";font-family:宋体;font-size:21px">2018</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">年</span></span><span style=";font-family:宋体;font-size:21px">7</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">月</span></span><span style=";font-family:宋体;font-size:21px">18</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">日</span></span></p><p style="margin-right:5px;line-height:37px"><br></p><p style="margin-right:5px;line-height:37px"><br></p><p style="margin-right:5px;line-height:37px"><br></p><p style="margin-right:0;margin-left:55px;text-autospace:ideograph-numeric;text-align:justify;text-justify:inter-ideograph;line-height:35px"><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:19px"><span style="font-family:仿宋_GB2312">道真县人力资源网</span></span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:19px"><span style="font-family:仿宋_GB2312">办公室</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:19px">201</span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:19px">8</span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:19px"><span style="font-family:仿宋_GB2312">年</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:19px">7</span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:19px"><span style="font-family:仿宋_GB2312">月</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:19px">18</span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:19px"><span style="font-family:仿宋_GB2312">日印</span></span><span style="position:absolute;z-index:1;left:0px;margin-left:0.0000px;margin-top:40.4667px;width:591.0000px;height:2.0000px"><img src="file:///C:/Users/123456/AppData/Local/Temp/ksohtml/wps8831.tmp.png" width="591" height="2"></span><span style="position:absolute;z-index:1;left:0px;margin-left:0.0000px;margin-top:0.0000px;width:591.0000px;height:1.0000px"><img src="file:///C:/Users/123456/AppData/Local/Temp/ksohtml/wps8842.tmp.png" width="591" height="1"></span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:19px"><span style="font-family:仿宋_GB2312">发</span></span></p><p><span style=";font-family:黑体;font-size:21px"><br style="page-break-before:always" clear="all"></span></p><p style="line-height:40px"><span style=";font-family:黑体;font-size:21px"><span style="font-family:黑体">附件</span></span><span style=";font-family:黑体;font-size:21px">1:</span></p><p style="line-height:40px"><br></p><p style="text-align:center;line-height:40px"><span style=";font-family:方正小标宋简体;font-size:29px"><span style="font-family:方正小标宋简体">遵义市专业技术职务任职资格申报材料</span></span></p><p style="text-align:center;line-height:40px"><span style=";font-family:方正小标宋简体;font-size:29px"><span style="font-family:方正小标宋简体">目录与格式（高、中级）</span></span></p><p style="text-indent:48px;line-height:40px"><br></p><p style="text-indent:48px;line-height:40px"><span style=";font-family:黑体;color:rgb(0,0,0);font-size:21px"><span style="font-family:黑体">一、政策性资格审查材料</span></span></p><p style="text-indent:48px;line-height:40px"><span style=";font-family:楷体_GB2312;color:rgb(0,0,0);font-size:21px"><span style="font-family:楷体_GB2312">（一）装订材料</span></span></p><p style="text-indent:48px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">1.</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">政策性审查材料目录。</span></span></p><p style="text-indent:48px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">2.公示及公示结果。</span></p><p style="text-indent:48px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">3</span><span style=";font-family:仿宋_GB2312;font-size:21px">.</span><span style=";font-family:仿宋_GB2312;font-size:21px">“个人诚信承诺书”及“单位诚信承诺书”。</span></p><p style="text-indent:48px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">4</span><span style=";font-family:仿宋_GB2312;font-size:21px">.</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">学历、学位证书复印件</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">,</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">学信网查询本人学历认证的打印件（学信网无法查询学历的，应提供学籍档案复印件）。</span></span></p><p style="text-indent:48px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">5</span><span style=";font-family:仿宋_GB2312;font-size:21px">.</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">专业技术职务资格证书复印件。</span></span></p><p style="text-indent:48px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">6</span><span style=";font-family:仿宋_GB2312;font-size:21px">.</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">事业单位人员需提供《遵义市事业单位按岗推荐评聘职称审核情况表》。</span></span></p><p style="text-indent:48px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">7</span><span style=";font-family:仿宋_GB2312;font-size:21px">.</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">事业单位人员需提供现任职务《遵义市事业单位岗位聘任审核表》复印件或工资晋升审批表；基层认定人员需提供《基层认定人员工作年限证明》；企业专业技术人员需提供劳动合同及当年《社保参保缴费凭证》。</span></span></p><p style="text-indent:48px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">8</span><span style=";font-family:仿宋_GB2312;font-size:21px">.</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">继续教育学时审核表和公需科目合格证复印件。</span></span></p><p style="text-indent:48px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">9</span><span style=";font-family:仿宋_GB2312;font-size:21px">.</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">专业技术人员年度考核证明材料复印件。</span></span></p><p style="text-indent:48px;line-height:40px"><span style=";font-family:楷体_GB2312;font-size:21px"><span style="font-family:楷体_GB2312">（二）散装材料</span></span></p><p style="text-indent:48px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">《遵义市专业技术职务任职资格评审表》一式</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">2</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">份（</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">A3</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">纸，双面印刷）。</span></span></p><p style="margin-left:48px;line-height:40px"><span style=";font-family:黑体;font-size:21px"><span style="font-family:黑体">二、业绩材料</span></span></p><p style="text-indent:48px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">1.</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">业绩材料目录。</span></span></p><p style="text-indent:48px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">2.</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">其他须提交的相关材料复印件。</span></span></p><p style="text-indent:48px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">3.</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">公开发表、出版的论文期刊、论著及其他学术成果材料原件。</span></span></p><p style="text-indent:48px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">4.</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">各类获奖证书原件。</span></span></p><p style="text-indent:48px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">5.</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">业绩证明材料原件。</span></span></p><p style="text-indent:43px;line-height:40px"><span style=";font-family:黑体;font-size:21px"><span style="font-family:黑体">三、申报材料的核实与装袋</span></span></p><p style="text-indent:42px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">1.</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">提交的复印材料均需用人单位审查后，连同复印材料原件送当地主管部门，经审核签署</span>“与原件相符”后，签字盖章确认。</span></p><p style="text-indent:42px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">2.</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">提交的论文须在所发表的期刊目录上划</span>“</span><span style=";font-family:仿宋_GB2312;font-size:21px">”标明。</span></p><p style="text-indent:42px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">3.</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">申报材料统一使用带封扣的牛皮纸质档案袋（竖向开口）包装。下载统一的档案袋封面、档案袋底部和侧面模板填写内容并进行张贴。</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">有多袋申报材料的，应在</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">封面</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">右下角注明</span>“共</span><span style=";font-family:仿宋_GB2312;font-size:21px">X</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">袋，第</span></span><span style=";font-family:仿宋_GB2312;font-size:21px">X</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">袋</span>”字样。</span></p><p style="line-height:40px"><br></p><p style="line-height:40px"><br></p><p style="line-height:40px"><br></p><p style="text-align:center;line-height:40px"><span style=";font-family:方正小标宋简体;font-size:29px"><span style="font-family:方正小标宋简体">遵义市专业技术职务任职资格申报材料</span></span></p><p style="text-align:center;line-height:40px"><span style=";font-family:方正小标宋简体;font-size:29px"><span style="font-family:方正小标宋简体">目录与格式（初级）</span></span></p><p style="text-indent:43px;line-height:40px"><br></p><p style="text-indent:43px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">初级职称申报材料不需装订成册，所有资料须经用人单位及主管部门专人审核签署</span>“与原件审核相符”字样并签名、加盖公章后，按以下顺序收集整理装袋后报送：</span></p><p style="line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">一、新参加工作人员试用期满初次申报职称的：</span></span></p><p style="text-indent:43px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">1.初级专业技术职务任职资格呈报表（一式二份）；</span></p><p style="text-indent:43px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">2.公示表（用人单位所有人员一起公示后，分别装入申报人的材料）；</span></p><p style="text-indent:43px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">3.公示确认表（每人一份）；</span></p><p style="text-indent:43px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">4.遵义市申报专业技术职务任职资格诚信承诺书；</span></p><p style="text-indent:43px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">5.身份证、教师资格证（或记者证、律师资格证等）、毕业证复印件、</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">学信网查询本人学历认证的打印件（学信网无法查询学历的，应提供学籍档案复印件）</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">；</span></span></p><p style="text-indent:43px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">6.继续教育公需科目“大生态”学习考试合格证；</span></p><p style="text-indent:43px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">7.试用期满《转正审批表》复印件。</span></p><p style="line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">二、转评助理级或员级晋升助理级的：</span></span></p><p style="text-indent:43px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">1.初级专业技术职务任职资格呈报表（一式二份）；</span></p><p style="text-indent:43px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">2.公示表（用人单位所有人员一起公示后，分别装入申报人的材料）；</span></p><p style="text-indent:43px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">3.公示确认表（每人一份）；</span></p><p style="text-indent:43px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">4.遵义市申报专业技术职务任职资格诚信承诺书；</span></p><p style="text-indent:43px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">5.身份证、教师资格证（或记者证、律师资格证等）、毕业证、专业技术职务资格证、岗位聘任审核表（民营经济系列的提供劳动合同或岗位聘用证明）复印件、</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">学信网查询本人学历认证的打印件（学信网无法查询学历的，应提供学籍档案复印件）</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">；</span></span></p><p style="text-indent:43px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">6.近三年年度考核表复印件；</span></p><p style="text-indent:43px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">7.继续教育公需科目“大生态”合格证；</span></p><p style="text-indent:43px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">8.与申报专业一致的专业技术工作总结一份（须分管领导签署意见、签名并加盖单位公章确认）。</span></p><p style="text-indent:43px;line-height:40px"><br></p><p style="text-autospace:ideograph-numeric;text-align:justify;text-justify:inter-ideograph;line-height:36px"><br></p><p><br></p>
+					</font>
+    			</div>
+   				<div class="KeysList" style="margin-top: 5px;">
+					<div class="jiathis_style">
+						<span class="jiathis_txt">分享到：</span>
+						<a class="jiathis_button_qzone" title="分享到QQ空间" href="javascript:;" onclick="jiathis_sendto('qzone');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_qzone">QQ空间</span>
+						</a>
+						<a class="jiathis_button_tsina" title="分享到微博" href="javascript:;" onclick="jiathis_sendto('tsina');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_tsina">新浪微博</span>
+						</a>
+						<a class="jiathis_button_tqq" title="分享到腾讯微博" href="javascript:;" onclick="jiathis_sendto('tqq');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_tqq">腾讯微博</span>
+						</a>
+						<a class="jiathis_button_renren" title="分享到人人网" href="javascript:;" onclick="jiathis_sendto('renren');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_renren">人人网</span>
+						</a>
+						<a href="javascript:;" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+						<a class="jiathis_counter_style">
+							<span class="jiathis_button_expanded jiathis_counter jiathis_bubble_style" id="jiathis_counter_36" title="累计分享0次">0</span>
+						</a>
+					</div>
+					<script type="text/javascript" src="../../../code/jia.js" ></script>
+				</div>
+   				<div class="KeysList">
+					<div class="right">
+			  			<a href="javascript:;" target="_blank" class="box_02">我要推荐</a>&emsp;
+						<!--a class="box_02" href="/syqt/rssdy/" target="_blank">RSS定制</a>&emsp;-->
+			 			<a class="box_02" href="../../../syqt/wzjc/index.html" target="_blank">网站纠错</a>&emsp;
+						<!--a class="box_02" href="#" target="_blank">返回顶部</a-->
+					</div>
+				</div>
+    			<div class="page">
+					<div id="prevpage">
+						<span>上一篇：</span><a href="javascript:;" id="no1">无</a>
+						
+							<script type="text/javascript">
+								var  str="";
+								var str_1 = "../201810/t20181018_21761544.html";
+								var str_4 = '道真自治县2018年胡遵劳务协作项目补贴实施方案';
+								if(str_4!="")
+								{
+									jQuery("#no1").hide();
+									if (str=="") {
+										document.write('<a  href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									} else {
+										document.write('<a  href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									}
+								}
+							</script>
+						
+					</div>
+					<div id="prevpage">
+						<span>下一篇：</span><a href="javascript:;" id="no2">无</a>
+						
+							<script type="text/javascript">
+								var  str="";
+								var str_1 = "../201804/t20180413_21600393.html";
+								var str_4 = '2018年度中心组专题学习实施方案';
+								if(str_4!="")
+								{
+									jQuery("#no2").hide();
+									if (str=="") {
+										document.write('<a  href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									} else {
+										document.write('<a  href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									}
+								}
+							</script>
+						
+					</div>
+    			</div>
+   				<div class="xgxx">
+        			<h1><span>相关信息</span></h1>
+					<ul>
+						<script type="text/javascript">
+							var key="";
+							if(key!=''&&key!='null'){
+								
+							}else{
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201810/t20181018_21761544.html";
+									var str_4 = '道真自治县2018年胡遵劳务协作项目补贴实施方案';
+									var str_2 = '2018-10-18';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "./t20180718_21660969.html";
+									var str_4 = '关于做好2018年工程、农业、民营经济 系列职称申报评审工作的通知';
+									var str_2 = '2018-07-18';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201804/t20180413_21600393.html";
+									var str_4 = '2018年度中心组专题学习实施方案';
+									var str_2 = '2018-04-13';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201804/t20180413_21600389.html";
+									var str_4 = '关于进一步规范2018年社会保险业务工作的通知';
+									var str_2 = '2018-04-13';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201804/t20180413_21600387.html";
+									var str_4 = '关于印发《2018年脱贫攻坚“春风行动”工作方案》的通知';
+									var str_2 = '2018-04-13';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+								
+							}
+						 </script>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="foot_bj">
+	<div class="foot_nr">
+		<p>
+			<a href="../../../syqt/rssdy/index.html">RSS订阅</a>|
+			<a href="../../../syqt/lxfs/index.html">联系方式</a>|
+			<a href="../../../syqt/wzdt/index.html">网站地图</a>
+		</p>
+		<p>Copyright 2010 All Rights Reserved      主办：道真县人力资源网</p>
+		<p>电话：0851-25782065       技术支持：<a href="javascript:;" target="_blank">贵州多彩博虹科技有限公司</a></p>
+		<p>(建议使用1024×768分辨率 IE70以上版本浏览器) </p>
+		<p style="margin-top: 12px;">
+			<!--a target="_blank" href="http://bszs.conac.cn/sitename?method=show&id=04E0DEEC2DCA0288E053022819ACC535">
+				<img src="/images/dz_jg.png" /></a-->
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src=' http://dcs.conac.cn/js/24/356/2168/40584250/CA243562168405842500001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+		</p>
+	</div>
+</div>
+<script id="_trs_ta_js" src="../../../c/js/ta-1290.js" async="async" defer="defer"></script>
+    </body>
+</html>

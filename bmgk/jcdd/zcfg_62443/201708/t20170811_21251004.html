@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>最高人民法院关于审理工伤保险行政案件若干问题的规定 法释【2014】9号</title>
+		<link rel="stylesheet" href="../../../../images/nry.css">
+		<meta name="Keywords" content="道真人社局,道真县人力资源网,道真人事考试,道真县人力资源与社会保障,道真县人社局组织全体党员参加扫墓活动">
+<script type="text/javascript" src="../../../../images/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../../../images/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+    jQuery(function() {
+		jQuery('#j_search_btn').click(function() {
+			var str = jQuery("#keyword").val();
+			checks(str);
+		});
+	});
+	function checks(t) {
+		t = t.replace(/(^\s+)|(\s+$)/g, "");
+		if (t == "" || t == "请输入关键检索字") {
+			alert('请输入有效内容');
+			return false;
+		}
+		szMsg = "[#_%&'/",
+		";:=!^]";
+		alertStr = "";
+		for (i = 1; i < szMsg.length + 1; i++) {
+			if (t.indexOf(szMsg.substring(i - 1, i)) > -1) {
+				alertStr = "请勿包含非法字符如[#_%&'/",
+				";:=!^]";
+				alert(alertStr);
+				// break;
+				return false;
+			}
+		}
+		var key = document.getElementById("keyword").value;
+		window.location.href ="/search.html?keyword=" + key;
+		return true;
+	}
+function sub(){
+    window.location.href ="/search.shtml";
+}
+function AddFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle)
+    } catch (e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, "")
+        } catch (e) {
+            alert("加入收藏失败，请使用Ctrl+D进行添加")
+        }
+    }
+}
+function SetHome(obj, vrl) {
+    try {
+        obj.style.behavior = "url(#default#homepage)";
+        obj.setHomePage(vrl)
+    } catch (e) {
+        if (window.netscape) {
+            try {
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")
+            } catch (e) {
+                alert("此操作被浏览器拒绝！n请在浏览器地址栏输入\"about:config\"并回车n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。")
+            }
+            var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
+            prefs.setCharPref("browser.startup.homepage", vrl)
+        }
+    }
+}
+	//设为首页 
+	function SetHome(url){
+		if (document.all) {
+			document.body.style.behavior='url(#default#homepage)';
+			document.body.setHomePage(url);
+		}else{ 
+			alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+		}
+	}
+</script>
+<script type="text/javascript">
+      function GoTo() {
+          window.open("/syqt/wzjc/index.html?url=" + document.URL);
+      }
+</script>
+		<script type="text/javascript">
+			function fontResizer(smallFont,medFont,largeFont){
+				function clearSelected(){
+					$(".smallFont").removeClass("curFont");
+					$(".medFont").removeClass("curFont");
+					$(".largeFont").removeClass("curFont");
+				}
+				function saveState(curSize){
+					var date = new Date();
+					date.setTime(date.getTime()+(7*24*60*60*1000));
+					var expires = "; expires="+date.toGMTString();
+					document.cookie = "fontSizer"+"="+curSize+expires+"; path=/";
+				}
+			
+				$(".smallFont").click(function(){
+					$('#Zoom').css('font-size', smallFont);
+					$('#Zoom p').css('font-size', smallFont);
+					$('#Zoom span').css('font-size', smallFont);
+					$('#Zoom font').css('font-size', smallFont);
+					clearSelected();
+					$(".smallFont").addClass("curFont");
+					saveState(smallFont);
+				});
+			
+				$(".medFont").click(function(){
+					$('#Zoom').css('font-size', medFont);
+					$('#Zoom p').css('font-size', medFont);
+					$('#Zoom span').css('font-size', medFont);
+					$('#Zoom font').css('font-size', medFont);
+					clearSelected();
+					$(".medFont").addClass("curFont");
+					saveState(medFont);
+				});
+			
+				$(".largeFont").click(function(){
+					$('#Zoom').css('font-size', largeFont);
+					$('#Zoom p').css('font-size', largeFont);
+					$('#Zoom span').css('font-size', largeFont);
+					$('#Zoom font').css('font-size', largeFont);
+					$('#Zoom').css('line-height','40px');
+					clearSelected();
+					$(".largeFont").addClass("curFont");
+					saveState(largeFont);
+				});
+			
+				function getCookie(c_name){
+					if(document.cookie.length>0){
+						c_start=document.cookie.indexOf(c_name + "=");
+						if (c_start!=-1){
+							c_start=c_start + c_name.length+1;
+							c_end=document.cookie.indexOf(";",c_start); 
+							if(c_end==-1)c_end=document.cookie.length;
+							return unescape(document.cookie.substring(c_start,c_end));
+						}
+					} 
+					return "";
+				}
+			
+				var savedSize = getCookie('fontSizer');
+			
+				if(savedSize!=""){
+					$('#Zoom').css('font-size', savedSize);
+					switch(savedSize){
+						case smallFont: $(".smallFont").addClass("curFont");
+						break;
+						case medFont: $(".medFont").addClass("curFont");
+						break;
+						case largeFont: $(".largeFont").addClass("curFont");
+						break;
+						default: $(".medFont").addClass("curFont");
+					}
+				}else {
+					$('#Zoom').css('font-size', medFont);
+					$(".medFont").addClass("curFont");
+				}
+				
+			}
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				fontResizer('12px','16px','20px');
+			});
+		</script>
+		<script type="text/javascript">
+			function ChangeColor(ColorName){
+				$('#c').css('background', ColorName);
+				$('#Zoom p').css('background', ColorName);
+				$('#Zoom span').css('background', ColorName);
+				$('#Zoom font').css('background', ColorName);
+			}	
+		</script>
+	</head>
+	<body>
+		<!--天气js-->
+<script type="text/javascript">
+	function initArray() {
+		for (i = 0; i < initArray.arguments.length; i++)
+			this[i] = initArray.arguments[i];
+	}
+	var isnMonths = new initArray("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+	var isnDays = new initArray("  星期日", "  星期一", "  星期二", "  星期三", "  星期四", "  星期五", "  星期六", "  星期日");
+	today = new Date();
+	hrs = today.getHours();
+	min = today.getMinutes();
+	sec = today.getSeconds();
+	clckh = "" + ((hrs > 12) ? hrs - 12 : hrs);
+	clckm = ((min < 10) ? "0" : "") + min;
+	clcks = ((sec < 10) ? "0" : "") + sec;
+	clck = (hrs >= 12) ? "下午" : "上午";
+	var stnr = "";
+	var ns = "0123456789";
+	var a = "";
+
+	function getFullYear(d) {
+		yr = d.getYear();
+		if (yr < 1000)
+			yr += 1900;
+		return yr;
+	}
+</script>
+<div class="banner">
+	<!--顶部-->
+	<div class="dingb_bj">
+		<div class="dingb_nr">
+			<!--日期-->
+			<div class="riqi f_l">
+				<ul>
+					<li><span>今天是: </span>
+						<script type="text/javascript">
+							document.write("<div class='time'>" + getFullYear(today) + "年" + "" + isnMonths[today.getMonth()] + "月" + today.getDate() + "日" + isnDays[today.getDay()] + "</div>");
+						</script>
+					</li>
+				</ul>
+			</div>
+			<!--收藏-->
+			<div class="f_r ding_y">
+				<a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>|
+				<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>
+			</div>
+		</div>
+	</div>
+	<!--logo-->
+	<div class="logo_by" style="overflow: initial;">
+		<ul>
+			<li class="f_l"><a href="../../../../index.html"><img src="../../../../images/logo.png"></a></li>
+			<li class="f_r"><img src="../../../../images/biaoyu.png"></li>
+		</ul>
+	</div>
+	<!--导航-->
+	<div class="nav_bj">
+		<div class="nav f_l">
+			<ul>
+				<li><a href="../../../../index.html">网站首页</a></li>
+				<li><a href="../../../../gzdt/index.html">工作动态</a></li>
+				<li><a href="../../../../ywgz/index.html">业务工作</a></li>
+				<li><a href="../../../index.html">部门概况</a></li>
+				<li><a href="../../../../zwgk/index.html">政务公开</a></li>
+			</ul>
+		</div>
+		<!--搜索-->
+		<div class="sous f_r">
+    		<dl>
+				<dt><a href="javascript:void(0);" id="j_search_btn"><img src="../../../../images/sous.png"></a></dt>
+				<dd>
+					<input id="keyword" name="keyword" type="text" class="sous_sy" value="请输入关键字" style="color:#666666; line-height:40px; font-size: 14px;" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#000'}" onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#9e9e9e'}">
+				</dd>
+			</dl>
+    	</div>
+	</div>
+</div>
+		<div class="content-main">
+			<div class="dqwz">
+				您当前所在位置：<a href="../../../../index.html" title="首页" class="CurrChnlCls">首页</a>&nbsp;&raquo;&nbsp;<a href="../../../index.html" title="部门概况" class="CurrChnlCls">部门概况</a>&nbsp;&raquo;&nbsp;<a href="../../index.html" title="监察大队" class="CurrChnlCls">监察大队</a>&nbsp;&raquo;&nbsp;<a href="../index.html" title="政策法规" class="CurrChnlCls">政策法规</a>
+			</div>
+			<div class="body_content" id="c">
+    			<div class="title">
+        			<h1>最高人民法院关于审理工伤保险行政案件若干问题的规定 法释【2014】9号</h1>
+        			<script type="text/javascript">
+						var fbt='';
+						if(fbt!=''){
+							document.write('<h2>'+fbt+'</h2>');
+						}
+					</script>
+        			<div class="toolbar">
+						发布时间：
+						<script type="text/javascript">
+							var  pubdata='2017年08月11日';
+							if(pubdata!=''){
+								document.write(pubdata);
+							}
+						</script>
+
+            			字体：
+						<span class="smallFont">小</span>
+						<span class="medFont curFont">中</span>
+						<span class="largeFont curFont">大</span> 
+						<script type="text/javascript">
+							var wzly='';
+							if(wzly!=''){
+								document.write('文章来源：'+wzly+'&emsp;');
+							}
+						</script>
+						<script type="text/javascript">
+							var zz='';
+							if(zz!=''){
+								document.write('作者：'+zz+'&emsp;');
+							}
+						</script>
+						点击量：<script src="http://rsj.gzdaozhen.gov.cn/count/index?id=21251004&siteid=501731"></script>次
+						<a href="javascript:window.print();">打印本页</a>&emsp;
+						<a href="javascript:window.opener=null;window.close()">关闭本页</a>&emsp;&emsp;
+						<i style="padding-left:10px">
+							视力保护色： 
+							<input onclick="ChangeColor('#F9F6AF')" name="bgcolor" src="../../../../images/110827103140057.gif" type="image" align="absmiddle" height="13" width="13">
+							<input onclick="ChangeColor('#9DDBF4')" name="bgcolor22" src="../../../../images/110827103140099.gif" type="image" align="absmiddle" height="13" width="13">
+							<input onclick="ChangeColor('#DEDEDE')" name="bgcolor2" src="../../../../images/110827103140184.gif" type="image" align="absmiddle" height="13" width="13"> 
+							<input onclick="ChangeColor('#F9D1D9')" name="bgcolor2" src="../../../../images/110827103140215.gif" type="image" align="absmiddle" height="13" width="13"> 
+							<input onclick="ChangeColor('#E4C8F8')" name="bgcolor2" src="../../../../images/110827103140245.gif" type="image" align="absmiddle" height="13" width="13">	
+							<input onclick="ChangeColor('#ffffff')" name="bgcolor2" src="../../../../images/110827103140292.gif" type="image" align="absmiddle" height="13" width="13">
+						</i>
+					</div>
+				</div>
+    			<div class="content">
+        			<!--视频开始-->
+					
+						
+					
+					<!--视频结束-->
+					<font id="Zoom">
+						<h1 style="text-align: center;">&nbsp; 最高人民法院关于审理工伤保险行政案件若干问题的规定<br>法释【2014】9号</h1><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">《最高人民法院关于审理工伤保险行政案件若干问题的规定》已于2014年4月21日由最高人民法院审判委员会第1613次会议通过，现予公布，自2014年9月1日起施行。</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312"></span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">为正确审理工伤保险行政案件，根据《中华人民共和国社会保险法》、《中华人民共和国劳动法》、《中华人民共和国行政诉讼法》、《工伤保险条例》及其他有关法律、行政法规规定，结合行政审判实际，制定本规定。</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">第一条 
+人民法院审理工伤认定行政案件，在认定是否存在《工伤保险条例》第十四条第（六）项“本人主要责任”、第十六条第（二）项“醉酒或者吸毒”和第十六条第（三）项“自残或者自杀”等情形时，应当以有权机构出具的事故责任认定书、结论性意见和人民法院生效裁判等法律文书为依据，但有相反证据足以推翻事故责任认定书和结论性意见的除外。</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">前述法律文书不存在或者内容不明确，社会保险行政部门就前款事实作出认定的，人民法院应当结合其提供的相关证据依法进行审查。</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">《工伤保险条例》第十六条第（一）项“故意犯罪”的认定，应当以刑事侦查机关、检察机关和审判机关的生效法律文书或者结论性意见为依据。</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">第二条 
+人民法院受理工伤认定行政案件后，发现原告或者第三人在提起行政诉讼前已经就是否存在劳动关系申请劳动仲裁或者提起民事诉讼的，应当中止行政案件的审理。</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">第三条 
+社会保险行政部门认定下列单位为承担工伤保险责任单位的，人民法院应予支持：</span><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: Verdana"></span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">（一）职工与两个或两个以上单位建立劳动关系，工伤事故发生时，职工为之工作的单位为承担工伤保险责任的单位；</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">（二）劳务派遣单位派遣的职工在用工单位工作期间因工伤亡的，派遣单位为承担工伤保险责任的单位；</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">（三）单位指派到其他单位工作的职工因工伤亡的，指派单位为承担工伤保险责任的单位；</span><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: Verdana"></span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">（四）用工单位违反法律、法现规定将承包业务转包给不具备用工主体资格的组织或者自然人，该组织或者自然人聘用的职工从事承包业务时因工伤亡的，用工单位为承担工伤保险责任的单位；</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">（五）个人挂靠其他单位对外经营，其聘用的人员因工伤亡的，被挂靠单位为承担工伤保险责任的单位。</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">前款第（四）、（五）项明确的承担工伤保险责任的单位承担赌偿责任或者社会保险经办机构从工伤保险基金支付工伤保险待遇后，有权向相关组织、单位和个人追偿。</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">第四条 
+社会保险行政部门认定下列情形为工伤的，人民法院应予支持：</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">（一）职工在工作时间和工作场所内受到伤害，用人单位或者社会保险行政部门没有证据证明是非工作原因导致的；</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">（二）职工参加用人单位组织或者受用人单位指派参加其他单位组织的活动受到伤害的；<br>（三）在工作时间内，职工来往于多个与其工作职责相关的工作场所之间的合理区域因工受到伤害的；</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">（四）其他与履行工作职责相关，在工作时间及合理区域内受到伤害的。</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">第五条 
+社会保险行政部门认定下列情形为“因工外出期间”的，人民法院应予支持：</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">（一）职工受用人单位唱派或者因工作需要在工作场所以外从事与工作职责有关的活动期间；</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">（二）职工受用人单位指派外出学习或者开会期间；</span><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: Verdana"></span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">（三）职工因工作需要的其他外出活动期间。</span><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: Verdana"></span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">职工因工外出期间从事与工作或者受用人单位指派外出学习、开会无关的个人活动受到伤害，社会保险行政部门不认定为工伤的，人民法院应予支持。</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">第六条 
+对社会保险行政部门认定下列情形为“上下班途中”的，人民法院应予支持：</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">（一）在合理时间内往返于工作地与佃听地、经常居住地、单位宿舍的合理路线的上下班途中；</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">（二）在合理时间内往返于工作地与配偶、父母、子女居住地的合理路线的上下班途中；</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">（三）从事属于日常工作生活所需要的活动，且在合理时间和合理路线的上下班途中；</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">（四）在合理时间内其他合理路线的上下班途中。</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">第七条 
+由于不属于职工或者其近亲属自身原因超过工伤认定申请期限的，被耽误的时间不计算在工伤认定申请期限内。</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">有下列情形之一耽误申请时间的，应当认定为不属于职工或者其近亲属自身原因：</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">（一）不可杭力；</span><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: Verdana"></span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">（二）人身自由受到限制；</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">（三）属于用人单位立原因；</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">（四）社会保险行政部门登记制度不完善；</span><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: Verdana"></span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">（五）当事人对是否存在劳动关系申请仲裁、提起民事诉讼。</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">第八条 
+职工因第三人的原因受到伤害，社会保险行政部门以职工或者其近亲属已经对第三人提起民事诉讼或者获得民事赌偿为由，作出不予受理工伤认定申请或者不予认定工伤决定的，人民法院不予支持。</span><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: Verdana"></span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">职工因第三人的原因受到伤害，社会保险行政部门已经作出工伤认定，</span><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: red; FONT-FAMILY: 仿宋_GB2312">职工或者其近亲属未对第三人提起民事诉讼或者尚未获得民事赌偿，起诉要求社会保险经办机构支付工伤保险待遇的，人民法院应予支持。</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">职工因第三人的原因导致工伤，社会保险经办机构以职工或者其近亲属已经对第三人提起民事诉讼为由，拒绝支付工伤保险待遇的，人民法院不予支持，但第三人已经支付的医疗费用除外。</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">第九条 
+因工伤认定申请人或者用人单位隐瞒有关情况或者提供虚假材料，导致工伤认定错误的，社会保险行政部门可以在诉讼中依法予以更正。</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">工伤认定依法更正后，原告不申请撤诉，社会保险行政部门在作出原工伤认定时有过错的，人民法院应当判决确认违法；社会保险行政部门无过错的，人民法院可以驳回原告诉讼请求。</span></p><p style="TEXT-INDENT: 43px"><span style="FONT-SIZE: 21px; BACKGROUND: white; COLOR: #333333; FONT-FAMILY: 仿宋_GB2312">第十条 
+最高人民法院以前颁布的司法解释与本规定不一致的，以本规定为准。</span></p><p><br></p>
+					</font>
+    			</div>
+   				<div class="KeysList" style="margin-top: 5px;">
+					<div class="jiathis_style">
+						<span class="jiathis_txt">分享到：</span>
+						<a class="jiathis_button_qzone" title="分享到QQ空间" href="javascript:;" onclick="jiathis_sendto('qzone');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_qzone">QQ空间</span>
+						</a>
+						<a class="jiathis_button_tsina" title="分享到微博" href="javascript:;" onclick="jiathis_sendto('tsina');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_tsina">新浪微博</span>
+						</a>
+						<a class="jiathis_button_tqq" title="分享到腾讯微博" href="javascript:;" onclick="jiathis_sendto('tqq');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_tqq">腾讯微博</span>
+						</a>
+						<a class="jiathis_button_renren" title="分享到人人网" href="javascript:;" onclick="jiathis_sendto('renren');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_renren">人人网</span>
+						</a>
+						<a href="javascript:;" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+						<a class="jiathis_counter_style">
+							<span class="jiathis_button_expanded jiathis_counter jiathis_bubble_style" id="jiathis_counter_36" title="累计分享0次">0</span>
+						</a>
+					</div>
+					<script type="text/javascript" src="../../../../code/jia.js" ></script>
+				</div>
+   				<div class="KeysList">
+					<div class="right">
+			  			<a href="javascript:;" target="_blank" class="box_02">我要推荐</a>&emsp;
+						<!--a class="box_02" href="/syqt/rssdy/" target="_blank">RSS定制</a>&emsp;-->
+			 			<a class="box_02" href="../../../../syqt/wzjc/index.html" target="_blank">网站纠错</a>&emsp;
+						<!--a class="box_02" href="#" target="_blank">返回顶部</a-->
+					</div>
+				</div>
+    			<div class="page">
+					<div id="prevpage">
+						<span>上一篇：</span><a href="javascript:;" id="no1">无</a>
+						
+							<script type="text/javascript">
+								var  str="";
+								var str_1 = "./t20170811_21251014.html";
+								var str_4 = '贵州省建设工程务工人员工资支付保障金实施办法  贵州省人民政府令';
+								if(str_4!="")
+								{
+									jQuery("#no1").hide();
+									if (str=="") {
+										document.write('<a  href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									} else {
+										document.write('<a  href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									}
+								}
+							</script>
+						
+					</div>
+					<div id="prevpage">
+						<span>下一篇：</span><a href="javascript:;" id="no2">无</a>
+						
+					</div>
+    			</div>
+   				<div class="xgxx">
+        			<h1><span>相关信息</span></h1>
+					<ul>
+						<script type="text/javascript">
+							var key="";
+							if(key!=''&&key!='null'){
+								
+							}else{
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "./t20170811_21251042.html";
+									var str_4 = '工伤保险条例';
+									var str_2 = '2017-08-11';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "./t20170811_21251018.html";
+									var str_4 = '社会保险法';
+									var str_2 = '2017-08-11';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "./t20170811_21251014.html";
+									var str_4 = '贵州省建设工程务工人员工资支付保障金实施办法  贵州省人民政府令';
+									var str_2 = '2017-08-11';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "./t20170811_21251004.html";
+									var str_4 = '最高人民法院关于审理工伤保险行政案件若干问题的规定 法释【2014】9号';
+									var str_2 = '2017-08-11';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+								
+							}
+						 </script>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="foot_bj">
+	<div class="foot_nr">
+		<p>
+			<a href="../../../../syqt/rssdy/index.html">RSS订阅</a>|
+			<a href="../../../../syqt/lxfs/index.html">联系方式</a>|
+			<a href="../../../../syqt/wzdt/index.html">网站地图</a>
+		</p>
+		<p>Copyright 2010 All Rights Reserved      主办：道真县人力资源网</p>
+		<p>电话：0851-25782065       技术支持：<a href="javascript:;" target="_blank">贵州多彩博虹科技有限公司</a></p>
+		<p>(建议使用1024×768分辨率 IE70以上版本浏览器) </p>
+		<p style="margin-top: 12px;">
+			<!--a target="_blank" href="http://bszs.conac.cn/sitename?method=show&id=04E0DEEC2DCA0288E053022819ACC535">
+				<img src="/images/dz_jg.png" /></a-->
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src=' http://dcs.conac.cn/js/24/356/2168/40584250/CA243562168405842500001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+		</p>
+	</div>
+</div>
+<script id="_trs_ta_js" src="../../../../c/js/ta-1290.js" async="async" defer="defer"></script>
+    </body>
+</html>

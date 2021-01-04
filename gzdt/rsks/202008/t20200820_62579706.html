@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>道真自治县2020年公开选调尹珍街道办工作人员进入资格复审人员名单公示</title>
+		<link rel="stylesheet" href="../../../images/nry.css">
+		<meta name="Keywords" content="道真人社局,道真县人力资源网,道真人事考试,道真县人力资源与社会保障,道真县人社局组织全体党员参加扫墓活动">
+<script type="text/javascript" src="../../../images/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../../images/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+    jQuery(function() {
+		jQuery('#j_search_btn').click(function() {
+			var str = jQuery("#keyword").val();
+			checks(str);
+		});
+	});
+	function checks(t) {
+		t = t.replace(/(^\s+)|(\s+$)/g, "");
+		if (t == "" || t == "请输入关键检索字") {
+			alert('请输入有效内容');
+			return false;
+		}
+		szMsg = "[#_%&'/",
+		";:=!^]";
+		alertStr = "";
+		for (i = 1; i < szMsg.length + 1; i++) {
+			if (t.indexOf(szMsg.substring(i - 1, i)) > -1) {
+				alertStr = "请勿包含非法字符如[#_%&'/",
+				";:=!^]";
+				alert(alertStr);
+				// break;
+				return false;
+			}
+		}
+		var key = document.getElementById("keyword").value;
+		window.location.href ="/search.html?keyword=" + key;
+		return true;
+	}
+function sub(){
+    window.location.href ="/search.shtml";
+}
+function AddFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle)
+    } catch (e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, "")
+        } catch (e) {
+            alert("加入收藏失败，请使用Ctrl+D进行添加")
+        }
+    }
+}
+function SetHome(obj, vrl) {
+    try {
+        obj.style.behavior = "url(#default#homepage)";
+        obj.setHomePage(vrl)
+    } catch (e) {
+        if (window.netscape) {
+            try {
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")
+            } catch (e) {
+                alert("此操作被浏览器拒绝！n请在浏览器地址栏输入\"about:config\"并回车n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。")
+            }
+            var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
+            prefs.setCharPref("browser.startup.homepage", vrl)
+        }
+    }
+}
+	//设为首页 
+	function SetHome(url){
+		if (document.all) {
+			document.body.style.behavior='url(#default#homepage)';
+			document.body.setHomePage(url);
+		}else{ 
+			alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+		}
+	}
+</script>
+<script type="text/javascript">
+      function GoTo() {
+          window.open("/syqt/wzjc/index.html?url=" + document.URL);
+      }
+</script>
+		<script type="text/javascript">
+			function fontResizer(smallFont,medFont,largeFont){
+				function clearSelected(){
+					$(".smallFont").removeClass("curFont");
+					$(".medFont").removeClass("curFont");
+					$(".largeFont").removeClass("curFont");
+				}
+				function saveState(curSize){
+					var date = new Date();
+					date.setTime(date.getTime()+(7*24*60*60*1000));
+					var expires = "; expires="+date.toGMTString();
+					document.cookie = "fontSizer"+"="+curSize+expires+"; path=/";
+				}
+			
+				$(".smallFont").click(function(){
+					$('#Zoom').css('font-size', smallFont);
+					$('#Zoom p').css('font-size', smallFont);
+					$('#Zoom span').css('font-size', smallFont);
+					$('#Zoom font').css('font-size', smallFont);
+					clearSelected();
+					$(".smallFont").addClass("curFont");
+					saveState(smallFont);
+				});
+			
+				$(".medFont").click(function(){
+					$('#Zoom').css('font-size', medFont);
+					$('#Zoom p').css('font-size', medFont);
+					$('#Zoom span').css('font-size', medFont);
+					$('#Zoom font').css('font-size', medFont);
+					clearSelected();
+					$(".medFont").addClass("curFont");
+					saveState(medFont);
+				});
+			
+				$(".largeFont").click(function(){
+					$('#Zoom').css('font-size', largeFont);
+					$('#Zoom p').css('font-size', largeFont);
+					$('#Zoom span').css('font-size', largeFont);
+					$('#Zoom font').css('font-size', largeFont);
+					$('#Zoom').css('line-height','40px');
+					clearSelected();
+					$(".largeFont").addClass("curFont");
+					saveState(largeFont);
+				});
+			
+				function getCookie(c_name){
+					if(document.cookie.length>0){
+						c_start=document.cookie.indexOf(c_name + "=");
+						if (c_start!=-1){
+							c_start=c_start + c_name.length+1;
+							c_end=document.cookie.indexOf(";",c_start); 
+							if(c_end==-1)c_end=document.cookie.length;
+							return unescape(document.cookie.substring(c_start,c_end));
+						}
+					} 
+					return "";
+				}
+			
+				var savedSize = getCookie('fontSizer');
+			
+				if(savedSize!=""){
+					$('#Zoom').css('font-size', savedSize);
+					switch(savedSize){
+						case smallFont: $(".smallFont").addClass("curFont");
+						break;
+						case medFont: $(".medFont").addClass("curFont");
+						break;
+						case largeFont: $(".largeFont").addClass("curFont");
+						break;
+						default: $(".medFont").addClass("curFont");
+					}
+				}else {
+					$('#Zoom').css('font-size', medFont);
+					$(".medFont").addClass("curFont");
+				}
+				
+			}
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				fontResizer('12px','16px','20px');
+			});
+		</script>
+		<script type="text/javascript">
+			function ChangeColor(ColorName){
+				$('#c').css('background', ColorName);
+				$('#Zoom p').css('background', ColorName);
+				$('#Zoom span').css('background', ColorName);
+				$('#Zoom font').css('background', ColorName);
+			}	
+		</script>
+	</head>
+	<body>
+		<!--天气js-->
+<script type="text/javascript">
+	function initArray() {
+		for (i = 0; i < initArray.arguments.length; i++)
+			this[i] = initArray.arguments[i];
+	}
+	var isnMonths = new initArray("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+	var isnDays = new initArray("  星期日", "  星期一", "  星期二", "  星期三", "  星期四", "  星期五", "  星期六", "  星期日");
+	today = new Date();
+	hrs = today.getHours();
+	min = today.getMinutes();
+	sec = today.getSeconds();
+	clckh = "" + ((hrs > 12) ? hrs - 12 : hrs);
+	clckm = ((min < 10) ? "0" : "") + min;
+	clcks = ((sec < 10) ? "0" : "") + sec;
+	clck = (hrs >= 12) ? "下午" : "上午";
+	var stnr = "";
+	var ns = "0123456789";
+	var a = "";
+
+	function getFullYear(d) {
+		yr = d.getYear();
+		if (yr < 1000)
+			yr += 1900;
+		return yr;
+	}
+</script>
+<div class="banner">
+	<!--顶部-->
+	<div class="dingb_bj">
+		<div class="dingb_nr">
+			<!--日期-->
+			<div class="riqi f_l">
+				<ul>
+					<li><span>今天是: </span>
+						<script type="text/javascript">
+							document.write("<div class='time'>" + getFullYear(today) + "年" + "" + isnMonths[today.getMonth()] + "月" + today.getDate() + "日" + isnDays[today.getDay()] + "</div>");
+						</script>
+					</li>
+				</ul>
+			</div>
+			<!--收藏-->
+			<div class="f_r ding_y">
+				<a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>|
+				<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>
+			</div>
+		</div>
+	</div>
+	<!--logo-->
+	<div class="logo_by" style="overflow: initial;">
+		<ul>
+			<li class="f_l"><a href="../../../index.html"><img src="../../../images/logo.png"></a></li>
+			<li class="f_r"><img src="../../../images/biaoyu.png"></li>
+		</ul>
+	</div>
+	<!--导航-->
+	<div class="nav_bj">
+		<div class="nav f_l">
+			<ul>
+				<li><a href="../../../index.html">网站首页</a></li>
+				<li><a href="../../index.html">工作动态</a></li>
+				<li><a href="../../../ywgz/index.html">业务工作</a></li>
+				<li><a href="../../../bmgk/index.html">部门概况</a></li>
+				<li><a href="../../../zwgk/index.html">政务公开</a></li>
+			</ul>
+		</div>
+		<!--搜索-->
+		<div class="sous f_r">
+    		<dl>
+				<dt><a href="javascript:void(0);" id="j_search_btn"><img src="../../../images/sous.png"></a></dt>
+				<dd>
+					<input id="keyword" name="keyword" type="text" class="sous_sy" value="请输入关键字" style="color:#666666; line-height:40px; font-size: 14px;" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#000'}" onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#9e9e9e'}">
+				</dd>
+			</dl>
+    	</div>
+	</div>
+</div>
+		<div class="content-main">
+			<div class="dqwz">
+				您当前所在位置：<a href="../../../index.html" title="首页" class="CurrChnlCls">首页</a>&nbsp;&raquo;&nbsp;<a href="../../index.html" title="工作动态" class="CurrChnlCls">工作动态</a>&nbsp;&raquo;&nbsp;<a href="../index.html" title="人事考试" class="CurrChnlCls">人事考试</a>
+			</div>
+			<div class="body_content" id="c">
+    			<div class="title">
+        			<h1>道真自治县2020年公开选调尹珍街道办工作人员进入资格复审人员名单公示</h1>
+        			<script type="text/javascript">
+						var fbt='';
+						if(fbt!=''){
+							document.write('<h2>'+fbt+'</h2>');
+						}
+					</script>
+        			<div class="toolbar">
+						发布时间：
+						<script type="text/javascript">
+							var  pubdata='2020年08月20日';
+							if(pubdata!=''){
+								document.write(pubdata);
+							}
+						</script>
+
+            			字体：
+						<span class="smallFont">小</span>
+						<span class="medFont curFont">中</span>
+						<span class="largeFont curFont">大</span> 
+						<script type="text/javascript">
+							var wzly='';
+							if(wzly!=''){
+								document.write('文章来源：'+wzly+'&emsp;');
+							}
+						</script>
+						<script type="text/javascript">
+							var zz='';
+							if(zz!=''){
+								document.write('作者：'+zz+'&emsp;');
+							}
+						</script>
+						点击量：<script src="http://rsj.gzdaozhen.gov.cn/count/index?id=62579706&siteid=501731"></script>次
+						<a href="javascript:window.print();">打印本页</a>&emsp;
+						<a href="javascript:window.opener=null;window.close()">关闭本页</a>&emsp;&emsp;
+						<i style="padding-left:10px">
+							视力保护色： 
+							<input onclick="ChangeColor('#F9F6AF')" name="bgcolor" src="../../../images/110827103140057.gif" type="image" align="absmiddle" height="13" width="13">
+							<input onclick="ChangeColor('#9DDBF4')" name="bgcolor22" src="../../../images/110827103140099.gif" type="image" align="absmiddle" height="13" width="13">
+							<input onclick="ChangeColor('#DEDEDE')" name="bgcolor2" src="../../../images/110827103140184.gif" type="image" align="absmiddle" height="13" width="13"> 
+							<input onclick="ChangeColor('#F9D1D9')" name="bgcolor2" src="../../../images/110827103140215.gif" type="image" align="absmiddle" height="13" width="13"> 
+							<input onclick="ChangeColor('#E4C8F8')" name="bgcolor2" src="../../../images/110827103140245.gif" type="image" align="absmiddle" height="13" width="13">	
+							<input onclick="ChangeColor('#ffffff')" name="bgcolor2" src="../../../images/110827103140292.gif" type="image" align="absmiddle" height="13" width="13">
+						</i>
+					</div>
+				</div>
+    			<div class="content">
+        			<!--视频开始-->
+					
+						
+					
+					<!--视频结束-->
+					<font id="Zoom">
+						<div class="view TRS_UEDITOR trs_paper_default trs_web"><p style="text-align: center;"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 微软雅黑,Microsoft YaHei; font-size: 24px; font-style: normal; font-weight: normal;" data-index="5">道真自治县2020年公开选调尹珍街道办工作人员进入资格复审人员</span></p><p style="text-align: center;"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 微软雅黑,Microsoft YaHei; font-size: 24px; font-style: normal; font-weight: normal;" data-index="5">名单公示</span></p><p style="background: rgb(255, 255, 255); margin: 0px; padding: 0px; text-align: left; line-height: 28px; text-indent: 32px;"><span style="color: rgb(51, 51, 51); letter-spacing: 0px; font-family: 微软雅黑; font-size: 16px; font-style: normal;"> </span></p><p style="background: rgb(255, 255, 255); margin: 0px; padding: 0px; text-align: left; line-height: 33px; text-indent: 32px;"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;"><span style="font-family: 仿宋_GB2312;"> 根据</span></span><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;"><span style="font-family: 仿宋_GB2312;">《道真自治县尹珍街道办事处公开选调工作人员简章》规定，我县于</span></span><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;">8</span><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;"><span style="font-family: 仿宋_GB2312;">月</span></span><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;">15</span><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;"><span style="font-family: 仿宋_GB2312;">日完成了笔试考试，笔试成绩已于</span></span><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;">8</span><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;"><span style="font-family: 仿宋_GB2312;">月</span>19日通过</span><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;"><span style="font-family: 仿宋_GB2312;">道真县人力资源网官网</span></span><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;"><span style="font-family: 仿宋_GB2312;">公布。在笔试参考人员中，根据笔试成绩从高到低，按资格复审人数与职位招聘计划数</span></span><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;">1</span><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;">:1比例确定资格复审人员，同一职位报考人员笔试成绩名次末位并列的同时确定为资格复审人员。经审核，现将进入资格复审人员名单进行</span><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;"><span style="font-family: 仿宋_GB2312;">公示。</span></span><strong><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: bold;"><span style="font-family: 仿宋_GB2312;">进入资格复审人员名单详见附件</span></span></strong></p><p style="background: rgb(255, 255, 255); margin: 0px; padding: 0px; text-align: left; line-height: 33px; text-indent: 0em;"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;"><span style="font-family: 仿宋_GB2312;">    联系电话：</span>0851-23130060,0851-23130026</span></p><p style="background: rgb(255, 255, 255); margin: 0px; padding: 0px; text-align: left; line-height: 33px; text-indent: 0em;"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;"><span style="font-family: 仿宋_GB2312;">  <strong>  附件：</strong><img style="margin-right: 2px; vertical-align: middle;" src="../../../govapp/lib/ueditor_demo/ueditor2/dialogs/attachment/fileTypeImages/icon_xls.gif" needdownload="false"><a title="道真自治县2020年公开选调尹珍街道办工作人员进入审查人员名单公示.xlsx" style="color: rgb(0, 102, 204); font-size: 12px;" href="javascript:;" otheroperation="false" appendix="true" oldsrc="/protect/P0202008/P020200820/P020200820394890236117.xlsx">道真自治县2020年公开选调尹珍街道办工作人员进入审查人员名单公示.xlsx</a></span></span></span></p><p style="background: rgb(255, 255, 255); margin: 0px; padding: 0px; text-align: left; line-height: 33px; text-indent: 0em;"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;"><span style="font-family: 仿宋_GB2312;"><br></span></span></span></p><p style="background: rgb(255, 255, 255); margin: 0px; padding: 0px; text-align: left; line-height: 33px; text-indent: 32px;"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;"><span style="font-family: 仿宋_GB2312;"> </span></span></p><p style="background: rgb(255, 255, 255); margin: 0px; padding: 0px; text-align: left; line-height: 33px; text-indent: 32px;"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;"><span style="font-family: 仿宋_GB2312;">                    道真自治县公开选调尹珍街道办工作人员领导小组办公室</span></span></p><p style="background: rgb(255, 255, 255); margin: 0px; padding: 0px; text-align: left; line-height: 33px; text-indent: 347px;"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;">         20</span><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;">20</span><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;"><span style="font-family: 仿宋_GB2312;">年</span></span><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;">8</span><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;"><span style="font-family: 仿宋_GB2312;">月</span></span><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;">20</span><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 仿宋_GB2312; font-size: 21px; font-style: normal; font-weight: normal;"><span style="font-family: 仿宋_GB2312;">日</span></span></p><p>&nbsp;</p></div>
+					</font>
+    			</div>
+   				<div class="KeysList" style="margin-top: 5px;">
+					<div class="jiathis_style">
+						<span class="jiathis_txt">分享到：</span>
+						<a class="jiathis_button_qzone" title="分享到QQ空间" href="javascript:;" onclick="jiathis_sendto('qzone');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_qzone">QQ空间</span>
+						</a>
+						<a class="jiathis_button_tsina" title="分享到微博" href="javascript:;" onclick="jiathis_sendto('tsina');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_tsina">新浪微博</span>
+						</a>
+						<a class="jiathis_button_tqq" title="分享到腾讯微博" href="javascript:;" onclick="jiathis_sendto('tqq');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_tqq">腾讯微博</span>
+						</a>
+						<a class="jiathis_button_renren" title="分享到人人网" href="javascript:;" onclick="jiathis_sendto('renren');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_renren">人人网</span>
+						</a>
+						<a href="javascript:;" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+						<a class="jiathis_counter_style">
+							<span class="jiathis_button_expanded jiathis_counter jiathis_bubble_style" id="jiathis_counter_36" title="累计分享0次">0</span>
+						</a>
+					</div>
+					<script type="text/javascript" src="../../../code/jia.js" ></script>
+				</div>
+   				<div class="KeysList">
+					<div class="right">
+			  			<a href="javascript:;" target="_blank" class="box_02">我要推荐</a>&emsp;
+						<!--a class="box_02" href="/syqt/rssdy/" target="_blank">RSS定制</a>&emsp;-->
+			 			<a class="box_02" href="../../../syqt/wzjc/index.html" target="_blank">网站纠错</a>&emsp;
+						<!--a class="box_02" href="#" target="_blank">返回顶部</a-->
+					</div>
+				</div>
+    			<div class="page">
+					<div id="prevpage">
+						<span>上一篇：</span><a href="javascript:;" id="no1">无</a>
+						
+					</div>
+					<div id="prevpage">
+						<span>下一篇：</span><a href="javascript:;" id="no2">无</a>
+						
+							<script type="text/javascript">
+								var  str="";
+								var str_1 = "./t20200819_62574460.html";
+								var str_4 = '道真自治县2020年公开选调尹珍街道办工作人员笔试成绩公示';
+								if(str_4!="")
+								{
+									jQuery("#no2").hide();
+									if (str=="") {
+										document.write('<a  href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									} else {
+										document.write('<a  href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									}
+								}
+							</script>
+						
+					</div>
+    			</div>
+   				<div class="xgxx">
+        			<h1><span>相关信息</span></h1>
+					<ul>
+						<script type="text/javascript">
+							var key="";
+							if(key!=''&&key!='null'){
+								
+							}else{
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "./t20200819_62574460.html";
+									var str_4 = '道真自治县2020年公开选调尹珍街道办工作人员笔试成绩公示';
+									var str_2 = '2020-08-19';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201911/t20191122_21957317.html";
+									var str_4 = '道真自治县2019年度符合晋升专业技术五、六级岗位任职条件人员名单公示的公示';
+									var str_2 = '2019-11-22';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201911/t20191122_21957318.html";
+									var str_4 = '道真自治县2019年度符合晋升专业技术五、六级岗位任职条件人员名单公示的公示';
+									var str_2 = '2019-11-22';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201911/t20191106_21948772.html";
+									var str_4 = '重庆方略精控金属制品有限公司招工简介';
+									var str_2 = '2019-11-06';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201910/t20191023_21941408.html";
+									var str_4 = '道真自治县2019年公开招聘事业单位拟人员名单（第三批）';
+									var str_2 = '2019-10-23';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+								
+							}
+						 </script>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="foot_bj">
+	<div class="foot_nr">
+		<p>
+			<a href="../../../syqt/rssdy/index.html">RSS订阅</a>|
+			<a href="../../../syqt/lxfs/index.html">联系方式</a>|
+			<a href="../../../syqt/wzdt/index.html">网站地图</a>
+		</p>
+		<p>Copyright 2010 All Rights Reserved      主办：道真县人力资源网</p>
+		<p>电话：0851-25782065       技术支持：<a href="javascript:;" target="_blank">贵州多彩博虹科技有限公司</a></p>
+		<p>(建议使用1024×768分辨率 IE70以上版本浏览器) </p>
+		<p style="margin-top: 12px;">
+			<!--a target="_blank" href="http://bszs.conac.cn/sitename?method=show&id=04E0DEEC2DCA0288E053022819ACC535">
+				<img src="/images/dz_jg.png" /></a-->
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src=' http://dcs.conac.cn/js/24/356/2168/40584250/CA243562168405842500001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+		</p>
+	</div>
+</div>
+<script id="_trs_ta_js" src="../../../c/js/ta-1290.js" async="async" defer="defer"></script>
+    </body>
+</html>

@@ -1,0 +1,480 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>2017年“就业政策进万家，真情服务你我他”主题宣传年活动方案</title>
+		<link rel="stylesheet" href="../../../images/nry.css">
+		<meta name="Keywords" content="道真人社局,道真县人力资源网,道真人事考试,道真县人力资源与社会保障,道真县人社局组织全体党员参加扫墓活动">
+<script type="text/javascript" src="../../../images/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../../images/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+    jQuery(function() {
+		jQuery('#j_search_btn').click(function() {
+			var str = jQuery("#keyword").val();
+			checks(str);
+		});
+	});
+	function checks(t) {
+		t = t.replace(/(^\s+)|(\s+$)/g, "");
+		if (t == "" || t == "请输入关键检索字") {
+			alert('请输入有效内容');
+			return false;
+		}
+		szMsg = "[#_%&'/",
+		";:=!^]";
+		alertStr = "";
+		for (i = 1; i < szMsg.length + 1; i++) {
+			if (t.indexOf(szMsg.substring(i - 1, i)) > -1) {
+				alertStr = "请勿包含非法字符如[#_%&'/",
+				";:=!^]";
+				alert(alertStr);
+				// break;
+				return false;
+			}
+		}
+		var key = document.getElementById("keyword").value;
+		window.location.href ="/search.html?keyword=" + key;
+		return true;
+	}
+function sub(){
+    window.location.href ="/search.shtml";
+}
+function AddFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle)
+    } catch (e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, "")
+        } catch (e) {
+            alert("加入收藏失败，请使用Ctrl+D进行添加")
+        }
+    }
+}
+function SetHome(obj, vrl) {
+    try {
+        obj.style.behavior = "url(#default#homepage)";
+        obj.setHomePage(vrl)
+    } catch (e) {
+        if (window.netscape) {
+            try {
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")
+            } catch (e) {
+                alert("此操作被浏览器拒绝！n请在浏览器地址栏输入\"about:config\"并回车n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。")
+            }
+            var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
+            prefs.setCharPref("browser.startup.homepage", vrl)
+        }
+    }
+}
+	//设为首页 
+	function SetHome(url){
+		if (document.all) {
+			document.body.style.behavior='url(#default#homepage)';
+			document.body.setHomePage(url);
+		}else{ 
+			alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+		}
+	}
+</script>
+<script type="text/javascript">
+      function GoTo() {
+          window.open("/syqt/wzjc/index.html?url=" + document.URL);
+      }
+</script>
+		<script type="text/javascript">
+			function fontResizer(smallFont,medFont,largeFont){
+				function clearSelected(){
+					$(".smallFont").removeClass("curFont");
+					$(".medFont").removeClass("curFont");
+					$(".largeFont").removeClass("curFont");
+				}
+				function saveState(curSize){
+					var date = new Date();
+					date.setTime(date.getTime()+(7*24*60*60*1000));
+					var expires = "; expires="+date.toGMTString();
+					document.cookie = "fontSizer"+"="+curSize+expires+"; path=/";
+				}
+			
+				$(".smallFont").click(function(){
+					$('#Zoom').css('font-size', smallFont);
+					$('#Zoom p').css('font-size', smallFont);
+					$('#Zoom span').css('font-size', smallFont);
+					$('#Zoom font').css('font-size', smallFont);
+					clearSelected();
+					$(".smallFont").addClass("curFont");
+					saveState(smallFont);
+				});
+			
+				$(".medFont").click(function(){
+					$('#Zoom').css('font-size', medFont);
+					$('#Zoom p').css('font-size', medFont);
+					$('#Zoom span').css('font-size', medFont);
+					$('#Zoom font').css('font-size', medFont);
+					clearSelected();
+					$(".medFont").addClass("curFont");
+					saveState(medFont);
+				});
+			
+				$(".largeFont").click(function(){
+					$('#Zoom').css('font-size', largeFont);
+					$('#Zoom p').css('font-size', largeFont);
+					$('#Zoom span').css('font-size', largeFont);
+					$('#Zoom font').css('font-size', largeFont);
+					$('#Zoom').css('line-height','40px');
+					clearSelected();
+					$(".largeFont").addClass("curFont");
+					saveState(largeFont);
+				});
+			
+				function getCookie(c_name){
+					if(document.cookie.length>0){
+						c_start=document.cookie.indexOf(c_name + "=");
+						if (c_start!=-1){
+							c_start=c_start + c_name.length+1;
+							c_end=document.cookie.indexOf(";",c_start); 
+							if(c_end==-1)c_end=document.cookie.length;
+							return unescape(document.cookie.substring(c_start,c_end));
+						}
+					} 
+					return "";
+				}
+			
+				var savedSize = getCookie('fontSizer');
+			
+				if(savedSize!=""){
+					$('#Zoom').css('font-size', savedSize);
+					switch(savedSize){
+						case smallFont: $(".smallFont").addClass("curFont");
+						break;
+						case medFont: $(".medFont").addClass("curFont");
+						break;
+						case largeFont: $(".largeFont").addClass("curFont");
+						break;
+						default: $(".medFont").addClass("curFont");
+					}
+				}else {
+					$('#Zoom').css('font-size', medFont);
+					$(".medFont").addClass("curFont");
+				}
+				
+			}
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				fontResizer('12px','16px','20px');
+			});
+		</script>
+		<script type="text/javascript">
+			function ChangeColor(ColorName){
+				$('#c').css('background', ColorName);
+				$('#Zoom p').css('background', ColorName);
+				$('#Zoom span').css('background', ColorName);
+				$('#Zoom font').css('background', ColorName);
+			}	
+		</script>
+	</head>
+	<body>
+		<!--天气js-->
+<script type="text/javascript">
+	function initArray() {
+		for (i = 0; i < initArray.arguments.length; i++)
+			this[i] = initArray.arguments[i];
+	}
+	var isnMonths = new initArray("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+	var isnDays = new initArray("  星期日", "  星期一", "  星期二", "  星期三", "  星期四", "  星期五", "  星期六", "  星期日");
+	today = new Date();
+	hrs = today.getHours();
+	min = today.getMinutes();
+	sec = today.getSeconds();
+	clckh = "" + ((hrs > 12) ? hrs - 12 : hrs);
+	clckm = ((min < 10) ? "0" : "") + min;
+	clcks = ((sec < 10) ? "0" : "") + sec;
+	clck = (hrs >= 12) ? "下午" : "上午";
+	var stnr = "";
+	var ns = "0123456789";
+	var a = "";
+
+	function getFullYear(d) {
+		yr = d.getYear();
+		if (yr < 1000)
+			yr += 1900;
+		return yr;
+	}
+</script>
+<div class="banner">
+	<!--顶部-->
+	<div class="dingb_bj">
+		<div class="dingb_nr">
+			<!--日期-->
+			<div class="riqi f_l">
+				<ul>
+					<li><span>今天是: </span>
+						<script type="text/javascript">
+							document.write("<div class='time'>" + getFullYear(today) + "年" + "" + isnMonths[today.getMonth()] + "月" + today.getDate() + "日" + isnDays[today.getDay()] + "</div>");
+						</script>
+					</li>
+				</ul>
+			</div>
+			<!--收藏-->
+			<div class="f_r ding_y">
+				<a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>|
+				<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>
+			</div>
+		</div>
+	</div>
+	<!--logo-->
+	<div class="logo_by" style="overflow: initial;">
+		<ul>
+			<li class="f_l"><a href="../../../index.html"><img src="../../../images/logo.png"></a></li>
+			<li class="f_r"><img src="../../../images/biaoyu.png"></li>
+		</ul>
+	</div>
+	<!--导航-->
+	<div class="nav_bj">
+		<div class="nav f_l">
+			<ul>
+				<li><a href="../../../index.html">网站首页</a></li>
+				<li><a href="../../../gzdt/index.html">工作动态</a></li>
+				<li><a href="../../../ywgz/index.html">业务工作</a></li>
+				<li><a href="../../../bmgk/index.html">部门概况</a></li>
+				<li><a href="../../index.html">政务公开</a></li>
+			</ul>
+		</div>
+		<!--搜索-->
+		<div class="sous f_r">
+    		<dl>
+				<dt><a href="javascript:void(0);" id="j_search_btn"><img src="../../../images/sous.png"></a></dt>
+				<dd>
+					<input id="keyword" name="keyword" type="text" class="sous_sy" value="请输入关键字" style="color:#666666; line-height:40px; font-size: 14px;" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#000'}" onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#9e9e9e'}">
+				</dd>
+			</dl>
+    	</div>
+	</div>
+</div>
+		<div class="content-main">
+			<div class="dqwz">
+				您当前所在位置：<a href="../../../index.html" title="首页" class="CurrChnlCls">首页</a>&nbsp;&raquo;&nbsp;<a href="../../index.html" title="政务公开" class="CurrChnlCls">政务公开</a>&nbsp;&raquo;&nbsp;<a href="../index.html" title="部门文件" class="CurrChnlCls">部门文件</a>
+			</div>
+			<div class="body_content" id="c">
+    			<div class="title">
+        			<h1>2017年“就业政策进万家，真情服务你我他”主题宣传年活动方案</h1>
+        			<script type="text/javascript">
+						var fbt='';
+						if(fbt!=''){
+							document.write('<h2>'+fbt+'</h2>');
+						}
+					</script>
+        			<div class="toolbar">
+						发布时间：
+						<script type="text/javascript">
+							var  pubdata='2017年07月02日';
+							if(pubdata!=''){
+								document.write(pubdata);
+							}
+						</script>
+
+            			字体：
+						<span class="smallFont">小</span>
+						<span class="medFont curFont">中</span>
+						<span class="largeFont curFont">大</span> 
+						<script type="text/javascript">
+							var wzly='';
+							if(wzly!=''){
+								document.write('文章来源：'+wzly+'&emsp;');
+							}
+						</script>
+						<script type="text/javascript">
+							var zz='';
+							if(zz!=''){
+								document.write('作者：'+zz+'&emsp;');
+							}
+						</script>
+						点击量：<script src="http://rsj.gzdaozhen.gov.cn/count/index?id=21164062&siteid=501731"></script>次
+						<a href="javascript:window.print();">打印本页</a>&emsp;
+						<a href="javascript:window.opener=null;window.close()">关闭本页</a>&emsp;&emsp;
+						<i style="padding-left:10px">
+							视力保护色： 
+							<input onclick="ChangeColor('#F9F6AF')" name="bgcolor" src="../../../images/110827103140057.gif" type="image" align="absmiddle" height="13" width="13">
+							<input onclick="ChangeColor('#9DDBF4')" name="bgcolor22" src="../../../images/110827103140099.gif" type="image" align="absmiddle" height="13" width="13">
+							<input onclick="ChangeColor('#DEDEDE')" name="bgcolor2" src="../../../images/110827103140184.gif" type="image" align="absmiddle" height="13" width="13"> 
+							<input onclick="ChangeColor('#F9D1D9')" name="bgcolor2" src="../../../images/110827103140215.gif" type="image" align="absmiddle" height="13" width="13"> 
+							<input onclick="ChangeColor('#E4C8F8')" name="bgcolor2" src="../../../images/110827103140245.gif" type="image" align="absmiddle" height="13" width="13">	
+							<input onclick="ChangeColor('#ffffff')" name="bgcolor2" src="../../../images/110827103140292.gif" type="image" align="absmiddle" height="13" width="13">
+						</i>
+					</div>
+				</div>
+    			<div class="content">
+        			<!--视频开始-->
+					
+						
+					
+					<!--视频结束-->
+					<font id="Zoom">
+						<p style="text-indent:73px;line-height:40px"><span style=";font-family:方正小标宋简体;font-size:29px"><span style="font-family:方正小标宋简体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 道真县人力资源网</span></span></p><p style="text-align:center;line-height:40px"><span style=";font-family:方正小标宋简体;font-size:29px"><span style="font-family:方正小标宋简体">关于印发《</span>2017年“就业政策进万家，真情服务你我他”主题宣传年活动方案》的通知</span></p><p style="text-align:left;line-height:40px"><br></p><p style="line-height:31px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">各乡（镇）人力资源和社会保障服务中心：</span></span></p><p style="text-indent:43px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">《</span>2017年“就业政策进万家，真情服务你我他”主题宣传年活动方案》已经局领导研究同意，现印发给你们，请遵照执行。</span></p><p style="text-indent:43px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 道真县人力资源网</span></span></p><p style="text-indent:43px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2017年5月23日</span></p><p style="text-indent:43px;line-height:40px"><br></p><p style="text-align:center;line-height:40px"><br></p><p style="text-align:center;line-height:40px"><br></p><p style="text-align:center;line-height:40px"><span style=";font-family:方正小标宋简体;font-size:29px">2017年“就业政策进万家，真情服务你我他”主题宣传年活动方案</span></p><p style="text-indent:43px;text-align:center;line-height:40px"><br></p><p style="text-indent:43px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">为进一步加大就业创业政策宣传力度，全面提高政策的知晓率和扶持精准度，不断拓宽受众面，充分调动劳动者就业创业的积极性，确保惠民政策落地生根，充分释放各项政策红利。根据遵市人社通</span></span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">〔</span>2017〕79号文件精神，我局特制定</span><span style=";font-family:仿宋_GB2312;font-size:21px">2017年“就业政策进万家，真情服务你我他”主题宣传年活动方案，请各乡镇按时间配合县级活动，组织开展宣传活动。</span></p><p style="margin-left:91px;line-height:40px"><span style="font-family:黑体;font-size:21px">一、</span><span style=";font-family:黑体;font-size:21px"><span style="font-family:黑体">总体目标</span></span></p><p style="text-indent:42px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">在全县组织开展</span>“就业政策进万家，真情服务你我他”主题宣传年活动，全面深入贯彻党中央、国务院、省委、省政府和市委、市政府、县委、县政府对就业工作的一系列重要部署，紧紧围绕我县出台的系列就业创业政策措施，充分利用报纸、广播电视、网站、微信公众号等各种媒介，坚持日常宣传和集中宣传相结合，全方位、多角度、立体化宣传就业创业政策，努力提升就业政策知晓率，为劳动者就业创业提供便利条件。</span></p><p style="margin-left:91px;line-height:40px"><span style="font-family:黑体;font-size:21px">二、</span><span style=";font-family:黑体;font-size:21px"><span style="font-family:黑体">宣传重点</span></span></p><p style="text-indent:42px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">结合今年我县多渠道促进高校毕业生就业创业、提高就业扶贫精准度促进农村贫困劳动力就业、开展就业援助专项行动确保零就业家庭动态清零等重点群体就业工作实际，重点面向园区企业、高校毕业生、农村贫困劳动力、易地移民搬迁劳动力、登记失业人员、就业困难人员等重点群体宣传就业创业政策。</span></span></p><p style="margin-left:91px;line-height:40px"><span style="font-family:黑体;font-size:21px">三、</span><span style=";font-family:黑体;font-size:21px"><span style="font-family:黑体">组织保障</span></span></p><p style="text-indent:42px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">为确保全县</span>2017年“就业政策进万家，真情服务你我他”主题宣传年活动工作有序推进，特成立宣传活动领导小组：</span></p><p style="text-indent:42px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">组</span><span style="font-family:仿宋_GB2312">长：江丛林（县委组织部副部长、县人社局局长）</span></span></p><p style="text-indent:42px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">副组长：高志来（县人社局副局长）</span></span></p><p style="text-indent:126px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">李晓梅（县就业局局长）</span></span></p><p style="text-indent:42px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">成</span><span style="font-family:仿宋_GB2312">员：杨</span><span style="font-family:仿宋_GB2312">熙（县人社局办公室负责人）</span></span></p><p style="text-indent:125px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">张全芬（县就业局综合股股长）</span></span></p><p style="text-indent:126px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">冷国芬（县就业局就业服务股股长）</span></span></p><p style="text-indent:126px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">熊</span><span style="font-family:仿宋_GB2312">林（县就业局创业服务股股长）</span></span></p><p style="text-indent:126px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">郑</span><span style="font-family:仿宋_GB2312">敏（县就业局工作人员）</span></span></p><p style="text-indent:126px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">各乡镇人社服务中心负责人</span></span></p><p style="text-indent:42px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">宣传活动领导小组办公室设在县就业局，由李晓梅同志任办公室主任，负责宣传活动的组织和协调工作，确保宣传活动有序开展。</span></span></p><p style="margin-left:91px;line-height:40px"><span style="font-family:黑体;font-size:21px">四、</span><span style=";font-family:黑体;font-size:21px"><span style="font-family:黑体">活动安排</span></span></p><p style="text-indent:32px;line-height:40px"><strong><span style=";font-family:楷体_GB2312;font-weight:bold;font-size:21px"><span style="font-family:楷体_GB2312">（一）开展全县</span>“</span></strong><strong><span style=";font-family:仿宋_GB2312;font-weight:bold;font-size:21px"><span style="font-family:仿宋_GB2312">就业政策进万家，真情服务你我他</span></span></strong><strong><span style=";font-family:楷体_GB2312;font-weight:bold;font-size:21px">”宣传统一行动日活动（5月、9月）。</span></strong><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">按照省厅确定的全省就业政策宣传统一行动日的具体时间，各乡镇在街上、乡镇社区（村）、企业或园区等人员较集中的地方同步组织开展就业政策集中宣传日活动，向社会集中发布介绍就业创业政策，接受公众现场咨询。</span></span></p><p style="text-indent:21px;line-height:40px"><strong><span style=";font-family:楷体_GB2312;font-weight:bold;font-size:21px"><span style="font-family:楷体_GB2312">（二）组织开展</span>“就业创业进园区”媒体联合采访宣传活动（4月-12月）。</span></strong><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">在《道真报》开辟就业创业专栏</span>,联合相关媒体深入园区、乡镇，采访高校毕业生、返乡农民工、易地扶贫搬迁贫困劳动力等群体就业创业典型事例，挖掘创业故事，对创业孵化基地、农民工创业园等创业平台的管理和运行、政策落实情况进行跟踪报道，形成典型引导、典型激励、典型带动的舆论导向。</span></p><p style="line-height:40px"><strong><span style=";font-family:楷体_GB2312;font-weight:bold;font-size:21px"><span style="font-family:楷体_GB2312">　（三）组织开展就业创业政策</span>“四进”服务宣传活动</span></strong></p><p style="text-indent:32px;line-height:40px"><strong><span style=";font-family:仿宋_GB2312;font-weight:bold;font-size:21px">&nbsp;1.开展就业创业政策进乡村（社区）活动（4月-12月）。一是</span></strong><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">就业创业政策进村入户</span></span><strong><span style=";font-family:仿宋_GB2312;font-weight:bold;font-size:21px"><span style="font-family:仿宋_GB2312">。</span></span></strong><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">各乡镇通过驻村干部进村入户、走街串巷，宣讲就业创业优惠政策及业务办理流程，特别是到易地扶贫搬迁点向贫困劳动力发放就业创业政策宣传册、明白卡，力争做到应享尽知。</span></span><strong><span style=";font-family:仿宋_GB2312;font-weight:bold;font-size:21px"><span style="font-family:仿宋_GB2312">二是</span></span></strong><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">就业创业政策赶大集。乡镇人社服务中心利用乡镇商贸和集市，组织工作人员上街宣讲就业创业优惠扶持政策，发放明白卡。</span></span><strong><span style=";font-family:仿宋_GB2312;font-weight:bold;font-size:21px"><span style="font-family:仿宋_GB2312">三是</span></span></strong><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">利用宣传车宣传政策作用，进行不定期流动宣传。</span></span></p><p style="text-indent:32px;line-height:40px"><strong><span style=";font-family:仿宋_GB2312;font-weight:bold;font-size:21px">&nbsp;2.开展就业创业政策进企业活动（4月-12月）。</span></strong><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">围绕</span>“民营企业招聘周活动”，以园区企业为重点，县就业局工作人员登门提供创业担保贷款及贴息、职业培训补贴、社会保险补贴、岗位开发补贴、就业见习补贴等政策和人力资源服务，现场解答企业咨询，发放有关扶持政策宣传材料。</span></p><p style="text-indent:42px;line-height:40px"><strong><span style=";font-family:仿宋_GB2312;font-weight:bold;font-size:21px">3.开展就业创业政策进校园活动（5月-7月）。</span></strong><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">围绕</span>“就业服务进校园，助力青春起航”为主题的公共就业服务校园行活动,在我县职中开展就业创业政策进校园活动，建立就业创业政策宣传的合作机制，制定就业创业政策宣传计划，定期组织部分创业成功人士、专业人士到职校进行政策讲解，最大限度地为即将走上社会的职校毕业生宣讲政策，介绍就业创业的方式方法，传授创业成功经验，助推创业成功。</span></p><p style="text-indent:42px;line-height:40px"><strong><span style=";font-family:仿宋_GB2312;font-weight:bold;font-size:21px">4.开展就业创业政策进园区活动（4月—12月）。</span></strong><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">以上玉工业园区、农民工返乡创业园等为重点，就业局工作人员进驻园区发放有关扶持政策汇编材料，提供创业担保贷款及贴息、就业技能培训补贴、社会保险补贴、公益性岗位补贴、就业见习补贴等政策咨询，解答就业创业者面临的各种疑难问题，做好后续跟踪服务。</span></span></p><p style="text-indent:42px;line-height:40px"><strong><span style=";font-family:楷体_GB2312;font-weight:bold;font-size:21px"><span style="font-family:楷体_GB2312">（四）举办就业创业成果展示活动（</span>11月—12月）。</span></strong><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">收集整理就业服务工作亮点、就业创业先进典型图片、工作剪影等图片资料，开展成果图片展示宣传。</span></span></p><p style="text-indent:42px;line-height:40px"><span style=";font-family:黑体;font-size:21px"><span style="font-family:黑体">五、工作要求</span></span></p><p style="text-indent:42px;line-height:40px"><strong><span style=";font-family:楷体_GB2312;font-weight:bold;font-size:21px"><span style="font-family:楷体_GB2312">（一）高度重视，精心组织。</span></span></strong><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">各乡镇要高度重视</span>,明确专人负责，按照方案规定的活动内容、时间节点，细化本乡镇宣传方案，积极做好政策宣传工作，确保宣传活动取得实效。</span></p><p style="text-indent:42px;line-height:40px"><strong><span style=";font-family:楷体_GB2312;font-weight:bold;font-size:21px"><span style="font-family:楷体_GB2312">（二）创新举措，务求实效。</span></span></strong><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">各乡镇要结合自身特色，创新宣传手段，做好特色宣传，突出宣传的针对性、精准性和实效性。</span></span></p><p style="text-indent:42px;line-height:40px"><strong><span style=";font-family:楷体_GB2312;font-weight:bold;font-size:21px"><span style="font-family:楷体_GB2312">（三）加强调度，总结经验。</span></span></strong><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">各乡镇要认真总结提炼工作中的好做法、好经验以及存在的问题和困难，为上级部门制定或调整就业创业政策提供决策依据。活动结束后，请各乡镇于</span>2017年12月1日前将本地开展主题活动的情况及统计报表报送县就业局。</span></p><p style="text-indent:42px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">联系人：张全芬</span></span></p><p style="text-indent:42px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">联系电话：</span>25782105</span></p><p style="text-indent:42px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">传真：</span>25782105</span></p><p style="text-indent:42px;line-height:40px"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">邮箱：</span></span><a href="mailto:912583768@qq.com"><span style="text-decoration:underline;"><span style=";font-family:宋体;color:rgb(0,0,0);text-underline:single">740979124@qq.com</span></span></a></p><p style="text-indent:42px;line-height:40px"><br></p><p style="text-indent:42px;line-height:40px"><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:21px"><span style="font-family:仿宋_GB2312">附件：</span>2017年</span><span style=";font-family:仿宋_GB2312;font-size:21px">“就业政策进万家，真情服务你我他”主题宣传年活动开展情况统计表</span></p><p style="margin-top:7px;margin-bottom:7px;margin-top:auto;margin-bottom:auto;text-align:center;line-height:23px"><strong><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-weight:bold;font-size:29px">2017<span style="font-family:仿宋_GB2312">年“就业政策进万家，真情服务你我他”主题宣传年活动</span></span></strong></p><p style="margin-top:7px;margin-bottom:7px;margin-top:auto;margin-bottom:auto;text-align:center;line-height:23px"><strong><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-weight:bold;font-size:29px"><span style="font-family:仿宋_GB2312">开展情况统计表</span></span></strong></p><p style="margin-top:7px;margin-bottom:7px;margin-top:auto;margin-bottom:auto;text-align:left;line-height:27px"><span style=";font-family:仿宋_GB2312;color:rgb(51,51,51);font-size:16px"><span style="font-family:仿宋_GB2312">填报单位：</span><span style="font-family:仿宋_GB2312">单位：人</span></span></p><table width="911"><tbody><tr style="height:18px" class="firstRow"><td rowspan="2" style="padding: 0px 2px; border-width: 1px; border-style: solid; border-color: windowtext;" valign="center" width="58"><br></td><td rowspan="2" style="padding: 0px 2px; border-width: 1px 1px 1px 43px; border-style: solid solid solid none; border-color: windowtext windowtext windowtext rgb(255, 255, 255);" valign="center" width="66"><p style="margin-top:7px;margin-bottom:7px;margin-top:auto;margin-bottom:auto;text-align:center;line-height:19px"><span style=";font-family:仿宋_GB2312;letter-spacing:-0;font-size:13px">组织开展宣传活动次数</span></p></td><td rowspan="2" style="padding: 0px 2px; border-left: medium none;" valign="center" width="57"><p style="margin-top:7px;margin-bottom:7px;margin-top:auto;margin-bottom:auto;text-align:center;line-height:19px"><span style=";font-family:仿宋_GB2312;letter-spacing:-0;font-size:13px">发放宣传资料份数</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="40"><br></td><td colspan="5" style="padding: 0px 2px; border-left: medium none;" valign="top" width="225"><p style="margin-top:7px;margin-bottom:7px;margin-top:auto;margin-bottom:auto;text-align:center;line-height:19px"><span style=";font-family:仿宋_GB2312;letter-spacing:-0;font-size:13px">其中</span></p></td><td rowspan="2" style="padding: 0px 2px; border-left: medium none;" valign="center" width="53"><p style="margin-top:7px;margin-bottom:7px;margin-top:auto;margin-bottom:auto;text-align:center;line-height:19px"><span style=";font-family:仿宋_GB2312;letter-spacing:-0;font-size:13px">提供政策咨询服务人数</span></p></td><td colspan="5" style="padding: 0px 2px; border-left: medium none;" valign="top" width="209"><p style="margin-top:7px;margin-bottom:7px;margin-top:auto;margin-bottom:auto;text-align:center;line-height:19px"><span style=";font-family:仿宋_GB2312;font-size:13px">其中</span></p></td><td rowspan="2" style="padding: 0px 2px; border-left: medium none;" valign="center" width="49"><p style="margin-top:7px;margin-bottom:7px;margin-top:auto;margin-bottom:auto;text-align:center;line-height:19px"><span style=";font-family:仿宋_GB2312;font-size:13px">“四进”活动开展情况</span></p></td><td colspan="4" style="padding: 0px 2px; border-left: medium none;" valign="top" width="155"><p style="margin-top:7px;margin-bottom:7px;margin-top:auto;margin-bottom:auto;text-align:center;line-height:19px"><span style=";font-family:仿宋_GB2312;font-size:13px">其中</span></p></td></tr><tr style="height:80px"><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="40"><p style="text-align:center;line-height:19px"><span style=";font-family:仿宋_GB2312;font-size:13px">政策文件（份）</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="50"><p style="text-align:center;line-height:19px"><span style=";font-family:仿宋_GB2312;font-size:13px">明白卡（张）</span></p><p style="text-align:center;line-height:19px"><br></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="43"><p style="text-align:center;line-height:19px"><span style=";font-family:仿宋_GB2312;font-size:13px">办事指南折页（份）</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="42"><p style="text-align:center;line-height:19px"><span style=";font-family:仿宋_GB2312;font-size:13px">漫画画册（册）</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="47"><p style="text-align:center;line-height:19px"><span style=";font-family:仿宋_GB2312;font-size:13px">宣传环保袋（个）</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="43"><p style="text-align:center;line-height:19px"><span style=";font-family:仿宋_GB2312;font-size:13px">其他</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="top" width="42"><p style="margin-top:7px;margin-bottom:7px;margin-top:auto;margin-bottom:auto;text-align:center;line-height:19px"><span style=";font-family:仿宋_GB2312;letter-spacing:-0;font-size:13px">高校毕业生</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="top" width="42"><p style="margin-top:7px;margin-bottom:7px;margin-top:auto;margin-bottom:auto;text-align:center;line-height:19px"><span style=";font-family:仿宋_GB2312;letter-spacing:-0;font-size:13px">返乡农民工</span></p></td><td style="padding: 0px 2px; border-width: 1px; border-style: solid; border-color: windowtext;" valign="top" width="42"><p style="text-align:center;line-height:19px"><span style=";font-family:仿宋_GB2312;letter-spacing:-0;font-size:13px">易地扶贫搬迁贫困劳动力</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="top" width="42"><p style="text-align:center;line-height:19px"><span style=";font-family:仿宋_GB2312;letter-spacing:-0;font-size:13px">化解过剩产能职工</span></p><p style="text-align:center;line-height:19px"><br></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="top" width="42"><p style="margin-top:7px;margin-bottom:7px;margin-top:auto;margin-bottom:auto;text-align:center;line-height:19px"><span style=";font-family:仿宋_GB2312;letter-spacing:-0;font-size:13px">其他</span></p></td><td style="padding: 0px 2px; border-width: 1px; border-style: solid; border-color: windowtext;" valign="top" width="34"><p style="margin-top:7px;margin-bottom:7px;margin-top:auto;margin-bottom:auto;text-align:center;line-height:19px"><span style=";font-family:仿宋_GB2312;font-size:13px">进乡村（社区）次数</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="45"><p style="margin-top:7px;margin-bottom:7px;margin-top:auto;margin-bottom:auto;text-align:center;line-height:19px"><span style=";font-family:仿宋_GB2312;font-size:13px">进企业次数</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="41"><p style="margin-top:7px;margin-bottom:7px;margin-top:auto;margin-bottom:auto;text-align:center;line-height:19px"><span style=";font-family:仿宋_GB2312;font-size:13px">进校园次数</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="35"><p style="margin-top:7px;margin-bottom:7px;margin-top:auto;margin-bottom:auto;text-align:center;line-height:19px"><span style=";font-family:仿宋_GB2312;font-size:13px">进园区次数</span></p></td></tr><tr style="height:53px"><td style="padding: 0px 2px; border-left: 1px solid windowtext; border-right: 1px solid windowtext; border-top: medium none;" valign="center" width="58"><p style="margin-top:7px;margin-bottom:7px;margin-top:auto;margin-bottom:auto;text-align:center;line-height:19px"><span style="font-family:仿宋_GB2312;font-size:13px">甲</span></p></td><td style="padding: 0px 2px; border-left: 43px none rgb(255, 255, 255); border-right: 1px solid windowtext; border-top: medium none;" valign="center" width="66"><p style=";text-align:center"><span style="font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:13px">1</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="57"><p style="text-align:center"><span style="font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:13px">2</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="40"><p style="text-align:center"><span style="font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:13px">3</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="50"><p style="text-align:center"><span style="font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:13px">4</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="43"><p style="text-align:center"><span style="font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:13px">5</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="42"><p style="text-align:center"><span style="font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:13px">6</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="47"><p style="text-align:center"><span style="font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:13px">7</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="43"><p style="text-align:center"><span style="font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:13px">8</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="53"><p style="text-align:center"><span style="font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:13px">9</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="42"><p style="text-align:center"><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:13px">10</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="42"><p style="text-align:center"><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:13px">11</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="42"><p style="text-align:center"><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:13px">12</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="42"><p style="text-align:center"><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:13px">13</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="42"><p style="text-align:center"><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:13px">14</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="49"><p style="text-align:center"><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:13px">15</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="34"><p style="text-align:center"><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:13px">16</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="45"><p style="text-align:center"><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:13px">17</span></p></td><td style="padding: 0px 2px; border-left: 1px solid windowtext; border-right: 1px solid windowtext; border-top: medium none;" valign="center" width="41"><p style="text-align:center"><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:13px">18</span></p></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="35"><p style="text-align:center"><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:13px">19</span></p></td></tr><tr style="height:26px"><td style="padding: 0px 2px; border-left: 1px solid windowtext; border-right: 1px solid windowtext; border-top: medium none;" valign="center" width="58"><p style="margin-top:7px;margin-bottom:7px;margin-top:auto;margin-bottom:auto;text-align:center;line-height:27px"><span style=";font-family:仿宋_GB2312;font-size:13px">总计</span></p></td><td style="padding: 0px 2px; border-left: 43px none rgb(255, 255, 255); border-right: 1px solid windowtext; border-top: medium none;" valign="center" width="66"><br></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="57"><br></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="40"><br></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="50"><br></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="43"><br></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="42"><br></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="47"><br></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="43"><br></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="53"><br></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="42"><br></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="42"><br></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="42"><br></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="42"><br></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="42"><br></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="49"><br></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="34"><br></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="45"><br></td><td style="padding: 0px 2px; border-left: 1px solid windowtext; border-right: 1px solid windowtext; border-top: medium none;" valign="center" width="41"><br></td><td style="padding: 0px 2px; border-left: medium none;" valign="center" width="35"><br></td></tr></tbody></table><p style="margin-top:7px;margin-bottom:7px;margin-top:auto;margin-bottom:auto;text-align:left;line-height:22px"><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:15px"><span style="font-family:仿宋_GB2312">单位负责人签章：</span></span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:15px"><span style="font-family:仿宋_GB2312">填表人签章：</span></span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:15px"><span style="font-family:仿宋_GB2312">联系电话：　　　　填报日期：</span><span style="font-family:仿宋_GB2312">年</span></span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:15px"><span style="font-family:仿宋_GB2312">月</span></span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:15px"><span style="font-family:仿宋_GB2312">日</span></span></p><p style="margin-top:7px;margin-bottom:7px;margin-top:auto;margin-bottom:auto;text-align:left"><strong><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-weight:bold;font-size:15px"><span style="font-family:仿宋_GB2312">填报说明：</span></span></strong><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:15px"><span style="font-family:仿宋_GB2312">统计</span></span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:15px"><span style="font-family:仿宋_GB2312">数据</span></span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:15px"><span style="font-family:仿宋_GB2312">，</span></span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:15px"><span style="font-family:仿宋_GB2312">应为</span>2017年主题宣传年活动</span><span style=";font-family:仿宋_GB2312;color:rgb(0,0,0);font-size:15px"><span style="font-family:仿宋_GB2312">期间的统计数据。</span></span></p><p style="margin-right:21px;line-height:36px"><br></p><p style="margin-right:21px"><br></p><p><br></p>
+					</font>
+    			</div>
+   				<div class="KeysList" style="margin-top: 5px;">
+					<div class="jiathis_style">
+						<span class="jiathis_txt">分享到：</span>
+						<a class="jiathis_button_qzone" title="分享到QQ空间" href="javascript:;" onclick="jiathis_sendto('qzone');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_qzone">QQ空间</span>
+						</a>
+						<a class="jiathis_button_tsina" title="分享到微博" href="javascript:;" onclick="jiathis_sendto('tsina');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_tsina">新浪微博</span>
+						</a>
+						<a class="jiathis_button_tqq" title="分享到腾讯微博" href="javascript:;" onclick="jiathis_sendto('tqq');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_tqq">腾讯微博</span>
+						</a>
+						<a class="jiathis_button_renren" title="分享到人人网" href="javascript:;" onclick="jiathis_sendto('renren');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_renren">人人网</span>
+						</a>
+						<a href="javascript:;" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+						<a class="jiathis_counter_style">
+							<span class="jiathis_button_expanded jiathis_counter jiathis_bubble_style" id="jiathis_counter_36" title="累计分享0次">0</span>
+						</a>
+					</div>
+					<script type="text/javascript" src="../../../code/jia.js" ></script>
+				</div>
+   				<div class="KeysList">
+					<div class="right">
+			  			<a href="javascript:;" target="_blank" class="box_02">我要推荐</a>&emsp;
+						<!--a class="box_02" href="/syqt/rssdy/" target="_blank">RSS定制</a>&emsp;-->
+			 			<a class="box_02" href="../../../syqt/wzjc/index.html" target="_blank">网站纠错</a>&emsp;
+						<!--a class="box_02" href="#" target="_blank">返回顶部</a-->
+					</div>
+				</div>
+    			<div class="page">
+					<div id="prevpage">
+						<span>上一篇：</span><a href="javascript:;" id="no1">无</a>
+						
+							<script type="text/javascript">
+								var  str="";
+								var str_1 = "./t20170702_21164064.html";
+								var str_4 = '关于加快推进建设工程项目参加工伤 保险的通知';
+								if(str_4!="")
+								{
+									jQuery("#no1").hide();
+									if (str=="") {
+										document.write('<a  href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									} else {
+										document.write('<a  href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									}
+								}
+							</script>
+						
+					</div>
+					<div id="prevpage">
+						<span>下一篇：</span><a href="javascript:;" id="no2">无</a>
+						
+							<script type="text/javascript">
+								var  str="";
+								var str_1 = "./t20170702_21164061.html";
+								var str_4 = '关于切实做好2017年创业贷款贴息工作的通知';
+								if(str_4!="")
+								{
+									jQuery("#no2").hide();
+									if (str=="") {
+										document.write('<a  href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									} else {
+										document.write('<a  href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									}
+								}
+							</script>
+						
+					</div>
+    			</div>
+   				<div class="xgxx">
+        			<h1><span>相关信息</span></h1>
+					<ul>
+						<script type="text/javascript">
+							var key="";
+							if(key!=''&&key!='null'){
+								
+							}else{
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201810/t20181018_21761544.html";
+									var str_4 = '道真自治县2018年胡遵劳务协作项目补贴实施方案';
+									var str_2 = '2018-10-18';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201807/t20180718_21660969.html";
+									var str_4 = '关于做好2018年工程、农业、民营经济 系列职称申报评审工作的通知';
+									var str_2 = '2018-07-18';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201804/t20180413_21600393.html";
+									var str_4 = '2018年度中心组专题学习实施方案';
+									var str_2 = '2018-04-13';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201804/t20180413_21600389.html";
+									var str_4 = '关于进一步规范2018年社会保险业务工作的通知';
+									var str_2 = '2018-04-13';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201804/t20180413_21600387.html";
+									var str_4 = '关于印发《2018年脱贫攻坚“春风行动”工作方案》的通知';
+									var str_2 = '2018-04-13';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+								
+							}
+						 </script>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="foot_bj">
+	<div class="foot_nr">
+		<p>
+			<a href="../../../syqt/rssdy/index.html">RSS订阅</a>|
+			<a href="../../../syqt/lxfs/index.html">联系方式</a>|
+			<a href="../../../syqt/wzdt/index.html">网站地图</a>
+		</p>
+		<p>Copyright 2010 All Rights Reserved      主办：道真县人力资源网</p>
+		<p>电话：0851-25782065       技术支持：<a href="javascript:;" target="_blank">贵州多彩博虹科技有限公司</a></p>
+		<p>(建议使用1024×768分辨率 IE70以上版本浏览器) </p>
+		<p style="margin-top: 12px;">
+			<!--a target="_blank" href="http://bszs.conac.cn/sitename?method=show&id=04E0DEEC2DCA0288E053022819ACC535">
+				<img src="/images/dz_jg.png" /></a-->
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src=' http://dcs.conac.cn/js/24/356/2168/40584250/CA243562168405842500001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+		</p>
+	</div>
+</div>
+<script id="_trs_ta_js" src="../../../c/js/ta-1290.js" async="async" defer="defer"></script>
+    </body>
+</html>

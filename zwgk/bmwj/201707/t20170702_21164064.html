@@ -1,0 +1,480 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>关于加快推进建设工程项目参加工伤 保险的通知</title>
+		<link rel="stylesheet" href="../../../images/nry.css">
+		<meta name="Keywords" content="道真人社局,道真县人力资源网,道真人事考试,道真县人力资源与社会保障,道真县人社局组织全体党员参加扫墓活动">
+<script type="text/javascript" src="../../../images/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../../images/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+    jQuery(function() {
+		jQuery('#j_search_btn').click(function() {
+			var str = jQuery("#keyword").val();
+			checks(str);
+		});
+	});
+	function checks(t) {
+		t = t.replace(/(^\s+)|(\s+$)/g, "");
+		if (t == "" || t == "请输入关键检索字") {
+			alert('请输入有效内容');
+			return false;
+		}
+		szMsg = "[#_%&'/",
+		";:=!^]";
+		alertStr = "";
+		for (i = 1; i < szMsg.length + 1; i++) {
+			if (t.indexOf(szMsg.substring(i - 1, i)) > -1) {
+				alertStr = "请勿包含非法字符如[#_%&'/",
+				";:=!^]";
+				alert(alertStr);
+				// break;
+				return false;
+			}
+		}
+		var key = document.getElementById("keyword").value;
+		window.location.href ="/search.html?keyword=" + key;
+		return true;
+	}
+function sub(){
+    window.location.href ="/search.shtml";
+}
+function AddFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle)
+    } catch (e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, "")
+        } catch (e) {
+            alert("加入收藏失败，请使用Ctrl+D进行添加")
+        }
+    }
+}
+function SetHome(obj, vrl) {
+    try {
+        obj.style.behavior = "url(#default#homepage)";
+        obj.setHomePage(vrl)
+    } catch (e) {
+        if (window.netscape) {
+            try {
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")
+            } catch (e) {
+                alert("此操作被浏览器拒绝！n请在浏览器地址栏输入\"about:config\"并回车n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。")
+            }
+            var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
+            prefs.setCharPref("browser.startup.homepage", vrl)
+        }
+    }
+}
+	//设为首页 
+	function SetHome(url){
+		if (document.all) {
+			document.body.style.behavior='url(#default#homepage)';
+			document.body.setHomePage(url);
+		}else{ 
+			alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+		}
+	}
+</script>
+<script type="text/javascript">
+      function GoTo() {
+          window.open("/syqt/wzjc/index.html?url=" + document.URL);
+      }
+</script>
+		<script type="text/javascript">
+			function fontResizer(smallFont,medFont,largeFont){
+				function clearSelected(){
+					$(".smallFont").removeClass("curFont");
+					$(".medFont").removeClass("curFont");
+					$(".largeFont").removeClass("curFont");
+				}
+				function saveState(curSize){
+					var date = new Date();
+					date.setTime(date.getTime()+(7*24*60*60*1000));
+					var expires = "; expires="+date.toGMTString();
+					document.cookie = "fontSizer"+"="+curSize+expires+"; path=/";
+				}
+			
+				$(".smallFont").click(function(){
+					$('#Zoom').css('font-size', smallFont);
+					$('#Zoom p').css('font-size', smallFont);
+					$('#Zoom span').css('font-size', smallFont);
+					$('#Zoom font').css('font-size', smallFont);
+					clearSelected();
+					$(".smallFont").addClass("curFont");
+					saveState(smallFont);
+				});
+			
+				$(".medFont").click(function(){
+					$('#Zoom').css('font-size', medFont);
+					$('#Zoom p').css('font-size', medFont);
+					$('#Zoom span').css('font-size', medFont);
+					$('#Zoom font').css('font-size', medFont);
+					clearSelected();
+					$(".medFont").addClass("curFont");
+					saveState(medFont);
+				});
+			
+				$(".largeFont").click(function(){
+					$('#Zoom').css('font-size', largeFont);
+					$('#Zoom p').css('font-size', largeFont);
+					$('#Zoom span').css('font-size', largeFont);
+					$('#Zoom font').css('font-size', largeFont);
+					$('#Zoom').css('line-height','40px');
+					clearSelected();
+					$(".largeFont").addClass("curFont");
+					saveState(largeFont);
+				});
+			
+				function getCookie(c_name){
+					if(document.cookie.length>0){
+						c_start=document.cookie.indexOf(c_name + "=");
+						if (c_start!=-1){
+							c_start=c_start + c_name.length+1;
+							c_end=document.cookie.indexOf(";",c_start); 
+							if(c_end==-1)c_end=document.cookie.length;
+							return unescape(document.cookie.substring(c_start,c_end));
+						}
+					} 
+					return "";
+				}
+			
+				var savedSize = getCookie('fontSizer');
+			
+				if(savedSize!=""){
+					$('#Zoom').css('font-size', savedSize);
+					switch(savedSize){
+						case smallFont: $(".smallFont").addClass("curFont");
+						break;
+						case medFont: $(".medFont").addClass("curFont");
+						break;
+						case largeFont: $(".largeFont").addClass("curFont");
+						break;
+						default: $(".medFont").addClass("curFont");
+					}
+				}else {
+					$('#Zoom').css('font-size', medFont);
+					$(".medFont").addClass("curFont");
+				}
+				
+			}
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				fontResizer('12px','16px','20px');
+			});
+		</script>
+		<script type="text/javascript">
+			function ChangeColor(ColorName){
+				$('#c').css('background', ColorName);
+				$('#Zoom p').css('background', ColorName);
+				$('#Zoom span').css('background', ColorName);
+				$('#Zoom font').css('background', ColorName);
+			}	
+		</script>
+	</head>
+	<body>
+		<!--天气js-->
+<script type="text/javascript">
+	function initArray() {
+		for (i = 0; i < initArray.arguments.length; i++)
+			this[i] = initArray.arguments[i];
+	}
+	var isnMonths = new initArray("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+	var isnDays = new initArray("  星期日", "  星期一", "  星期二", "  星期三", "  星期四", "  星期五", "  星期六", "  星期日");
+	today = new Date();
+	hrs = today.getHours();
+	min = today.getMinutes();
+	sec = today.getSeconds();
+	clckh = "" + ((hrs > 12) ? hrs - 12 : hrs);
+	clckm = ((min < 10) ? "0" : "") + min;
+	clcks = ((sec < 10) ? "0" : "") + sec;
+	clck = (hrs >= 12) ? "下午" : "上午";
+	var stnr = "";
+	var ns = "0123456789";
+	var a = "";
+
+	function getFullYear(d) {
+		yr = d.getYear();
+		if (yr < 1000)
+			yr += 1900;
+		return yr;
+	}
+</script>
+<div class="banner">
+	<!--顶部-->
+	<div class="dingb_bj">
+		<div class="dingb_nr">
+			<!--日期-->
+			<div class="riqi f_l">
+				<ul>
+					<li><span>今天是: </span>
+						<script type="text/javascript">
+							document.write("<div class='time'>" + getFullYear(today) + "年" + "" + isnMonths[today.getMonth()] + "月" + today.getDate() + "日" + isnDays[today.getDay()] + "</div>");
+						</script>
+					</li>
+				</ul>
+			</div>
+			<!--收藏-->
+			<div class="f_r ding_y">
+				<a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>|
+				<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>
+			</div>
+		</div>
+	</div>
+	<!--logo-->
+	<div class="logo_by" style="overflow: initial;">
+		<ul>
+			<li class="f_l"><a href="../../../index.html"><img src="../../../images/logo.png"></a></li>
+			<li class="f_r"><img src="../../../images/biaoyu.png"></li>
+		</ul>
+	</div>
+	<!--导航-->
+	<div class="nav_bj">
+		<div class="nav f_l">
+			<ul>
+				<li><a href="../../../index.html">网站首页</a></li>
+				<li><a href="../../../gzdt/index.html">工作动态</a></li>
+				<li><a href="../../../ywgz/index.html">业务工作</a></li>
+				<li><a href="../../../bmgk/index.html">部门概况</a></li>
+				<li><a href="../../index.html">政务公开</a></li>
+			</ul>
+		</div>
+		<!--搜索-->
+		<div class="sous f_r">
+    		<dl>
+				<dt><a href="javascript:void(0);" id="j_search_btn"><img src="../../../images/sous.png"></a></dt>
+				<dd>
+					<input id="keyword" name="keyword" type="text" class="sous_sy" value="请输入关键字" style="color:#666666; line-height:40px; font-size: 14px;" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#000'}" onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#9e9e9e'}">
+				</dd>
+			</dl>
+    	</div>
+	</div>
+</div>
+		<div class="content-main">
+			<div class="dqwz">
+				您当前所在位置：<a href="../../../index.html" title="首页" class="CurrChnlCls">首页</a>&nbsp;&raquo;&nbsp;<a href="../../index.html" title="政务公开" class="CurrChnlCls">政务公开</a>&nbsp;&raquo;&nbsp;<a href="../index.html" title="部门文件" class="CurrChnlCls">部门文件</a>
+			</div>
+			<div class="body_content" id="c">
+    			<div class="title">
+        			<h1>关于加快推进建设工程项目参加工伤 保险的通知</h1>
+        			<script type="text/javascript">
+						var fbt='';
+						if(fbt!=''){
+							document.write('<h2>'+fbt+'</h2>');
+						}
+					</script>
+        			<div class="toolbar">
+						发布时间：
+						<script type="text/javascript">
+							var  pubdata='2017年07月02日';
+							if(pubdata!=''){
+								document.write(pubdata);
+							}
+						</script>
+
+            			字体：
+						<span class="smallFont">小</span>
+						<span class="medFont curFont">中</span>
+						<span class="largeFont curFont">大</span> 
+						<script type="text/javascript">
+							var wzly='';
+							if(wzly!=''){
+								document.write('文章来源：'+wzly+'&emsp;');
+							}
+						</script>
+						<script type="text/javascript">
+							var zz='';
+							if(zz!=''){
+								document.write('作者：'+zz+'&emsp;');
+							}
+						</script>
+						点击量：<script src="http://rsj.gzdaozhen.gov.cn/count/index?id=21164064&siteid=501731"></script>次
+						<a href="javascript:window.print();">打印本页</a>&emsp;
+						<a href="javascript:window.opener=null;window.close()">关闭本页</a>&emsp;&emsp;
+						<i style="padding-left:10px">
+							视力保护色： 
+							<input onclick="ChangeColor('#F9F6AF')" name="bgcolor" src="../../../images/110827103140057.gif" type="image" align="absmiddle" height="13" width="13">
+							<input onclick="ChangeColor('#9DDBF4')" name="bgcolor22" src="../../../images/110827103140099.gif" type="image" align="absmiddle" height="13" width="13">
+							<input onclick="ChangeColor('#DEDEDE')" name="bgcolor2" src="../../../images/110827103140184.gif" type="image" align="absmiddle" height="13" width="13"> 
+							<input onclick="ChangeColor('#F9D1D9')" name="bgcolor2" src="../../../images/110827103140215.gif" type="image" align="absmiddle" height="13" width="13"> 
+							<input onclick="ChangeColor('#E4C8F8')" name="bgcolor2" src="../../../images/110827103140245.gif" type="image" align="absmiddle" height="13" width="13">	
+							<input onclick="ChangeColor('#ffffff')" name="bgcolor2" src="../../../images/110827103140292.gif" type="image" align="absmiddle" height="13" width="13">
+						</i>
+					</div>
+				</div>
+    			<div class="content">
+        			<!--视频开始-->
+					
+						
+					
+					<!--视频结束-->
+					<font id="Zoom">
+						<div class="view TRS_UEDITOR trs_paper_default trs_external"><p style="text-align: center; line-height: 40px;"><span style="color: rgb(0, 0, 0); font-family: 方正小标宋简体; font-size: 29px;"><span style="font-family: 方正小标宋简体;">关于加快推进建设工程项目参加工伤</span></span></p><p style="text-align: center; line-height: 40px;"><span style="color: rgb(0, 0, 0); font-family: 方正小标宋简体; font-size: 29px;"><span style="font-family: 方正小标宋简体;">保险的通知</span></span></p><p style="line-height: 37px; margin-right: 0px; -ms-text-autospace: ideograph-numeric;"><br></p><p style="line-height: 37px; margin-right: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">各乡镇人民政府</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">、县直有关部门、</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">各建设工程施工单位：</span></span></p><p style="line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">根据人力资源和社会保障部、住房城乡建设部、安全监管总局、全国总工会《关于进一步做好建筑工伤保险工作的意见》（人社部发〔</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;">2014</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">〕</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;">103</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">号和贵州省人力资源和社会保障厅、贵州省住房和城乡建设厅《关于加快推进建设工程项目参加工伤保险的通知》（黔人社厅发〔</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;">2017</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">〕</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;">3</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">号）文件精神，全面实施建筑业参加工伤保险</span>“同舟计划”。为进一步做好建筑业工伤保险工作</span><span style="font-family: 仿宋_GB2312; font-size: 21px;">,</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">切实维护</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">建设项目</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">职工工伤保障权益，现将有关事项通知如下：</span></span></p><p style="line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">一、指导思想和任务目标</span></span></strong></p><p style="line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">以深入贯彻党的十八届三中、四中、五中、六中全会精神为指导，深入贯彻习近平总书记系列讲话精神，根据《社会保险法》、《建筑法》和《工伤保险条例》的规定，进一步完善我县工伤保险制度，</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">实现建设项目</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">参加工伤保险全覆盖，实现建筑业从业人员特别是农民工工伤保险权益的全面保障。</span></span></p><p style="line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">二、参保范围</span></span></strong></p><p style="line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">在我县行政辖区内的从事房屋建筑和市政基础设施工程建设项目水利、交通建设工程</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">等</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">全部纳入工伤保险参保范围，为参与项目建设的所有从业人员办理工伤保险，并缴纳工伤保险费</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">，</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">依照《工伤保险条例》规定享受工伤保险待遇。</span></span></p><p style="line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">三、实施步骤</span></span></strong></p><p style="line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（一）县住房城乡建设局要全面摸清行业内建筑企业在建项目和拟建项目以及参加工伤保险等基本情况报县人社局备案，县社保局以此为依据做好参保前的宣传准备工作。</span></span></p><p style="line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（二）工作行动领导小组按季对工作推进情况不定期督查，确保</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;">2017</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">年底将全县建筑企业从业人员全部纳入到工伤保险，基本实现全覆盖。</span></span></p><p style="line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（三）按相关建筑业参加工伤保险有关政策和措施，有计划、分步骤全面推进建筑业参加工伤保险工作，坚持收支两条线管理，用工单位按时缴纳工伤保险费，经办机构缩短支付业务办理时限，确保享受工伤待遇人员按时足额支付到位。</span></span></p><p style="line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">四、严格执行费率降低政策，提高建筑企业参加积极性</span></span></strong></p><p style="line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><strong><span style="font-family: 仿宋_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 仿宋_GB2312;">（一）基准费率调整</span></span></strong></p><p style="line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">按照黔人社厅发〔</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;">2017</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">〕</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;">3</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">号文件规定，从</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;">2017</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">年</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;">2</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">月</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;">20</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">日起，新签订合同的建设项目工程项目</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">，建筑施工企业按建设项目申报参加工伤保险，由总承包单位以合同金额税</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">前</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">造价一定比例代缴工伤保险费，以工程项目的工期为周期，基准缴费比例由原</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;">2</span><span style="font-family: 仿宋_GB2312; font-size: 21px;">‰下降为</span><span style="font-family: 仿宋_GB2312; font-size: 21px;">1</span><span style="font-family: 仿宋_GB2312; font-size: 21px;">‰</span><span style="font-family: 仿宋_GB2312; font-size: 21px;">.</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">追加工程造价的，必须相应补缴差额部分。</span></span></p><p style="line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><strong><span style="font-family: 仿宋_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 仿宋_GB2312;">（二）浮动费率调整</span></span></strong></p><p style="line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">建筑施工企业从业人员工伤保险实行浮动费率，费率的浮动调整，由省社保局根据建筑施工企业工伤保险基金运行情况和工伤事故发生率，按《工伤保险条例》的有关规定提出工伤保险费率调整意见，从</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;">2017</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">年起，浮动比例按基准缴费比例的</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;">50%</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">、</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;">80%</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">、</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;">100%</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">、</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;">120%</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">、</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;">150%</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">五个档次上下浮动。</span></span></p><p style="line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">五、优化经办流程，及时支付待遇</span></span></strong></p><p style="line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">县社保局要优化以建设工程项目参加工伤保险工作流程，切实解决参保单位和职工</span>“垫资”和“跑腿”问题，最大限度缩短流程、简化手续，力争实现施工企业办理参保缴费备案当日办结，建筑施工企业从业人员在参保建设项目施工工地上因工作原因遭受事故伤害或者患职业病的，按照《工伤保险条例》和省、市工伤保险待遇政策规定进行工伤认定、劳动能力鉴定、享受工伤保险有关待遇，所需费用按规定从工伤保险基金支付。</span></p><p style="line-height: 37px; margin-right: 0px; -ms-text-autospace: ideograph-numeric;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">&nbsp; &nbsp; 六、加强部门协作，强化工作督导</span></span></strong></p><p style="line-height: 37px; margin-right: 0px; -ms-text-autospace: ideograph-numeric;"><strong><span style="font-family: 仿宋_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 仿宋_GB2312;">&nbsp;&nbsp; （一）加强组织领导。</span></span></strong><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">在县人民政府的领导下，建立以</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">县人社局</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">牵头，县</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">住建局、安监局、总工会等单位</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">组成的</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">道真自治县建筑业参加工伤保险</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">联席会议制度</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">定期或不定期研究建筑企业参加工伤保险相关问题。</span></span></p><p style="line-height: 37px; margin-right: 0px; -ms-text-autospace: ideograph-numeric;"><strong><span style="font-family: 仿宋_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 仿宋_GB2312;">&nbsp;&nbsp; （二）明确部门职责。</span></span></strong><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">县人力资源和社会保障局负责牵头做好具体的参保工作流程，建设项目工伤保险政策的宣传培训，做好建筑施工企业从业人员工伤保险参保的监督管理，积极开展工伤预防工作。县社保局负责建设工程施工企业从业人员参加工伤保险参保登记、费用征缴以及因工伤残人员待遇核定与发放等经办服务。</span></span></p><p style="line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">县住建局负责对管辖范围内建设工程项目日常管理，督促建筑施工企业参加工伤保险，并及时将建设项目报批、建筑施工企业分布和建设项目从业人员情况等提供给县人力资源和社会保障局。加强施工许可证管理和施工企业劳动用工管理，将按规定参加工伤保险作为建设项目施工许可的必备前置条件之一，对未提交社保经办机构开具的按项目参加工伤保险证明的建设项目，不予核发施工许可证。</span></span></p><p style="line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">县安监局依法行使综合监督管理职权。指导协调、监督检查建筑行业安全生产工作，监督考核并通报建筑行业安全生产控制指标执行情况，监督事故查处和责任追究落实情况，统计和通报安全生产事故以及人员伤亡情况。</span></span></p><p style="line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">县总工会组织负责加强对建筑企业工会的政策宣传，对用人单位未按规定时间提出工伤认定申请的，企业工会可直接向县人力资源和社会保障局提出工伤认定申请，维护和监督工伤职工各项权益的落实。</span></span></p><p style="line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><strong><span style="font-family: 仿宋_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 仿宋_GB2312;">（三）建立工作联席会议制度。</span></span></strong><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">为了进一步加强对建筑业参加工伤保险的组织领导，按照省、市文件精神，要求建立建筑业参加工伤保险工作联席会议制度。联席会议制度的主要职责是要求落实国家、省、市建筑业参加工伤保险工作的政策措施及目标任务，指导督促所属建筑业参保工作，研究协调工作中存在的问题，协调做好所属建筑业参加工伤保险工作情况汇总和进度统计报表等工作。</span></span></p><p style="line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><strong><span style="font-family: 仿宋_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 仿宋_GB2312;">（四）加强督促检查。</span></span></strong><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">县人力资源和社会保障局牵头，住建局、安监局、总工会等部门共同参与，加强对建设项目参加工伤保险的监督检查。建筑施工企业必须按本办法规定及时、如实申报建设项目工伤保险参保，建筑施工企业未按规定为从业人员办理工伤保险参保手续的，从业人员可以向县人力资源和社会保障局、</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">县</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">住建局举报。</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">县</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">住建局和人力资源和社会保障局应及时将举报信息相互通报，并协调配合开展调查处理工作，对未办理建设项目从业人员参加工伤保险的建筑施工企业，依据《社会保险法》等相关规定进行处罚。</span></span></p><p style="text-align: left; line-height: 37px; margin-right: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">道真自治县人力资源和社会保障</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">局 &nbsp; 道真自治县住房和城乡建设局</span></span></p><p style="text-align: left; line-height: 37px; margin-right: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">道真自治县安全生产管理局&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">道真自治县总工会</span></span></p><p style="text-align: left; line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><br></p><p style="text-align: left; line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 仿宋_GB2312; font-size: 21px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017年6月21日 </span></p><p style="text-align: right; line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;"><br></p><p style="text-align: left; line-height: 37px; text-indent: 42px; margin-right: 0px; margin-left: 0px; -ms-text-autospace: ideograph-numeric;">&nbsp;</p><p><br></p></div>
+					</font>
+    			</div>
+   				<div class="KeysList" style="margin-top: 5px;">
+					<div class="jiathis_style">
+						<span class="jiathis_txt">分享到：</span>
+						<a class="jiathis_button_qzone" title="分享到QQ空间" href="javascript:;" onclick="jiathis_sendto('qzone');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_qzone">QQ空间</span>
+						</a>
+						<a class="jiathis_button_tsina" title="分享到微博" href="javascript:;" onclick="jiathis_sendto('tsina');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_tsina">新浪微博</span>
+						</a>
+						<a class="jiathis_button_tqq" title="分享到腾讯微博" href="javascript:;" onclick="jiathis_sendto('tqq');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_tqq">腾讯微博</span>
+						</a>
+						<a class="jiathis_button_renren" title="分享到人人网" href="javascript:;" onclick="jiathis_sendto('renren');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_renren">人人网</span>
+						</a>
+						<a href="javascript:;" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+						<a class="jiathis_counter_style">
+							<span class="jiathis_button_expanded jiathis_counter jiathis_bubble_style" id="jiathis_counter_36" title="累计分享0次">0</span>
+						</a>
+					</div>
+					<script type="text/javascript" src="../../../code/jia.js" ></script>
+				</div>
+   				<div class="KeysList">
+					<div class="right">
+			  			<a href="javascript:;" target="_blank" class="box_02">我要推荐</a>&emsp;
+						<!--a class="box_02" href="/syqt/rssdy/" target="_blank">RSS定制</a>&emsp;-->
+			 			<a class="box_02" href="../../../syqt/wzjc/index.html" target="_blank">网站纠错</a>&emsp;
+						<!--a class="box_02" href="#" target="_blank">返回顶部</a-->
+					</div>
+				</div>
+    			<div class="page">
+					<div id="prevpage">
+						<span>上一篇：</span><a href="javascript:;" id="no1">无</a>
+						
+							<script type="text/javascript">
+								var  str="";
+								var str_1 = "../201804/t20180413_21600384.html";
+								var str_4 = '关于印发《道真自治县2018年人力资源和社会保障工作要点》的通知';
+								if(str_4!="")
+								{
+									jQuery("#no1").hide();
+									if (str=="") {
+										document.write('<a  href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									} else {
+										document.write('<a  href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									}
+								}
+							</script>
+						
+					</div>
+					<div id="prevpage">
+						<span>下一篇：</span><a href="javascript:;" id="no2">无</a>
+						
+							<script type="text/javascript">
+								var  str="";
+								var str_1 = "./t20170702_21164062.html";
+								var str_4 = '2017年“就业政策进万家，真情服务你我他”主题宣传年活动方案';
+								if(str_4!="")
+								{
+									jQuery("#no2").hide();
+									if (str=="") {
+										document.write('<a  href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									} else {
+										document.write('<a  href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									}
+								}
+							</script>
+						
+					</div>
+    			</div>
+   				<div class="xgxx">
+        			<h1><span>相关信息</span></h1>
+					<ul>
+						<script type="text/javascript">
+							var key="";
+							if(key!=''&&key!='null'){
+								
+							}else{
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201810/t20181018_21761544.html";
+									var str_4 = '道真自治县2018年胡遵劳务协作项目补贴实施方案';
+									var str_2 = '2018-10-18';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201807/t20180718_21660969.html";
+									var str_4 = '关于做好2018年工程、农业、民营经济 系列职称申报评审工作的通知';
+									var str_2 = '2018-07-18';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201804/t20180413_21600393.html";
+									var str_4 = '2018年度中心组专题学习实施方案';
+									var str_2 = '2018-04-13';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201804/t20180413_21600389.html";
+									var str_4 = '关于进一步规范2018年社会保险业务工作的通知';
+									var str_2 = '2018-04-13';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201804/t20180413_21600387.html";
+									var str_4 = '关于印发《2018年脱贫攻坚“春风行动”工作方案》的通知';
+									var str_2 = '2018-04-13';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+								
+							}
+						 </script>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="foot_bj">
+	<div class="foot_nr">
+		<p>
+			<a href="../../../syqt/rssdy/index.html">RSS订阅</a>|
+			<a href="../../../syqt/lxfs/index.html">联系方式</a>|
+			<a href="../../../syqt/wzdt/index.html">网站地图</a>
+		</p>
+		<p>Copyright 2010 All Rights Reserved      主办：道真县人力资源网</p>
+		<p>电话：0851-25782065       技术支持：<a href="javascript:;" target="_blank">贵州多彩博虹科技有限公司</a></p>
+		<p>(建议使用1024×768分辨率 IE70以上版本浏览器) </p>
+		<p style="margin-top: 12px;">
+			<!--a target="_blank" href="http://bszs.conac.cn/sitename?method=show&id=04E0DEEC2DCA0288E053022819ACC535">
+				<img src="/images/dz_jg.png" /></a-->
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src=' http://dcs.conac.cn/js/24/356/2168/40584250/CA243562168405842500001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+		</p>
+	</div>
+</div>
+<script id="_trs_ta_js" src="../../../c/js/ta-1290.js" async="async" defer="defer"></script>
+    </body>
+</html>

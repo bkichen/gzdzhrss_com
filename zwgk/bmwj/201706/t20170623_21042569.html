@@ -1,0 +1,480 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>2017年度党组中心组学习计划</title>
+		<link rel="stylesheet" href="../../../images/nry.css">
+		<meta name="Keywords" content="道真人社局,道真县人力资源网,道真人事考试,道真县人力资源与社会保障,道真县人社局组织全体党员参加扫墓活动">
+<script type="text/javascript" src="../../../images/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../../images/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+    jQuery(function() {
+		jQuery('#j_search_btn').click(function() {
+			var str = jQuery("#keyword").val();
+			checks(str);
+		});
+	});
+	function checks(t) {
+		t = t.replace(/(^\s+)|(\s+$)/g, "");
+		if (t == "" || t == "请输入关键检索字") {
+			alert('请输入有效内容');
+			return false;
+		}
+		szMsg = "[#_%&'/",
+		";:=!^]";
+		alertStr = "";
+		for (i = 1; i < szMsg.length + 1; i++) {
+			if (t.indexOf(szMsg.substring(i - 1, i)) > -1) {
+				alertStr = "请勿包含非法字符如[#_%&'/",
+				";:=!^]";
+				alert(alertStr);
+				// break;
+				return false;
+			}
+		}
+		var key = document.getElementById("keyword").value;
+		window.location.href ="/search.html?keyword=" + key;
+		return true;
+	}
+function sub(){
+    window.location.href ="/search.shtml";
+}
+function AddFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle)
+    } catch (e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, "")
+        } catch (e) {
+            alert("加入收藏失败，请使用Ctrl+D进行添加")
+        }
+    }
+}
+function SetHome(obj, vrl) {
+    try {
+        obj.style.behavior = "url(#default#homepage)";
+        obj.setHomePage(vrl)
+    } catch (e) {
+        if (window.netscape) {
+            try {
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")
+            } catch (e) {
+                alert("此操作被浏览器拒绝！n请在浏览器地址栏输入\"about:config\"并回车n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。")
+            }
+            var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
+            prefs.setCharPref("browser.startup.homepage", vrl)
+        }
+    }
+}
+	//设为首页 
+	function SetHome(url){
+		if (document.all) {
+			document.body.style.behavior='url(#default#homepage)';
+			document.body.setHomePage(url);
+		}else{ 
+			alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+		}
+	}
+</script>
+<script type="text/javascript">
+      function GoTo() {
+          window.open("/syqt/wzjc/index.html?url=" + document.URL);
+      }
+</script>
+		<script type="text/javascript">
+			function fontResizer(smallFont,medFont,largeFont){
+				function clearSelected(){
+					$(".smallFont").removeClass("curFont");
+					$(".medFont").removeClass("curFont");
+					$(".largeFont").removeClass("curFont");
+				}
+				function saveState(curSize){
+					var date = new Date();
+					date.setTime(date.getTime()+(7*24*60*60*1000));
+					var expires = "; expires="+date.toGMTString();
+					document.cookie = "fontSizer"+"="+curSize+expires+"; path=/";
+				}
+			
+				$(".smallFont").click(function(){
+					$('#Zoom').css('font-size', smallFont);
+					$('#Zoom p').css('font-size', smallFont);
+					$('#Zoom span').css('font-size', smallFont);
+					$('#Zoom font').css('font-size', smallFont);
+					clearSelected();
+					$(".smallFont").addClass("curFont");
+					saveState(smallFont);
+				});
+			
+				$(".medFont").click(function(){
+					$('#Zoom').css('font-size', medFont);
+					$('#Zoom p').css('font-size', medFont);
+					$('#Zoom span').css('font-size', medFont);
+					$('#Zoom font').css('font-size', medFont);
+					clearSelected();
+					$(".medFont").addClass("curFont");
+					saveState(medFont);
+				});
+			
+				$(".largeFont").click(function(){
+					$('#Zoom').css('font-size', largeFont);
+					$('#Zoom p').css('font-size', largeFont);
+					$('#Zoom span').css('font-size', largeFont);
+					$('#Zoom font').css('font-size', largeFont);
+					$('#Zoom').css('line-height','40px');
+					clearSelected();
+					$(".largeFont").addClass("curFont");
+					saveState(largeFont);
+				});
+			
+				function getCookie(c_name){
+					if(document.cookie.length>0){
+						c_start=document.cookie.indexOf(c_name + "=");
+						if (c_start!=-1){
+							c_start=c_start + c_name.length+1;
+							c_end=document.cookie.indexOf(";",c_start); 
+							if(c_end==-1)c_end=document.cookie.length;
+							return unescape(document.cookie.substring(c_start,c_end));
+						}
+					} 
+					return "";
+				}
+			
+				var savedSize = getCookie('fontSizer');
+			
+				if(savedSize!=""){
+					$('#Zoom').css('font-size', savedSize);
+					switch(savedSize){
+						case smallFont: $(".smallFont").addClass("curFont");
+						break;
+						case medFont: $(".medFont").addClass("curFont");
+						break;
+						case largeFont: $(".largeFont").addClass("curFont");
+						break;
+						default: $(".medFont").addClass("curFont");
+					}
+				}else {
+					$('#Zoom').css('font-size', medFont);
+					$(".medFont").addClass("curFont");
+				}
+				
+			}
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				fontResizer('12px','16px','20px');
+			});
+		</script>
+		<script type="text/javascript">
+			function ChangeColor(ColorName){
+				$('#c').css('background', ColorName);
+				$('#Zoom p').css('background', ColorName);
+				$('#Zoom span').css('background', ColorName);
+				$('#Zoom font').css('background', ColorName);
+			}	
+		</script>
+	</head>
+	<body>
+		<!--天气js-->
+<script type="text/javascript">
+	function initArray() {
+		for (i = 0; i < initArray.arguments.length; i++)
+			this[i] = initArray.arguments[i];
+	}
+	var isnMonths = new initArray("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+	var isnDays = new initArray("  星期日", "  星期一", "  星期二", "  星期三", "  星期四", "  星期五", "  星期六", "  星期日");
+	today = new Date();
+	hrs = today.getHours();
+	min = today.getMinutes();
+	sec = today.getSeconds();
+	clckh = "" + ((hrs > 12) ? hrs - 12 : hrs);
+	clckm = ((min < 10) ? "0" : "") + min;
+	clcks = ((sec < 10) ? "0" : "") + sec;
+	clck = (hrs >= 12) ? "下午" : "上午";
+	var stnr = "";
+	var ns = "0123456789";
+	var a = "";
+
+	function getFullYear(d) {
+		yr = d.getYear();
+		if (yr < 1000)
+			yr += 1900;
+		return yr;
+	}
+</script>
+<div class="banner">
+	<!--顶部-->
+	<div class="dingb_bj">
+		<div class="dingb_nr">
+			<!--日期-->
+			<div class="riqi f_l">
+				<ul>
+					<li><span>今天是: </span>
+						<script type="text/javascript">
+							document.write("<div class='time'>" + getFullYear(today) + "年" + "" + isnMonths[today.getMonth()] + "月" + today.getDate() + "日" + isnDays[today.getDay()] + "</div>");
+						</script>
+					</li>
+				</ul>
+			</div>
+			<!--收藏-->
+			<div class="f_r ding_y">
+				<a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>|
+				<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>
+			</div>
+		</div>
+	</div>
+	<!--logo-->
+	<div class="logo_by" style="overflow: initial;">
+		<ul>
+			<li class="f_l"><a href="../../../index.html"><img src="../../../images/logo.png"></a></li>
+			<li class="f_r"><img src="../../../images/biaoyu.png"></li>
+		</ul>
+	</div>
+	<!--导航-->
+	<div class="nav_bj">
+		<div class="nav f_l">
+			<ul>
+				<li><a href="../../../index.html">网站首页</a></li>
+				<li><a href="../../../gzdt/index.html">工作动态</a></li>
+				<li><a href="../../../ywgz/index.html">业务工作</a></li>
+				<li><a href="../../../bmgk/index.html">部门概况</a></li>
+				<li><a href="../../index.html">政务公开</a></li>
+			</ul>
+		</div>
+		<!--搜索-->
+		<div class="sous f_r">
+    		<dl>
+				<dt><a href="javascript:void(0);" id="j_search_btn"><img src="../../../images/sous.png"></a></dt>
+				<dd>
+					<input id="keyword" name="keyword" type="text" class="sous_sy" value="请输入关键字" style="color:#666666; line-height:40px; font-size: 14px;" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#000'}" onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#9e9e9e'}">
+				</dd>
+			</dl>
+    	</div>
+	</div>
+</div>
+		<div class="content-main">
+			<div class="dqwz">
+				您当前所在位置：<a href="../../../index.html" title="首页" class="CurrChnlCls">首页</a>&nbsp;&raquo;&nbsp;<a href="../../index.html" title="政务公开" class="CurrChnlCls">政务公开</a>&nbsp;&raquo;&nbsp;<a href="../index.html" title="部门文件" class="CurrChnlCls">部门文件</a>
+			</div>
+			<div class="body_content" id="c">
+    			<div class="title">
+        			<h1>2017年度党组中心组学习计划</h1>
+        			<script type="text/javascript">
+						var fbt='';
+						if(fbt!=''){
+							document.write('<h2>'+fbt+'</h2>');
+						}
+					</script>
+        			<div class="toolbar">
+						发布时间：
+						<script type="text/javascript">
+							var  pubdata='2017年06月23日';
+							if(pubdata!=''){
+								document.write(pubdata);
+							}
+						</script>
+
+            			字体：
+						<span class="smallFont">小</span>
+						<span class="medFont curFont">中</span>
+						<span class="largeFont curFont">大</span> 
+						<script type="text/javascript">
+							var wzly='';
+							if(wzly!=''){
+								document.write('文章来源：'+wzly+'&emsp;');
+							}
+						</script>
+						<script type="text/javascript">
+							var zz='';
+							if(zz!=''){
+								document.write('作者：'+zz+'&emsp;');
+							}
+						</script>
+						点击量：<script src="http://rsj.gzdaozhen.gov.cn/count/index?id=21042569&siteid=501731"></script>次
+						<a href="javascript:window.print();">打印本页</a>&emsp;
+						<a href="javascript:window.opener=null;window.close()">关闭本页</a>&emsp;&emsp;
+						<i style="padding-left:10px">
+							视力保护色： 
+							<input onclick="ChangeColor('#F9F6AF')" name="bgcolor" src="../../../images/110827103140057.gif" type="image" align="absmiddle" height="13" width="13">
+							<input onclick="ChangeColor('#9DDBF4')" name="bgcolor22" src="../../../images/110827103140099.gif" type="image" align="absmiddle" height="13" width="13">
+							<input onclick="ChangeColor('#DEDEDE')" name="bgcolor2" src="../../../images/110827103140184.gif" type="image" align="absmiddle" height="13" width="13"> 
+							<input onclick="ChangeColor('#F9D1D9')" name="bgcolor2" src="../../../images/110827103140215.gif" type="image" align="absmiddle" height="13" width="13"> 
+							<input onclick="ChangeColor('#E4C8F8')" name="bgcolor2" src="../../../images/110827103140245.gif" type="image" align="absmiddle" height="13" width="13">	
+							<input onclick="ChangeColor('#ffffff')" name="bgcolor2" src="../../../images/110827103140292.gif" type="image" align="absmiddle" height="13" width="13">
+						</i>
+					</div>
+				</div>
+    			<div class="content">
+        			<!--视频开始-->
+					
+						
+					
+					<!--视频结束-->
+					<font id="Zoom">
+						<p style="text-align:center"><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">道人社</span>[2017]26号</span></p><p style="text-align:center"><br></p><p><br></p><p style=";text-align:center;line-height:37px"><strong><span style=";font-family:方正小标宋简体;color:rgb(0,0,0);font-weight:bold;font-size:29px"><span style="font-family:方正小标宋简体">中共道真县人力资源网党组</span></span></strong></p><p style=";text-align:center;line-height:37px"><strong><span style=";font-family:方正小标宋简体;color:rgb(0,0,0);font-weight:bold;font-size:29px">2017年度党组中心组学习计划 </span></strong></p><p style=";text-align:left;line-height:37px"><br></p><p style=";text-align:left;line-height:37px"><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">根据中央和省、市、县委有关文件精神，为适应新形势下</span></span><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">人力资源和社会</span></span><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">保障工作的新要求，结合我局工作实际，现将</span>2017年度局党组中心组学习计划安排如下。</span></p><p style="text-indent:42px;text-align:left;line-height:37px"><span style=";font-family:黑体;color:rgb(0,0,0);font-size:21px"><span style="font-family:黑体">一、指导思想</span></span><strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-weight:bold;font-size:21px"><br></span></strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">高举中国特色社会主义伟大旗帜，以马克思列宁主义、毛泽东思想、邓小平理论、</span>“三个代表”重要思想、科学发展观为指导，深入贯彻习近平总书记系列重要讲话精神和治国理政新理念新思想新战略，全面贯彻落实十八届三中、四中、五中、六中全会及党的十九大精神，省委、市委、县委重要会议精神，紧紧围绕统筹推进“五位一体”总体布局和协调推进“四个全面”战略布局，坚持主基调主战略，以提高领导科学发展的能力和水平为重点，不断创新学习方式，丰富学习内容，增强学习的针对性、时效性、主动性和自觉性，营造重视学习、崇尚学习、学以致用的浓厚氛围，努力用中国特色社会主义理论武装头脑、指导实践、推动工作，不断提高全局干部职工特别是领导干部的理论素质、履职能力和业务水平，推动学习型机关党组织建设，为推进全县全面小康提供坚强的人才支持和民生保障。 </span></p><p style="text-indent:41px;text-align:left;line-height:37px"><span style=";font-family:黑体;color:rgb(0,0,0);font-size:21px"><span style="font-family:黑体">二、学习内容及</span></span><span style=";font-family:黑体;color:rgb(0,0,0);font-size:21px"><span style="font-family:黑体">学习专题安排</span></span></p><p style=";text-align:justify;text-justify:inter-ideograph;line-height:37px"><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">坚持不懈学习马克思主义基本原理，学习毛泽东思想和中国特色社会主义理论体系，特别要把学习贯彻习近平总书记系列重要讲话精神作为重中之重，同学习贯彻党的十八大和十八届三中、四中、五中、六中全会精神结合起来，同研究解决人力资源社会保障重大问题结合起来，同提高党员干部思想理论素养结合起来，向以习近平同志为核心的党中央看齐，向党的理论和路线方针政策看齐，不断开创人力资源社会保障事业发展新局面。</span></span></p><p style=";text-align:left;line-height:37px"><strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-weight:bold;font-size:21px"><span style="font-family:华文仿宋">全年安排十二个学习专题，原则上每月集中学习一次。学习内容、学习时间可根据省委、市委、县委有关精神作适当调整。</span></span></strong></p><p style="text-indent:42px;text-align:left;line-height:37px"><strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-weight:bold;font-size:21px"><span style="font-family:华文仿宋">第一专题：</span></span></strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">《关于新形势下党内政治生活的若干准则》和《中国共产党党内监督条例》；</span></span></p><p style=";text-align:left;line-height:37px"><strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-weight:bold;font-size:21px"><span style="font-family:华文仿宋">第二专题：</span></span></strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">习近平总书记系列重要讲话精神；</span></span></p><p style="text-indent:42px;text-align:left;line-height:37px"><strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-weight:bold;font-size:21px"><span style="font-family:华文仿宋">第三专题：</span></span></strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">以习近平同志为核心的党中央治国理政新理念新思想新战略（全面建成小康社会、全面深化改革、全面依法治国、全面从严治党的战略布局，创新、协调、绿色、开放、共享的发展理念等）；</span></span></p><p style="text-indent:42px;text-align:left;line-height:37px"><strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-weight:bold;font-size:21px"><span style="font-family:华文仿宋">第四专题：</span></span></strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">省第十二次党代会精神；</span></span></p><p style="text-indent:42px;text-align:left;line-height:37px"><strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-weight:bold;font-size:21px"><span style="font-family:华文仿宋">第五专题：</span></span></strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">市第五次党代会、县第八次党代会精神；</span></span></p><p style="text-indent:43px;text-align:left;line-height:37px"><strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-weight:bold;font-size:21px"><span style="font-family:华文仿宋">第六专题：</span></span></strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px">2017年“中央一号文件”精神；</span></p><p style="text-indent:43px;text-align:left;line-height:37px"><strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-weight:bold;font-size:21px"><span style="font-family:华文仿宋">第七专题：</span></span></strong><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">扎实推进</span>“两学一做”学习教育常态化制度化</span><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">。按照中央、省、市、县各级要求和部署，在全体党员中继续深入开展</span>“两学一做”学习教育，重点学习党章党规、总书记系列讲话和中央指定的系列指导书目；</span></p><p style="text-indent:42px;text-align:left;line-height:37px"><strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-weight:bold;font-size:21px"><span style="font-family:华文仿宋">第八专题：</span></span></strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">《中国共产党党委（党组）理论学习中心组学习规则》；</span></span></p><p style="text-indent:42px;text-align:left;line-height:37px"><strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-weight:bold;font-size:21px"><span style="font-family:华文仿宋">第九专题：</span></span></strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">中央、省委关于意识形态工作的重大部署和基本要求</span></span><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">；</span></span></p><p style=";text-align:left;line-height:37px"><strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-weight:bold;font-size:21px"><span style="font-family:华文仿宋">第十专题：</span></span></strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">党的十九大精神；</span></span></p><p style="text-indent:43px;text-align:left;line-height:37px"><strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-weight:bold;font-size:21px"><span style="font-family:华文仿宋">第十一专题：</span></span></strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">精神文明建设、培育和践行社会主义核心价值观；</span></span></p><p style="text-indent:42px;text-align:justify;text-justify:inter-ideograph;line-height:37px"><strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-weight:bold;font-size:21px"><span style="font-family:华文仿宋">第十二专题：</span></span></strong><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">结合人社工作实际开展学习，重点学习《劳动合同法》、《就业促进法》、《社会保险法》、《劳动人事争议调解仲裁法》、《公务员法法》、《事业单位管理条例》等相关法律法规</span></span><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">。</span></span></p><p style="text-indent:42px;text-align:left;line-height:37px"><span style=";font-family:黑体;color:rgb(0,0,0);font-size:21px"><span style="font-family:黑体">三、学习方式</span></span></p><p style="text-indent:42px;text-align:left;line-height:37px"><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">坚持个人自学与集中学习相结合，在平时分散自学、自主选学以及到基层学习调研的基础上，采取专题学习，专题讨论、专题讲座等形式组织集中学习。</span></span></p><p style="text-indent:43px;text-align:justify;text-justify:inter-ideograph;line-height:37px"><span style=";font-family:黑体;color:rgb(0,0,0);font-size:21px"><span style="font-family:黑体">四、学习要求</span></span><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><br></span><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px">&nbsp;&nbsp;&nbsp;&nbsp;1、</span><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">党组成员积极发挥带头作用。要把专题学习，特别是学习贯彻习近平总书记系列重要讲话精神作为政治责任、政治要求，以身作则、率先垂范，努力在学习上深一步、认识上高一筹、实践上先一着，做到真学、真懂、真信、真用。</span></span></p><p style="text-indent:42px;text-align:justify;text-justify:inter-ideograph;line-height:37px"><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px">2、中心学习要结合工作实际。坚持理论联系实际，坚持理论武装、坚定理想信念与指导工作实践、推动工作相结合。</span><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">紧紧围绕统筹推进</span>“五位一体”总体布局和协调推进“四个全面”战略布局，坚持主题主线和主基调主战略</span><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">，深入把握</span>“十三五”时期的形势任务，更全面地领会中央对人力资源社会保障工作提出的新理念新思想新战略以及人力资源社会保障领域的新决策新部署。</span></p><p style="text-indent:43px;text-align:justify;text-justify:inter-ideograph;line-height:37px"><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px">3、学习形式多种，增强学习效果。在个人自学的基础上，开展集体学习研讨和专题调研，</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">深入贯彻党的十八届六中全会精神，认真落实中央《关于新形势下党内政治生活的若干准则》，强化</span>“三会一课”制度的落实，推动“两学一做”学习教育常态化制度化，</span><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">积极探索利用新媒体、利用在线学习等多种途径，进一步提高学习的针对性和有效性，切实做到理论和实际相结合。</span></span></p><p style="text-indent:43px;text-align:left;line-height:37px"><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px">4</span><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">、坚持学习制度，严格学习考勤，每一专题的学习尽量保证全体干部职工参加，无特殊情况一律不准请假，确因特殊原因需要请假的须经中心学习组组长同意，并自觉补学。</span></span></p><p style="text-indent:42px;text-align:left;line-height:37px"><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px">5、每次集中学习前，相关股室及相关人员要按照规定的学习专题作好充分准备，作好专题辅导和专题讲座，确保学习效果，提高学习质量。</span></p><p style="text-indent:42px;text-align:left;line-height:37px"><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px">6、认真做好学习笔记，集中学习时要认真学认真记，平时自学要有学习记录。</span></p><p style="text-indent:42px;line-height:37px"><span style=";font-family:仿宋_GB2312;font-size:21px">7、</span><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">按照《道真自治县县直机关</span>“百名书记讲党课、千名党员写感言”暨优质党课优秀感言评比活动实施方案》精神，</span><span style=";font-family:仿宋_GB2312;font-size:21px"><span style="font-family:仿宋_GB2312">党组（党委）书记、各支部书记要为本系统、本部门、本单位、本支部全体党员、入党积极分子上一堂党课。要求每名书记讲党课</span>1次，每名党员至少听党课1次，并写1篇听后感。党课要坚持理论联系实际，针对存在的突出问题，有的放矢地设置内容和形式，增强党课的针对性和吸引力。授课方式要灵活多样、突出特色，力求既生动又深刻，既有吸引力又有感染力，切实增强实际效果。感言文体不限，但要发自肺腑出自真心，杜绝网上下载或抄袭他人，字数控制在800字以内，局机关各股室和社保、就业、仲裁、监察统一交到局办公室，由局办公室汇总后统一上报。</span></p><p style="text-indent:42px;text-align:left;line-height:37px"><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px">8、集中学习除做好规定的学习专题外，还将通过邀请专家作辅导报告、观看专题片、交流讨论等方式进行，不断丰富学习形式。</span></p><p style="text-indent:42px;text-align:left;line-height:37px"><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px">9、坚持理论联系实际的学风，紧密联系人力资源和社会保障工作实际开展学习，不断提高思想认识，做到“贯穿、结合、转化”，通过学习进一步指导工作实践，解决实际问题，促进工作开展。</span></p><p style="text-indent:43px;text-align:left;line-height:37px"></p><p style="text-indent:11px;text-align:left;line-height:37px"><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">附件：道真县人力资源网党组中心组学习计划表</span></span></p><p style=";text-align:left;line-height:37px"><br></p><p style=";text-align:left;line-height:37px"><br></p><p style="text-indent:177px;text-align:left;line-height:37px"><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px"><span style="font-family:华文仿宋">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; 中共道真县人力资源网党组</span></span></p><p style=";text-align:left;line-height:37px"><span style=";font-family:华文仿宋;color:rgb(0,0,0);font-size:21px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2017年3月26日</span></p><p style=";text-align:left;line-height:37px"></p><p style=";text-align:left;line-height:37px"></p><p><br></p>
+					</font>
+    			</div>
+   				<div class="KeysList" style="margin-top: 5px;">
+					<div class="jiathis_style">
+						<span class="jiathis_txt">分享到：</span>
+						<a class="jiathis_button_qzone" title="分享到QQ空间" href="javascript:;" onclick="jiathis_sendto('qzone');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_qzone">QQ空间</span>
+						</a>
+						<a class="jiathis_button_tsina" title="分享到微博" href="javascript:;" onclick="jiathis_sendto('tsina');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_tsina">新浪微博</span>
+						</a>
+						<a class="jiathis_button_tqq" title="分享到腾讯微博" href="javascript:;" onclick="jiathis_sendto('tqq');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_tqq">腾讯微博</span>
+						</a>
+						<a class="jiathis_button_renren" title="分享到人人网" href="javascript:;" onclick="jiathis_sendto('renren');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_renren">人人网</span>
+						</a>
+						<a href="javascript:;" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+						<a class="jiathis_counter_style">
+							<span class="jiathis_button_expanded jiathis_counter jiathis_bubble_style" id="jiathis_counter_36" title="累计分享0次">0</span>
+						</a>
+					</div>
+					<script type="text/javascript" src="../../../code/jia.js" ></script>
+				</div>
+   				<div class="KeysList">
+					<div class="right">
+			  			<a href="javascript:;" target="_blank" class="box_02">我要推荐</a>&emsp;
+						<!--a class="box_02" href="/syqt/rssdy/" target="_blank">RSS定制</a>&emsp;-->
+			 			<a class="box_02" href="../../../syqt/wzjc/index.html" target="_blank">网站纠错</a>&emsp;
+						<!--a class="box_02" href="#" target="_blank">返回顶部</a-->
+					</div>
+				</div>
+    			<div class="page">
+					<div id="prevpage">
+						<span>上一篇：</span><a href="javascript:;" id="no1">无</a>
+						
+							<script type="text/javascript">
+								var  str="";
+								var str_1 = "../201707/t20170702_21164061.html";
+								var str_4 = '关于切实做好2017年创业贷款贴息工作的通知';
+								if(str_4!="")
+								{
+									jQuery("#no1").hide();
+									if (str=="") {
+										document.write('<a  href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									} else {
+										document.write('<a  href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									}
+								}
+							</script>
+						
+					</div>
+					<div id="prevpage">
+						<span>下一篇：</span><a href="javascript:;" id="no2">无</a>
+						
+							<script type="text/javascript">
+								var  str="";
+								var str_1 = "./t20170623_21042553.html";
+								var str_4 = '道真县人力资源网 关于认真做好全县城镇低保户和农村易地搬迁贫困户享受城镇居民基本医疗优惠待遇工作的函';
+								if(str_4!="")
+								{
+									jQuery("#no2").hide();
+									if (str=="") {
+										document.write('<a  href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									} else {
+										document.write('<a  href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									}
+								}
+							</script>
+						
+					</div>
+    			</div>
+   				<div class="xgxx">
+        			<h1><span>相关信息</span></h1>
+					<ul>
+						<script type="text/javascript">
+							var key="";
+							if(key!=''&&key!='null'){
+								
+							}else{
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201810/t20181018_21761544.html";
+									var str_4 = '道真自治县2018年胡遵劳务协作项目补贴实施方案';
+									var str_2 = '2018-10-18';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201807/t20180718_21660969.html";
+									var str_4 = '关于做好2018年工程、农业、民营经济 系列职称申报评审工作的通知';
+									var str_2 = '2018-07-18';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201804/t20180413_21600393.html";
+									var str_4 = '2018年度中心组专题学习实施方案';
+									var str_2 = '2018-04-13';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201804/t20180413_21600389.html";
+									var str_4 = '关于进一步规范2018年社会保险业务工作的通知';
+									var str_2 = '2018-04-13';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201804/t20180413_21600387.html";
+									var str_4 = '关于印发《2018年脱贫攻坚“春风行动”工作方案》的通知';
+									var str_2 = '2018-04-13';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+								
+							}
+						 </script>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="foot_bj">
+	<div class="foot_nr">
+		<p>
+			<a href="../../../syqt/rssdy/index.html">RSS订阅</a>|
+			<a href="../../../syqt/lxfs/index.html">联系方式</a>|
+			<a href="../../../syqt/wzdt/index.html">网站地图</a>
+		</p>
+		<p>Copyright 2010 All Rights Reserved      主办：道真县人力资源网</p>
+		<p>电话：0851-25782065       技术支持：<a href="javascript:;" target="_blank">贵州多彩博虹科技有限公司</a></p>
+		<p>(建议使用1024×768分辨率 IE70以上版本浏览器) </p>
+		<p style="margin-top: 12px;">
+			<!--a target="_blank" href="http://bszs.conac.cn/sitename?method=show&id=04E0DEEC2DCA0288E053022819ACC535">
+				<img src="/images/dz_jg.png" /></a-->
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src=' http://dcs.conac.cn/js/24/356/2168/40584250/CA243562168405842500001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+		</p>
+	</div>
+</div>
+<script id="_trs_ta_js" src="../../../c/js/ta-1290.js" async="async" defer="defer"></script>
+    </body>
+</html>

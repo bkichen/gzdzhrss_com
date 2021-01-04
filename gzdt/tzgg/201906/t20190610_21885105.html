@@ -1,0 +1,480 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>2019年度企业稳岗补贴经办一次性告知书</title>
+		<link rel="stylesheet" href="../../../images/nry.css">
+		<meta name="Keywords" content="道真人社局,道真县人力资源网,道真人事考试,道真县人力资源与社会保障,道真县人社局组织全体党员参加扫墓活动">
+<script type="text/javascript" src="../../../images/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../../images/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+    jQuery(function() {
+		jQuery('#j_search_btn').click(function() {
+			var str = jQuery("#keyword").val();
+			checks(str);
+		});
+	});
+	function checks(t) {
+		t = t.replace(/(^\s+)|(\s+$)/g, "");
+		if (t == "" || t == "请输入关键检索字") {
+			alert('请输入有效内容');
+			return false;
+		}
+		szMsg = "[#_%&'/",
+		";:=!^]";
+		alertStr = "";
+		for (i = 1; i < szMsg.length + 1; i++) {
+			if (t.indexOf(szMsg.substring(i - 1, i)) > -1) {
+				alertStr = "请勿包含非法字符如[#_%&'/",
+				";:=!^]";
+				alert(alertStr);
+				// break;
+				return false;
+			}
+		}
+		var key = document.getElementById("keyword").value;
+		window.location.href ="/search.html?keyword=" + key;
+		return true;
+	}
+function sub(){
+    window.location.href ="/search.shtml";
+}
+function AddFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle)
+    } catch (e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, "")
+        } catch (e) {
+            alert("加入收藏失败，请使用Ctrl+D进行添加")
+        }
+    }
+}
+function SetHome(obj, vrl) {
+    try {
+        obj.style.behavior = "url(#default#homepage)";
+        obj.setHomePage(vrl)
+    } catch (e) {
+        if (window.netscape) {
+            try {
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")
+            } catch (e) {
+                alert("此操作被浏览器拒绝！n请在浏览器地址栏输入\"about:config\"并回车n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。")
+            }
+            var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
+            prefs.setCharPref("browser.startup.homepage", vrl)
+        }
+    }
+}
+	//设为首页 
+	function SetHome(url){
+		if (document.all) {
+			document.body.style.behavior='url(#default#homepage)';
+			document.body.setHomePage(url);
+		}else{ 
+			alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+		}
+	}
+</script>
+<script type="text/javascript">
+      function GoTo() {
+          window.open("/syqt/wzjc/index.html?url=" + document.URL);
+      }
+</script>
+		<script type="text/javascript">
+			function fontResizer(smallFont,medFont,largeFont){
+				function clearSelected(){
+					$(".smallFont").removeClass("curFont");
+					$(".medFont").removeClass("curFont");
+					$(".largeFont").removeClass("curFont");
+				}
+				function saveState(curSize){
+					var date = new Date();
+					date.setTime(date.getTime()+(7*24*60*60*1000));
+					var expires = "; expires="+date.toGMTString();
+					document.cookie = "fontSizer"+"="+curSize+expires+"; path=/";
+				}
+			
+				$(".smallFont").click(function(){
+					$('#Zoom').css('font-size', smallFont);
+					$('#Zoom p').css('font-size', smallFont);
+					$('#Zoom span').css('font-size', smallFont);
+					$('#Zoom font').css('font-size', smallFont);
+					clearSelected();
+					$(".smallFont").addClass("curFont");
+					saveState(smallFont);
+				});
+			
+				$(".medFont").click(function(){
+					$('#Zoom').css('font-size', medFont);
+					$('#Zoom p').css('font-size', medFont);
+					$('#Zoom span').css('font-size', medFont);
+					$('#Zoom font').css('font-size', medFont);
+					clearSelected();
+					$(".medFont").addClass("curFont");
+					saveState(medFont);
+				});
+			
+				$(".largeFont").click(function(){
+					$('#Zoom').css('font-size', largeFont);
+					$('#Zoom p').css('font-size', largeFont);
+					$('#Zoom span').css('font-size', largeFont);
+					$('#Zoom font').css('font-size', largeFont);
+					$('#Zoom').css('line-height','40px');
+					clearSelected();
+					$(".largeFont").addClass("curFont");
+					saveState(largeFont);
+				});
+			
+				function getCookie(c_name){
+					if(document.cookie.length>0){
+						c_start=document.cookie.indexOf(c_name + "=");
+						if (c_start!=-1){
+							c_start=c_start + c_name.length+1;
+							c_end=document.cookie.indexOf(";",c_start); 
+							if(c_end==-1)c_end=document.cookie.length;
+							return unescape(document.cookie.substring(c_start,c_end));
+						}
+					} 
+					return "";
+				}
+			
+				var savedSize = getCookie('fontSizer');
+			
+				if(savedSize!=""){
+					$('#Zoom').css('font-size', savedSize);
+					switch(savedSize){
+						case smallFont: $(".smallFont").addClass("curFont");
+						break;
+						case medFont: $(".medFont").addClass("curFont");
+						break;
+						case largeFont: $(".largeFont").addClass("curFont");
+						break;
+						default: $(".medFont").addClass("curFont");
+					}
+				}else {
+					$('#Zoom').css('font-size', medFont);
+					$(".medFont").addClass("curFont");
+				}
+				
+			}
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				fontResizer('12px','16px','20px');
+			});
+		</script>
+		<script type="text/javascript">
+			function ChangeColor(ColorName){
+				$('#c').css('background', ColorName);
+				$('#Zoom p').css('background', ColorName);
+				$('#Zoom span').css('background', ColorName);
+				$('#Zoom font').css('background', ColorName);
+			}	
+		</script>
+	</head>
+	<body>
+		<!--天气js-->
+<script type="text/javascript">
+	function initArray() {
+		for (i = 0; i < initArray.arguments.length; i++)
+			this[i] = initArray.arguments[i];
+	}
+	var isnMonths = new initArray("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+	var isnDays = new initArray("  星期日", "  星期一", "  星期二", "  星期三", "  星期四", "  星期五", "  星期六", "  星期日");
+	today = new Date();
+	hrs = today.getHours();
+	min = today.getMinutes();
+	sec = today.getSeconds();
+	clckh = "" + ((hrs > 12) ? hrs - 12 : hrs);
+	clckm = ((min < 10) ? "0" : "") + min;
+	clcks = ((sec < 10) ? "0" : "") + sec;
+	clck = (hrs >= 12) ? "下午" : "上午";
+	var stnr = "";
+	var ns = "0123456789";
+	var a = "";
+
+	function getFullYear(d) {
+		yr = d.getYear();
+		if (yr < 1000)
+			yr += 1900;
+		return yr;
+	}
+</script>
+<div class="banner">
+	<!--顶部-->
+	<div class="dingb_bj">
+		<div class="dingb_nr">
+			<!--日期-->
+			<div class="riqi f_l">
+				<ul>
+					<li><span>今天是: </span>
+						<script type="text/javascript">
+							document.write("<div class='time'>" + getFullYear(today) + "年" + "" + isnMonths[today.getMonth()] + "月" + today.getDate() + "日" + isnDays[today.getDay()] + "</div>");
+						</script>
+					</li>
+				</ul>
+			</div>
+			<!--收藏-->
+			<div class="f_r ding_y">
+				<a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>|
+				<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>
+			</div>
+		</div>
+	</div>
+	<!--logo-->
+	<div class="logo_by" style="overflow: initial;">
+		<ul>
+			<li class="f_l"><a href="../../../index.html"><img src="../../../images/logo.png"></a></li>
+			<li class="f_r"><img src="../../../images/biaoyu.png"></li>
+		</ul>
+	</div>
+	<!--导航-->
+	<div class="nav_bj">
+		<div class="nav f_l">
+			<ul>
+				<li><a href="../../../index.html">网站首页</a></li>
+				<li><a href="../../index.html">工作动态</a></li>
+				<li><a href="../../../ywgz/index.html">业务工作</a></li>
+				<li><a href="../../../bmgk/index.html">部门概况</a></li>
+				<li><a href="../../../zwgk/index.html">政务公开</a></li>
+			</ul>
+		</div>
+		<!--搜索-->
+		<div class="sous f_r">
+    		<dl>
+				<dt><a href="javascript:void(0);" id="j_search_btn"><img src="../../../images/sous.png"></a></dt>
+				<dd>
+					<input id="keyword" name="keyword" type="text" class="sous_sy" value="请输入关键字" style="color:#666666; line-height:40px; font-size: 14px;" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#000'}" onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#9e9e9e'}">
+				</dd>
+			</dl>
+    	</div>
+	</div>
+</div>
+		<div class="content-main">
+			<div class="dqwz">
+				您当前所在位置：<a href="../../../index.html" title="首页" class="CurrChnlCls">首页</a>&nbsp;&raquo;&nbsp;<a href="../../index.html" title="工作动态" class="CurrChnlCls">工作动态</a>&nbsp;&raquo;&nbsp;<a href="../index.html" title="通知公告" class="CurrChnlCls">通知公告</a>
+			</div>
+			<div class="body_content" id="c">
+    			<div class="title">
+        			<h1>2019年度企业稳岗补贴经办一次性告知书</h1>
+        			<script type="text/javascript">
+						var fbt='';
+						if(fbt!=''){
+							document.write('<h2>'+fbt+'</h2>');
+						}
+					</script>
+        			<div class="toolbar">
+						发布时间：
+						<script type="text/javascript">
+							var  pubdata='2019年06月10日';
+							if(pubdata!=''){
+								document.write(pubdata);
+							}
+						</script>
+
+            			字体：
+						<span class="smallFont">小</span>
+						<span class="medFont curFont">中</span>
+						<span class="largeFont curFont">大</span> 
+						<script type="text/javascript">
+							var wzly='';
+							if(wzly!=''){
+								document.write('文章来源：'+wzly+'&emsp;');
+							}
+						</script>
+						<script type="text/javascript">
+							var zz='';
+							if(zz!=''){
+								document.write('作者：'+zz+'&emsp;');
+							}
+						</script>
+						点击量：<script src="http://rsj.gzdaozhen.gov.cn/count/index?id=21885105&siteid=501731"></script>次
+						<a href="javascript:window.print();">打印本页</a>&emsp;
+						<a href="javascript:window.opener=null;window.close()">关闭本页</a>&emsp;&emsp;
+						<i style="padding-left:10px">
+							视力保护色： 
+							<input onclick="ChangeColor('#F9F6AF')" name="bgcolor" src="../../../images/110827103140057.gif" type="image" align="absmiddle" height="13" width="13">
+							<input onclick="ChangeColor('#9DDBF4')" name="bgcolor22" src="../../../images/110827103140099.gif" type="image" align="absmiddle" height="13" width="13">
+							<input onclick="ChangeColor('#DEDEDE')" name="bgcolor2" src="../../../images/110827103140184.gif" type="image" align="absmiddle" height="13" width="13"> 
+							<input onclick="ChangeColor('#F9D1D9')" name="bgcolor2" src="../../../images/110827103140215.gif" type="image" align="absmiddle" height="13" width="13"> 
+							<input onclick="ChangeColor('#E4C8F8')" name="bgcolor2" src="../../../images/110827103140245.gif" type="image" align="absmiddle" height="13" width="13">	
+							<input onclick="ChangeColor('#ffffff')" name="bgcolor2" src="../../../images/110827103140292.gif" type="image" align="absmiddle" height="13" width="13">
+						</i>
+					</div>
+				</div>
+    			<div class="content">
+        			<!--视频开始-->
+					
+						
+					
+					<!--视频结束-->
+					<font id="Zoom">
+						<p style="text-align:center"><span style=";font-family:方正小标宋简体;font-size:29px">2019年度企业稳岗补贴经办一次性告知书</span></p><p style="text-indent:37px"><span style=";font-family:宋体;font-size:19px">2019<span style="font-family:宋体">年度稳岗补贴从</span><span style="font-family:Calibri">2019</span><span style="font-family:宋体">年</span><span style="font-family:Calibri">6</span><span style="font-family:宋体">月</span><span style="font-family:Calibri">10</span><span style="font-family:宋体">日开始受理申报材料，为做好该项业务，现明确办理程序如下：</span></span></p><p style="text-indent:37px"><strong><span style=";font-family:宋体;font-weight:bold;font-size:19px"><span style="font-family:宋体">一、稳岗补贴申报条件</span></span></strong></p><p style="text-indent:37px"><span style=";font-family:宋体;font-size:19px">1.2018<span style="font-family:宋体">年度失业保险费无欠费（在</span><span style="font-family:Calibri">2019</span><span style="font-family:宋体">年</span><span style="font-family:Calibri">7</span><span style="font-family:宋体">月底之前缴清相关费用的也视为无欠费）的企业及符合条件的事业单位；</span></span></p><p style="text-indent:37px"><span style=";font-family:宋体;font-size:19px">2.<span style="font-family:宋体">经失业保险参保地人力资源和社会保障部门核定不裁员或少裁员（</span><span style="font-family:Calibri">2018</span><span style="font-family:宋体">年度裁员率低于遵义市</span><span style="font-family:Calibri">2018</span><span style="font-family:宋体">年度城镇登记失业率</span><span style="font-family:Calibri">2.97%</span><span style="font-family:宋体">）的参保企业及符合条件的事业单位。</span></span></p><p style="text-indent:37px"><strong><span style=";font-family:宋体;font-weight:bold;font-size:19px"><span style="font-family:宋体">二、以下几类单位可以申报</span>2019<span style="font-family:宋体">年度稳岗补贴</span></span></strong></p><p><span style=";font-family:宋体;font-size:19px">&nbsp;&nbsp;&nbsp;&nbsp;1.<span style="font-family:宋体">经失业保险参保地人力资源和社会保障部门核定不裁员或少裁员（</span><span style="font-family:Calibri">2018</span><span style="font-family:宋体">年度裁员率低于遵义市</span><span style="font-family:Calibri">2018</span><span style="font-family:宋体">年度城镇登记失业率</span><span style="font-family:Calibri">2.97%</span><span style="font-family:宋体">的企业）的参保单位；</span></span></p><p style="text-indent:37px"><span style="font-family:宋体;font-size:19px">2.</span><span style=";font-family:宋体;font-size:19px"><span style="font-family:宋体">纳入</span>2018<span style="font-family:宋体">年化解过剩产能名单的钢铁、煤炭、煤电行业企业（名单可在市人力资源和社会保障局网站查询）；</span></span></p><p style="text-indent:37px"><span style="font-family:宋体;font-size:19px">3.</span><span style=";font-family:宋体;font-size:19px">2018<span style="font-family:宋体">年</span><span style="font-family:Calibri">12</span><span style="font-family:宋体">月参保缴费人数在</span><span style="font-family:Calibri">30</span><span style="font-family:宋体">人（含）以内，年度累计裁员</span><span style="font-family:Calibri">1</span><span style="font-family:宋体">人及未裁员的小微企业。</span></span></p><p style="text-indent:37px"><span style="font-family:宋体;font-size:19px">4.</span><span style=";font-family:宋体;font-size:19px"><span style="font-family:宋体">吸纳深度贫困地区建档立卡贫困人员就业，签订劳动合同并为其缴纳失业保险费且未解除劳动合同的事业单位。</span></span></p><p style="text-indent:37px"><span style="font-family:宋体;font-size:19px">5.</span><span style=";font-family:宋体;font-size:19px">2019<span style="font-family:宋体">年度暂时性生产经营困难且恢复有望企业申请和裁定流程咨询各地人力资源和社会保障部门。</span></span></p><p style="text-indent:37px"><strong><span style=";font-family:宋体;font-weight:bold;font-size:19px"><span style="font-family:宋体">三、申报单位办理流程</span></span></strong></p><p style="text-indent:37px"><span style=";font-family:宋体;font-size:19px"><span style="font-family:宋体">（一）申报单位应提供材料</span></span></p><p style="text-indent:37px"><span style=";font-family:宋体;font-size:19px"><span style="font-family:宋体">（</span>1<span style="font-family:宋体">）申报表（一式三份，必须使用</span><span style="font-family:Calibri">2019</span><span style="font-family:宋体">年新版的申报表，可在</span></span><span style=";font-family:宋体;color:rgb(0,0,255);font-size:19px"><span style="font-family:宋体"></span></span><span style=";font-family:宋体;font-size:19px"><span style="font-family:宋体">人社局网站下载）；</span></span></p><p style="text-indent:37px"><span style=";font-family:宋体;font-size:19px"><span style="font-family:宋体">（</span>2<span style="font-family:宋体">）</span><span style="font-family:Calibri">2018</span><span style="font-family:宋体">年</span><span style="font-family:Calibri">1-12</span><span style="font-family:宋体">月人员花名册（一份，提交到县人社局劳动保障监察股&lt;人社局一楼&gt;）；</span></span></p><p style="text-indent:37px"><span style=";font-family:宋体;font-size:19px"><span style="font-family:宋体">（</span>3<span style="font-family:宋体">）裁员率承诺说明（一份，提交<span style=";font-family:宋体;font-size:19px"><span style="font-family:宋体">到县人社局劳动保障监察股&lt;人社局一楼&gt;</span></span>）；</span></span></p><p style="text-indent:37px"><span style=";font-family:宋体;font-size:19px"><span style="font-family:宋体">（</span>4<span style="font-family:宋体">）</span><span style="font-family:Calibri">2019</span><span style="font-family:宋体">年度企业申领稳岗补贴审批统计表（电子版，提交社会保险经办机构）；</span></span></p><p style="text-indent:37px"><span style=";font-family:宋体;font-size:19px"><span style="font-family:宋体">（</span>5<span style="font-family:宋体">）符合申报条件第</span><span style="font-family:Calibri">2-3</span><span style="font-family:宋体">项的申报单位需在遵义市人力资源和社会保障局提供的企业名单内，符合第</span><span style="font-family:Calibri">5</span><span style="font-family:宋体">项申报条件的单位需提供劳动合同和深度贫困地区建档立卡相关资料。</span></span></p><p><span style=";font-family:宋体;font-size:19px"><span style="font-family:宋体">（二）办理流程：</span></span></p><p style="text-indent:37px"><span style=";font-family:宋体;font-size:19px"><span style="font-family:宋体">（</span>1<span style="font-family:宋体">）根据申报表到<span style=";font-family:宋体;font-size:19px"><span style="font-family:宋体">县人社局劳动保障监察股&lt;人社局一楼&gt;</span></span>审核申报单位年度裁员率是否低于遵义市</span><span style="font-family:Calibri">2018</span><span style="font-family:宋体">年城镇登记失业率</span><span style="font-family:Calibri">2.97%</span><span style="font-family:宋体">；</span></span></p><p style="text-indent:37px"><span style=";font-family:宋体;font-size:19px"><span style="font-family:宋体">（</span>2<span style="font-family:宋体">）社保局前台窗口打印</span><span style="font-family:Calibri">2018</span><span style="font-family:宋体">年度</span><span style="font-family:Calibri">1-12</span><span style="font-family:宋体">期缴费记录（一式两份），若企业</span><span style="font-family:Calibri">2018</span><span style="font-family:宋体">年度存在失业保险费欠费，需在</span><span style="font-family:Calibri">2019</span><span style="font-family:宋体">年</span><span style="font-family:Calibri">7</span><span style="font-family:宋体">月底前缴清相关费用后方可申领；</span></span></p><p style="text-indent:37px"><span style=";font-family:宋体;font-size:19px"><span style="font-family:宋体">（</span>3<span style="font-family:宋体">）到社会保险经办部门失业保险经办股计算稳岗补贴返还比例、</span><span style="font-family:Calibri">2018</span><span style="font-family:宋体">年度缴纳的失业保险费金额、拟返还金额；</span></span></p><p style="text-indent:37px"><span style=";font-family:宋体;font-size:19px"><span style="font-family:宋体">（</span>4<span style="font-family:宋体">）到社会保险经办机构办公室盖章；</span></span></p><p style="text-indent:37px"><span style=";font-family:宋体;font-size:19px"><span style="font-family:宋体">（</span>5<span style="font-family:宋体">）审核完毕的资料交失业科存档。</span></span></p><p style="text-indent:37px"><span style=";font-family:宋体;font-size:19px"><span style="font-family:宋体">（三）申领审批手续办理成功的企业在递交纸质材料之后，根据申报成功的申请表登录稳岗补贴信息系统</span></span><a href="javascript:;"><span style="text-decoration:underline;"><span style=";font-family:&#39;Times New Roman&#39;;color:rgb(0,0,255);text-underline:single;font-size:19px">http://wgbt.mohrss.gov.cn/</span></span></a><span style=";font-family:宋体;font-size:19px"><span style="font-family:宋体">进行网上信息填报。</span></span></p><p style="text-indent:37px"><span style=";font-family:宋体;font-size:19px"><span style="font-family:宋体">（四）在遵义市范围内（含各县区）用同一营业执照注册的企业应合并申报稳岗补贴，并提供全部的缴费信息，一个年度内只能申领一次稳岗补贴。</span></span></p><p style="text-indent:37px"><strong><span style=";font-family:宋体;font-weight:bold;font-size:19px"><span style="font-family:宋体">四、申报截至时间：</span>2019<span style="font-family:宋体">年</span><span style="font-family:Calibri">12</span><span style="font-family:宋体">月</span><span style="font-family:Calibri">31</span><span style="font-family:宋体">日（为确保本年度发放到位，建议企业在</span><span style="font-family:Calibri">2019</span><span style="font-family:宋体">年</span><span style="font-family:Calibri">11</span><span style="font-family:宋体">月</span><span style="font-family:Calibri">30</span><span style="font-family:宋体">日前申报）。 </span></span></strong></p><p style="text-indent:37px"><strong><span style=";font-family:宋体;font-weight:bold;font-size:19px"><span style="font-family:宋体">五、稳岗补贴发放时间：企业申报成功后，人社局将全年分为三次发放，发放时间暂定为</span>7<span style="font-family:宋体">月、</span><span style="font-family:Calibri">9</span><span style="font-family:宋体">月、</span><span style="font-family:Calibri">12</span><span style="font-family:宋体">月，请符合条件的企业及时办理。</span></span></strong></p><p><a style="font-size:16px; color:#0066cc;" href="javascript:;" title="附件3-稳岗补贴申报表（2019版）.doc" oldsrc="W020190610531826870690.doc">附件3-稳岗补贴申报表（2019版）.doc</a></p><p><a style="font-size:16px; color:#0066cc;" href="javascript:;" title="附件5-2019年稳岗补贴登记表.xls" oldsrc="W020190610531826886354.xls">附件5-2019年稳岗补贴登记表.xls</a></p>
+					</font>
+    			</div>
+   				<div class="KeysList" style="margin-top: 5px;">
+					<div class="jiathis_style">
+						<span class="jiathis_txt">分享到：</span>
+						<a class="jiathis_button_qzone" title="分享到QQ空间" href="javascript:;" onclick="jiathis_sendto('qzone');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_qzone">QQ空间</span>
+						</a>
+						<a class="jiathis_button_tsina" title="分享到微博" href="javascript:;" onclick="jiathis_sendto('tsina');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_tsina">新浪微博</span>
+						</a>
+						<a class="jiathis_button_tqq" title="分享到腾讯微博" href="javascript:;" onclick="jiathis_sendto('tqq');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_tqq">腾讯微博</span>
+						</a>
+						<a class="jiathis_button_renren" title="分享到人人网" href="javascript:;" onclick="jiathis_sendto('renren');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_renren">人人网</span>
+						</a>
+						<a href="javascript:;" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+						<a class="jiathis_counter_style">
+							<span class="jiathis_button_expanded jiathis_counter jiathis_bubble_style" id="jiathis_counter_36" title="累计分享0次">0</span>
+						</a>
+					</div>
+					<script type="text/javascript" src="../../../code/jia.js" ></script>
+				</div>
+   				<div class="KeysList">
+					<div class="right">
+			  			<a href="javascript:;" target="_blank" class="box_02">我要推荐</a>&emsp;
+						<!--a class="box_02" href="/syqt/rssdy/" target="_blank">RSS定制</a>&emsp;-->
+			 			<a class="box_02" href="../../../syqt/wzjc/index.html" target="_blank">网站纠错</a>&emsp;
+						<!--a class="box_02" href="#" target="_blank">返回顶部</a-->
+					</div>
+				</div>
+    			<div class="page">
+					<div id="prevpage">
+						<span>上一篇：</span><a href="javascript:;" id="no1">无</a>
+						
+							<script type="text/javascript">
+								var  str="";
+								var str_1 = "./t20190626_21894319.html";
+								var str_4 = '关于征集2019年度青年就业见习岗位的 公 告';
+								if(str_4!="")
+								{
+									jQuery("#no1").hide();
+									if (str=="") {
+										document.write('<a  href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									} else {
+										document.write('<a  href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									}
+								}
+							</script>
+						
+					</div>
+					<div id="prevpage">
+						<span>下一篇：</span><a href="javascript:;" id="no2">无</a>
+						
+							<script type="text/javascript">
+								var  str="";
+								var str_1 = "../201904/t20190428_21864154.html";
+								var str_4 = '贵安新区富士康员工招聘公告';
+								if(str_4!="")
+								{
+									jQuery("#no2").hide();
+									if (str=="") {
+										document.write('<a  href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									} else {
+										document.write('<a  href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									}
+								}
+							</script>
+						
+					</div>
+    			</div>
+   				<div class="xgxx">
+        			<h1><span>相关信息</span></h1>
+					<ul>
+						<script type="text/javascript">
+							var key="";
+							if(key!=''&&key!='null'){
+								
+							}else{
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201909/t20190917_21926093.html";
+									var str_4 = '2019年度申领失业稳岗补贴单位公示表(第二批)';
+									var str_2 = '2019-09-17';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201908/t20190807_21911894.html";
+									var str_4 = '贵州省参保企业职工申领 职业技能提升补贴须知';
+									var str_2 = '2019-08-07';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201908/t20190805_21909689.html";
+									var str_4 = '道真自治县2019年稳岗补贴发放企业名单公示（第一批）';
+									var str_2 = '2019-08-05';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "./t20190626_21894319.html";
+									var str_4 = '关于征集2019年度青年就业见习岗位的 公 告';
+									var str_2 = '2019-06-26';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "./t20190610_21885105.html";
+									var str_4 = '2019年度企业稳岗补贴经办一次性告知书';
+									var str_2 = '2019-06-10';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+								
+							}
+						 </script>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="foot_bj">
+	<div class="foot_nr">
+		<p>
+			<a href="../../../syqt/rssdy/index.html">RSS订阅</a>|
+			<a href="../../../syqt/lxfs/index.html">联系方式</a>|
+			<a href="../../../syqt/wzdt/index.html">网站地图</a>
+		</p>
+		<p>Copyright 2010 All Rights Reserved      主办：道真县人力资源网</p>
+		<p>电话：0851-25782065       技术支持：<a href="javascript:;" target="_blank">贵州多彩博虹科技有限公司</a></p>
+		<p>(建议使用1024×768分辨率 IE70以上版本浏览器) </p>
+		<p style="margin-top: 12px;">
+			<!--a target="_blank" href="http://bszs.conac.cn/sitename?method=show&id=04E0DEEC2DCA0288E053022819ACC535">
+				<img src="/images/dz_jg.png" /></a-->
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src=' http://dcs.conac.cn/js/24/356/2168/40584250/CA243562168405842500001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+		</p>
+	</div>
+</div>
+<script id="_trs_ta_js" src="../../../c/js/ta-1290.js" async="async" defer="defer"></script>
+    </body>
+</html>

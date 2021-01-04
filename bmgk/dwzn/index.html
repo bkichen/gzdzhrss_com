@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>道真县人力资源网-单位职能</title>
+	<link href="../../images/list.css" rel="stylesheet" type="text/css">
+	<meta name="Keywords" content="道真人社局,道真县人力资源网,道真人事考试,道真县人力资源与社会保障,道真县人社局组织全体党员参加扫墓活动">
+<script type="text/javascript" src="../../images/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../images/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+    jQuery(function() {
+		jQuery('#j_search_btn').click(function() {
+			var str = jQuery("#keyword").val();
+			checks(str);
+		});
+	});
+	function checks(t) {
+		t = t.replace(/(^\s+)|(\s+$)/g, "");
+		if (t == "" || t == "请输入关键检索字") {
+			alert('请输入有效内容');
+			return false;
+		}
+		szMsg = "[#_%&'/",
+		";:=!^]";
+		alertStr = "";
+		for (i = 1; i < szMsg.length + 1; i++) {
+			if (t.indexOf(szMsg.substring(i - 1, i)) > -1) {
+				alertStr = "请勿包含非法字符如[#_%&'/",
+				";:=!^]";
+				alert(alertStr);
+				// break;
+				return false;
+			}
+		}
+		var key = document.getElementById("keyword").value;
+		window.location.href ="/search.html?keyword=" + key;
+		return true;
+	}
+function sub(){
+    window.location.href ="/search.shtml";
+}
+function AddFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle)
+    } catch (e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, "")
+        } catch (e) {
+            alert("加入收藏失败，请使用Ctrl+D进行添加")
+        }
+    }
+}
+function SetHome(obj, vrl) {
+    try {
+        obj.style.behavior = "url(#default#homepage)";
+        obj.setHomePage(vrl)
+    } catch (e) {
+        if (window.netscape) {
+            try {
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")
+            } catch (e) {
+                alert("此操作被浏览器拒绝！n请在浏览器地址栏输入\"about:config\"并回车n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。")
+            }
+            var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
+            prefs.setCharPref("browser.startup.homepage", vrl)
+        }
+    }
+}
+	//设为首页 
+	function SetHome(url){
+		if (document.all) {
+			document.body.style.behavior='url(#default#homepage)';
+			document.body.setHomePage(url);
+		}else{ 
+			alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+		}
+	}
+</script>
+<script type="text/javascript">
+      function GoTo() {
+          window.open("/syqt/wzjc/index.html?url=" + document.URL);
+      }
+</script>
+</head>
+
+<body>
+	<input id="Chid" value='5441095' type="hidden">
+	<!--天气js-->
+<script type="text/javascript">
+	function initArray() {
+		for (i = 0; i < initArray.arguments.length; i++)
+			this[i] = initArray.arguments[i];
+	}
+	var isnMonths = new initArray("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+	var isnDays = new initArray("  星期日", "  星期一", "  星期二", "  星期三", "  星期四", "  星期五", "  星期六", "  星期日");
+	today = new Date();
+	hrs = today.getHours();
+	min = today.getMinutes();
+	sec = today.getSeconds();
+	clckh = "" + ((hrs > 12) ? hrs - 12 : hrs);
+	clckm = ((min < 10) ? "0" : "") + min;
+	clcks = ((sec < 10) ? "0" : "") + sec;
+	clck = (hrs >= 12) ? "下午" : "上午";
+	var stnr = "";
+	var ns = "0123456789";
+	var a = "";
+
+	function getFullYear(d) {
+		yr = d.getYear();
+		if (yr < 1000)
+			yr += 1900;
+		return yr;
+	}
+</script>
+<div class="banner">
+	<!--顶部-->
+	<div class="dingb_bj">
+		<div class="dingb_nr">
+			<!--日期-->
+			<div class="riqi f_l">
+				<ul>
+					<li><span>今天是: </span>
+						<script type="text/javascript">
+							document.write("<div class='time'>" + getFullYear(today) + "年" + "" + isnMonths[today.getMonth()] + "月" + today.getDate() + "日" + isnDays[today.getDay()] + "</div>");
+						</script>
+					</li>
+				</ul>
+			</div>
+			<!--收藏-->
+			<div class="f_r ding_y">
+				<a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>|
+				<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>
+			</div>
+		</div>
+	</div>
+	<!--logo-->
+	<div class="logo_by" style="overflow: initial;">
+		<ul>
+			<li class="f_l"><a href="../../index.html"><img src="../../images/logo.png"></a></li>
+			<li class="f_r"><img src="../../images/biaoyu.png"></li>
+		</ul>
+	</div>
+	<!--导航-->
+	<div class="nav_bj">
+		<div class="nav f_l">
+			<ul>
+				<li><a href="../../index.html">网站首页</a></li>
+				<li><a href="../../gzdt/index.html">工作动态</a></li>
+				<li><a href="../../ywgz/index.html">业务工作</a></li>
+				<li><a href="../index.html">部门概况</a></li>
+				<li><a href="../../zwgk/index.html">政务公开</a></li>
+			</ul>
+		</div>
+		<!--搜索-->
+		<div class="sous f_r">
+    		<dl>
+				<dt><a href="javascript:void(0);" id="j_search_btn"><img src="../../images/sous.png"></a></dt>
+				<dd>
+					<input id="keyword" name="keyword" type="text" class="sous_sy" value="请输入关键字" style="color:#666666; line-height:40px; font-size: 14px;" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#000'}" onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#9e9e9e'}">
+				</dd>
+			</dl>
+    	</div>
+	</div>
+</div>
+	<div class="content-main">
+		<div class="dqwz">
+			您当前所在位置：<a href="../../index.html" title="首页" class="CurrChnlCls">首页</a>&nbsp;&raquo;&nbsp;<a href="../index.html" title="部门概况" class="CurrChnlCls">部门概况</a>&nbsp;&raquo;&nbsp;<a href="" title="单位职能" class="CurrChnlCls">单位职能</a>
+		</div>
+		<div class="zb_lb f_l">
+			<h2>部门概况</h2>
+			<div class="Left_Nav">
+				<ul>
+					
+						<script type="text/javascript">
+							var  str2=document.getElementById("Chid").value;
+							var  str3='单位职能';
+							var  str4 = './';
+							if(str4.substring(0,7)!="http://"){
+								if(str2=='5441095'){
+									document.write('<li class="li_nav on"><a href="./">'+str3+'</a></li>');
+								}else{
+									document.write('<li class="li_nav"><a href="./">'+str3+'</a></li>');
+								}
+							}else{
+								document.write('<li class="li_nav"><a href="./" target="_blank">'+str3+'</a></li>');
+							}
+						</script>
+					
+						<script type="text/javascript">
+							var  str2=document.getElementById("Chid").value;
+							var  str3='领导信息';
+							var  str4 = '../ldxx/';
+							if(str4.substring(0,7)!="http://"){
+								if(str2=='5441096'){
+									document.write('<li class="li_nav on"><a href="../ldxx/">'+str3+'</a></li>');
+								}else{
+									document.write('<li class="li_nav"><a href="../ldxx/">'+str3+'</a></li>');
+								}
+							}else{
+								document.write('<li class="li_nav"><a href="../ldxx/" target="_blank">'+str3+'</a></li>');
+							}
+						</script>
+					
+						<script type="text/javascript">
+							var  str2=document.getElementById("Chid").value;
+							var  str3='就业创业';
+							var  str4 = '../jycy/';
+							if(str4.substring(0,7)!="http://"){
+								if(str2=='5441097'){
+									document.write('<li class="li_nav on"><a href="../jycy/">'+str3+'</a></li>');
+								}else{
+									document.write('<li class="li_nav"><a href="../jycy/">'+str3+'</a></li>');
+								}
+							}else{
+								document.write('<li class="li_nav"><a href="../jycy/" target="_blank">'+str3+'</a></li>');
+							}
+						</script>
+					
+						<script type="text/javascript">
+							var  str2=document.getElementById("Chid").value;
+							var  str3='社保经办';
+							var  str4 = '../sbjb/';
+							if(str4.substring(0,7)!="http://"){
+								if(str2=='5441101'){
+									document.write('<li class="li_nav on"><a href="../sbjb/">'+str3+'</a></li>');
+								}else{
+									document.write('<li class="li_nav"><a href="../sbjb/">'+str3+'</a></li>');
+								}
+							}else{
+								document.write('<li class="li_nav"><a href="../sbjb/" target="_blank">'+str3+'</a></li>');
+							}
+						</script>
+					
+						<script type="text/javascript">
+							var  str2=document.getElementById("Chid").value;
+							var  str3='争议仲裁';
+							var  str4 = '../zyzc/';
+							if(str4.substring(0,7)!="http://"){
+								if(str2=='5441105'){
+									document.write('<li class="li_nav on"><a href="../zyzc/">'+str3+'</a></li>');
+								}else{
+									document.write('<li class="li_nav"><a href="../zyzc/">'+str3+'</a></li>');
+								}
+							}else{
+								document.write('<li class="li_nav"><a href="../zyzc/" target="_blank">'+str3+'</a></li>');
+							}
+						</script>
+					
+						<script type="text/javascript">
+							var  str2=document.getElementById("Chid").value;
+							var  str3='监察大队';
+							var  str4 = '../jcdd/';
+							if(str4.substring(0,7)!="http://"){
+								if(str2=='5441109'){
+									document.write('<li class="li_nav on"><a href="../jcdd/">'+str3+'</a></li>');
+								}else{
+									document.write('<li class="li_nav"><a href="../jcdd/">'+str3+'</a></li>');
+								}
+							}else{
+								document.write('<li class="li_nav"><a href="../jcdd/" target="_blank">'+str3+'</a></li>');
+							}
+						</script>
+					
+				</ul>
+				<div class="hover" style="top: 0px;"></div>
+			</div>
+		</div>
+		<div class="yb_nr f_r">
+			<div class="ImgList">
+				<h1><span>单位职能</span></h1>
+				<div class="view">
+					<font id="Zoom">
+						
+							<div class="view TRS_UEDITOR trs_paper_default trs_external"><p style="margin: auto 0px; text-align: center; line-height: 40px; text-indent: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">道府办发〔</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;">2014</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">〕</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;">134号</span></p><p style="margin: auto 0px; text-align: center; line-height: 40px; text-indent: 0px; -ms-text-autospace: ideograph-numeric;"><br></p><p style="margin: auto 0px; text-align: center; line-height: 40px; text-indent: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 方正小标宋简体; font-size: 29px;"><span style="font-family: 方正小标宋简体;">道真自治县人民政府办公室《关于印发道真仡佬族苗族自治县人力资源和社会保障局主要职责内设机构和人员》编制规定的通知</span></span></p><p style="margin: 0px; text-align: left; line-height: 40px; text-indent: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">各乡（镇）人民政府，县政府各工作部门：　　　　　　　　　　　　　　　　　　　　　　　　</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"></span></p><p style="margin: 0px; text-align: left; line-height: 40px; text-indent: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">　　《道真仡佬族苗族自治县人力资源和社会保障局主要职责内设机构和人员编制规定》已经县政府批准，现予印发。</span></span></p><p style="margin: auto 0px; text-align: center; line-height: 40px; text-indent: 0px; -ms-text-autospace: ideograph-numeric;"><br></p><p style="margin: auto 0px; text-align: center; line-height: 24px; text-indent: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">　　　　　　　　　　　　　　道真自治县人民政府办公室</span></span></p><p style="margin: auto 0px; text-align: center; line-height: 24px; text-indent: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"></span><span style="font-family: 仿宋_GB2312; font-size: 21px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2014年12月12日</span></p><p style="margin: auto 0px; text-align: center; line-height: 40px; text-indent: 0px; -ms-text-autospace: ideograph-numeric;"><span style="font-family: 方正小标宋简体; font-size: 29px;"><span style="font-family: 方正小标宋简体;">道真仡佬族苗族自治县人力资源和社会保障局主要职责内设机构和人员编制规定</span></span></p><p style="text-align: left; text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">根据《中共遵义市委办公室遵义市人民政府办公室关于印发</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">〈</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">道真自治县人民政府职能转变和机构改革方案</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">〉</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">的通知》</span><span style="font-family: 仿宋_GB2312;">（遵党办发〔</span>2014〕78号）和《中共道真自治县委道真自治县人民政府关</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">于</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">县人民政府职能转变和机构改革的实施意见》（道党发〔</span>2014〕3号），设立道真讫佬族苗族自治县人力资源和社会保障局，为县人民政府工作部门</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><br></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"></span><span style="font-family: 黑体; font-size: 21px;"><span style="font-family: 黑体;">一、职责调整</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><br></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">取消已由省、市、县人民政府公布取消的行政审批事项</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span></p><p style="text-align: left; text-indent: 42px;"><span style="font-family: 黑体; font-size: 21px;">二、</span><span style="font-family: 黑体; font-size: 21px;"><span style="font-family: 黑体;">主要职责</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><br></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（一）贯彻执行党和国家人力资源和社会保障事业法律法规、方针政策；拟订全县人力资源和社会保障事业发展规划、年度计划，并组织实施和监督检查。</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><br></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（二）拟订人力资源市场发展规划和人力资源流动政策，建立统一规范的人力资源市场，促进人力资源合理流动、有效配置</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span></p><p style="text-align: left; text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（三）负责促进就业工作</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">拟订统筹城乡就业发展规划和政策，完善公共就业服务体系，落实就业援助制度；完善职业资格制度，统筹建立面向城乡劳动者的职业培训制度；牵头拟订高校毕业生就业政策；会同有关部门拟订高技能人才、农村实用人才的培养计划和激励政策；负责引进人才在本县就业的管理工作；承担农村劳动力转移工作部门联席会议日常工作。</span></span></p><p style="text-align: left;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（四）统筹建立覆盖城乡的社会保障体系</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">拟订并组织实施城乡社会保险及其补充保险的政策和标准；拟订社会保险关系转续办法并组织实施；贯彻执行机关企事业单位和其他社会组织、社会成员的基本养老保险和基本医疗保险政策规定；会同有关部门拟订社会保险及其补充保险基金管理和监督制度并组织实施；组织编制全县社会保险基金预决算草案，参与拟订全县社会保障基金收缴、支付、管理、运营的实施细则；按规定做好社会保险基金保值增值的监督管理工作</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span></p><p style="text-align: left; text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（五）负责就业、失业、社会保险基金预测预警和信息引导；拟订应对预案，实施预防、调节和控制，保持就业形势稳定和社会保险基金总体收支平衡</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span></p><p style="text-align: left; text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（六）贯彻执行机关、事业单位人员工资收入分配制度改革和机关企事业单位人员福利及离退休政策规定；建立机关企事业单位人员工资正常增长和支付保障机制；拟订企业职工工资收入的宏观调控政策，完善最低工资制度和工资支付保障机制；参与劳动模范评定工作</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span></p><p style="text-align: left; text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（七）会同有关部门指导事业单位人事制度改革，拟订事业单位人员和机关工勤人员管理办法；参与人才管理工作，拟订专业技术人员管理和继续教育工作制度并组织实施；牵头推进深化职称制度改革工作，负责高层次专业技术人才选拔和培养工作；拟订吸引国</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（境）</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">外专家、省外留学人员来道（回道）工作或定居政策</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（八）会同有关部门拟订军队转业干部安置计划并组织实施；负责军队转业干部教育培训相关工作，做好部分企业军队转业干部解困和稳定工作，负责自主择业军队转业干部管理服务工作。</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（九）负责行政机关公务员、参照公务员法管理的事业单位工作人员和聘任制公务员综合管理；贯彻执行有关人员调配政策和特殊人员安置政策；会同有关部门组织落实国家荣誉制度，负责政府奖励表彰工作</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（十）组织实施公务员行为规范、职业道德建设、能力建设政策以及公务员职位分类标准和管理办法的实施细则，依法对公务员进行监督；负责公务员、参照公务员法管理单位工作人员的考试录用工作；负责县级机关公务员考核培训工作；负责公务员申诉控告和聘任制公务员人事争议仲裁工作，保障公务员合法权益；组织实施公务员奖惩政策；负责公务员信息统计管理工作。</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（十一）会同有关部门拟订农民工工作规划，负责农民工工作相关政策措施的落实，协调解决重点难点问题，维护农民工合法权益</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span></p><p><span style="font-family: 仿宋_GB2312; font-size: 21px;"></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（十二）统筹实施劳动人事争议仲裁制度；完善劳动关系协调机制；督促落实消除非法使用童工政策和女工、未成年工的特殊劳动保护政策；组织实施劳动监察，协调劳动者维权工作，依法查处重大案件</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span></p><p><span style="font-family: 仿宋_GB2312; font-size: 21px;"></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（十三）负责拟订基本医疗保险、工伤保险、生育保险支付标准、诊疗项目、用药及服务设施范围、定点医疗机构与定点药店费用结算审核等管理办法并监督执行；负责基本医疗保险就医管理和监督工作，负责医疗保险基金支付方式改革工作；监督执行医疗制度改革相关政策</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span></p><p><span style="font-family: 仿宋_GB2312; font-size: 21px;"></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（十四）负责有关人力资源和社会保障工作的对外交流与合作事宜．</span></span></p><p><span style="font-family: 仿宋_GB2312; font-size: 21px;"></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（十五）受理涉及人力资源和社会保障的信访事项，会同有关部门协调处理有关人力资源和社会保障方面的重大信访事件和突发事件</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span></p><p><span style="font-family: 仿宋_GB2312; font-size: 21px;"></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（十六）承办县人民政府和上级业务部门交办的其他事项。</span></span></p><p><span style="font-family: 黑体; font-size: 21px;"><span style="font-family: 黑体;">　　三、</span></span><span style="font-family: 黑体; font-size: 21px;"><span style="font-family: 黑体;">内设机构</span></span></p><p><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">　　根</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">据上述职责，道真</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">仡</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">佬族苗族自治县人力资源和社会保障局设</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;">9个内设</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">机构：</span></span></p><p><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">　　（一）办公室</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">综合</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">规划开发股）</span></span></p><p><span style="font-family: 仿宋_GB2312; font-size: 21px;"></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">负责局机关文电、会务、机要、档案、信息化建设、政务公开、保密、计划生育、社会治安综合治理和后勤保障等机关日常运转工作；负责全县人力资源和社会保障信访工作；负责受理、组织、协调、交办、转送、督办涉及人力资源和社会保障工作的信访事项</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span></p><p><span style="font-family: 仿宋_GB2312; font-size: 21px;"></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">编制人力资源和社会保障事业发展规划、年度计划；拟订人力资源市场发展规划；负责全县人力资源需求和社会保险事业发展预测分析，承担全县人力资源和社会保障统计综合管理与分析工作；承担全县人才资源开发工作；承担全县人力资源和社会保障系统数据统计及信息化建设规划工作。</span></span></p><p><span style="font-family: 仿宋_GB2312; font-size: 21px;"></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">承担局机关和所属单位机构编制、网上名称管理、干部人事、退休干部管理和职工教育培训等工作</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">开展党风廉政建设的教育和宣传工作，认真执行领导干部廉洁自律各项规定，加强对领导干部执行规定情况的监督检查。负责本单位各项规章制度的执行和督促检查；搞好本局党风廉政建设和机关党建工作，受理本局党员干部党风党纪、政风政纪控告和申诉，调查处理违反党纪政纪案件；承担纪检监察有关工作。</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（二）财务股</span></span></p><p><span style="font-family: 仿宋_GB2312; font-size: 21px;"></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">承担编制全县社会保险基金和就业资金预决算草案工作；参与拟订全县人力资源和社会保障资金（基金）财务管理办法并监督实施；编制本部门预决算，负责机关及所属单位的财务会计制度建设、资金资产管理与监督以及绩效评价工作；承担有关科技项目和外援贷款项目管理工作</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span></p><p><span style="font-family: 仿宋_GB2312; font-size: 21px;"></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（三）政策法规股</span></span></p><p><span style="font-family: 仿宋_GB2312; font-size: 21px;"></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">宣传贯彻人力资源和社会保障方针政策、法律法规；组织开展人力资源和社会保障政策研究工作；承担重要文稿起草工作；承担人力资源和社会保障新闻发布工作；承担机关规范性文件的合法性审核工作；负责相关行政复议及行政应诉工作；拟订劳动监察工作规划和年度计划；组织实施劳动监察，依法查处和督办重大案件；负责全县工伤预防、认定和康复管理工作；负责工伤伤残等级鉴定的相关工作；贯彻落实国家劳动法规和拟订劳动合同和集体合同制度实施意见，负责劳动合同管理；监督执行国家企业职工工作时间、休息休假制度；拟订女工、未成年工的特殊劳动保护和消除非法使用童工管理办法；指导全县劳动监察工作；协调跨区域劳动者维权工作，组织处理有关突发事件；承担其他人力资源和社会保障监督检查工作；拟订人力资源服务机构市场准入管理制度；监督指导职业中介机构</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span></p><p><span style="font-family: 仿宋_GB2312; font-size: 21px;"></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（四）公务员管理股（录用调配股、军队转业干部管理办公室）</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">负责公务员行为规范、职业道德建设和能力建设，实施公务员职位分类标准和管理办法，依法对公务员实施监督管理；拟订公务员培训规划和年度计划并组织实施；负责组织公务员、参照公务员法管理单位工作人员的考试录用和事业单位工作人员的公开招聘工作及考试考核聘用工作；负责公务员考核奖惩、申诉控告工作，保障公务员合法权益；负责组织机关公务员培训工作；负责公务员统计工作；审核公务员、机关工勤人员奖励、表彰工作；按管理权限负责机关事业单位工作人员的调配工作</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">负责转业军官的接收、安置工作；负责协调有关部门做好转业军官随军调（迁）家属的安置工作；做好企业军队转业干部解困和稳定工作；承担自主择业军队转业干部管理服务工作</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。　　　</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（五）考核奖惩培训股</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">负责机关和事业单位人员考核、奖励以及涉及考核奖励方面的申诉控告管理工作；组织实施机关、事业单位工作人员的年度考核工作；综合管理全县政府系统的奖励、表彰工作，承办受县级以上政府系统奖励、表彰人员的审核、推荐、呈报工作；参与县委、政府综合性奖励表彰活动；组织实施国家公务员更新知识培训和专业技术人员继续教育；负责承办事业单位举办专业技术人员继续教育培训班的审核批复、监督管理工作；承办专业技术人员的学时登记工作；完成主管部门交办的其他工作</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（六）事业单位人事管理股（人才工作股）</span></span></p><p><span style="font-family: 仿宋_GB2312; font-size: 21px;"></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">承担政府人才工作综合管理工作，协调配合相关单位拟定人才发展中长期规划和年度工作计划；组织实施</span>“15851 ”人才工程，会同有关部门制定人才培养计划和激励政策、抓好全县人才资源开发相关服务工作，不断优化人才服务环境；负责县级高级人才津贴的考核、审批、发放工作，兑现相关人才政策待遇；负责职称评审及管理工作，推行和强化执业资格制度及资格考试制度，承办深化职称制度改革事宜；负责高、中、初级专业技术职务的推荐、评审工作；负责组织享受政府特殊津贴专家的推荐、选拔和管理工作；协调做好引进人才在本县就业管理工作</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">管理机关工勤和事业单位人员，指导事业单位人事制度改革和人事管理工作；负责事业单位管理人员、专业技术人员和工勤人员的聘用及岗位管理工作</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">负责事业单位人员和机关工勤人员的考核、处分、辞职、辞退和申诉控告工作；拟定专业技术人员培训计划并组织实施；综合管理、审核事业单位人员奖励、表彰工作</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">负责机关事业单位技术工人技术等级考评工作和事业单位专业技术人员综合管理。</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">负责事业单位人员统计工作。</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（七）工资福利退休股</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">管理县直机关事业单位工资总额，承办县直机关、事业单位工资政策实施和工资统发工作；指导全县机关、事业单位工资总额管理工作；贯彻执行机关、事业单位津贴、补贴制度和绩效工资制度；协调县直机关、事业单位离退休人员的管理服务工作；承担县直机关、事业单位工作人员正常退休及提前退休手续的审核办理工作；指导和监督县内企业落实职工工资收入分配政策；指导和监督县内国有企业工资总额管理和企业负责人工资收入分配；负责全县机关企事业单位干部职工工资年报统计工作；负责工资指导价位的发布。</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（八）社会保险基金监督股</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">拟订全县机关企事业单位基本养老保险、补充养老保险、城镇居民养老保险、失业保险、医疗保险、生育保险、工伤保险工作制度；拟订全县养老保险、失业保险、医疗保险、工伤保险、生育保险基金管理办法，并监督实施；拟订养老保险、失业保险、医疗保险、工伤保险、生育保险基金预测预警制度；完善县内企业职工离退休政策，办理本级企业职工提前退休手续。负责全县医疗保险和生育保险定点医疗机构、药店的监督管理；拟订全县农村养老保险和被征地农民社会保障工作规划；拟订全县农村社会保险基金管理办法和征地方案中有关被征地农民社会保障措施的审核。</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">对社会保险基金、就业再就业资金及其他资金进行监督管理；拟订全县社会保险及其补充保险基金监督管理制度；依法监督全县社会保险及其补充保险基金征缴、支付、管理和运营，并组织查处县内重大案件；承担县社会保障监督委员会办公室的日常工作．</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">（九）档案室</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">保管干部职工人事档案，为国家积累档案史料；收集、鉴别和整理干部职工档案材料；办理干部职工档案的查阅、借阅和利用；做好干部职工档案的安全、保密、保护工作；调查研究干部职工档案工作情况，制定完善规章制度，搞好档案室的达标建设；指导乡镇人力资源和社会保障服务中心档案管理。</span></span></p><p style="text-indent: 42px;"><span style="font-family: 黑体; font-size: 21px;"><span style="font-family: 黑体;">四、人员编制</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">道真仡佬族苗族自治县人力资源和社会保障局机关行政编制</span>17名。其中，局长1名，副局长3名；股长（主任）9名。　　　</span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">机关工勤人员编制</span>2 名，由财政全额预算管理。</span></p><p style="text-indent: 42px;"><span style="font-family: 黑体; font-size: 21px;"><span style="font-family: 黑体;">五、其他事项</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">所属事业单位机构编制事项另行规定。</span></span></p><p style="text-indent: 42px;"><span style="font-family: 黑体; font-size: 21px;"><span style="font-family: 黑体;">六、附则</span></span></p><p style="text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">本规定由县机构编制委员会办公室负责解释，其调整由县机构编制委员会办公室按规定程序办理。</span></span></p><p style="text-indent: 42px;"><br></p><p><br></p></div>
+						
+					</font>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="foot_bj">
+	<div class="foot_nr">
+		<p>
+			<a href="../../syqt/rssdy/index.html">RSS订阅</a>|
+			<a href="../../syqt/lxfs/index.html">联系方式</a>|
+			<a href="../../syqt/wzdt/index.html">网站地图</a>
+		</p>
+		<p>Copyright 2010 All Rights Reserved      主办：道真县人力资源网</p>
+		<p>电话：0851-25782065       技术支持：<a href="javascript:;" target="_blank">贵州多彩博虹科技有限公司</a></p>
+		<p>(建议使用1024×768分辨率 IE70以上版本浏览器) </p>
+		<p style="margin-top: 12px;">
+			<!--a target="_blank" href="http://bszs.conac.cn/sitename?method=show&id=04E0DEEC2DCA0288E053022819ACC535">
+				<img src="/images/dz_jg.png" /></a-->
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src=' http://dcs.conac.cn/js/24/356/2168/40584250/CA243562168405842500001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+		</p>
+	</div>
+</div>
+<script id="_trs_ta_js" src="../../c/js/ta-1290.js" async="async" defer="defer"></script>
+</body>
+</html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>人力资源社会保障部办公厅 财政部办公厅关于进一步做好2017年就业重点工作的通知（人社厅发〔2017〕32号）</title>
+		<link rel="stylesheet" href="../../../../images/nry.css">
+		<meta name="Keywords" content="道真人社局,道真县人力资源网,道真人事考试,道真县人力资源与社会保障,道真县人社局组织全体党员参加扫墓活动">
+<script type="text/javascript" src="../../../../images/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../../../images/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+    jQuery(function() {
+		jQuery('#j_search_btn').click(function() {
+			var str = jQuery("#keyword").val();
+			checks(str);
+		});
+	});
+	function checks(t) {
+		t = t.replace(/(^\s+)|(\s+$)/g, "");
+		if (t == "" || t == "请输入关键检索字") {
+			alert('请输入有效内容');
+			return false;
+		}
+		szMsg = "[#_%&'/",
+		";:=!^]";
+		alertStr = "";
+		for (i = 1; i < szMsg.length + 1; i++) {
+			if (t.indexOf(szMsg.substring(i - 1, i)) > -1) {
+				alertStr = "请勿包含非法字符如[#_%&'/",
+				";:=!^]";
+				alert(alertStr);
+				// break;
+				return false;
+			}
+		}
+		var key = document.getElementById("keyword").value;
+		window.location.href ="/search.html?keyword=" + key;
+		return true;
+	}
+function sub(){
+    window.location.href ="/search.shtml";
+}
+function AddFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle)
+    } catch (e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, "")
+        } catch (e) {
+            alert("加入收藏失败，请使用Ctrl+D进行添加")
+        }
+    }
+}
+function SetHome(obj, vrl) {
+    try {
+        obj.style.behavior = "url(#default#homepage)";
+        obj.setHomePage(vrl)
+    } catch (e) {
+        if (window.netscape) {
+            try {
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")
+            } catch (e) {
+                alert("此操作被浏览器拒绝！n请在浏览器地址栏输入\"about:config\"并回车n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。")
+            }
+            var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
+            prefs.setCharPref("browser.startup.homepage", vrl)
+        }
+    }
+}
+	//设为首页 
+	function SetHome(url){
+		if (document.all) {
+			document.body.style.behavior='url(#default#homepage)';
+			document.body.setHomePage(url);
+		}else{ 
+			alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+		}
+	}
+</script>
+<script type="text/javascript">
+      function GoTo() {
+          window.open("/syqt/wzjc/index.html?url=" + document.URL);
+      }
+</script>
+		<script type="text/javascript">
+			function fontResizer(smallFont,medFont,largeFont){
+				function clearSelected(){
+					$(".smallFont").removeClass("curFont");
+					$(".medFont").removeClass("curFont");
+					$(".largeFont").removeClass("curFont");
+				}
+				function saveState(curSize){
+					var date = new Date();
+					date.setTime(date.getTime()+(7*24*60*60*1000));
+					var expires = "; expires="+date.toGMTString();
+					document.cookie = "fontSizer"+"="+curSize+expires+"; path=/";
+				}
+			
+				$(".smallFont").click(function(){
+					$('#Zoom').css('font-size', smallFont);
+					$('#Zoom p').css('font-size', smallFont);
+					$('#Zoom span').css('font-size', smallFont);
+					$('#Zoom font').css('font-size', smallFont);
+					clearSelected();
+					$(".smallFont").addClass("curFont");
+					saveState(smallFont);
+				});
+			
+				$(".medFont").click(function(){
+					$('#Zoom').css('font-size', medFont);
+					$('#Zoom p').css('font-size', medFont);
+					$('#Zoom span').css('font-size', medFont);
+					$('#Zoom font').css('font-size', medFont);
+					clearSelected();
+					$(".medFont").addClass("curFont");
+					saveState(medFont);
+				});
+			
+				$(".largeFont").click(function(){
+					$('#Zoom').css('font-size', largeFont);
+					$('#Zoom p').css('font-size', largeFont);
+					$('#Zoom span').css('font-size', largeFont);
+					$('#Zoom font').css('font-size', largeFont);
+					$('#Zoom').css('line-height','40px');
+					clearSelected();
+					$(".largeFont").addClass("curFont");
+					saveState(largeFont);
+				});
+			
+				function getCookie(c_name){
+					if(document.cookie.length>0){
+						c_start=document.cookie.indexOf(c_name + "=");
+						if (c_start!=-1){
+							c_start=c_start + c_name.length+1;
+							c_end=document.cookie.indexOf(";",c_start); 
+							if(c_end==-1)c_end=document.cookie.length;
+							return unescape(document.cookie.substring(c_start,c_end));
+						}
+					} 
+					return "";
+				}
+			
+				var savedSize = getCookie('fontSizer');
+			
+				if(savedSize!=""){
+					$('#Zoom').css('font-size', savedSize);
+					switch(savedSize){
+						case smallFont: $(".smallFont").addClass("curFont");
+						break;
+						case medFont: $(".medFont").addClass("curFont");
+						break;
+						case largeFont: $(".largeFont").addClass("curFont");
+						break;
+						default: $(".medFont").addClass("curFont");
+					}
+				}else {
+					$('#Zoom').css('font-size', medFont);
+					$(".medFont").addClass("curFont");
+				}
+				
+			}
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				fontResizer('12px','16px','20px');
+			});
+		</script>
+		<script type="text/javascript">
+			function ChangeColor(ColorName){
+				$('#c').css('background', ColorName);
+				$('#Zoom p').css('background', ColorName);
+				$('#Zoom span').css('background', ColorName);
+				$('#Zoom font').css('background', ColorName);
+			}	
+		</script>
+	</head>
+	<body>
+		<!--天气js-->
+<script type="text/javascript">
+	function initArray() {
+		for (i = 0; i < initArray.arguments.length; i++)
+			this[i] = initArray.arguments[i];
+	}
+	var isnMonths = new initArray("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+	var isnDays = new initArray("  星期日", "  星期一", "  星期二", "  星期三", "  星期四", "  星期五", "  星期六", "  星期日");
+	today = new Date();
+	hrs = today.getHours();
+	min = today.getMinutes();
+	sec = today.getSeconds();
+	clckh = "" + ((hrs > 12) ? hrs - 12 : hrs);
+	clckm = ((min < 10) ? "0" : "") + min;
+	clcks = ((sec < 10) ? "0" : "") + sec;
+	clck = (hrs >= 12) ? "下午" : "上午";
+	var stnr = "";
+	var ns = "0123456789";
+	var a = "";
+
+	function getFullYear(d) {
+		yr = d.getYear();
+		if (yr < 1000)
+			yr += 1900;
+		return yr;
+	}
+</script>
+<div class="banner">
+	<!--顶部-->
+	<div class="dingb_bj">
+		<div class="dingb_nr">
+			<!--日期-->
+			<div class="riqi f_l">
+				<ul>
+					<li><span>今天是: </span>
+						<script type="text/javascript">
+							document.write("<div class='time'>" + getFullYear(today) + "年" + "" + isnMonths[today.getMonth()] + "月" + today.getDate() + "日" + isnDays[today.getDay()] + "</div>");
+						</script>
+					</li>
+				</ul>
+			</div>
+			<!--收藏-->
+			<div class="f_r ding_y">
+				<a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>|
+				<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>
+			</div>
+		</div>
+	</div>
+	<!--logo-->
+	<div class="logo_by" style="overflow: initial;">
+		<ul>
+			<li class="f_l"><a href="../../../../index.html"><img src="../../../../images/logo.png"></a></li>
+			<li class="f_r"><img src="../../../../images/biaoyu.png"></li>
+		</ul>
+	</div>
+	<!--导航-->
+	<div class="nav_bj">
+		<div class="nav f_l">
+			<ul>
+				<li><a href="../../../../index.html">网站首页</a></li>
+				<li><a href="../../../../gzdt/index.html">工作动态</a></li>
+				<li><a href="../../../../ywgz/index.html">业务工作</a></li>
+				<li><a href="../../../index.html">部门概况</a></li>
+				<li><a href="../../../../zwgk/index.html">政务公开</a></li>
+			</ul>
+		</div>
+		<!--搜索-->
+		<div class="sous f_r">
+    		<dl>
+				<dt><a href="javascript:void(0);" id="j_search_btn"><img src="../../../../images/sous.png"></a></dt>
+				<dd>
+					<input id="keyword" name="keyword" type="text" class="sous_sy" value="请输入关键字" style="color:#666666; line-height:40px; font-size: 14px;" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#000'}" onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#9e9e9e'}">
+				</dd>
+			</dl>
+    	</div>
+	</div>
+</div>
+		<div class="content-main">
+			<div class="dqwz">
+				您当前所在位置：<a href="../../../../index.html" title="首页" class="CurrChnlCls">首页</a>&nbsp;&raquo;&nbsp;<a href="../../../index.html" title="部门概况" class="CurrChnlCls">部门概况</a>&nbsp;&raquo;&nbsp;<a href="../../index.html" title="就业创业" class="CurrChnlCls">就业创业</a>&nbsp;&raquo;&nbsp;<a href="../index.html" title="政策法规" class="CurrChnlCls">政策法规</a>
+			</div>
+			<div class="body_content" id="c">
+    			<div class="title">
+        			<h1>人力资源社会保障部办公厅 财政部办公厅关于进一步做好2017年就业重点工作的通知（人社厅发〔2017〕32号）</h1>
+        			<script type="text/javascript">
+						var fbt='';
+						if(fbt!=''){
+							document.write('<h2>'+fbt+'</h2>');
+						}
+					</script>
+        			<div class="toolbar">
+						发布时间：
+						<script type="text/javascript">
+							var  pubdata='2017年08月10日';
+							if(pubdata!=''){
+								document.write(pubdata);
+							}
+						</script>
+
+            			字体：
+						<span class="smallFont">小</span>
+						<span class="medFont curFont">中</span>
+						<span class="largeFont curFont">大</span> 
+						<script type="text/javascript">
+							var wzly='';
+							if(wzly!=''){
+								document.write('文章来源：'+wzly+'&emsp;');
+							}
+						</script>
+						<script type="text/javascript">
+							var zz='';
+							if(zz!=''){
+								document.write('作者：'+zz+'&emsp;');
+							}
+						</script>
+						点击量：<script src="http://rsj.gzdaozhen.gov.cn/count/index?id=21250094&siteid=501731"></script>次
+						<a href="javascript:window.print();">打印本页</a>&emsp;
+						<a href="javascript:window.opener=null;window.close()">关闭本页</a>&emsp;&emsp;
+						<i style="padding-left:10px">
+							视力保护色： 
+							<input onclick="ChangeColor('#F9F6AF')" name="bgcolor" src="../../../../images/110827103140057.gif" type="image" align="absmiddle" height="13" width="13">
+							<input onclick="ChangeColor('#9DDBF4')" name="bgcolor22" src="../../../../images/110827103140099.gif" type="image" align="absmiddle" height="13" width="13">
+							<input onclick="ChangeColor('#DEDEDE')" name="bgcolor2" src="../../../../images/110827103140184.gif" type="image" align="absmiddle" height="13" width="13"> 
+							<input onclick="ChangeColor('#F9D1D9')" name="bgcolor2" src="../../../../images/110827103140215.gif" type="image" align="absmiddle" height="13" width="13"> 
+							<input onclick="ChangeColor('#E4C8F8')" name="bgcolor2" src="../../../../images/110827103140245.gif" type="image" align="absmiddle" height="13" width="13">	
+							<input onclick="ChangeColor('#ffffff')" name="bgcolor2" src="../../../../images/110827103140292.gif" type="image" align="absmiddle" height="13" width="13">
+						</i>
+					</div>
+				</div>
+    			<div class="content">
+        			<!--视频开始-->
+					
+						
+					
+					<!--视频结束-->
+					<font id="Zoom">
+						<p><strong><span style="font-size: 24px;">&nbsp; 人力资源社会保障部办公厅 财政部办公厅关于进一步做好2017年就业重点工作的通知</span></strong></p><p><strong><span style="font-size: 24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （人社厅发〔2017〕32号）</span></strong></p><p>各省、自治区、直辖市及新疆生产建设兵团人力资源社会保障厅（局）、财政厅（局、财务局）：</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2017年，受经济下行压力和结构调整影响，就业形势仍然复杂严峻，工作任务更加繁重。各地人力资源社会保障和财政部门要进一步提高认识、加强配合，认真谋划工作安排，探索更有针对性的措施，全力确保目标任务完成，以优异成绩迎接党的十九大召开。现就做好今年就业创业有关重点工作通知如下：</p><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;一、完善落实积极就业政策</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;各地要把抓好政策落实作为全年就业工作的主线。全面实施现行就业创业政策，及时做好新一轮就业创业政策的配套和细化工作，加强工作调度、督查问责和典型引路，确保政策落地生效。进一步加强部门衔接，优化经办程序，方便劳动者享受政策。持续加强政策宣传，继续组织政策宣传周等活动，充分利用新媒体开展精准宣传，提高劳动者政策知晓度。加强政策解读、业务交流和教育培训，提升基层工作人员政策水平。</p><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;二、全力促进高校毕业生就业</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;各地要坚持把高校毕业生就业摆在就业工作首位。积极拓宽就业渠道，引导和鼓励毕业生到基层工作，健全服务保障机制。以实施高校毕业生就业创业促进计划为抓手，综合运用涵盖校内外各阶段、就业创业全过程的一揽子措施，促进毕业生就业创业。加强创业培训、跟踪服务和政策扶持的衔接配合，拓宽多元化资金支持渠道，为毕业生创业提供全方位支持。实施“三支一扶”计划，开展能力提升专项培训，做好招募选拔、管理服务、培养使用、期满流动等工作。完善毕业生实名制精准服务制度，提升职业培训、就业见习等服务项目保障能力。加强对各类就业困难和长期失业毕业生的就业援助，提供“一对一”指导和服务，保证求职创业补贴应享尽享。</p><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;三、稳妥做好去产能职工安置工作</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;各地要始终把职工安置作为化解钢铁煤炭行业过剩产能工作的重中之重，推动职工安置与去产能任务确定、奖补资金安排等工作同考虑、同部署。积极创新鼓励措施，落实稳岗补贴和内退职工免缴失业保险费政策，引导企业更多通过内部挖潜安置职工。对分流职工中的失业人员，要提前介入、及时跟进，按规定发放失业保险金，提供有针对性的岗位对接、技能提升、创业引导和政策扶持。对其中的就业困难人员和零就业家庭成员，要加大援助力度，确实难以通过市场实现就业的，通过公益性岗位托底帮扶。完善落实应对预案，及时协调解决突发问题，确保不因职工安置问题引发重大群体性事件。</p><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;四、全面开展就业扶贫工作</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;各地要将就业扶贫作为政治任务，全面落实人社、财政、扶贫三部门就业扶贫文件，细化实化政策措施，抓好工作部署谋划，统筹相关资金保障政策落实。依托农村贫困劳动力就业信息平台，及时获取贫困劳动力就业失业基础信息。建立岗位开发、技能培训、就业服务、权益维护“四位一体”工作机制，促进贫困劳动力转移就业和稳定就业。建立健全对口劳务协作机制，争取把劳务协作纳入本地区东西部扶贫协作省际结对协作机制的总体框架，对符合条件的，在东部省份对西部省份对口援助资金和援助项目安排上予以支持。遴选一批企业作为贫困劳动力就业基地，定向接收贫困劳动力。实施技能脱贫千校行动，组织技工院校定向招收建档立卡贫困家庭和非建档立卡的农村低保家庭、经济困难残疾人家庭以及农村特困救助供养应、往届“两后生”。</p><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;五、统筹推进各类群体就业</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;各地要继续做好农村富余劳动力转移就业工作，推动农民工平等享受基本公共就业创业服务。加强对失业人员的就业服务和政策扶持，帮助尽早实现再就业。健全困难人员就业援助长效机制，强化分类帮扶、精准帮扶，规范公益性岗位开发管理，完善政策期满退出机制。加强对去产能任务较重、发生重特大自然灾害的地区和资源枯竭型城市的就业援助，及时制定计划，开展专门指导，保障资金投入。参与东北等困难地区就业援助行动的相关省份，要将此列为全年重点任务，实施好劳务对接协作等各项具体行动，确保重点地区就业局势稳定。</p><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;六、大力促进创业带动就业</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;各地要以制定实施创业行动计划为抓手，综合运用人社部门和其他相关部门促进创业的政策措施，加强对创业者的政策扶持。用好普惠金融发展专项资金，抓好创业担保贷款及财政贴息政策落实，引导金融机构加强对重点群体创业的金融支持。加强对重点群体的创业培训，完善创业培训工作机制。制定公共创业服务项目清单和服务指南，明确服务内容和标准，支持市场主体参与公共创业服务。持续推进创业孵化载体建设，提升综合服务能力，努力提高创业成功率。深入推进农民工等人员返乡创业，会同有关部门统筹实施返乡创业三年行动计划。</p><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;七、切实强化公共就业服务和人力资源市场建设</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;各地要进一步健全覆盖城乡的公共就业服务体系，重点加强基层公共就业服务平台建设，推进公共就业服务均等化、标准化、信息化。打造“互联网+”公共就业创业服务平台，实施公共就业服务人员队伍能力提升计划。充分运用就业创业服务补助政策，研究确定向社会购买基本就业创业服务成果的范围，创新服务供给模式，增加服务供给数量，提升服务专业化水平。大力发展人力资源服务业，推动实施人力资源服务业发展推进计划和人力资源服务龙头企业培育工程。</p><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;八、大力开展职业培训工作</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;各地要加大职业培训力度，大规模开展职业培训，推动扩大企业新型学徒制试点，建立企业新型学徒培养模式。完善落实贫困家庭子女、未升学初高中毕业生、农民工、失业人员和转岗职工、退役军人等免费职业培训政策，确保培训补贴资金投入，规范补贴资金使用。统筹实施新生代农民工职业技能提升计划、高校毕业生技能就业行动、化解过剩产能企业职工特别职业培训计划、“春潮行动”、返乡农民工创业培训行动计划、残疾人职业技能提升计划等项目。深入实施国家高技能人才振兴计划，推进高技能人才培训基地、技能大师工作室和技师培训项目建设。积极探索建立国家基本职业培训包制度。</p><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;九、努力夯实就业工作基础</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;各地要密切关注经济和就业形势变化，做好就业常规统计和市场供求、失业动态、农村劳动力转移就业等情况监测，强化对就业信息统计监测的资金保障，提升就业形势分析研判能力。强化底线思维，紧盯关键指标和重点群体、重点市县、重点企业的就业失业状况，稳妥做好风险防范和应对工作。做好离校未就业高校毕业生、去产能涉及企业职工以及农村建档立卡和非建档立卡的低保对象、特困人员、经济困难残疾人等贫困劳动力等实名制信息采集入库和管理工作，实现信息动态更新、综合运用。建立登记失业人员、就业困难人员实名制数据库和稳岗补贴企业实名制信息系统，逐步推进享受就业创业扶持政策人员实名制数据库建设。</p><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;十、管好用好促进就业资金</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;各地财政部门要主动发挥职能作用，适应保障民生兜底的需要，加大对促进就业的支持力度，强化就业补助资金对扶持创业的支出保障。结合工作实际，科学测算资金需求，合理安排资金规模，完善资金分配办法。持续完善资金管理制度和内控监管机制，切实强化对市县完善落实制度情况的督促检查，继续做好资金管理使用情况专项检查工作，更多采取两部门联合检查、委托第三方机构专业审查等方式进行检查。做好资金滚存结余清查和使用情况统计报送工作，加强对市县资金支出进度的调度，以强化政策落实带动资金支出、促进结余消化。科学确定资金区域绩效目标，以绩效目标申报为契机，进一步加强完善绩效评价工作，提高资金使用效益。将失业保险基金按规定用于促进就业支出，开展东7省（市）失业保险基金用于促进就业的使用绩效评估。</p><p style="TEXT-ALIGN: right">&nbsp;&nbsp;&nbsp;&nbsp;人力资源社会保障部办公厅</p><p style="TEXT-ALIGN: right">&nbsp;&nbsp;&nbsp;&nbsp;财政部办公厅</p><p style="TEXT-ALIGN: right">&nbsp;&nbsp;&nbsp;&nbsp;2017年3月21日</p><p style="TEXT-ALIGN: right"><br></p><p><br></p><p><br><br><br><br></p><p><br></p>
+					</font>
+    			</div>
+   				<div class="KeysList" style="margin-top: 5px;">
+					<div class="jiathis_style">
+						<span class="jiathis_txt">分享到：</span>
+						<a class="jiathis_button_qzone" title="分享到QQ空间" href="javascript:;" onclick="jiathis_sendto('qzone');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_qzone">QQ空间</span>
+						</a>
+						<a class="jiathis_button_tsina" title="分享到微博" href="javascript:;" onclick="jiathis_sendto('tsina');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_tsina">新浪微博</span>
+						</a>
+						<a class="jiathis_button_tqq" title="分享到腾讯微博" href="javascript:;" onclick="jiathis_sendto('tqq');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_tqq">腾讯微博</span>
+						</a>
+						<a class="jiathis_button_renren" title="分享到人人网" href="javascript:;" onclick="jiathis_sendto('renren');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_renren">人人网</span>
+						</a>
+						<a href="javascript:;" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+						<a class="jiathis_counter_style">
+							<span class="jiathis_button_expanded jiathis_counter jiathis_bubble_style" id="jiathis_counter_36" title="累计分享0次">0</span>
+						</a>
+					</div>
+					<script type="text/javascript" src="../../../../code/jia.js" ></script>
+				</div>
+   				<div class="KeysList">
+					<div class="right">
+			  			<a href="javascript:;" target="_blank" class="box_02">我要推荐</a>&emsp;
+						<!--a class="box_02" href="/syqt/rssdy/" target="_blank">RSS定制</a>&emsp;-->
+			 			<a class="box_02" href="../../../../syqt/wzjc/index.html" target="_blank">网站纠错</a>&emsp;
+						<!--a class="box_02" href="#" target="_blank">返回顶部</a-->
+					</div>
+				</div>
+    			<div class="page">
+					<div id="prevpage">
+						<span>上一篇：</span><a href="javascript:;" id="no1">无</a>
+						
+							<script type="text/javascript">
+								var  str="";
+								var str_1 = "./t20170810_21250095.html";
+								var str_4 = '人力资源社会保障部 教育部 全国总工会 全国工商联关于开展2017年全国民营企业招聘周活动的通知  （人社部函〔2017〕45号）';
+								if(str_4!="")
+								{
+									jQuery("#no1").hide();
+									if (str=="") {
+										document.write('<a  href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									} else {
+										document.write('<a  href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									}
+								}
+							</script>
+						
+					</div>
+					<div id="prevpage">
+						<span>下一篇：</span><a href="javascript:;" id="no2">无</a>
+						
+					</div>
+    			</div>
+   				<div class="xgxx">
+        			<h1><span>相关信息</span></h1>
+					<ul>
+						<script type="text/javascript">
+							var key="";
+							if(key!=''&&key!='null'){
+								
+							}else{
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "./t20170811_21250633.html";
+									var str_4 = '财政部 税务总局 人力资源社会保障部关于继续实施支持和促进重点群体创业就业有关 税收政策的通知 （财税〔2017〕49号）';
+									var str_2 = '2017-08-11';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "./t20170811_21250628.html";
+									var str_4 = '财政部 税务总局 民政部关于继续实施扶持自主就业退役士兵创业就业有关税收政策的通知 （财税〔2017〕46号）';
+									var str_2 = '2017-08-11';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "./t20170811_21250617.html";
+									var str_4 = '人力资源社会保障部关于贯彻落实《国务院关于做好当前和今后一段时期就业创业工作的意见》的通知 （人社部函〔2017〕51号）';
+									var str_2 = '2017-08-11';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "./t20170811_21250614.html";
+									var str_4 = '国务院关于做好当前和今后一段时期就业创业工作的意见（国发〔2017〕28号）';
+									var str_2 = '2017-08-11';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "./t20170810_21250095.html";
+									var str_4 = '人力资源社会保障部 教育部 全国总工会 全国工商联关于开展2017年全国民营企业招聘周活动的通知  （人社部函〔2017〕45号）';
+									var str_2 = '2017-08-10';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+								
+							}
+						 </script>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="foot_bj">
+	<div class="foot_nr">
+		<p>
+			<a href="../../../../syqt/rssdy/index.html">RSS订阅</a>|
+			<a href="../../../../syqt/lxfs/index.html">联系方式</a>|
+			<a href="../../../../syqt/wzdt/index.html">网站地图</a>
+		</p>
+		<p>Copyright 2010 All Rights Reserved      主办：道真县人力资源网</p>
+		<p>电话：0851-25782065       技术支持：<a href="javascript:;" target="_blank">贵州多彩博虹科技有限公司</a></p>
+		<p>(建议使用1024×768分辨率 IE70以上版本浏览器) </p>
+		<p style="margin-top: 12px;">
+			<!--a target="_blank" href="http://bszs.conac.cn/sitename?method=show&id=04E0DEEC2DCA0288E053022819ACC535">
+				<img src="/images/dz_jg.png" /></a-->
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src=' http://dcs.conac.cn/js/24/356/2168/40584250/CA243562168405842500001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+		</p>
+	</div>
+</div>
+<script id="_trs_ta_js" src="../../../../c/js/ta-1290.js" async="async" defer="defer"></script>
+    </body>
+</html>

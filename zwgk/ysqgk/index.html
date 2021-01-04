@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>道真县人力资源网-依申请公开</title>
+<meta name="Keywords" content="道真人社局,道真县人力资源网,道真人事考试,道真县人力资源与社会保障,道真县人社局组织全体党员参加扫墓活动">
+<script type="text/javascript" src="../../images/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../images/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+    jQuery(function() {
+		jQuery('#j_search_btn').click(function() {
+			var str = jQuery("#keyword").val();
+			checks(str);
+		});
+	});
+	function checks(t) {
+		t = t.replace(/(^\s+)|(\s+$)/g, "");
+		if (t == "" || t == "请输入关键检索字") {
+			alert('请输入有效内容');
+			return false;
+		}
+		szMsg = "[#_%&'/",
+		";:=!^]";
+		alertStr = "";
+		for (i = 1; i < szMsg.length + 1; i++) {
+			if (t.indexOf(szMsg.substring(i - 1, i)) > -1) {
+				alertStr = "请勿包含非法字符如[#_%&'/",
+				";:=!^]";
+				alert(alertStr);
+				// break;
+				return false;
+			}
+		}
+		var key = document.getElementById("keyword").value;
+		window.location.href ="/search.html?keyword=" + key;
+		return true;
+	}
+function sub(){
+    window.location.href ="/search.shtml";
+}
+function AddFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle)
+    } catch (e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, "")
+        } catch (e) {
+            alert("加入收藏失败，请使用Ctrl+D进行添加")
+        }
+    }
+}
+function SetHome(obj, vrl) {
+    try {
+        obj.style.behavior = "url(#default#homepage)";
+        obj.setHomePage(vrl)
+    } catch (e) {
+        if (window.netscape) {
+            try {
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")
+            } catch (e) {
+                alert("此操作被浏览器拒绝！n请在浏览器地址栏输入\"about:config\"并回车n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。")
+            }
+            var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
+            prefs.setCharPref("browser.startup.homepage", vrl)
+        }
+    }
+}
+	//设为首页 
+	function SetHome(url){
+		if (document.all) {
+			document.body.style.behavior='url(#default#homepage)';
+			document.body.setHomePage(url);
+		}else{ 
+			alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+		}
+	}
+</script>
+<script type="text/javascript">
+      function GoTo() {
+          window.open("/syqt/wzjc/index.html?url=" + document.URL);
+      }
+</script>
+<script type="text/javascript" src="../../tools/layui/layui.js"></script>
+<link rel="stylesheet" type="text/css" href="../../tools/layui/css/layui.css">
+<script type="text/javascript">
+var layer;
+layui.use('layer', function(){
+  layer = layui.layer;
+});
+</script>
+<link rel="stylesheet" href="../../images/ysqgk_page.css">
+<style type="text/css">
+.btbj{ color: red; float: left; display: block;	width: 25px; margin-top: 15px; text-align: center;	}
+.layui-input, .layui-textarea { width: 50% !important;float: left;}
+.layui-form-label{ width: 120px !important;}
+h2.No2_Title{ border-bottom: 1px solid #069be5; height: 45px; line-height: 45px;}
+h2.No2_Title span{float: left;background: #54c1fb;display: block;height: 45px;line-height: 45px;padding: 0 20px;color: #FFFFFF;font-size: 16px;}
+.viewBox{margin-top:10px;}
+.viewBox p.title{ margin-bottom: 8px; font-size: 20px; color: #333; line-height: 20px; border-left: 5px solid #00a6ff; padding-left: 6px;}
+.layui-layer-demo .layui-layer-content{ padding:0 10px;}
+</style>
+<style>
+.dy{text-align:center;margin-top:20px;}
+.dy a{ background: #63cbfd;color: #ffffff;padding: 5px 10px;}
+.dy a:hover{ background: #63cbfd;color: #ffffff;padding: 5px 10px;filter:alpha(opacity=80); -moz-opacity:0.8; -khtml-opacity: 0.8; opacity: 0.8;}
+.tq a:link, a:visited { color: #fff;text-decoration: none;}
+</style>
+<script type="text/javascript">
+    function GetQueryString(name) {
+	   var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
+	   var r = window.location.search.substr(1).match(reg);
+	   if (r!=null) return (r[2]); return null;
+	}
+</script>
+</head>
+<body>
+<div class="warp">
+  <div class="mian"> 
+    <!--头部--> 
+    <!--天气js-->
+<script type="text/javascript">
+	function initArray() {
+		for (i = 0; i < initArray.arguments.length; i++)
+			this[i] = initArray.arguments[i];
+	}
+	var isnMonths = new initArray("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+	var isnDays = new initArray("  星期日", "  星期一", "  星期二", "  星期三", "  星期四", "  星期五", "  星期六", "  星期日");
+	today = new Date();
+	hrs = today.getHours();
+	min = today.getMinutes();
+	sec = today.getSeconds();
+	clckh = "" + ((hrs > 12) ? hrs - 12 : hrs);
+	clckm = ((min < 10) ? "0" : "") + min;
+	clcks = ((sec < 10) ? "0" : "") + sec;
+	clck = (hrs >= 12) ? "下午" : "上午";
+	var stnr = "";
+	var ns = "0123456789";
+	var a = "";
+
+	function getFullYear(d) {
+		yr = d.getYear();
+		if (yr < 1000)
+			yr += 1900;
+		return yr;
+	}
+</script>
+<div class="banner">
+	<!--顶部-->
+	<div class="dingb_bj">
+		<div class="dingb_nr">
+			<!--日期-->
+			<div class="riqi f_l">
+				<ul>
+					<li><span>今天是: </span>
+						<script type="text/javascript">
+							document.write("<div class='time'>" + getFullYear(today) + "年" + "" + isnMonths[today.getMonth()] + "月" + today.getDate() + "日" + isnDays[today.getDay()] + "</div>");
+						</script>
+					</li>
+				</ul>
+			</div>
+			<!--收藏-->
+			<div class="f_r ding_y">
+				<a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>|
+				<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>
+			</div>
+		</div>
+	</div>
+	<!--logo-->
+	<div class="logo_by" style="overflow: initial;">
+		<ul>
+			<li class="f_l"><a href="../../index.html"><img src="../../images/logo.png"></a></li>
+			<li class="f_r"><img src="../../images/biaoyu.png"></li>
+		</ul>
+	</div>
+	<!--导航-->
+	<div class="nav_bj">
+		<div class="nav f_l">
+			<ul>
+				<li><a href="../../index.html">网站首页</a></li>
+				<li><a href="../../gzdt/index.html">工作动态</a></li>
+				<li><a href="../../ywgz/index.html">业务工作</a></li>
+				<li><a href="../../bmgk/index.html">部门概况</a></li>
+				<li><a href="../index.html">政务公开</a></li>
+			</ul>
+		</div>
+		<!--搜索-->
+		<div class="sous f_r">
+    		<dl>
+				<dt><a href="javascript:void(0);" id="j_search_btn"><img src="../../images/sous.png"></a></dt>
+				<dd>
+					<input id="keyword" name="keyword" type="text" class="sous_sy" value="请输入关键字" style="color:#666666; line-height:40px; font-size: 14px;" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#000'}" onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#9e9e9e'}">
+				</dd>
+			</dl>
+    	</div>
+	</div>
+</div>
+    <!--主体-->
+    <div class="content" style="height:auto; background: #fff;">
+      <div class="content_top"></div>
+      <div class="content_middle">
+         <div class="zfxxgktx_tq_search">
+        <div class="tq f_l f14">您当前所在的位置： <a href="../index.html" title="政务公开" class="CurrChnlCls">政务公开</a>&nbsp;&raquo;&nbsp;<a href="" title="依申请公开" class="CurrChnlCls">依申请公开</a> </div>
+      </div>
+        <div class="zfxxgktx_right_content">
+          <dl>
+            <dt>
+              <ul class="f16">
+                <li class="ysqgk_sm"><a href="javascript:;"><i></i>依申请公开说明</a></li>
+                <li class="smysqgk"><a href="javascript:;"><i></i>书面依申请公开</a></li>
+                <li class="wsysqgk"><a href="javascript:;"><i></i>网上依申请公开</a></li>
+                <li class="wssqjgcx"><a href="javascript:;"><i></i>网上申请结果查询</a></li>
+              </ul>
+            </dt>
+            <dd>
+              <div class="right_nav_content">
+                <div class="title f16">
+                  <h3>依申请公开说明</h3>
+                </div>
+                <div class="content_list">
+                  
+                </div>
+              </div>
+              <div class="right_nav_content" style="display: none;">
+                <div class="title f16">
+                  <h3>书面依申请公开</h3>
+                </div>
+                <div class="content_list">
+                  <div class="xzbg">
+                    <div class="title_a">
+                      <div class="sz">1</div>
+                      <div class=" f_l right_title f14">下载表格</div>
+                    </div>
+                    <div class="xzsqgkbg f14">下载申请公开表格</div>
+                    
+                  </div>
+                  <div class="xzbg">
+                    <div class="title_a">
+                      <div class="sz">2</div>
+                      <div class=" f_l right_title f14">填写申请书</div>
+                    </div>
+                    <div class="xzsqgkbg f14">填写申请书</div>
+                    <div class="ysqgkbg" style="width:100%">
+                      <div style="color:#e20000; font-size:14px;">>>申请表填写注意事项</div>
+                      <p class="mgT10">1、申请表应填写完整，对没有联系方式或联系方式有误的信息恕不回复。</p>
+                      <p>2、申请表内容应真实有效，同时申请人对申请材料的真实性负责。</p>
+                      <p>3、申请人根据本市有关规定属于低收入者的，如需免除费用，须在本表中提出，并同时提供相关证明。</p>
+                      <p>4、为提高处理效率，对所需信息的描述应尽量详细、明确，若有可能提供信息的标题、发布时间、发文字号或者其他有助于明确该信息的提示。</p>
+                    </div>
+                  </div>
+                  <div class="xzbg">
+                    <div class="title_a">
+                      <div class="sz">3</div>
+                      <div class=" f_l right_title f14">提交表格</div>
+                    </div>
+                    <div class="xzsqgkbg f14">提交表格</div>
+                    <div class="ysqgkbg" style="width:100%">根据内容向相关部门提交申请</div>
+                  </div>
+                </div>
+              </div>
+              <div class="right_nav_content" style="display: none;">
+                <div class="title f16">
+                  <h3>网上依申请公开</h3>
+                </div>
+                <div style="padding-top:10px;">
+                  <iframe src="javascript:;" marginheight="0" marginwidth="0" frameborder="0" scrolling="no" width="100%" height="950" id="GetUrl" name="GetUrl"></iframe>
+                </div>
+              </div>
+              <div class="right_nav_content" style="display: none;">
+                <div class="title f16">
+                  <h3>网上申请结果查询</h3>
+                </div>
+                <div style="padding-top:10px;">
+                  <iframe src="javascript:;" marginheight="0" marginwidth="0" frameborder="0" scrolling="no" width="100%" height="530" id="GetListUrl" name="GetListUrl"></iframe>
+                </div>
+              </div>
+            </dd>
+          </dl>
+        </div>
+      </div> 
+      <div class="content_bottom"></div>
+    </div>
+    <!--底部--> 
+    <div class="foot_bj">
+	<div class="foot_nr">
+		<p>
+			<a href="../../syqt/rssdy/index.html">RSS订阅</a>|
+			<a href="../../syqt/lxfs/index.html">联系方式</a>|
+			<a href="../../syqt/wzdt/index.html">网站地图</a>
+		</p>
+		<p>Copyright 2010 All Rights Reserved      主办：道真县人力资源网</p>
+		<p>电话：0851-25782065       技术支持：<a href="javascript:;" target="_blank">贵州多彩博虹科技有限公司</a></p>
+		<p>(建议使用1024×768分辨率 IE70以上版本浏览器) </p>
+		<p style="margin-top: 12px;">
+			<!--a target="_blank" href="http://bszs.conac.cn/sitename?method=show&id=04E0DEEC2DCA0288E053022819ACC535">
+				<img src="/images/dz_jg.png" /></a-->
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src=' http://dcs.conac.cn/js/24/356/2168/40584250/CA243562168405842500001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+		</p>
+	</div>
+</div>
+<script id="_trs_ta_js" src="../../c/js/ta-1290.js" async="async" defer="defer"></script> 
+  </div>
+</div>
+<script type="text/javascript">
+	var index=0;
+	var lmid='5441114';
+	if(lmid=='62448'){
+		index=1;
+	}else if(lmid=='62449'){
+		index=2;
+	}else{
+		index=0;
+	}
+    jQuery(".zfxxgktx_right_content").slide({ titCell:"dt a",mainCell:"dd",defaultIndex:index,trigger:"click" });
+
+window.onresize = function () {//窗口改变时执行
+	reinitIframe();
+}
+function reinitIframe(){
+	var iframe = document.getElementById("GetUrl");
+	try{
+		var bHeight = iframe.contentWindow.document.body.scrollHeight;
+		var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
+		var height = Math.min(bHeight, dHeight);
+		iframe.height = height;
+		// console.log(iframe.height);
+	}catch (ex){}
+}
+// 定时触发
+window.setInterval("reinitIframe()", 200);
+</script>
+</body>
+</html>

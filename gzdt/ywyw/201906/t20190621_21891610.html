@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>毕业生报到、档案寄存，你应该知道的那些事</title>
+		<link rel="stylesheet" href="../../../images/nry.css">
+		<meta name="Keywords" content="道真人社局,道真县人力资源网,道真人事考试,道真县人力资源与社会保障,道真县人社局组织全体党员参加扫墓活动">
+<script type="text/javascript" src="../../../images/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../../images/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+    jQuery(function() {
+		jQuery('#j_search_btn').click(function() {
+			var str = jQuery("#keyword").val();
+			checks(str);
+		});
+	});
+	function checks(t) {
+		t = t.replace(/(^\s+)|(\s+$)/g, "");
+		if (t == "" || t == "请输入关键检索字") {
+			alert('请输入有效内容');
+			return false;
+		}
+		szMsg = "[#_%&'/",
+		";:=!^]";
+		alertStr = "";
+		for (i = 1; i < szMsg.length + 1; i++) {
+			if (t.indexOf(szMsg.substring(i - 1, i)) > -1) {
+				alertStr = "请勿包含非法字符如[#_%&'/",
+				";:=!^]";
+				alert(alertStr);
+				// break;
+				return false;
+			}
+		}
+		var key = document.getElementById("keyword").value;
+		window.location.href ="/search.html?keyword=" + key;
+		return true;
+	}
+function sub(){
+    window.location.href ="/search.shtml";
+}
+function AddFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle)
+    } catch (e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, "")
+        } catch (e) {
+            alert("加入收藏失败，请使用Ctrl+D进行添加")
+        }
+    }
+}
+function SetHome(obj, vrl) {
+    try {
+        obj.style.behavior = "url(#default#homepage)";
+        obj.setHomePage(vrl)
+    } catch (e) {
+        if (window.netscape) {
+            try {
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")
+            } catch (e) {
+                alert("此操作被浏览器拒绝！n请在浏览器地址栏输入\"about:config\"并回车n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。")
+            }
+            var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
+            prefs.setCharPref("browser.startup.homepage", vrl)
+        }
+    }
+}
+	//设为首页 
+	function SetHome(url){
+		if (document.all) {
+			document.body.style.behavior='url(#default#homepage)';
+			document.body.setHomePage(url);
+		}else{ 
+			alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+		}
+	}
+</script>
+<script type="text/javascript">
+      function GoTo() {
+          window.open("/syqt/wzjc/index.html?url=" + document.URL);
+      }
+</script>
+		<script type="text/javascript">
+			function fontResizer(smallFont,medFont,largeFont){
+				function clearSelected(){
+					$(".smallFont").removeClass("curFont");
+					$(".medFont").removeClass("curFont");
+					$(".largeFont").removeClass("curFont");
+				}
+				function saveState(curSize){
+					var date = new Date();
+					date.setTime(date.getTime()+(7*24*60*60*1000));
+					var expires = "; expires="+date.toGMTString();
+					document.cookie = "fontSizer"+"="+curSize+expires+"; path=/";
+				}
+			
+				$(".smallFont").click(function(){
+					$('#Zoom').css('font-size', smallFont);
+					$('#Zoom p').css('font-size', smallFont);
+					$('#Zoom span').css('font-size', smallFont);
+					$('#Zoom font').css('font-size', smallFont);
+					clearSelected();
+					$(".smallFont").addClass("curFont");
+					saveState(smallFont);
+				});
+			
+				$(".medFont").click(function(){
+					$('#Zoom').css('font-size', medFont);
+					$('#Zoom p').css('font-size', medFont);
+					$('#Zoom span').css('font-size', medFont);
+					$('#Zoom font').css('font-size', medFont);
+					clearSelected();
+					$(".medFont").addClass("curFont");
+					saveState(medFont);
+				});
+			
+				$(".largeFont").click(function(){
+					$('#Zoom').css('font-size', largeFont);
+					$('#Zoom p').css('font-size', largeFont);
+					$('#Zoom span').css('font-size', largeFont);
+					$('#Zoom font').css('font-size', largeFont);
+					$('#Zoom').css('line-height','40px');
+					clearSelected();
+					$(".largeFont").addClass("curFont");
+					saveState(largeFont);
+				});
+			
+				function getCookie(c_name){
+					if(document.cookie.length>0){
+						c_start=document.cookie.indexOf(c_name + "=");
+						if (c_start!=-1){
+							c_start=c_start + c_name.length+1;
+							c_end=document.cookie.indexOf(";",c_start); 
+							if(c_end==-1)c_end=document.cookie.length;
+							return unescape(document.cookie.substring(c_start,c_end));
+						}
+					} 
+					return "";
+				}
+			
+				var savedSize = getCookie('fontSizer');
+			
+				if(savedSize!=""){
+					$('#Zoom').css('font-size', savedSize);
+					switch(savedSize){
+						case smallFont: $(".smallFont").addClass("curFont");
+						break;
+						case medFont: $(".medFont").addClass("curFont");
+						break;
+						case largeFont: $(".largeFont").addClass("curFont");
+						break;
+						default: $(".medFont").addClass("curFont");
+					}
+				}else {
+					$('#Zoom').css('font-size', medFont);
+					$(".medFont").addClass("curFont");
+				}
+				
+			}
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				fontResizer('12px','16px','20px');
+			});
+		</script>
+		<script type="text/javascript">
+			function ChangeColor(ColorName){
+				$('#c').css('background', ColorName);
+				$('#Zoom p').css('background', ColorName);
+				$('#Zoom span').css('background', ColorName);
+				$('#Zoom font').css('background', ColorName);
+			}	
+		</script>
+	</head>
+	<body>
+		<!--天气js-->
+<script type="text/javascript">
+	function initArray() {
+		for (i = 0; i < initArray.arguments.length; i++)
+			this[i] = initArray.arguments[i];
+	}
+	var isnMonths = new initArray("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+	var isnDays = new initArray("  星期日", "  星期一", "  星期二", "  星期三", "  星期四", "  星期五", "  星期六", "  星期日");
+	today = new Date();
+	hrs = today.getHours();
+	min = today.getMinutes();
+	sec = today.getSeconds();
+	clckh = "" + ((hrs > 12) ? hrs - 12 : hrs);
+	clckm = ((min < 10) ? "0" : "") + min;
+	clcks = ((sec < 10) ? "0" : "") + sec;
+	clck = (hrs >= 12) ? "下午" : "上午";
+	var stnr = "";
+	var ns = "0123456789";
+	var a = "";
+
+	function getFullYear(d) {
+		yr = d.getYear();
+		if (yr < 1000)
+			yr += 1900;
+		return yr;
+	}
+</script>
+<div class="banner">
+	<!--顶部-->
+	<div class="dingb_bj">
+		<div class="dingb_nr">
+			<!--日期-->
+			<div class="riqi f_l">
+				<ul>
+					<li><span>今天是: </span>
+						<script type="text/javascript">
+							document.write("<div class='time'>" + getFullYear(today) + "年" + "" + isnMonths[today.getMonth()] + "月" + today.getDate() + "日" + isnDays[today.getDay()] + "</div>");
+						</script>
+					</li>
+				</ul>
+			</div>
+			<!--收藏-->
+			<div class="f_r ding_y">
+				<a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>|
+				<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>
+			</div>
+		</div>
+	</div>
+	<!--logo-->
+	<div class="logo_by" style="overflow: initial;">
+		<ul>
+			<li class="f_l"><a href="../../../index.html"><img src="../../../images/logo.png"></a></li>
+			<li class="f_r"><img src="../../../images/biaoyu.png"></li>
+		</ul>
+	</div>
+	<!--导航-->
+	<div class="nav_bj">
+		<div class="nav f_l">
+			<ul>
+				<li><a href="../../../index.html">网站首页</a></li>
+				<li><a href="../../index.html">工作动态</a></li>
+				<li><a href="../../../ywgz/index.html">业务工作</a></li>
+				<li><a href="../../../bmgk/index.html">部门概况</a></li>
+				<li><a href="../../../zwgk/index.html">政务公开</a></li>
+			</ul>
+		</div>
+		<!--搜索-->
+		<div class="sous f_r">
+    		<dl>
+				<dt><a href="javascript:void(0);" id="j_search_btn"><img src="../../../images/sous.png"></a></dt>
+				<dd>
+					<input id="keyword" name="keyword" type="text" class="sous_sy" value="请输入关键字" style="color:#666666; line-height:40px; font-size: 14px;" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#000'}" onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#9e9e9e'}">
+				</dd>
+			</dl>
+    	</div>
+	</div>
+</div>
+		<div class="content-main">
+			<div class="dqwz">
+				您当前所在位置：<a href="../../../index.html" title="首页" class="CurrChnlCls">首页</a>&nbsp;&raquo;&nbsp;<a href="../../index.html" title="工作动态" class="CurrChnlCls">工作动态</a>&nbsp;&raquo;&nbsp;<a href="../index.html" title="业务要闻" class="CurrChnlCls">业务要闻</a>
+			</div>
+			<div class="body_content" id="c">
+    			<div class="title">
+        			<h1>毕业生报到、档案寄存，你应该知道的那些事</h1>
+        			<script type="text/javascript">
+						var fbt='';
+						if(fbt!=''){
+							document.write('<h2>'+fbt+'</h2>');
+						}
+					</script>
+        			<div class="toolbar">
+						发布时间：
+						<script type="text/javascript">
+							var  pubdata='2019年06月21日';
+							if(pubdata!=''){
+								document.write(pubdata);
+							}
+						</script>
+
+            			字体：
+						<span class="smallFont">小</span>
+						<span class="medFont curFont">中</span>
+						<span class="largeFont curFont">大</span> 
+						<script type="text/javascript">
+							var wzly='';
+							if(wzly!=''){
+								document.write('文章来源：'+wzly+'&emsp;');
+							}
+						</script>
+						<script type="text/javascript">
+							var zz='';
+							if(zz!=''){
+								document.write('作者：'+zz+'&emsp;');
+							}
+						</script>
+						点击量：<script src="http://rsj.gzdaozhen.gov.cn/count/index?id=21891610&siteid=501731"></script>次
+						<a href="javascript:window.print();">打印本页</a>&emsp;
+						<a href="javascript:window.opener=null;window.close()">关闭本页</a>&emsp;&emsp;
+						<i style="padding-left:10px">
+							视力保护色： 
+							<input onclick="ChangeColor('#F9F6AF')" name="bgcolor" src="../../../images/110827103140057.gif" type="image" align="absmiddle" height="13" width="13">
+							<input onclick="ChangeColor('#9DDBF4')" name="bgcolor22" src="../../../images/110827103140099.gif" type="image" align="absmiddle" height="13" width="13">
+							<input onclick="ChangeColor('#DEDEDE')" name="bgcolor2" src="../../../images/110827103140184.gif" type="image" align="absmiddle" height="13" width="13"> 
+							<input onclick="ChangeColor('#F9D1D9')" name="bgcolor2" src="../../../images/110827103140215.gif" type="image" align="absmiddle" height="13" width="13"> 
+							<input onclick="ChangeColor('#E4C8F8')" name="bgcolor2" src="../../../images/110827103140245.gif" type="image" align="absmiddle" height="13" width="13">	
+							<input onclick="ChangeColor('#ffffff')" name="bgcolor2" src="../../../images/110827103140292.gif" type="image" align="absmiddle" height="13" width="13">
+						</i>
+					</div>
+				</div>
+    			<div class="content">
+        			<!--视频开始-->
+					
+						
+					
+					<!--视频结束-->
+					<font id="Zoom">
+						<p style="text-indent:228px"><strong><span style=";font-family:宋体;color:rgb(0,0,0);font-weight:bold;font-size:13px"><span style="font-family:宋体">毕业生报到</span></span></strong></p><p style="text-indent:27px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:13px">“毕业生就业报到证”的全称是“</span><a href="javascript:;"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:13px"><span style="font-family:宋体">全国普通高等学校本专科毕业生就业报到证</span></span></a><span style=";font-family:宋体;color:rgb(0,0,0);font-size:13px">”和“全国毕业研究生就业报到证”，由国家教育部印制，由省（直辖市、</span><a href="javascript:;"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:13px"><span style="font-family:宋体">自治区</span></span></a><span style=";font-family:宋体;color:rgb(0,0,0);font-size:13px"><span style="font-family:宋体">）级普通高等学校毕业生就业管理部门签发，只有列入国家或省毕业生就业方案的普通高校毕业生才能持有的有效报到证件。</span></span></p><p style="margin-left:27px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:13px"><span style="font-family:宋体">其作用有：</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:13px"><br></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:13px">1.《就业报到证》是毕业生到单位报到的证明。</span></p><p style="margin-left:27px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:13px">2.当地公安部门凭《就业报到证》为毕业生办理落户手续。</span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:13px"><br></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:13px">3.学校相关部门依据《就业报到证》为毕业生办理档案投递、组织关系转移和户籍迁移等手续。</span></p><p style="text-indent:27px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:13px">4.《就业报到证》是毕业生有关部门办理自主创业手续及减免有关税费的证明。</span></p><p style="text-indent:27px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:13px">5.《就业报到证》一式两页，正本为蓝色由毕业生本人持有，到单位报到时交给单位。副本为白色，由学校负责装入毕业生本人档案。</span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:13px"><br></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:13px">&nbsp;&nbsp;&nbsp;&nbsp;6.《就业报到证》有效期一般为毕业后两年时间内(即2019年毕业生到2021年6月30号)。请毕业生在有效期内登陆“遵义人社”“</span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:13px"><span style="font-family:宋体">乐业遵义</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:13px">”微信公众号“便民服务”栏目进行网上报到。</span></p><p style="text-indent:27px"><a name="5368021-5603804-2"></a><span style=";font-family:宋体;color:rgb(0,0,0);font-size:13px"><a name="5368021-5603804-3"></a><a name="5368021-5603804-4"></a></span></p><p style="text-indent:110px"><span style=";font-family:宋体;font-size:22px"><span style="font-family:宋体">毕业生</span></span><span style=";font-family:宋体;font-size:22px"><span style="font-family:宋体">网上报到流程</span>(手机端)</span></p><p style=";text-align:center;line-height:40px"><span style=";font-family:宋体;color:rgb(255,0,0);font-size:19px"><span style="font-family:宋体">请关注微信</span>“乐业遵义”</span><span style=";font-family:宋体;color:rgb(255,0,0);font-size:19px"><span style="font-family:宋体">公众号</span></span></p><p style=";text-align:center;line-height:40px"><img src="W020190621632144303578.png" _src="../../file/read_image.jsp?FileName=U020190621632097833590.png" title="图片1.png" alt="图片1.png" oldsrc="W020190621632144303578.png"></p><p style="text-indent:28px;text-align:justify;text-justify:inter-ideograph;line-height:40px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">报到流程：</span></span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px">1.<span style="font-family:宋体">点击“</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">人才</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">服务</span>”、“大学生报到”选项。</span></p><p style="margin-left:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px">2.<span style="font-family:宋体">点击</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px">“立即注册”</span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px">---<span style="font-family:宋体">“个人注册”</span><span style="font-family:Times New Roman">---</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">注册人个会员。</span></span><span style=";font-family:宋体;font-size:16px"><br></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px">3.<span style="font-family:宋体">填写个人基本资料及创建简历。</span></span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px">4.<span style="font-family:宋体">返回首页（点击左上角首页按钮），点击“大学生报到”，完善报到信息（报到地区请选择报到所在地），填写信息保存提交，三个工作日后查询</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">网上</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">审核</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">通过即可</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">，</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">报到</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">无须</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">再</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">到现场审核</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">和上传照片</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">。</span></span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">受理时间：周一至周五</span>9<span style="font-family:宋体">：</span><span style="font-family:Times New Roman">00---17</span><span style="font-family:宋体">：</span><span style="font-family:Times New Roman">00</span><span style="font-family:宋体">（节假日除外）</span></span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">受理地点：</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">道真县人社局</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">（</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">县政府红绿灯下行</span>50<span style="font-family:宋体">米，尹珍大道长朝巷</span><span style="font-family:Times New Roman">14</span><span style="font-family:宋体">号</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">）</span></span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">受理单位：</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">道真县人力资源网二楼人才交流服务中心</span></span></p><p style="text-indent:14px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">服务电话：</span></span><span style=";font-family:宋体;font-size:14px">0851-23</span><span style=";font-family:宋体;font-size:14px">130079</span></p><p style="text-indent:27px"><br></p><p style="text-indent:187px"><strong><span style=";font-family:宋体;color:rgb(0,0,0);font-weight:bold;font-size:13px"><span style="font-family:宋体">毕业生档案查询须知</span></span></strong></p><p style="text-indent:28px"><br></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">遵义市户籍大中专毕业生可通过以下三种方式查询档案</span>:</span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">一、</span>“遵义人力资源网”<span style="font-family:Times New Roman">-</span><span style="font-family:宋体">“档案查询”</span><span style="font-family:Times New Roman">-</span><span style="font-family:宋体">输入姓名、身份证号（或毕业学校）</span><span style="font-family:Times New Roman">-</span><span style="font-family:宋体">查询。同时，你还可以关注“遵义人社”微信公众号－“人社查询”－“档案查询”或“</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">乐业遵义</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px">”微信公众号－“招考服务”－“档案查询”<span style="font-family:Times New Roman">-</span><span style="font-family:宋体">输入姓名、身份证号（或毕业学校）</span><span style="font-family:Times New Roman">-</span><span style="font-family:宋体">查询。</span></span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">网址：</span></span><span style=";font-family:&#39;Times New Roman&#39;;color:rgb(0,0,0);font-size:14px">http://www.zy</span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px">hr.org.cn/</span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">单位地址：遵义市红花岗区银河路</span>625<span style="font-family:宋体">号</span></span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">联系电话：</span>0851-23163887</span></p><p style="text-indent:28px"><br></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">二</span></span><span style=";font-family:&#39;Times New Roman&#39;;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">、</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px">“</span><span style=";font-family:&#39;Times New Roman&#39;;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">遵义教育网</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px">”</span><span style=";font-family:&#39;Times New Roman&#39;;color:rgb(0,0,0);font-size:14px">-“<span style="font-family:宋体">网上办事</span><span style="font-family:Times New Roman">”-“2003</span><span style="font-family:宋体">届</span><span style="font-family:Times New Roman">-2018</span><span style="font-family:宋体">届毕业生档案查询</span><span style="font-family:Times New Roman">”-XX</span><span style="font-family:宋体">年度档案移交花名册。</span></span></p><p style="text-indent:28px"><span style=";font-family:&#39;Times New Roman&#39;;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">网址</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px">http://jyj.zunyi.gov.cn/</span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">单位地址：遵义市新浦新区建投大厦</span>3<span style="font-family:宋体">号楼</span></span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">联系电话：</span></span><span style=";font-family:&#39;Times New Roman&#39;;color:rgb(0,0,0);font-size:14px">0851-28222836<span style="font-family:宋体">、</span><span style="font-family:Times New Roman">28252110</span></span></p><p style="text-indent:28px"><br></p><p style="text-indent:28px"><span style=";font-family:&#39;Times New Roman&#39;;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">三、省外高校毕业生档案，可查询</span>“<span style="font-family:宋体">贵州省普通高等学校毕业生就业工作办公室</span><span style="font-family:Times New Roman">”</span><span style="font-family:宋体">－</span><span style="font-family:Times New Roman">“</span><span style="font-family:宋体">档案查询</span><span style="font-family:Times New Roman">”</span><span style="font-family:宋体">－输入姓名－查询。</span></span></p><p style="text-indent:28px"><span style=";font-family:&#39;Times New Roman&#39;;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">网址</span>http://www.gzsjyzx.com/</span></p><p style="text-indent:28px"><span style=";font-family:&#39;Times New Roman&#39;;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">地址：贵阳市观山湖区金朱东路</span>162<span style="font-family:宋体">号）</span></span></p><p style="text-indent:28px"><span style=";font-family:&#39;Times New Roman&#39;;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">联系电话：</span>0851-86810407</span></p><p style="text-indent:28px"><br></p><p style="text-indent:28px"><span style=";font-family:&#39;Times New Roman&#39;;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">说明：省外院校毕业生档案，学校可寄到贵州省普通高等学校毕业生就业工作办公室。</span></span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">若需调档人员</span>,<span style="font-family:宋体">请查询到档案编号和档案存放地址，并携带有效证件到相应地点办理调档手续（户籍为新浦新区请到遵义市人力资源开发服务中心办理相关手续）。以上方式均查询不到档案去向者，请向自己毕业学校的相关部门咨询。同时</span><span style="font-family:Times New Roman">,</span><span style="font-family:宋体">我中心接收的应届毕业生档案将于本年度</span><span style="font-family:Times New Roman">10</span><span style="font-family:宋体">月份分流至户籍所在地的人社部门</span><span style="font-family:Times New Roman">,</span><span style="font-family:宋体">请您关注。</span></span></p><p style="text-indent:27px"><br></p><p style="text-indent:27px"><br></p><p style="text-indent:27px;text-align:justify;text-justify:inter-ideograph"><strong><span style=";font-family:宋体;font-weight:bold;font-size:13px"><span style="font-family:宋体">档案接收单位：</span><span style="font-family:宋体">道真县人力资源网</span>(人才交流服务中心)</span></strong></p><p style="text-align:justify;text-justify:inter-ideograph"><strong><span style=";font-family:宋体;font-weight:bold;font-size:13px"><span style="font-family:宋体">具体地址：道真自治县尹珍大道长朝巷</span>14号</span></strong></p><p style="text-align:justify;text-justify:inter-ideograph"><strong><span style=";font-family:宋体;font-weight:bold;font-size:13px"><span style="font-family:宋体">联系人：郑新华</span><span style="font-family:宋体">朱俊勤</span><span style="font-family:宋体">联系方式：</span>0851--23130060；0851--25782065</span></strong></p><p></p><p></p><p></p><p style=";line-height:40px"><br></p><p style=";line-height:40px"><br></p><p style=";line-height:40px"><br></p><p style=";line-height:40px"><br></p><p style="text-indent:187px"><strong><span style=";font-family:宋体;color:rgb(0,0,0);font-weight:bold;font-size:13px"><span style="font-family:宋体">毕业生户口和档案转移须知</span></span></strong></p><p style="text-indent:187px"></p><p style="text-indent:27px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:13px"><span style="font-family:宋体">为高校毕业生办理户口和人事档案手续提供便利。对毕业生离校时未落实工作单位的高校毕业生，本人要求户口和人事档案留存在学校的，经学校同意可为其免费保管两年；本人要求将户口转回入学前户籍所在地的，公安机关应当按照户籍管理规定为其办理落户手续。毕业生两年内落实工作单位的，凭省、地（州、市）毕业生就业主管部门签发的《全国普通高等学校毕业生就业报到证》及毕业生户口迁移证到工作单位的，凭用人单位录（聘）用手续、劳动合同、《普通高等学校毕业证书》和毕业生户口迁移证到工作单位所在地户口登记机关办理落户手续。户口和人事档案留存在学校的毕业生，两年后仍未落实就业单位的，将户口转回入学前户籍所在地，公安部门要为其办理落户手续，档案转至入学前所在地人民政府人事部门所属的人才交流中心。</span></span></p><p><br></p><p style="text-indent:187px"></p><p style="text-indent:187px"></p><p style="text-indent:187px"></p><p style="text-indent:187px"><strong><span style=";font-family:宋体;color:rgb(0,0,0);font-weight:bold;font-size:13px"><span style="font-family:宋体">毕业生党员组织关系转移须知</span></span></strong></p><p style="text-indent:187px"></p><p style="text-indent:27px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:13px"><span style="font-family:宋体">高校毕业生党员，可有</span>4种选择接转党组织关系：根据中央组织部《关于进一步加强党员组织关系管理的意见》（中组发[2001]10号）规定，高校毕业生党员，①已经落实工作单位的，应将党员关系及时转移到所去单位党组织；②尚未落实工作单位的，可将党员组织关系转移到本人或父母居住地的街道、乡镇党组织；③也可将党组织关系随同档案转移到县以上政府人事（劳动）部门所属的人才（劳动）服务机构党组织；④按国家有关规定选择将户口两年内继续保留在原就读学校的，也可将党员组织关系保留在原就读学校的党组织。</span></p><p><br></p><p style="text-indent:180px"><br></p><p style="text-indent:187px"><strong><span style=";font-family:宋体;color:rgb(0,0,0);font-weight:bold;font-size:13px"><span style="font-family:宋体">流动人员人事档案转入须知</span></span></strong></p><p style="text-indent:28px;text-align:left;line-height:28px"><strong><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-weight:bold;font-size:13px"><span style="font-family:宋体">一、服务对象：</span></span></strong><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-size:13px"><span style="font-family:宋体">需将人事档案保存</span></span><span style=";font-family:宋体;font-size:13px"><span style="font-family:宋体">在我中心的人员。</span></span></p><p style="text-indent:28px;text-align:left;line-height:28px"><strong><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-weight:bold;font-size:13px"><span style="font-family:宋体">二、需要材料：</span></span></strong></p><p style="text-indent:33px"><span style=";font-family:宋体;font-size:13px">1.</span><span style=";font-family:宋体;font-size:13px"><span style="font-family:宋体">档案在原单位，属于</span>“辞职”、“辞退”、“除名”、“ 自动离职”、“解除合同”或其他原因离开原单位者：</span></p><p style="text-indent:27px"><span style=";font-family:宋体;font-size:13px"><span style="font-family:宋体">查验并收取服务对象相应的辞职、辞退、除名、自动离职、解除合同或其他离开原单位证明书面材料及本人申请、身份证复印件，根据服务对象信息开具《调档函》。</span></span></p><p style="text-indent:33px"><span style=";font-family:宋体;font-size:13px">2.</span><span style=";font-family:宋体;font-size:13px"><span style="font-family:宋体">档案在各地人才交流服务中心或省毕分办者：</span></span></p><p style="text-indent:27px"><span style=";font-family:宋体;font-size:13px"><span style="font-family:宋体">查验并收取服务对象本人身份证复印件，要求其在身份证复印件上申请由我中心代理档案并注明现档案所在地。根据服务对象信息开具《调档函》。</span></span></p><p style="text-indent:33px"><span style=";font-family:宋体;font-size:13px">3.</span><span style=";font-family:宋体;font-size:13px"><span style="font-family:宋体">档案在学校者：</span></span></p><p style="text-indent:27px"><span style=";font-family:宋体;font-size:13px"><span style="font-family:宋体">查验并收取服务对象本人身份证及学历证复印件，要求其在身份证复印件上申请由我中心代理档案并注明现档案所在地。根据服务对象信息开具《调档函》。</span></span></p><p style="text-indent:27px"><span style=";font-family:宋体;font-size:13px">4．委托他人办理的要有委托书、身份证复印件、代办人身份证原件及复印件。</span></p><p style="text-indent:27px"><span style=";font-family:宋体;font-size:13px">5.审核档案材料，经检查合格后，与中心签订《委托保管档案合同书》或《人事代理合同书》。</span></p><p style="text-indent:27px"><strong><span style=";font-family:宋体;font-weight:bold;font-size:13px"><span style="font-family:宋体">三、办理时限：</span></span></strong><span style=";font-family:宋体;font-size:13px"><span style="font-family:宋体">材料齐备立即办理。</span></span></p><p style=";line-height:31px"><br></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">受理时间：周一至周五</span>9<span style="font-family:宋体">：</span><span style="font-family:Times New Roman">00---17</span><span style="font-family:宋体">：</span><span style="font-family:Times New Roman">00</span><span style="font-family:宋体">（节假日除外）</span></span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">受理地点：</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">道真县人社局</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">（</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">县政府红绿灯下行</span>50<span style="font-family:宋体">米，尹珍大道长朝巷</span><span style="font-family:Times New Roman">14</span><span style="font-family:宋体">号</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">）</span></span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">受理单位：</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">道真县人力资源网二楼人才交流服务中心</span></span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">服务电话：</span></span><span style=";font-family:宋体;font-size:14px">0851-23</span><span style=";font-family:宋体;font-size:14px">130079</span></p><p style="text-indent:187px"></p><p style="text-indent:187px"><strong><span style=";font-family:宋体;color:rgb(0,0,0);font-weight:bold;font-size:13px"><span style="font-family:宋体">流动人员人事档案转出须知</span></span></strong></p><p style="text-indent:28px;text-align:left;line-height:28px"><strong><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-weight:bold;font-size:13px"><span style="font-family:宋体">一、服务对象：</span></span></strong><span style=";font-family:宋体;font-size:13px"><span style="font-family:宋体">需将人事档案</span></span><span style=";font-family:宋体;font-size:13px"><span style="font-family:宋体">从我中心</span></span><span style=";font-family:宋体;font-size:13px"><span style="font-family:宋体">调出的人员。</span></span></p><p style="text-indent:28px;text-align:left;line-height:28px"><strong><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-weight:bold;font-size:13px"><span style="font-family:宋体">二、需要材料：</span></span></strong></p><p style="text-indent:29px"><span style=";font-family:宋体;font-size:13px">1.本人身份证原件（留存复印件）</span><span style=";font-family:宋体;font-size:13px"><span style="font-family:宋体">。</span></span><span style=";font-family:宋体;font-size:13px"><span style="font-family:宋体">委托他人办理的，需提供委托书、代办人身份证原件（留存复印件）</span></span><span style=";font-family:宋体;font-size:13px"><span style="font-family:宋体">；</span></span></p><p style="text-indent:27px"><span style=";font-family:宋体;font-size:13px">2.</span><span style=";font-family:宋体;font-size:13px"><span style="font-family:宋体">原有工作单位的另需单位出具终止合同书、辞职辞退书、解聘书或单位同意转档函（任选一）；</span></span></p><p style="text-indent:27px"><span style=";font-family:宋体;font-size:13px">3.调档函。其中：（1）县以上（含县）各级政府所属人力资源服务机构出具的调档函；（2）办理保险、失业、退休调档的，由该办理单位出具调档函；（3）考取公务员或被事业单位录（聘）用的，由录取单位开具调档函；（4）国有企业或国有控股企业聘用的由聘用单位出具的调档函；（5）升学调档的，由录取学校出具调档函；（6）应征入伍的由武装部门出具的调档函；（7）聘用为特岗教师的，由教育部门出具调档函。</span></p><p style="text-indent:26px;text-align:left;line-height:28px"><strong><span style=";font-family:宋体;font-weight:bold;font-size:13px"><span style="font-family:宋体">三、</span></span></strong><strong><span style=";font-family:宋体;font-weight:bold;font-size:13px"><span style="font-family:宋体">办理时限</span></span></strong><span style=";font-family:宋体;font-size:13px"><span style="font-family:宋体">：五个工作日</span></span><strong><span style=";font-family:宋体;font-weight:bold;font-size:13px"><span style="font-family:宋体">。</span></span></strong></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">受理时间：周一至周五</span>9<span style="font-family:宋体">：</span><span style="font-family:Times New Roman">00---17</span><span style="font-family:宋体">：</span><span style="font-family:Times New Roman">00</span><span style="font-family:宋体">（节假日除外）</span></span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">受理地点：</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">道真县人社局</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">（</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">县政府红绿灯下行</span>50<span style="font-family:宋体">米，尹珍大道长朝巷</span><span style="font-family:Times New Roman">14</span><span style="font-family:宋体">号</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">）</span></span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">受理单位：</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">道真县人力资源网二楼人才交流服务中心</span></span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">服务电话：</span></span><span style=";font-family:宋体;font-size:14px">0851-23</span><span style=";font-family:宋体;font-size:14px">130079</span></p><p style="text-indent:28px"><br></p><p style="text-indent:187px"><strong><span style=";font-family:宋体;color:rgb(0,0,0);font-weight:bold;font-size:13px"><span style="font-family:宋体">出具流动人员人事档案证明材料</span></span></strong></p><p style="text-indent:28px;text-align:left;line-height:28px"><strong><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-weight:bold;font-size:13px"><span style="font-family:宋体">一、出具证明的适应范围：</span></span></strong><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-size:13px"><span style="font-family:宋体">需要出具与本人档案记载相关或管理人事档案相关证明材料的，由存档人员提出申请，经审核同意后出具。证明种类为分：存档证明、经历证明、其他证明。</span></span></p><p style="text-indent:28px;text-align:left;line-height:28px"><strong><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-weight:bold;font-size:13px"><span style="font-family:宋体">二、需要材料：</span></span></strong></p><p style="text-indent:28px;text-align:left;line-height:28px"><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-size:13px"><span style="font-family:宋体">本人身份证原件及复印件（委托他人办理的应提供委托书、身份证复印件、代办人的身份证原件及复印件）、申请书、索取证明的信函。</span></span></p><p style="text-indent:28px;text-align:left;line-height:28px"><strong><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-weight:bold;font-size:13px"><span style="font-family:宋体">三、办理程序：</span></span></strong></p><p style="text-indent:28px;text-align:left;line-height:28px"><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-size:13px">1.存档人员向档案管理机构说明出具证明材料的事由（或对方索取证明的信函）。</span></p><p style="text-indent:28px;text-align:left;line-height:28px"><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-size:13px">2.根据档案实际记载出具证明。档案中无记载的，应补齐相关材料后出具。</span></p><p style="text-indent:28px;text-align:left;line-height:28px"><strong><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-weight:bold;font-size:13px"><span style="font-family:宋体">四、办理时限：材料齐备立即办理</span></span></strong></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">受理时间：周一至周五</span>9<span style="font-family:宋体">：</span><span style="font-family:Times New Roman">00---17</span><span style="font-family:宋体">：</span><span style="font-family:Times New Roman">00</span><span style="font-family:宋体">（节假日除外）</span></span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">受理地点：</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">道真县人社局</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">（</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">县政府红绿灯下行</span>50<span style="font-family:宋体">米，尹珍大道长朝巷</span><span style="font-family:Times New Roman">14</span><span style="font-family:宋体">号</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">）</span></span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">受理单位：</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">道真县人力资源网二楼人才交流服务中心</span></span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">服务电话：</span></span><span style=";font-family:宋体;font-size:14px">0851-23</span><span style=";font-family:宋体;font-size:14px">130079</span></p><p style="text-indent:168px;line-height:40px"><br></p><p style="text-indent:187px"><strong><span style=";font-family:宋体;color:rgb(0,0,0);font-weight:bold;font-size:13px"><span style="font-family:宋体">流动人员人事档案查阅</span></span></strong></p><p style="text-indent:28px;text-align:left;line-height:28px"><strong><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-weight:bold;font-size:13px"><span style="font-family:宋体">一、查阅档案范围</span></span></strong></p><p style="text-indent:28px;text-align:left;line-height:28px"><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-size:13px">1.公安、检察、法院、司法等国家机关或公证机构因侦查、审理或公证需要可查阅有关人员的档案；</span></p><p style="text-indent:28px;text-align:left;line-height:28px"><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-size:13px">2.设立党委（党组）的机关、企事业单位因考察、任免、聘任、调动、入党（团）、参军、出国等工作需要可跨单位查阅有关人员的档案；</span></p><p style="text-indent:28px;text-align:left;line-height:28px"><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-size:13px">3.用人单位因工作需要可查阅本单位员工的档案。</span></p><p style="text-indent:28px;text-align:left;line-height:28px"><strong><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-weight:bold;font-size:13px"><span style="font-family:宋体">二、查阅要求</span></span></strong></p><p style="text-indent:28px;text-align:left;line-height:28px"><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-size:13px">1.查阅单位应持有效单位介绍信及身份证件查阅。</span></p><p style="text-indent:28px;text-align:left;line-height:28px"><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-size:13px">2.查阅档案应在档案查阅室或指定的地方查阅。</span></p><p style="text-indent:28px;text-align:left;line-height:28px"><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-size:13px">3.查阅者不得涂改、圈划、抽取、撤换档案材料，对档案内容应严格保密，不得泄露或擅自向外公布，保障个人隐私不受侵犯。</span></p><p style="text-indent:28px;text-align:left;line-height:28px"><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-size:13px">4.不得擅自复制、拍摄档案内容。确因工作需要从档案中取证的，应说明理由，经审核同意后，方可复制或拍摄。复制的材料应注明出处和日期，并加盖公章。</span></p><p style="text-indent:28px;text-align:left;line-height:28px"><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-size:13px">5.需要摘录档案内容的，应征得同意，摘录部分由档案管理人员与原件核对无误后，注明出处及日期，并加盖公章。</span></p><p style="text-indent:28px;text-align:left;line-height:28px"><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-size:13px">6.任何个人不得查阅或借用本人及其直系亲属的档案。</span></p><p style="text-indent:28px;text-align:left;line-height:28px"><strong><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-weight:bold;font-size:13px"><span style="font-family:宋体">三、查阅程序</span></span></strong></p><p style="text-indent:28px;text-align:left;line-height:28px"><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-size:13px">1.档案管理人员审核查阅人提供的有效证件及相关材料，填写《查阅档案登记表》，按规定提供档案材料。</span></p><p style="text-indent:28px;text-align:left;line-height:28px"><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-size:13px">2.查阅结束后，档案管理人员应及时将被查阅档案归库，并将查阅人所持有的介绍信、身份证复印件留存。</span></p><p style="text-indent:28px;text-align:left;line-height:28px"><strong><span style=";font-family:宋体;color:rgb(0,0,0);letter-spacing:1px;font-weight:bold;font-size:13px"><span style="font-family:宋体">四、办理时限：材料齐备立即办理</span></span></strong></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">受理时间：周一至周五</span>9<span style="font-family:宋体">：</span><span style="font-family:Times New Roman">00---17</span><span style="font-family:宋体">：</span><span style="font-family:Times New Roman">00</span><span style="font-family:宋体">（节假日除外）</span></span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">受理地点：</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">道真县人社局</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">（</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">县政府红绿灯下行</span>50<span style="font-family:宋体">米，尹珍大道长朝巷</span><span style="font-family:Times New Roman">14</span><span style="font-family:宋体">号</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">）</span></span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">受理单位：</span></span><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">道真县人力资源网二楼人才交流服务中心</span></span></p><p style="text-indent:28px"><span style=";font-family:宋体;color:rgb(0,0,0);font-size:14px"><span style="font-family:宋体">服务电话：</span></span><span style=";font-family:宋体;font-size:14px">0851-23</span><span style=";font-family:宋体;font-size:14px">130079</span></p><p style="text-align:center;line-height:33px"></p><p><br></p>
+					</font>
+    			</div>
+   				<div class="KeysList" style="margin-top: 5px;">
+					<div class="jiathis_style">
+						<span class="jiathis_txt">分享到：</span>
+						<a class="jiathis_button_qzone" title="分享到QQ空间" href="javascript:;" onclick="jiathis_sendto('qzone');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_qzone">QQ空间</span>
+						</a>
+						<a class="jiathis_button_tsina" title="分享到微博" href="javascript:;" onclick="jiathis_sendto('tsina');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_tsina">新浪微博</span>
+						</a>
+						<a class="jiathis_button_tqq" title="分享到腾讯微博" href="javascript:;" onclick="jiathis_sendto('tqq');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_tqq">腾讯微博</span>
+						</a>
+						<a class="jiathis_button_renren" title="分享到人人网" href="javascript:;" onclick="jiathis_sendto('renren');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_renren">人人网</span>
+						</a>
+						<a href="javascript:;" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+						<a class="jiathis_counter_style">
+							<span class="jiathis_button_expanded jiathis_counter jiathis_bubble_style" id="jiathis_counter_36" title="累计分享0次">0</span>
+						</a>
+					</div>
+					<script type="text/javascript" src="../../../code/jia.js" ></script>
+				</div>
+   				<div class="KeysList">
+					<div class="right">
+			  			<a href="javascript:;" target="_blank" class="box_02">我要推荐</a>&emsp;
+						<!--a class="box_02" href="/syqt/rssdy/" target="_blank">RSS定制</a>&emsp;-->
+			 			<a class="box_02" href="../../../syqt/wzjc/index.html" target="_blank">网站纠错</a>&emsp;
+						<!--a class="box_02" href="#" target="_blank">返回顶部</a-->
+					</div>
+				</div>
+    			<div class="page">
+					<div id="prevpage">
+						<span>上一篇：</span><a href="javascript:;" id="no1">无</a>
+						
+					</div>
+					<div id="prevpage">
+						<span>下一篇：</span><a href="javascript:;" id="no2">无</a>
+						
+							<script type="text/javascript">
+								var  str="";
+								var str_1 = "../201802/t20180213_21515402.html";
+								var str_4 = '道真自治县2018年“就业脱贫·春风行动” 现场求职招聘会公告';
+								if(str_4!="")
+								{
+									jQuery("#no2").hide();
+									if (str=="") {
+										document.write('<a  href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									} else {
+										document.write('<a  href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									}
+								}
+							</script>
+						
+					</div>
+    			</div>
+   				<div class="xgxx">
+        			<h1><span>相关信息</span></h1>
+					<ul>
+						<script type="text/javascript">
+							var key="";
+							if(key!=''&&key!='null'){
+								
+							}else{
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "./t20190621_21891610.html";
+									var str_4 = '毕业生报到、档案寄存，你应该知道的那些事';
+									var str_2 = '2019-06-21';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201802/t20180213_21515402.html";
+									var str_4 = '道真自治县2018年“就业脱贫·春风行动” 现场求职招聘会公告';
+									var str_2 = '2018-02-13';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201802/t20180212_21515159.html";
+									var str_4 = '我县召开劳动力就业信息数据采集工作启动会';
+									var str_2 = '2018-02-12';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201802/t20180212_21515165.html";
+									var str_4 = '道真县人社局召开2018年高校生就业创业 座谈会';
+									var str_2 = '2018-02-12';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201802/t20180212_21515171.html";
+									var str_4 = '道真县“就业脱贫·春风行动”服务月 系列活动拉开序幕';
+									var str_2 = '2018-02-12';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+								
+							}
+						 </script>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="foot_bj">
+	<div class="foot_nr">
+		<p>
+			<a href="../../../syqt/rssdy/index.html">RSS订阅</a>|
+			<a href="../../../syqt/lxfs/index.html">联系方式</a>|
+			<a href="../../../syqt/wzdt/index.html">网站地图</a>
+		</p>
+		<p>Copyright 2010 All Rights Reserved      主办：道真县人力资源网</p>
+		<p>电话：0851-25782065       技术支持：<a href="javascript:;" target="_blank">贵州多彩博虹科技有限公司</a></p>
+		<p>(建议使用1024×768分辨率 IE70以上版本浏览器) </p>
+		<p style="margin-top: 12px;">
+			<!--a target="_blank" href="http://bszs.conac.cn/sitename?method=show&id=04E0DEEC2DCA0288E053022819ACC535">
+				<img src="/images/dz_jg.png" /></a-->
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src=' http://dcs.conac.cn/js/24/356/2168/40584250/CA243562168405842500001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+		</p>
+	</div>
+</div>
+<script id="_trs_ta_js" src="../../../c/js/ta-1290.js" async="async" defer="defer"></script>
+    </body>
+</html>

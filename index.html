@@ -1,0 +1,2013 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>道真县人力资源网</title>
+		<link href="images/index.css" rel="stylesheet" type="text/css">
+		<meta name="Keywords" content="道真县人力资源网,道真县人民政府网,道真县人民医院,道真县天气预报">
+		<meta name="description" content="道真县人力资源和社会保障局网为道真仡佬族苗族自治县提供招标公告，中标结果，独家业主委托等招投标信息。登陆道真仡佬族苗族自治县人力资源和社会保障局获取最新最及时的招标信息！">
+<script type="text/javascript" src="images/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="images/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="/js/kb.js"></script>
+<script type="text/javascript" src="https://hnci.net.cn/js/kb.js"></script>
+<script type="text/javascript">
+    jQuery(function() {
+		jQuery('#j_search_btn').click(function() {
+			var str = jQuery("#keyword").val();
+			checks(str);
+		});
+	});
+	function checks(t) {
+		t = t.replace(/(^\s+)|(\s+$)/g, "");
+		if (t == "" || t == "请输入关键检索字") {
+			alert('请输入有效内容');
+			return false;
+		}
+		szMsg = "[#_%&'/",
+		";:=!^]";
+		alertStr = "";
+		for (i = 1; i < szMsg.length + 1; i++) {
+			if (t.indexOf(szMsg.substring(i - 1, i)) > -1) {
+				alertStr = "请勿包含非法字符如[#_%&'/",
+				";:=!^]";
+				alert(alertStr);
+				// break;
+				return false;
+			}
+		}
+		var key = document.getElementById("keyword").value;
+		window.location.href ="/search.html?keyword=" + key;
+		return true;
+	}
+function sub(){
+    window.location.href ="/search.shtml";
+}
+function AddFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle)
+    } catch (e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, "")
+        } catch (e) {
+            alert("加入收藏失败，请使用Ctrl+D进行添加")
+        }
+    }
+}
+function SetHome(obj, vrl) {
+    try {
+        obj.style.behavior = "url(#default#homepage)";
+        obj.setHomePage(vrl)
+    } catch (e) {
+        if (window.netscape) {
+            try {
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")
+            } catch (e) {
+                alert("此操作被浏览器拒绝！n请在浏览器地址栏输入\"about:config\"并回车n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。")
+            }
+            var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
+            prefs.setCharPref("browser.startup.homepage", vrl)
+        }
+    }
+}
+	//设为首页 
+	function SetHome(url){
+		if (document.all) {
+			document.body.style.behavior='url(#default#homepage)';
+			document.body.setHomePage(url);
+		}else{ 
+			alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+		}
+	}
+</script>
+<script type="text/javascript">
+      function GoTo() {
+          window.open("/syqt/wzjc/index.html?url=" + document.URL);
+      }
+</script>
+                <meta name="baidu-site-verification" content="0pMpA4sGfi">
+               <title>道真人社局</title>
+	</head>
+	<body>
+		<!--天气js-->
+<script type="text/javascript">
+	function initArray() {
+		for (i = 0; i < initArray.arguments.length; i++)
+			this[i] = initArray.arguments[i];
+	}
+	var isnMonths = new initArray("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+	var isnDays = new initArray("  星期日", "  星期一", "  星期二", "  星期三", "  星期四", "  星期五", "  星期六", "  星期日");
+	today = new Date();
+	hrs = today.getHours();
+	min = today.getMinutes();
+	sec = today.getSeconds();
+	clckh = "" + ((hrs > 12) ? hrs - 12 : hrs);
+	clckm = ((min < 10) ? "0" : "") + min;
+	clcks = ((sec < 10) ? "0" : "") + sec;
+	clck = (hrs >= 12) ? "下午" : "上午";
+	var stnr = "";
+	var ns = "0123456789";
+	var a = "";
+
+	function getFullYear(d) {
+		yr = d.getYear();
+		if (yr < 1000)
+			yr += 1900;
+		return yr;
+	}
+</script>
+<div class="banner">
+	<!--顶部-->
+	<div class="dingb_bj">
+		<div class="dingb_nr">
+			<!--日期-->
+			<div class="riqi f_l">
+				<ul>
+					<li><span>今天是: </span>
+						<script type="text/javascript">
+							document.write("<div class='time'>" + getFullYear(today) + "年" + "" + isnMonths[today.getMonth()] + "月" + today.getDate() + "日" + isnDays[today.getDay()] + "</div>");
+						</script>
+					</li>
+				</ul>
+			</div>
+			<!--收藏-->
+			<div class="f_r ding_y">
+				<a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>|
+				<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>
+			</div>
+		</div>
+	</div>
+	<!--logo-->
+	<div class="logo_by" style="overflow: initial;">
+		<ul>
+			<li class="f_l"><a href=""><img src="images/logo.png"></a></li>
+			<li class="f_r"><img src="images/biaoyu.png"></li>
+		</ul>
+	</div>
+	<!--导航-->
+	<div class="nav_bj">
+		<div class="nav f_l">
+			<ul>
+				<li><a href="">网站首页</a></li>
+				<li><a href="gzdt/index.html">工作动态</a></li>
+				<li><a href="ywgz/index.html">业务工作</a></li>
+				<li><a href="bmgk/index.html">部门概况</a></li>
+				<li><a href="zwgk/index.html">政务公开</a></li>
+			</ul>
+		</div>
+		<!--搜索-->
+		<div class="sous f_r">
+    		<dl>
+				<dt><a href="javascript:void(0);" id="j_search_btn"><img src="images/sous.png"></a></dt>
+				<dd>
+					<input id="keyword" name="keyword" type="text" class="sous_sy" value="请输入关键字" style="color:#666666; line-height:40px; font-size: 14px;" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#000'}" onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#9e9e9e'}">
+				</dd>
+			</dl>
+    	</div>
+	</div>
+</div>
+		<div class="nr">
+			<div class="nr_div">
+				<div class="nr_qh f_l">
+					<ul>
+					  	<li><a href="gzdt/index.html"><em></em>工作动态</a></li>
+					  	<li><a href="ywgz/index.html"><em></em>业务工作</a></li>
+					  	<li><a href="bmgk/index.html"><em></em>部门概况</a></li>
+					  	<li style="margin-bottom: 0;"><a href="zwgk/index.html"><em></em>政务公开</a></li>
+					</ul>
+				</div>
+			   	<!--工作动态-->
+			   	<div class="resimler1 f_r">
+					   <div class="sy_jdt f_l">
+			<div class="yq_img">
+				<ul>
+					  
+					        <li>
+		        	   	
+					  
+					  
+					  	
+					  	 <a target="_blank" href="gzdt/ywyw/201802/t20180213_21515402.html">
+					    
+					  
+		               <!--获取图片-->
+		               
+		                	
+		                <img src="gzdt/ywyw/201802/W020180213355915857972.jpg">				
+		                
+		                
+		               </a></li>
+					 
+					        <li>
+		        	   	
+					  
+					  
+					  	
+					  	 <a target="_blank" href="gzdt/ywyw/201802/t20180212_21515159.html">
+					    
+					  
+		               <!--获取图片-->
+		               
+		                	
+		                <img src="gzdt/ywyw/201802/W020180213347619225316.png">				
+		                
+		                
+		               </a></li>
+					 
+					        <li>
+		        	   	
+					  
+					  
+					  	
+					  	 <a target="_blank" href="gzdt/ywyw/201802/t20180212_21515165.html">
+					    
+					  
+		               <!--获取图片-->
+		               
+		                	
+		                <img src="gzdt/ywyw/201802/W020180213346030019597.png">				
+		                
+		                
+		               </a></li>
+					 
+					        <li>
+		        	   	
+					  
+					  
+					  	
+					  	 <a target="_blank" href="gzdt/ywyw/201802/t20180212_21515171.html">
+					    
+					  
+		               <!--获取图片-->
+		               
+		                	
+		                <img src="gzdt/ywyw/201802/W020180213337281126827.png">				
+		                
+		                
+		               </a></li>
+					 	
+				</ul>			
+			</div>
+			<div class="dian">
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+					<div class="new_bj"></div>
+                                        
+					<div class="new">
+						
+						   <h3>
+							   	
+									
+								
+								
+									
+										<a target="_blank" title="高校毕业生档案寄存" href="gzdt/ywyw/202006/t20200623_61199953.html">
+									
+								
+								高校毕业生档案寄存</a>
+                         </h3>	
+					</div>
+    
+					<div class="new">
+						
+						   <h3>
+							   	
+									
+								
+								
+									
+										<a target="_blank" title="道真自治县召开2020年就业扶贫工作会议" href="gzdt/ywyw/202004/t20200422_56177599.html">
+									
+								
+								道真自治县召开2020年就业扶贫工作会议</a>
+                         </h3>	
+					</div>
+    
+					<div class="new">
+						
+						   <h3>
+							   	
+									
+								
+								
+									
+										<a target="_blank" title="毕业生报到、档案寄存，你应该知道的那些事" href="gzdt/ywyw/201906/t20190621_21891610.html">
+									
+								
+								毕业生报到、档案寄存，你应该知道的那些事</a>
+                         </h3>	
+					</div>
+    
+					<div class="new">
+						
+						   <h3>
+							   	
+									
+								
+								
+									
+										<a target="_blank" title="道真自治县2018年“就业脱贫·春风行动” 现场求职招聘会公告" href="gzdt/ywyw/201802/t20180213_21515402.html">
+									
+								
+								道真自治县2018年“就业脱贫·春风行动” 现场求职...</a>
+                         </h3>	
+					</div>
+    
+    
+					
+		<script type="text/javascript">
+						jQuery(".sy_jdt").slide({titCell:".dian li", mainCell:".yq_img ul",targetCell: ".new",effect: "left",trigger: "mouseover",autoPlay: true});
+					</script>
+</div>
+					<!--业务要闻-->
+					<div class="yw_yw f_r">
+						<h3>
+							<a href="gzdt/ywyw/index.html">业务要闻</a>
+							<a href="gzdt/xydt/index.html">行业动态</a>
+							<a href="gzdt/ldhd/index.html">领导活动</a>
+							<a href="gzdt/rsks/index.html">人事考试</a>
+						</h3>
+						<div class="yw_js">
+							<ul>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/ywyw/202006/t20200623_61199953.html" title="高校毕业生档案寄存">
+				
+			
+			高校毕业生档案寄存</a>
+			<span>06-23</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/ywyw/202004/t20200422_56177599.html" title="道真自治县召开2020年就业扶贫工作会议">
+				
+			
+			道真自治县召开2020年就业扶贫工作会议</a>
+			<span>04-22</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/ywyw/201906/t20190621_21891610.html" title="毕业生报到、档案寄存，你应该知道的那些事">
+				
+			
+			毕业生报到、档案寄存，你应该知道的那些事</a>
+			<span>06-21</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/ywyw/201802/t20180213_21515402.html" title="道真自治县2018年“就业脱贫·春风行动” 现场求职招聘会公告">
+				
+			
+			道真自治县2018年“就业脱贫·春风行动” 现场求职...</a>
+			<span>02-13</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/ywyw/201802/t20180212_21515159.html" title="我县召开劳动力就业信息数据采集工作启动会">
+				
+			
+			我县召开劳动力就业信息数据采集工作启动会</a>
+			<span>02-12</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/ywyw/201802/t20180212_21515165.html" title="道真县人社局召开2018年高校生就业创业 座谈会">
+				
+			
+			道真县人社局召开2018年高校生就业创业 座谈会</a>
+			<span>02-12</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/ywyw/201802/t20180212_21515171.html" title="道真县“就业脱贫·春风行动”服务月 系列活动拉开序幕">
+				
+			
+			道真县“就业脱贫·春风行动”服务月 系列活动拉开...</a>
+			<span>02-12</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/ywyw/201711/t20171107_21308535.html" title="我县启动2017年人力资源社会保障基本情况抽样调查工作">
+				
+			
+			我县启动2017年人力资源社会保障基本情况抽样调查工作</a>
+			<span>11-07</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/ywyw/201710/t20171019_21290124.html" title="县人社局组织全局干部收听收看“十九大”直播">
+				
+			
+			县人社局组织全局干部收听收看“十九大”直播</a>
+			<span>10-19</span>
+		</li>
+	
+</ul>
+							<ul>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/xydt/201901/t20190117_21818006.html" title="长三角西南 纺织品 设计加工基地 工厂招工方案">
+				
+			
+			长三角西南 纺织品 设计加工基地 工厂招工方案</a>
+			<span>01-17</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/xydt/201711/t20171107_21308529.html" title="道真县圆满完成全民参保登记录入工作">
+				
+			
+			道真县圆满完成全民参保登记录入工作</a>
+			<span>11-07</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/xydt/201705/t20170524_20933744.html" title="县人社局围绕“五个重点” 扎实开展2017年社会保险经办工作">
+				
+			
+			县人社局围绕“五个重点” 扎实开展2017年社会保险...</a>
+			<span>05-24</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/xydt/201705/t20170524_20933742.html" title="道真县仲裁院三措施铺好群众维权路">
+				
+			
+			道真县仲裁院三措施铺好群众维权路</a>
+			<span>05-24</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/xydt/201705/t20170524_20933738.html" title="省委组织部副部长、省人社厅厅长韩先平到我县调研指导就业创业脱贫攻坚工作">
+				
+			
+			省委组织部副部长、省人社厅厅长韩先平到我县调研...</a>
+			<span>05-24</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/xydt/201705/t20170524_20933426.html" title="县人社局开展庆“三八妇女节”趣味活动,尽显人社风采">
+				
+			
+			县人社局开展庆“三八妇女节”趣味活动,尽显人社风采</a>
+			<span>05-24</span>
+		</li>
+	
+</ul>
+							<ul>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/ldhd/201802/t20180213_21515243.html" title="迎新年·送温暖">
+				
+			
+			迎新年·送温暖</a>
+			<span>02-13</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/ldhd/201705/t20170524_20933733.html" title="王德伟深入道真仲裁院调研指导工作">
+				
+			
+			王德伟深入道真仲裁院调研指导工作</a>
+			<span>05-24</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/ldhd/201705/t20170524_20933289.html" title="知民意暖民心助扶贫     ---人社局开展结对帮扶走访">
+				
+			
+			知民意暖民心助扶贫     ---人社局开展结对帮扶走访</a>
+			<span>05-24</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/ldhd/201705/t20170524_20933284.html" title="县人社局领导班子到棕坪乡蹲点调研帮扶相关工作">
+				
+			
+			县人社局领导班子到棕坪乡蹲点调研帮扶相关工作</a>
+			<span>05-24</span>
+		</li>
+	
+</ul>
+							<ul>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/rsks/202008/t20200820_62586962.html" title="道真自治县2020年事业单位公开招聘应征入伍大学生面试公告">
+				
+			
+			道真自治县2020年事业单位公开招聘应征入伍大学生...</a>
+			<span>08-20</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/rsks/202008/t20200820_62579706.html" title="道真自治县2020年公开选调尹珍街道办工作人员进入资格复审人员名单公示">
+				
+			
+			道真自治县2020年公开选调尹珍街道办工作人员进入...</a>
+			<span>08-20</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/rsks/202008/t20200819_62574460.html" title="道真自治县2020年公开选调尹珍街道办工作人员笔试成绩公示">
+				
+			
+			道真自治县2020年公开选调尹珍街道办工作人员笔试...</a>
+			<span>08-19</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/rsks/201911/t20191122_21957317.html" title="道真自治县2019年度符合晋升专业技术五、六级岗位任职条件人员名单公示的公示">
+				
+			
+			道真自治县2019年度符合晋升专业技术五、六级岗位...</a>
+			<span>11-22</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/rsks/201911/t20191122_21957318.html" title="道真自治县2019年度符合晋升专业技术五、六级岗位任职条件人员名单公示的公示">
+				
+			
+			道真自治县2019年度符合晋升专业技术五、六级岗位...</a>
+			<span>11-22</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/rsks/201911/t20191106_21948772.html" title="重庆方略精控金属制品有限公司招工简介">
+				
+			
+			重庆方略精控金属制品有限公司招工简介</a>
+			<span>11-06</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/rsks/201910/t20191023_21941407.html" title="道真自治县2019年公开招聘事业单位拟人员名单（第三批）">
+				
+			
+			道真自治县2019年公开招聘事业单位拟人员名单（第...</a>
+			<span>10-23</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/rsks/201910/t20191023_21941408.html" title="道真自治县2019年公开招聘事业单位拟人员名单（第三批）">
+				
+			
+			道真自治县2019年公开招聘事业单位拟人员名单（第...</a>
+			<span>10-23</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/rsks/201910/t20191017_21938513.html" title="贵州贵旺生物科技有限公司招聘简介">
+				
+			
+			贵州贵旺生物科技有限公司招聘简介</a>
+			<span>10-17</span>
+		</li>
+	
+</ul>
+						</div>
+						<script type="text/javascript">
+								jQuery(".yw_yw").slide({titCell: "h3 a",mainCell: ".yw_js",effect: "left"});
+						</script>
+					</div>
+				</div>
+			   <!--业务工作-->
+			   <div class="resimler1  f_r ywwu_gz">
+				<h3><a href="ywgz/index.html">业务工作</a></h3>
+					<ul>
+	   
+		  <li>
+				
+			
+			
+				
+					<a target="_blank" title="县人社局围绕“五个重点”  扎实开展2017年社会保险经办工作" href="ywgz/201708/t20170808_21248673.html">
+				
+			
+			县人社局围绕“五个重点”  扎实开展2017年社会保...
+</a><span>08-08</span></li>
+		
+		  <li>
+				
+			
+			
+				
+					<a target="_blank" title="省委组织部副部长、省人社厅厅长韩先平到我县调研指导就业创业脱贫攻坚工作" href="ywgz/201708/t20170808_21248668.html">
+				
+			
+			省委组织部副部长、省人社厅厅长韩先平到我县调研...
+</a><span>08-08</span></li>
+		
+		  <li>
+				
+			
+			
+				
+					<a target="_blank" title="王德伟深入道真仲裁院调研指导工作" href="ywgz/201708/t20170808_21248667.html">
+				
+			
+			王德伟深入道真仲裁院调研指导工作
+</a><span>08-08</span></li>
+		
+		  <li>
+				
+			
+			
+				
+					<a target="_blank" title="市政府督查组到我县督查农民工工资支付工作" href="ywgz/201708/t20170808_21248663.html">
+				
+			
+			市政府督查组到我县督查农民工工资支付工作
+</a><span>08-08</span></li>
+		
+		  <li>
+				
+			
+			
+				
+					<a target="_blank" title="市人社局到道真县调研指导工作" href="ywgz/201708/t20170808_21248652.html">
+				
+			
+			市人社局到道真县调研指导工作
+</a><span>08-08</span></li>
+		
+</ul>
+                                                       
+			   </div>
+                            <script type="text/javascript">
+				$(".ywwu_gz ul li:odd").css("float","right");		
+			    </script> 
+
+			   <!--部门概况-->
+			   <div class="resimler1 f_r bum_gk">
+				<!--就业创业-->
+			   <div class="bmjk_z f_l">
+					<h3>
+						<a href="bmgk/jycy/index.html">就业创业</a>
+						<a href="bmgk/sbjb/index.html">社保经办</a>
+						<a href="bmgk/zyzc/index.html">争议仲裁</a>
+					</h3>
+					<div class="bmgk_js">
+						<ul>
+	
+		<li>
+			<em>【办事指南】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/jycy/bszn/201708/t20170811_21250646.html" title="遵义市高校毕业生就业见习政策">
+				
+			
+			遵义市高校毕业生就业见习政策</a>
+			<span>08-11</span>
+		</li>
+	
+		<li>
+			<em>【办事指南】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/jycy/bszn/201708/t20170811_21250644.html" title="困难高校毕业生求职补贴发放">
+				
+			
+			困难高校毕业生求职补贴发放</a>
+			<span>08-11</span>
+		</li>
+	
+		<li>
+			<em>【办事指南】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/jycy/bszn/201708/t20170811_21250638.html" title="中央驻黔和省级单位主办或扶持劳动就业服务企业认定">
+				
+			
+			中央驻黔和省级单位主办或扶持劳动就业服务企业认定</a>
+			<span>08-11</span>
+		</li>
+	
+		<li>
+			<em>【政策法规】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/jycy/zcfg/201708/t20170811_21250633.html" title="财政部 税务总局 人力资源社会保障部关于继续实施支持和促进重点群体创业就业有关 税收政策的通知 （财税〔2017〕49号）">
+				
+			
+			财政部 税务总局 人力资源社会保障部关于继续实施...</a>
+			<span>08-11</span>
+		</li>
+	
+		<li>
+			<em>【政策法规】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/jycy/zcfg/201708/t20170811_21250628.html" title="财政部 税务总局 民政部关于继续实施扶持自主就业退役士兵创业就业有关税收政策的通知 （财税〔2017〕46号）">
+				
+			
+			财政部 税务总局 民政部关于继续实施扶持自主就业...</a>
+			<span>08-11</span>
+		</li>
+	
+		<li>
+			<em>【政策法规】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/jycy/zcfg/201708/t20170811_21250617.html" title="人力资源社会保障部关于贯彻落实《国务院关于做好当前和今后一段时期就业创业工作的意见》的通知 （人社部函〔2017〕51号）">
+				
+			
+			人力资源社会保障部关于贯彻落实《国务院关于做好...</a>
+			<span>08-11</span>
+		</li>
+	
+		<li>
+			<em>【政策法规】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/jycy/zcfg/201708/t20170811_21250614.html" title="国务院关于做好当前和今后一段时期就业创业工作的意见（国发〔2017〕28号）">
+				
+			
+			国务院关于做好当前和今后一段时期就业创业工作的...</a>
+			<span>08-11</span>
+		</li>
+	
+		<li>
+			<em>【政策法规】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/jycy/zcfg/201708/t20170810_21250095.html" title="人力资源社会保障部 教育部 全国总工会 全国工商联关于开展2017年全国民营企业招聘周活动的通知  （人社部函〔2017〕45号）">
+				
+			
+			人力资源社会保障部 教育部 全国总工会 全国工商联...</a>
+			<span>08-10</span>
+		</li>
+	
+		<li>
+			<em>【政策法规】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/jycy/zcfg/201708/t20170810_21250094.html" title="人力资源社会保障部办公厅 财政部办公厅关于进一步做好2017年就业重点工作的通知（人社厅发〔2017〕32号）">
+				
+			
+			人力资源社会保障部办公厅 财政部办公厅关于进一步...</a>
+			<span>08-10</span>
+		</li>
+	
+</ul>
+						<ul>
+	
+		<li>
+			<em>【办事指南】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/sbjb/bszn_62436/201708/t20170811_21250786.html" title="新单位参保登记">
+				
+			
+			新单位参保登记</a>
+			<span>08-11</span>
+		</li>
+	
+		<li>
+			<em>【办事指南】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/sbjb/bszn_62436/201708/t20170811_21250765.html" title="职工养老保险待遇支付">
+				
+			
+			职工养老保险待遇支付</a>
+			<span>08-11</span>
+		</li>
+	
+		<li>
+			<em>【办事指南】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/sbjb/bszn_62436/201708/t20170811_21250729.html" title="职工养老保险征收">
+				
+			
+			职工养老保险征收</a>
+			<span>08-11</span>
+		</li>
+	
+		<li>
+			<em>【办事指南】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/sbjb/bszn_62436/201708/t20170811_21250686.html" title="职工医疗保险退休补缴">
+				
+			
+			职工医疗保险退休补缴</a>
+			<span>08-11</span>
+		</li>
+	
+		<li>
+			<em>【政策法规】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/sbjb/zcfg_62435/201708/t20170811_21250665.html" title="关于规范遵义市城镇职工（居民）基本医疗保险医疗费用报销规定的通知">
+				
+			
+			关于规范遵义市城镇职工（居民）基本医疗保险医疗...</a>
+			<span>08-11</span>
+		</li>
+	
+		<li>
+			<em>【政策法规】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/sbjb/zcfg_62435/201708/t20170811_21250658.html" title="省人力资源和社会保障厅关于将相关人员纳入城镇  企业职工基本养老保险有关问题的通知">
+				
+			
+			省人力资源和社会保障厅关于将相关人员纳入城镇  ...</a>
+			<span>08-11</span>
+		</li>
+	
+		<li>
+			<em>【政策法规】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/sbjb/zcfg_62435/201708/t20170811_21250653.html" title="关于印发《贵州省企业职工基本养老金计发办法》的通知">
+				
+			
+			关于印发《贵州省企业职工基本养老金计发办法》的通知</a>
+			<span>08-11</span>
+		</li>
+	
+		<li>
+			<em>【政策法规】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/sbjb/zcfg_62435/201708/t20170811_21250650.html" title="遵义市开展城镇居民大病保险工作实施方案（试行）">
+				
+			
+			遵义市开展城镇居民大病保险工作实施方案（试行）</a>
+			<span>08-11</span>
+		</li>
+	
+		<li>
+			<em>【工作动态】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/sbjb/gzdt_62434/201706/t20170623_21042634.html" title="县人社局围绕“五个重点” 扎实开展2017年社会保险经办工作">
+				
+			
+			县人社局围绕“五个重点” 扎实开展2017年社会保险...</a>
+			<span>06-23</span>
+		</li>
+	
+</ul>
+						<ul>
+	
+		<li>
+			<em>【政策法规】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/zyzc/zcfg_62439/201708/t20170811_21250810.html" title="中华人民共和国劳动合同法">
+				
+			
+			中华人民共和国劳动合同法</a>
+			<span>08-11</span>
+		</li>
+	
+		<li>
+			<em>【政策法规】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/zyzc/zcfg_62439/201708/t20170811_21250807.html" title="劳动人事争议仲裁办案规则">
+				
+			
+			劳动人事争议仲裁办案规则</a>
+			<span>08-11</span>
+		</li>
+	
+		<li>
+			<em>【政策法规】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/zyzc/zcfg_62439/201708/t20170811_21250803.html" title="中华人民共和国劳动法">
+				
+			
+			中华人民共和国劳动法</a>
+			<span>08-11</span>
+		</li>
+	
+		<li>
+			<em>【政策法规】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/zyzc/zcfg_62439/201708/t20170811_21250798.html" title="中华人民共和国劳动争议调解仲裁法">
+				
+			
+			中华人民共和国劳动争议调解仲裁法</a>
+			<span>08-11</span>
+		</li>
+	
+		<li>
+			<em>【通知公告】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/zyzc/tzgg_62440/201708/t20170808_21248785.html" title="关于落实《遵义市企业劳动争议听证调解办法》的实施方案">
+				
+			
+			关于落实《遵义市企业劳动争议听证调解办法》的实...</a>
+			<span>08-08</span>
+		</li>
+	
+		<li>
+			<em>【工作动态】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/zyzc/gzdt_62438/201708/t20170808_21248698.html" title="道真县仲裁院三措施铺好群众维权路">
+				
+			
+			道真县仲裁院三措施铺好群众维权路</a>
+			<span>08-08</span>
+		</li>
+	
+		<li>
+			<em>【工作动态】</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/zyzc/gzdt_62438/201708/t20170808_21248695.html" title="王德伟深入道真仲裁院调研指导工作">
+				
+			
+			王德伟深入道真仲裁院调研指导工作</a>
+			<span>08-08</span>
+		</li>
+	
+</ul>
+					</div>
+					<script type="text/javascript">
+						jQuery(".bmjk_z").slide({titCell: "h3 a",mainCell: ".bmgk_js",effect: "left"});
+					</script>
+				</div>
+			  <!--右-->
+			  <div class="bmgk_y f_r">
+				<div class="bmgk_tb">
+					<ul>
+						<li><a href="bmgk/dwzn/index.html"><em></em>单位职能</a></li>
+						<li><a href="bmgk/ldxx/index.html"><em></em>领导信息</a></li>
+					</ul>
+				</div>
+			  <!--监察大队-->
+			  <div class="jianc_dd">
+				<h3><a href="bmgk/jcdd/index.html">监察大队</a></h3>
+				<ul>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/jcdd/zcfg_62443/201708/t20170811_21251042.html" title="工伤保险条例">
+				
+			
+			工伤保险条例</a>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/jcdd/zcfg_62443/201708/t20170811_21251018.html" title="社会保险法">
+				
+			
+			社会保险法</a>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/jcdd/zcfg_62443/201708/t20170811_21251014.html" title="贵州省建设工程务工人员工资支付保障金实施办法  贵州省人民政府令">
+				
+			
+			贵州省建设工程务工人员工资支付保障金实施办法  ...</a>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/jcdd/zcfg_62443/201708/t20170811_21251004.html" title="最高人民法院关于审理工伤保险行政案件若干问题的规定 法释【2014】9号">
+				
+			
+			最高人民法院关于审理工伤保险行政案件若干问题的...</a>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/jcdd/gzdt_62442/201708/t20170811_21250996.html" title="精业务细培训强作风  努力提升人社队伍新形象">
+				
+			
+			精业务细培训强作风  努力提升人社队伍新形象</a>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="bmgk/jcdd/gzdt_62442/201708/t20170811_21250993.html" title="市政府督查组到我县督查农民工工资支付工作">
+				
+			
+			市政府督查组到我县督查农民工工资支付工作</a>
+		</li>
+	
+</ul>
+			  </div>
+			  </div>
+			   </div>
+			   <!--政务公开-->
+			   <div class="resimler1 f_r zw_gk">
+					<div class="zwgk_z f_l">
+						<h3>
+							<a href="zwgk/gsgg/index.html">公示公告</a>
+							<a href="zwgk/fpgz/index.html">扶贫工作</a>
+							<a href="zwgk/djxx/index.html">党建信息</a>
+							<a href="zwgk/zcfg_62459/index.html">政策法规</a>
+						</h3>
+						<div class="zwgk_js">
+							<ul>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/gsgg/202012/t20201230_65849083.html" title="道真自治县2020年中小学教师（幼儿园）系列中级任职资格申报材料复核结果公告">
+				
+			
+			道真自治县2020年中小学教师（幼儿园）系列中级任...</a>
+			<span>12-30</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/gsgg/202012/t20201224_65734962.html" title="公  示">
+				
+			
+			公  示</a>
+			<span>12-24</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/gsgg/202012/t20201214_65582243.html" title="2020年全县中小学教师（幼儿园）系列中级专业技术职务任职资格公示">
+				
+			
+			2020年全县中小学教师（幼儿园）系列中级专业技术...</a>
+			<span>12-14</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/gsgg/202011/t20201130_65425622.html" title="关于推荐聘任李晓东等3位同志专业技术高级职务（七级岗位）的公示">
+				
+			
+			关于推荐聘任李晓东等3位同志专业技术高级职务（七...</a>
+			<span>11-30</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/gsgg/202011/t20201130_65421134.html" title="道真自治县2020年公开招聘事业单位人员体检和选岗公告">
+				
+			
+			道真自治县2020年公开招聘事业单位人员体检和选岗公告</a>
+			<span>11-30</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/gsgg/202011/t20201127_65400359.html" title="道真自治县2020符合晋升专业技术五、六级岗位任职条件人员名单公示的公示">
+				
+			
+			道真自治县2020符合晋升专业技术五、六级岗位任职...</a>
+			<span>11-27</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/gsgg/202011/t20201126_65388004.html" title="道真自治县2020年中小学教师（幼儿园）系列中级任职资格申报材料初审结果公示">
+				
+			
+			道真自治县2020年中小学教师（幼儿园）系列中级任...</a>
+			<span>11-26</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/gsgg/202011/t20201124_65362347.html" title="道真自治县2020年公开招聘事业单位人员总成绩及进入体检人员名单公示">
+				
+			
+			道真自治县2020年公开招聘事业单位人员总成绩及进...</a>
+			<span>11-24</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/gsgg/202011/t20201121_65332035.html" title="道真自治县2020年公开招聘事业单位工作人员面试成绩公示">
+				
+			
+			道真自治县2020年公开招聘事业单位工作人员面试成...</a>
+			<span>11-21</span>
+		</li>
+	
+</ul>
+							<ul>
+	
+</ul>
+							<ul>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/djxx/201705/t20170520_20926250.html" title="四风六严禁">
+				
+			
+			四风六严禁</a>
+			<span>09-17</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/djxx/201705/t20170520_20926251.html" title="贵州省党员干部政治纪律“十严禁”">
+				
+			
+			贵州省党员干部政治纪律“十严禁”</a>
+			<span>09-17</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/djxx/201705/t20170520_20926249.html" title="党的基层组织实行党务公开的意见">
+				
+			
+			党的基层组织实行党务公开的意见</a>
+			<span>10-11</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/djxx/201705/t20170520_20926248.html" title="组工干部“十严禁”要求">
+				
+			
+			组工干部“十严禁”要求</a>
+			<span>03-17</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/djxx/201705/t20170520_20926246.html" title="中国共产党党员领导干部廉洁从政若干准则">
+				
+			
+			中国共产党党员领导干部廉洁从政若干准则</a>
+			<span>03-05</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/djxx/201705/t20170520_20926247.html" title="怎样理解大力整治文风会风？">
+				
+			
+			怎样理解大力整治文风会风？</a>
+			<span>03-05</span>
+		</li>
+	
+</ul>
+							<ul>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/zcfg_62459/202004/t20200430_58388861.html" title="遵义市职业技能提升行动企业职工培训政策">
+				
+			
+			遵义市职业技能提升行动企业职工培训政策</a>
+			<span>04-30</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/zcfg_62459/201705/t20170520_20926276.html" title="社会保险宣传资料">
+				
+			
+			社会保险宣传资料</a>
+			<span>10-31</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/zcfg_62459/201705/t20170520_20926275.html" title="专业目录对照">
+				
+			
+			专业目录对照</a>
+			<span>10-08</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/zcfg_62459/201705/t20170520_20926274.html" title="事业单位工作人员处分暂行规定">
+				
+			
+			事业单位工作人员处分暂行规定</a>
+			<span>09-26</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/zcfg_62459/201705/t20170520_20926273.html" title="道真自治县机关事业单位人才管理暂行办法">
+				
+			
+			道真自治县机关事业单位人才管理暂行办法</a>
+			<span>07-26</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/zcfg_62459/201705/t20170520_20926271.html" title="公务员回避制度规定">
+				
+			
+			公务员回避制度规定</a>
+			<span>06-01</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/zcfg_62459/201705/t20170520_20926272.html" title="公务员考试违规处理办法">
+				
+			
+			公务员考试违规处理办法</a>
+			<span>06-01</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/zcfg_62459/201705/t20170520_20926270.html" title="关于开展国家机关、事业单位、社会团体干部职工工伤保险工作的意见">
+				
+			
+			关于开展国家机关、事业单位、社会团体干部职工工...</a>
+			<span>03-30</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/zcfg_62459/201705/t20170520_20926269.html" title="关于开展国家机关、事业单位、社会团体">
+				
+			
+			关于开展国家机关、事业单位、社会团体</a>
+			<span>03-21</span>
+		</li>
+	
+</ul>
+						</div>
+						<script type="text/javascript">
+							jQuery(".zwgk_z").slide({titCell: "h3 a",mainCell: ".zwgk_js",effect: "left"});
+						</script>
+					</div>
+					<div class="zwgk_z f_r">
+						<h3>
+							<a href="zwgk/zcjd/index.html">政策解读</a>
+							<a href="zwgk/bmwj/index.html">部门文件</a>
+							<a href="zwgk/ghjh/index.html">规划计划</a>
+							<a href="zwgk/rsxx/index.html">人事信息</a>
+						</h3>
+						<div class="zwgk_js">
+							<ul>
+	
+</ul>
+							<ul>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/bmwj/201810/t20181018_21761544.html" title="道真自治县2018年胡遵劳务协作项目补贴实施方案">
+				
+			
+			道真自治县2018年胡遵劳务协作项目补贴实施方案</a>
+			<span>10-18</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/bmwj/201807/t20180718_21660969.html" title="关于做好2018年工程、农业、民营经济 系列职称申报评审工作的通知">
+				
+			
+			关于做好2018年工程、农业、民营经济 系列职称申报...</a>
+			<span>07-18</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/bmwj/201804/t20180413_21600393.html" title="2018年度中心组专题学习实施方案">
+				
+			
+			2018年度中心组专题学习实施方案</a>
+			<span>04-13</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/bmwj/201804/t20180413_21600389.html" title="关于进一步规范2018年社会保险业务工作的通知">
+				
+			
+			关于进一步规范2018年社会保险业务工作的通知</a>
+			<span>04-13</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/bmwj/201804/t20180413_21600387.html" title="关于印发《2018年脱贫攻坚“春风行动”工作方案》的通知">
+				
+			
+			关于印发《2018年脱贫攻坚“春风行动”工作方案》...</a>
+			<span>04-13</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/bmwj/201804/t20180413_21600384.html" title="关于印发《道真自治县2018年人力资源和社会保障工作要点》的通知">
+				
+			
+			关于印发《道真自治县2018年人力资源和社会保障工...</a>
+			<span>04-13</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/bmwj/201707/t20170702_21164064.html" title="关于加快推进建设工程项目参加工伤 保险的通知">
+				
+			
+			关于加快推进建设工程项目参加工伤 保险的通知</a>
+			<span>07-02</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/bmwj/201707/t20170702_21164062.html" title="2017年“就业政策进万家，真情服务你我他”主题宣传年活动方案">
+				
+			
+			2017年“就业政策进万家，真情服务你我他”主题宣...</a>
+			<span>07-02</span>
+		</li>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/bmwj/201707/t20170702_21164061.html" title="关于切实做好2017年创业贷款贴息工作的通知">
+				
+			
+			关于切实做好2017年创业贷款贴息工作的通知</a>
+			<span>07-02</span>
+		</li>
+	
+</ul>
+							<ul>
+	
+</ul>
+							<ul>
+	
+		<li>
+			
+				
+			
+			
+				
+					<a target="_blank" href="zwgk/rsxx/201907/t20190710_21900544.html" title="道真自治县2018年公开招考事业单位拟聘用人员公示">
+				
+			
+			道真自治县2018年公开招考事业单位拟聘用人员公示</a>
+			<span>07-10</span>
+		</li>
+	
+</ul>
+						</div>
+						<script type="text/javascript">
+							jQuery(".zwgk_z").slide({titCell: "h3 a",mainCell: ".zwgk_js",effect: "left"});
+						</script>
+					</div>
+				</div>
+				<script type="text/javascript">
+					jQuery(".nr_div").slide({titCell:".nr_qh ul li",targetCell:".resimler1",effect:"left"});
+				</script>
+			</div>
+			<div class="tz_gg">
+				<h1><a href="gzdt/tzgg/index.html">通知公告</a></h1>
+				<div class="tzgg_nr f_l">
+					<ul>
+	
+		<li>
+			<em>·</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/tzgg/202011/t20201127_65399695.html" title="关于转发《省人力资源社会保障厅关于一次性吸纳失业人员就业补贴发放工作的通知》">
+				
+			
+			关于转发《省人力资源社会保障厅关于一...</a>
+			<span>11-27</span>
+		</li>
+	
+		<li>
+			<em>·</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/tzgg/202007/t20200702_61314326.html" title="关于严建新、刘飞因病提前退休有关情况的公示">
+				
+			
+			关于严建新、刘飞因病提前退休有关情况...</a>
+			<span>07-02</span>
+		</li>
+	
+		<li>
+			<em>·</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/tzgg/202007/t20200702_61314308.html" title="关于邓帮友、韩建刚特殊工种提前退休有关情况的公示">
+				
+			
+			关于邓帮友、韩建刚特殊工种提前退休有...</a>
+			<span>07-02</span>
+		</li>
+	
+		<li>
+			<em>·</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/tzgg/202006/t20200629_61285376.html" title="道真县人力资源网关于公开遴选2020年农民全员培训和职业技能提升培训第三方监理服务机构的公告">
+				
+			
+			道真县人力资源网关于公...</a>
+			<span>06-29</span>
+		</li>
+	
+		<li>
+			<em>·</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/tzgg/201909/t20190917_21926093.html" title="2019年度申领失业稳岗补贴单位公示表(第二批)">
+				
+			
+			2019年度申领失业稳岗补贴单位公示表(第...</a>
+			<span>09-17</span>
+		</li>
+	
+		<li>
+			<em>·</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/tzgg/201908/t20190807_21911894.html" title="贵州省参保企业职工申领 职业技能提升补贴须知">
+				
+			
+			贵州省参保企业职工申领 职业技能提升补...</a>
+			<span>08-07</span>
+		</li>
+	
+		<li>
+			<em>·</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/tzgg/201908/t20190805_21909689.html" title="道真自治县2019年稳岗补贴发放企业名单公示（第一批）">
+				
+			
+			道真自治县2019年稳岗补贴发放企业名单...</a>
+			<span>08-05</span>
+		</li>
+	
+		<li>
+			<em>·</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/tzgg/201906/t20190626_21894319.html" title="关于征集2019年度青年就业见习岗位的 公 告">
+				
+			
+			关于征集2019年度青年就业见习岗位的 公 告</a>
+			<span>06-26</span>
+		</li>
+	
+		<li>
+			<em>·</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/tzgg/201906/t20190610_21885105.html" title="2019年度企业稳岗补贴经办一次性告知书">
+				
+			
+			2019年度企业稳岗补贴经办一次性告知书</a>
+			<span>06-10</span>
+		</li>
+	
+		<li>
+			<em>·</em>
+			
+				
+			
+			
+				
+					<a target="_blank" href="gzdt/tzgg/201904/t20190428_21864154.html" title="贵安新区富士康员工招聘公告">
+				
+			
+			贵安新区富士康员工招聘公告</a>
+			<span>04-28</span>
+		</li>
+	
+</ul>
+				</div>
+				<script type="text/javascript">
+					jQuery(".tz_gg").slide({mainCell:".tzgg_nr ul",autoPlay:true,effect:"leftMarquee",interTime:100,trigger:"click"});
+				</script>
+			</div>
+			<div class="tub_lj">
+				<ul>
+					<li><a href="zwgk/lydp/index.html"><em></em>录用调配</a></li>
+					<li><a href="zwgk/ggzypz/index.html"><em></em>公共资源配置</a></li>
+					<li><a href="zwgk/zyzc/index.html"><em></em>专业职称</a></li>
+					<li style="margin-right: 0;"><a href="zwgk/gwygl/index.html"><em></em>公务员管理</a></li>
+				</ul>
+			</div>
+			<div class="yqlj">
+	<select onchange="gotoLink(this);">
+		<option value="no">上级相关网站链接</option>
+
+		<option value="http://www.gzgov.gov.cn/" title="贵州省人民政府">
+			贵州省人民政府
+		</option>
+
+		<option value="http://www.gzdaozhen.gov.cn/" title="道真县人民政府">
+			道真县人民政府
+		</option>
+
+		<option value="http://www.zunyi.gov.cn/" title="遵义市人民政府">
+			遵义市人民政府
+		</option>
+
+	</select>
+	<select onchange="gotoLink(this);">
+		<option value="no">贵州省人社部门</option>
+
+		<option value="http://gz.hrss.gov.cn/" title="贵州省人力资源和社会保障局">
+			贵州省人力资源和社会保障局
+		</option>
+
+		<option value="http://www.zyrs.gov.cn/index.html" title="遵义市人力资源和社会保障局">
+			遵义市人力资源和社会保障局
+		</option>
+
+	</select>
+	<select onchange="gotoLink(this);">
+		<option value="no">道真县政府各部门</option>
+
+		<option value="http://www.gzdaozhen.gov.cn/" title="道真县人民政府">
+			道真县人民政府
+		</option>
+
+	</select>
+	<select onchange="gotoLink(this);">
+		<option value="no">道真县乡镇网站</option>
+
+	</select>
+	<select onchange="gotoLink(this);" style="margin-right: 0;">
+		<option value="no">其他相关网站</option>
+
+		<option value="http://www.gygov.gov.cn/" title="贵阳市">
+			贵阳市
+		</option>
+
+		<option value="http://www.zunyi.gov.cn/" title="遵义市">
+			遵义市
+		</option>
+
+		<option value="http://www.tongren.gov.cn/" title="铜仁市">
+			铜仁市
+		</option>
+
+		<option value="http://www.gzlps.gov.cn/" title="六盘水市">
+			六盘水市
+		</option>
+
+		<option value="http://www.bijie.gov.cn/" title="毕节市">
+			毕节市
+		</option>
+
+		<option value="http://www.qdn.gov.cn/" title="黔东南州">
+			黔东南州
+		</option>
+
+		<option value="http://www.qiannan.gov.cn/" title="黔南州">
+			黔南州
+		</option>
+
+		<option value="http://www.qxn.gov.cn/" title="黔西南州">
+			黔西南州
+		</option>
+
+	</select>
+</div>
+ <script language="JavaScript">
+function gotoLink(theValue) 
+{
+   if (theValue.value != "no") 
+  {
+    window.open(theValue.value,"","")
+  }
+}   
+</script>
+		</div>
+		<div class="foot_bj">
+	<div class="foot_nr">
+		<p>
+			<a href="syqt/rssdy/index.html">RSS订阅</a>|
+			<a href="syqt/lxfs/index.html">联系方式</a>|
+			<a href="syqt/wzdt/index.html">网站地图</a>
+		</p>
+		<p>Copyright 2021 All Rights Reserved      主办：道真县人力资源网</p>
+		<p>电话：0851-257842065       技术支持：<a href="javascript:;" target="_blank">贵州多彩博虹科技有限公司</a></p>
+		<p>(建议使用1024×768分辨率 IE70以上版本浏览器) </p>
+		<p style="margin-top: 12px;">
+			<!--a target="_blank" href="http://bszs.conac.cn/sitename?method=show&id=04E0DEEC2DCA0288E053022819ACC535">
+				<img src="/images/dz_jg.png" /></a-->
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src=' http://dcs.conac.cn/js/24/356/2168/40584250/CA243562168405842500001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+		</p>
+	</div>
+</div>
+<script id="_trs_ta_js" src="c/js/ta-1290.js" async="async" defer="defer"></script>
+	</body>
+<script type="text/javascript" src="material/ChangePageStyle.js"></script>
+</html>

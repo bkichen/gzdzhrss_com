@@ -1,0 +1,24 @@
+.banner{ background: url(banner.png) no-repeat; height: 398px;width: 100%; margin: 0 auto;overflow: hidden;}
+/*顶部*/
+.dingb_bj{ height: 38px; background: 100%; background: #0099cc;overflow: hidden;}
+.dingb_nr{ width: 1200px; margin: 0 auto; overflow: hidden;line-height: 38px;color: #FFFFFF;}
+.riqi{ width: 220px;height: 38px; overflow: hidden; }
+.riqi ul li{ float: left; height: 36px; width: auto; color: #FFFFFF;}
+.riqi ul li span{ float: left; padding-right: 5px;}
+.time{ width: 160px;overflow: hidden; float: left;}
+.ding_y a{color: #FFFFFF; padding: 0 12px;}
+
+/*logo 标语*/
+.logo_by{ width: 1200px; height: 95px; margin: 0 auto; margin-top: 93px;overflow: hidden;}
+
+/*导航*/
+.nav_bj{ margin: 0 auto; overflow: hidden; width: 1200px; margin-top: 94px; height: 80px; background: url(nav_bj.jpg) no-repeat;}
+.nav{ line-height: 80px; width: 660px; overflow: hidden;}
+.nav ul li{ float: left; margin: 0 28px;}
+.nav ul li a{ color: #FFFFFF; font-size: 18px;}
+
+/*搜索*/
+.sous{ margin: 19px 0; width: 460px; height: 42px; overflow: hidden;margin-right: 15px;}
+.sous dt{ height: 42px; width: 131px; float: left;}
+.sous dd{ width: 320px; height: 40px; margin: 1px 0; float: right;}
+.sous_sy{ width:320px; border:none; height:40px; line-height:40px;float:left; text-indent:20px; background:#FFFFFF; }

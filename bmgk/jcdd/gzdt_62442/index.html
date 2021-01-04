@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>道真县人力资源网-工作动态</title>
+	<link href="../../../images/list.css" rel="stylesheet" type="text/css">
+	<meta name="Keywords" content="道真人社局,道真县人力资源网,道真人事考试,道真县人力资源与社会保障,道真县人社局组织全体党员参加扫墓活动">
+<script type="text/javascript" src="../../../images/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../../images/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+    jQuery(function() {
+		jQuery('#j_search_btn').click(function() {
+			var str = jQuery("#keyword").val();
+			checks(str);
+		});
+	});
+	function checks(t) {
+		t = t.replace(/(^\s+)|(\s+$)/g, "");
+		if (t == "" || t == "请输入关键检索字") {
+			alert('请输入有效内容');
+			return false;
+		}
+		szMsg = "[#_%&'/",
+		";:=!^]";
+		alertStr = "";
+		for (i = 1; i < szMsg.length + 1; i++) {
+			if (t.indexOf(szMsg.substring(i - 1, i)) > -1) {
+				alertStr = "请勿包含非法字符如[#_%&'/",
+				";:=!^]";
+				alert(alertStr);
+				// break;
+				return false;
+			}
+		}
+		var key = document.getElementById("keyword").value;
+		window.location.href ="/search.html?keyword=" + key;
+		return true;
+	}
+function sub(){
+    window.location.href ="/search.shtml";
+}
+function AddFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle)
+    } catch (e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, "")
+        } catch (e) {
+            alert("加入收藏失败，请使用Ctrl+D进行添加")
+        }
+    }
+}
+function SetHome(obj, vrl) {
+    try {
+        obj.style.behavior = "url(#default#homepage)";
+        obj.setHomePage(vrl)
+    } catch (e) {
+        if (window.netscape) {
+            try {
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")
+            } catch (e) {
+                alert("此操作被浏览器拒绝！n请在浏览器地址栏输入\"about:config\"并回车n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。")
+            }
+            var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
+            prefs.setCharPref("browser.startup.homepage", vrl)
+        }
+    }
+}
+	//设为首页 
+	function SetHome(url){
+		if (document.all) {
+			document.body.style.behavior='url(#default#homepage)';
+			document.body.setHomePage(url);
+		}else{ 
+			alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+		}
+	}
+</script>
+<script type="text/javascript">
+      function GoTo() {
+          window.open("/syqt/wzjc/index.html?url=" + document.URL);
+      }
+</script>
+</head>
+
+<body>
+	<input id="Chid" value='5441110' type="hidden">
+	<!--天气js-->
+<script type="text/javascript">
+	function initArray() {
+		for (i = 0; i < initArray.arguments.length; i++)
+			this[i] = initArray.arguments[i];
+	}
+	var isnMonths = new initArray("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+	var isnDays = new initArray("  星期日", "  星期一", "  星期二", "  星期三", "  星期四", "  星期五", "  星期六", "  星期日");
+	today = new Date();
+	hrs = today.getHours();
+	min = today.getMinutes();
+	sec = today.getSeconds();
+	clckh = "" + ((hrs > 12) ? hrs - 12 : hrs);
+	clckm = ((min < 10) ? "0" : "") + min;
+	clcks = ((sec < 10) ? "0" : "") + sec;
+	clck = (hrs >= 12) ? "下午" : "上午";
+	var stnr = "";
+	var ns = "0123456789";
+	var a = "";
+
+	function getFullYear(d) {
+		yr = d.getYear();
+		if (yr < 1000)
+			yr += 1900;
+		return yr;
+	}
+</script>
+<div class="banner">
+	<!--顶部-->
+	<div class="dingb_bj">
+		<div class="dingb_nr">
+			<!--日期-->
+			<div class="riqi f_l">
+				<ul>
+					<li><span>今天是: </span>
+						<script type="text/javascript">
+							document.write("<div class='time'>" + getFullYear(today) + "年" + "" + isnMonths[today.getMonth()] + "月" + today.getDate() + "日" + isnDays[today.getDay()] + "</div>");
+						</script>
+					</li>
+				</ul>
+			</div>
+			<!--收藏-->
+			<div class="f_r ding_y">
+				<a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>|
+				<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>
+			</div>
+		</div>
+	</div>
+	<!--logo-->
+	<div class="logo_by" style="overflow: initial;">
+		<ul>
+			<li class="f_l"><a href="../../../index.html"><img src="../../../images/logo.png"></a></li>
+			<li class="f_r"><img src="../../../images/biaoyu.png"></li>
+		</ul>
+	</div>
+	<!--导航-->
+	<div class="nav_bj">
+		<div class="nav f_l">
+			<ul>
+				<li><a href="../../../index.html">网站首页</a></li>
+				<li><a href="../../../gzdt/index.html">工作动态</a></li>
+				<li><a href="../../../ywgz/index.html">业务工作</a></li>
+				<li><a href="../../index.html">部门概况</a></li>
+				<li><a href="../../../zwgk/index.html">政务公开</a></li>
+			</ul>
+		</div>
+		<!--搜索-->
+		<div class="sous f_r">
+    		<dl>
+				<dt><a href="javascript:void(0);" id="j_search_btn"><img src="../../../images/sous.png"></a></dt>
+				<dd>
+					<input id="keyword" name="keyword" type="text" class="sous_sy" value="请输入关键字" style="color:#666666; line-height:40px; font-size: 14px;" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#000'}" onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#9e9e9e'}">
+				</dd>
+			</dl>
+    	</div>
+	</div>
+</div>
+	<div class="content-main">
+		<div class="dqwz">
+			您当前所在位置：<a href="../../../index.html" title="首页" class="CurrChnlCls">首页</a>&nbsp;&raquo;&nbsp;<a href="../../index.html" title="部门概况" class="CurrChnlCls">部门概况</a>&nbsp;&raquo;&nbsp;<a href="../index.html" title="监察大队" class="CurrChnlCls">监察大队</a>&nbsp;&raquo;&nbsp;<a href="" title="工作动态" class="CurrChnlCls">工作动态</a>
+		</div>
+		<div class="zb_lb f_l">
+			<h2>监察大队</h2>
+			<div class="Left_Nav">
+				<ul>
+					
+						<script type="text/javascript">
+							var  str2=document.getElementById("Chid").value;
+							var  str3='工作动态';
+							var  str4 = './';
+							if(str4.substring(0,7)!="http://"){
+								if(str2=='5441110'){
+									document.write('<li class="li_nav on"><a href="./">'+str3+'</a></li>');
+								}else{
+									document.write('<li class="li_nav"><a href="./">'+str3+'</a></li>');
+								}
+							}else{
+								document.write('<li class="li_nav"><a href="./" target="_blank">'+str3+'</a></li>');
+							}
+						</script>
+					
+						<script type="text/javascript">
+							var  str2=document.getElementById("Chid").value;
+							var  str3='政策法规';
+							var  str4 = '../zcfg_62443/';
+							if(str4.substring(0,7)!="http://"){
+								if(str2=='5441111'){
+									document.write('<li class="li_nav on"><a href="../zcfg_62443/">'+str3+'</a></li>');
+								}else{
+									document.write('<li class="li_nav"><a href="../zcfg_62443/">'+str3+'</a></li>');
+								}
+							}else{
+								document.write('<li class="li_nav"><a href="../zcfg_62443/" target="_blank">'+str3+'</a></li>');
+							}
+						</script>
+					
+						<script type="text/javascript">
+							var  str2=document.getElementById("Chid").value;
+							var  str3='通知公告';
+							var  str4 = '../tzgg_62444/';
+							if(str4.substring(0,7)!="http://"){
+								if(str2=='5441112'){
+									document.write('<li class="li_nav on"><a href="../tzgg_62444/">'+str3+'</a></li>');
+								}else{
+									document.write('<li class="li_nav"><a href="../tzgg_62444/">'+str3+'</a></li>');
+								}
+							}else{
+								document.write('<li class="li_nav"><a href="../tzgg_62444/" target="_blank">'+str3+'</a></li>');
+							}
+						</script>
+					
+				</ul>
+				<div class="hover" style="top: 0px;"></div>
+			</div>
+		</div>
+		<div class="yb_nr f_r">
+			<div class="NewsList">
+				<h1><span>工作动态</span></h1>
+				<ul>
+				   
+						<li>
+							
+								
+							
+							
+								
+									<a href="201708/t20170811_21250996.html" title="精业务细培训强作风  努力提升人社队伍新形象" target="_blank">
+								
+							
+								精业务细培训强作风  努力提升人社队伍新形象
+							</a>
+							<span>2017-08-11</span>
+						</li>
+					
+						<li>
+							
+								
+							
+							
+								
+									<a href="201708/t20170811_21250993.html" title="市政府督查组到我县督查农民工工资支付工作" target="_blank">
+								
+							
+								市政府督查组到我县督查农民工工资支付工作
+							</a>
+							<span>2017-08-11</span>
+						</li>
+					    
+				</ul>
+			</div>
+			<!-- 通用分页 -->
+			<!-- 通用分页 -->
+ <script type="text/javascript" src="../../../images/createpage.js"></script>
+ <div class="page">
+    <script>createPageHTML(1, 0, "index", "html")</script>
+</div>
+<!-- 通用分页 结束 -->
+			<!-- 通用分页 结束 -->
+		</div>
+	</div>
+	<div class="foot_bj">
+	<div class="foot_nr">
+		<p>
+			<a href="../../../syqt/rssdy/index.html">RSS订阅</a>|
+			<a href="../../../syqt/lxfs/index.html">联系方式</a>|
+			<a href="../../../syqt/wzdt/index.html">网站地图</a>
+		</p>
+		<p>Copyright 2010 All Rights Reserved      主办：道真县人力资源网</p>
+		<p>电话：0851-25782065       技术支持：<a href="javascript:;" target="_blank">贵州多彩博虹科技有限公司</a></p>
+		<p>(建议使用1024×768分辨率 IE70以上版本浏览器) </p>
+		<p style="margin-top: 12px;">
+			<!--a target="_blank" href="http://bszs.conac.cn/sitename?method=show&id=04E0DEEC2DCA0288E053022819ACC535">
+				<img src="/images/dz_jg.png" /></a-->
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src=' http://dcs.conac.cn/js/24/356/2168/40584250/CA243562168405842500001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+		</p>
+	</div>
+</div>
+<script id="_trs_ta_js" src="../../../c/js/ta-1290.js" async="async" defer="defer"></script>
+</body>
+</html>

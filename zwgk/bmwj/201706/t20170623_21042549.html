@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>关于印发《2017年全县人力资源和社会保障 工作要点》的通知</title>
+		<link rel="stylesheet" href="../../../images/nry.css">
+		<meta name="Keywords" content="道真人社局,道真县人力资源网,道真人事考试,道真县人力资源与社会保障,道真县人社局组织全体党员参加扫墓活动">
+<script type="text/javascript" src="../../../images/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../../images/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+    jQuery(function() {
+		jQuery('#j_search_btn').click(function() {
+			var str = jQuery("#keyword").val();
+			checks(str);
+		});
+	});
+	function checks(t) {
+		t = t.replace(/(^\s+)|(\s+$)/g, "");
+		if (t == "" || t == "请输入关键检索字") {
+			alert('请输入有效内容');
+			return false;
+		}
+		szMsg = "[#_%&'/",
+		";:=!^]";
+		alertStr = "";
+		for (i = 1; i < szMsg.length + 1; i++) {
+			if (t.indexOf(szMsg.substring(i - 1, i)) > -1) {
+				alertStr = "请勿包含非法字符如[#_%&'/",
+				";:=!^]";
+				alert(alertStr);
+				// break;
+				return false;
+			}
+		}
+		var key = document.getElementById("keyword").value;
+		window.location.href ="/search.html?keyword=" + key;
+		return true;
+	}
+function sub(){
+    window.location.href ="/search.shtml";
+}
+function AddFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle)
+    } catch (e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, "")
+        } catch (e) {
+            alert("加入收藏失败，请使用Ctrl+D进行添加")
+        }
+    }
+}
+function SetHome(obj, vrl) {
+    try {
+        obj.style.behavior = "url(#default#homepage)";
+        obj.setHomePage(vrl)
+    } catch (e) {
+        if (window.netscape) {
+            try {
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")
+            } catch (e) {
+                alert("此操作被浏览器拒绝！n请在浏览器地址栏输入\"about:config\"并回车n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。")
+            }
+            var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
+            prefs.setCharPref("browser.startup.homepage", vrl)
+        }
+    }
+}
+	//设为首页 
+	function SetHome(url){
+		if (document.all) {
+			document.body.style.behavior='url(#default#homepage)';
+			document.body.setHomePage(url);
+		}else{ 
+			alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+		}
+	}
+</script>
+<script type="text/javascript">
+      function GoTo() {
+          window.open("/syqt/wzjc/index.html?url=" + document.URL);
+      }
+</script>
+		<script type="text/javascript">
+			function fontResizer(smallFont,medFont,largeFont){
+				function clearSelected(){
+					$(".smallFont").removeClass("curFont");
+					$(".medFont").removeClass("curFont");
+					$(".largeFont").removeClass("curFont");
+				}
+				function saveState(curSize){
+					var date = new Date();
+					date.setTime(date.getTime()+(7*24*60*60*1000));
+					var expires = "; expires="+date.toGMTString();
+					document.cookie = "fontSizer"+"="+curSize+expires+"; path=/";
+				}
+			
+				$(".smallFont").click(function(){
+					$('#Zoom').css('font-size', smallFont);
+					$('#Zoom p').css('font-size', smallFont);
+					$('#Zoom span').css('font-size', smallFont);
+					$('#Zoom font').css('font-size', smallFont);
+					clearSelected();
+					$(".smallFont").addClass("curFont");
+					saveState(smallFont);
+				});
+			
+				$(".medFont").click(function(){
+					$('#Zoom').css('font-size', medFont);
+					$('#Zoom p').css('font-size', medFont);
+					$('#Zoom span').css('font-size', medFont);
+					$('#Zoom font').css('font-size', medFont);
+					clearSelected();
+					$(".medFont").addClass("curFont");
+					saveState(medFont);
+				});
+			
+				$(".largeFont").click(function(){
+					$('#Zoom').css('font-size', largeFont);
+					$('#Zoom p').css('font-size', largeFont);
+					$('#Zoom span').css('font-size', largeFont);
+					$('#Zoom font').css('font-size', largeFont);
+					$('#Zoom').css('line-height','40px');
+					clearSelected();
+					$(".largeFont").addClass("curFont");
+					saveState(largeFont);
+				});
+			
+				function getCookie(c_name){
+					if(document.cookie.length>0){
+						c_start=document.cookie.indexOf(c_name + "=");
+						if (c_start!=-1){
+							c_start=c_start + c_name.length+1;
+							c_end=document.cookie.indexOf(";",c_start); 
+							if(c_end==-1)c_end=document.cookie.length;
+							return unescape(document.cookie.substring(c_start,c_end));
+						}
+					} 
+					return "";
+				}
+			
+				var savedSize = getCookie('fontSizer');
+			
+				if(savedSize!=""){
+					$('#Zoom').css('font-size', savedSize);
+					switch(savedSize){
+						case smallFont: $(".smallFont").addClass("curFont");
+						break;
+						case medFont: $(".medFont").addClass("curFont");
+						break;
+						case largeFont: $(".largeFont").addClass("curFont");
+						break;
+						default: $(".medFont").addClass("curFont");
+					}
+				}else {
+					$('#Zoom').css('font-size', medFont);
+					$(".medFont").addClass("curFont");
+				}
+				
+			}
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				fontResizer('12px','16px','20px');
+			});
+		</script>
+		<script type="text/javascript">
+			function ChangeColor(ColorName){
+				$('#c').css('background', ColorName);
+				$('#Zoom p').css('background', ColorName);
+				$('#Zoom span').css('background', ColorName);
+				$('#Zoom font').css('background', ColorName);
+			}	
+		</script>
+	</head>
+	<body>
+		<!--天气js-->
+<script type="text/javascript">
+	function initArray() {
+		for (i = 0; i < initArray.arguments.length; i++)
+			this[i] = initArray.arguments[i];
+	}
+	var isnMonths = new initArray("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+	var isnDays = new initArray("  星期日", "  星期一", "  星期二", "  星期三", "  星期四", "  星期五", "  星期六", "  星期日");
+	today = new Date();
+	hrs = today.getHours();
+	min = today.getMinutes();
+	sec = today.getSeconds();
+	clckh = "" + ((hrs > 12) ? hrs - 12 : hrs);
+	clckm = ((min < 10) ? "0" : "") + min;
+	clcks = ((sec < 10) ? "0" : "") + sec;
+	clck = (hrs >= 12) ? "下午" : "上午";
+	var stnr = "";
+	var ns = "0123456789";
+	var a = "";
+
+	function getFullYear(d) {
+		yr = d.getYear();
+		if (yr < 1000)
+			yr += 1900;
+		return yr;
+	}
+</script>
+<div class="banner">
+	<!--顶部-->
+	<div class="dingb_bj">
+		<div class="dingb_nr">
+			<!--日期-->
+			<div class="riqi f_l">
+				<ul>
+					<li><span>今天是: </span>
+						<script type="text/javascript">
+							document.write("<div class='time'>" + getFullYear(today) + "年" + "" + isnMonths[today.getMonth()] + "月" + today.getDate() + "日" + isnDays[today.getDay()] + "</div>");
+						</script>
+					</li>
+				</ul>
+			</div>
+			<!--收藏-->
+			<div class="f_r ding_y">
+				<a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>|
+				<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>
+			</div>
+		</div>
+	</div>
+	<!--logo-->
+	<div class="logo_by" style="overflow: initial;">
+		<ul>
+			<li class="f_l"><a href="../../../index.html"><img src="../../../images/logo.png"></a></li>
+			<li class="f_r"><img src="../../../images/biaoyu.png"></li>
+		</ul>
+	</div>
+	<!--导航-->
+	<div class="nav_bj">
+		<div class="nav f_l">
+			<ul>
+				<li><a href="../../../index.html">网站首页</a></li>
+				<li><a href="../../../gzdt/index.html">工作动态</a></li>
+				<li><a href="../../../ywgz/index.html">业务工作</a></li>
+				<li><a href="../../../bmgk/index.html">部门概况</a></li>
+				<li><a href="../../index.html">政务公开</a></li>
+			</ul>
+		</div>
+		<!--搜索-->
+		<div class="sous f_r">
+    		<dl>
+				<dt><a href="javascript:void(0);" id="j_search_btn"><img src="../../../images/sous.png"></a></dt>
+				<dd>
+					<input id="keyword" name="keyword" type="text" class="sous_sy" value="请输入关键字" style="color:#666666; line-height:40px; font-size: 14px;" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#000'}" onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#9e9e9e'}">
+				</dd>
+			</dl>
+    	</div>
+	</div>
+</div>
+		<div class="content-main">
+			<div class="dqwz">
+				您当前所在位置：<a href="../../../index.html" title="首页" class="CurrChnlCls">首页</a>&nbsp;&raquo;&nbsp;<a href="../../index.html" title="政务公开" class="CurrChnlCls">政务公开</a>&nbsp;&raquo;&nbsp;<a href="../index.html" title="部门文件" class="CurrChnlCls">部门文件</a>
+			</div>
+			<div class="body_content" id="c">
+    			<div class="title">
+        			<h1>关于印发《2017年全县人力资源和社会保障 工作要点》的通知</h1>
+        			<script type="text/javascript">
+						var fbt='';
+						if(fbt!=''){
+							document.write('<h2>'+fbt+'</h2>');
+						}
+					</script>
+        			<div class="toolbar">
+						发布时间：
+						<script type="text/javascript">
+							var  pubdata='2017年06月23日';
+							if(pubdata!=''){
+								document.write(pubdata);
+							}
+						</script>
+
+            			字体：
+						<span class="smallFont">小</span>
+						<span class="medFont curFont">中</span>
+						<span class="largeFont curFont">大</span> 
+						<script type="text/javascript">
+							var wzly='';
+							if(wzly!=''){
+								document.write('文章来源：'+wzly+'&emsp;');
+							}
+						</script>
+						<script type="text/javascript">
+							var zz='';
+							if(zz!=''){
+								document.write('作者：'+zz+'&emsp;');
+							}
+						</script>
+						点击量：<script src="http://rsj.gzdaozhen.gov.cn/count/index?id=21042549&siteid=501731"></script>次
+						<a href="javascript:window.print();">打印本页</a>&emsp;
+						<a href="javascript:window.opener=null;window.close()">关闭本页</a>&emsp;&emsp;
+						<i style="padding-left:10px">
+							视力保护色： 
+							<input onclick="ChangeColor('#F9F6AF')" name="bgcolor" src="../../../images/110827103140057.gif" type="image" align="absmiddle" height="13" width="13">
+							<input onclick="ChangeColor('#9DDBF4')" name="bgcolor22" src="../../../images/110827103140099.gif" type="image" align="absmiddle" height="13" width="13">
+							<input onclick="ChangeColor('#DEDEDE')" name="bgcolor2" src="../../../images/110827103140184.gif" type="image" align="absmiddle" height="13" width="13"> 
+							<input onclick="ChangeColor('#F9D1D9')" name="bgcolor2" src="../../../images/110827103140215.gif" type="image" align="absmiddle" height="13" width="13"> 
+							<input onclick="ChangeColor('#E4C8F8')" name="bgcolor2" src="../../../images/110827103140245.gif" type="image" align="absmiddle" height="13" width="13">	
+							<input onclick="ChangeColor('#ffffff')" name="bgcolor2" src="../../../images/110827103140292.gif" type="image" align="absmiddle" height="13" width="13">
+						</i>
+					</div>
+				</div>
+    			<div class="content">
+        			<!--视频开始-->
+					
+						
+					
+					<!--视频结束-->
+					<font id="Zoom">
+						<div class="view TRS_UEDITOR trs_paper_default trs_external"><p style="text-align: center;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">道人社</span>[2017]16号</span></p><p style="text-align: center;"><br></p><p><br></p><p style="text-align: center; line-height: 37px;"><span style="font-family: 方正小标宋简体; font-size: 29px;"><span style="font-family: 方正小标宋简体;">关于印发《</span>2017年全县人力资源和社会保障</span></p><p style="text-align: center; line-height: 37px;"><span style="font-family: 方正小标宋简体; font-size: 29px;"><span style="font-family: 方正小标宋简体;">工作要点》的通知</span></span></p><p><br></p><p style="line-height: 37px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">各乡（镇）人力资源和社会保障服务中心，局机关各股室、局属各事业单位：</span></span></p><p style="line-height: 37px; text-indent: 43px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">现将《</span>2017年全县人力资源和社会保障工作要点》印发给你们，请按照要求认真抓好落实。</span></p><p style="line-height: 37px; margin-left: 383px;"><br></p><p style="line-height: 37px; margin-left: 383px;"><br></p><p style="line-height: 37px; margin-left: 362px;"><br></p><p style="line-height: 37px; margin-left: 341px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">道真县人力资源网</span></span></p><p style="line-height: 37px; margin-left: 362px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;">2017年3月27日</span></p><p><br></p><p style="margin-right: 14px;"><br></p><p style="margin-right: 14px;"><br></p><p style="margin-right: 14px;"><br></p><p style="text-align: center; line-height: 37px;"><span style="font-family: 黑体; font-size: 29px;">2017年全县人力资源和社会保障工作要点</span></p><p style="line-height: 37px; text-indent: 43px;"><br></p><p style="line-height: 37px; text-indent: 42px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;">2017年，全县人力资源和社会保障工作要深入贯彻党十八大和十八届三中、四中、五中、六中全会精神，紧紧围绕协调推进“四个全面”战略布局，牢固树立“五大发展理念”，紧扣“坚持红色传承,推动绿色发展,奋力打造西部内陆开放新高地”主题，坚持“民生为本、人才优先”工作主线，深化改革引领，着力推进各项工作创特色、出亮点、见实效，为全县经济社会发展提供强有力的人力资源和社会保障支撑。</span></p><p style="line-height: 37px; text-indent: 42px;"><span style="font-family: 黑体; font-size: 21px;"><span style="font-family: 黑体;">一、</span></span><span style="font-family: 黑体; font-size: 21px;"><span style="font-family: 黑体;">促进就业创业</span></span></p><p style="line-height: 37px; text-indent: 42px;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">确保完成就业工作目标任务。</span></span></strong><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">继续实施就业优先战略和更加积极的就业政策。实现城镇新增就业</span>3500人，其中失业人员再就业470人，就业困难人员实现就业310人；实现转移农村劳动力就业4000人；城镇登记失业率控制在4.2%以内。</span></p><p style="line-height: 37px; text-indent: 43px;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">做好就业扶贫工作</span></span></strong><span style="font-family: 楷体_GB2312; font-size: 21px;"><span style="font-family: 楷体_GB2312;">。</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">认真做好农村贫困家庭劳动力和易地扶贫搬迁就业帮扶以及留守儿童困境儿童家庭劳动力就业创业帮扶。建立健全劳动者终身职业培训体系。统筹开展全县农村青壮年劳动力规范化技能培训。加大精准培训农村实用人才、乡村旅游、宾馆酒店、农村电商、农家乐等服务业人员工作力度。进一步实施</span>“雁归兴贵”行动计划，大力引导农民工返乡创业。</span></p><p style="line-height: 37px; text-indent: 43px;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">推动创业带动就业</span></span></strong><span style="font-family: 楷体_GB2312; font-size: 21px;"><span style="font-family: 楷体_GB2312;">。</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">深化创业型城市创建。实施</span>“全民创业行动计划”，加强创业孵化示范基地建设及农民工创业示范园（点）创建。加大创业担保贷款支持力度，强化创业培训，深入落实创业补贴等扶持政策。鼓励和支持外出务工返乡人员、高校毕业生等重点群体创业，大力支持</span><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">园区企业发展状大。</span></span></p><p style="line-height: 37px; text-indent: 43px;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">抓好高校毕业生等重点群体就业</span></span></strong><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。推进高校毕业生就业创业促进计划，引导和鼓励高校毕业生到基层工作。开展离校未就业高校毕业生创业培训。加强就业援助，做好城镇困难人员、复员退伍军人等各类群体就业工作，确保零就业家庭动态清零。</span></span></p><p style="line-height: 37px; text-indent: 42px;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">强化公共就业服务。</span></span></strong><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">开展充分就业社区创建，夯实公共就业服务基础，推进公共就业服务规范化、信息化和专业化建设。加强人力资源市场建设和诚信体系建设，开展各项公共就业和人才服务专项活动，推进基层公共就业服务规范化建设，健全城乡均等的公共就业人才服务体系。</span></span></p><p style="line-height: 37px; text-indent: 42px;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">加强职业技能培训</span></span></strong><strong><span style="font-family: 仿宋_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 仿宋_GB2312;">。</span></span></strong><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">以实施农民工职业技能提升计划等项目为载体，创新职业技能培训模式，突出转业转岗培训。</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">围绕新型工业化、城镇化、农业产业化技能人才需求，结合区域经济发展和支柱产业、重点行业、新农村建设需要，围绕</span> “5个100工程”，大力开展技能培训和创业培训。加强</span><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">与相关部门协同配合，</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">突出服务园区，针对企业用工需求，实施岗位技能提升培训。</span></span></p><p style="line-height: 37px; text-indent: 43px;"><strong><span style="color: rgb(13, 13, 13); font-family: 黑体; font-size: 21px; font-weight: bold;"><span style="font-family: 黑体;">二、深化社会保障制度改革</span></span></strong></p><p style="line-height: 37px; text-indent: 42px;"><strong><span style="color: rgb(13, 13, 13); font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">深入推进养老保险制度改革</span></span></strong><strong><span style="color: rgb(13, 13, 13); font-family: 楷体; font-size: 21px; font-weight: bold;"><span style="font-family: 宋体;">。</span></span></strong><span style="color: rgb(13, 13, 13); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">全面推进全民参保计划，工伤保险</span>“同舟计划”等专项工作。落实机关事业单位基本养老保险关系转移接续办法。</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">进一步落实职工基本养老保险和城乡居民基本养老保险关系衔接工作。</span></span><span style="color: rgb(13, 13, 13); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">完善城乡居民基本养老保险长期缴费激励机制。</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">落实和完善被征地农民社会保障政策。完善和落实被征地农民社会保障政策。</span></span><span style="color: rgb(13, 13, 13); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">引导和鼓励符合条件的用人单位建立企业年金制度。</span></span></p><p style="line-height: 37px; text-indent: 43px;"><strong><span style="color: rgb(13, 13, 13); font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">深化医疗保险制度改革</span></span></strong><span style="color: rgb(13, 13, 13); font-family: 楷体; font-size: 21px;"><span style="font-family: 宋体;">。</span></span><span style="color: rgb(13, 13, 13); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">推进城乡居民医保制度整合。</span></span><span style="color: rgb(13, 13, 13); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">完善城乡居民大病保险制度。</span></span><span style="color: rgb(13, 13, 13); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">推进医保付费方式改革。提升医保智能审核监控系统应用</span></span><span style="color: rgb(13, 13, 13); font-family: 仿宋_GB2312; font-size: 21px;">,强化对医疗服务行为的监管。推进跨省异地就医即时结算。调整居民医保政府补助标准，逐步提高个人缴费标准。推动实施职工个人账户购买商业健康保险工作。配合完善工伤保险省级统筹制度。加强工伤认定和劳动能力鉴定工作。</span></p><p style="line-height: 37px; text-indent: 43px;"><strong><span style="color: rgb(13, 13, 13); font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">继续扩大社会保险覆盖面、</span></span></strong><span style="font-family: 楷体_GB2312; font-size: 21px;"><span style="font-family: 楷体_GB2312;">做好扩面征缴工作</span></span><strong><span style="color: rgb(13, 13, 13); font-family: 楷体; font-size: 21px; font-weight: bold;"><span style="font-family: 宋体;">。</span></span></strong><span style="color: rgb(13, 13, 13); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">全面实施</span>“全民参保计划”。全力推进建筑业等高风险企业特别是农民工参加工伤保险工作，确保今年底全部建筑行业从业人员都参加工伤保险。</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">以城镇居民、个体劳动者、灵活就业人员和农民工为扩面征缴重点，不断扩大社会保险覆盖面。实现</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">企业职工养老保险、城乡居民社会养老保险、基本医疗保险、失业保险参保人数和基金征收分别增长</span>10%，工伤保险增长5%的目标。</span></p><p style="line-height: 37px; text-indent: 42px;"><strong><span style="color: rgb(13, 13, 13); font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">强化资金基金监管</span></span></strong><span style="color: rgb(13, 13, 13); font-family: 楷体; font-size: 21px;"><span style="font-family: 宋体;">。</span></span><span style="font-family: 楷体_GB2312; font-size: 21px;"><span style="font-family: 楷体_GB2312;">加强社会保险基金和就业等各类专项资金监管，</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">认真开展社保基金和就业资金管理使用情况检查。</span></span><span style="color: rgb(13, 13, 13); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">加大资金基金监督专项检查力度，严厉打击社会保险欺诈犯罪行为</span></span><span style="font-family: 楷体_GB2312; font-size: 21px;"><span style="font-family: 楷体_GB2312;">。</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">着力推进社会保险基金监管制度建设、社会监督和安全评估工作；强化违法违规问题查处力度，保障基金安全。</span></span></p><p style="line-height: 37px; text-indent: 43px;"><strong><span style="color: rgb(13, 13, 13); font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">提升社保经办管理服务能力</span></span></strong><strong><span style="color: rgb(13, 13, 13); font-family: 楷体; font-size: 21px; font-weight: bold;"><span style="font-family: 宋体;">。</span></span></strong><span style="color: rgb(13, 13, 13); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">深入推进营业执照、组织机构代码证、税务登记证、社保登记证、统计登记证</span>“五证合一”登记制度改革，完善社会保险内控制度，加强精算分析和精细化管理，积极推进网上经办服务，</span><span style="color: rgb(13, 13, 13); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">提高</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">社保经办规范化、信息化、专业化水平。</span></span></p><p style="line-height: 37px; text-indent: 43px;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">提高公共服务能力和水平。</span></span></strong><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">进一步推进社会管理和公共服务综合标准化试点建设，规范社会保险公共服务的业务工作。加强内控制度建设，推进网上经办服务，加大智能监控系统建设。加强基层社保经办服务管理，推进企业退休人员社会化管理服务。健全完善社会保险各险种业务经办规程。规范社会保险业务档案管理，加快信息化、标准化、规范化建设。进一步加大稽核检查力度、加强慢特病和两定机构的监督管理，确保社保基金安全。</span></span></p><p style="line-height: 37px; text-indent: 42px;"><strong><span style="font-family: 黑体; font-size: 21px; font-weight: bold;"><span style="font-family: 黑体;">三、创新人才工作体制机制，深化人事制度改革</span></span></strong></p><p style="line-height: 37px; text-indent: 42px;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">实施</span>“15851人才精英工程”。</span></strong><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">进一步加强人才队伍建设和创新人才发展体制机制。以</span>“15851人才精英工程”为抓手，完善我市高层次人才的选拔、培养、使用、评价、激励等政策措施。</span></p><p style="line-height: 37px;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">做好综合性人才工作。</span></span></strong><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">继续深化事业单位人事管理工作，做好事业单位公开招聘工作。稳步推进事业单位岗位聘任、晋职晋级、年度考核、初任培训等工作。稳步推进事业单位岗位竞聘和岗位续聘工作。开展全县人才（项目）需求调查，组织参与</span>“贵州人才博览会”、全省“5个100工程”急需紧缺人才专项招聘等活动，加大对高层次人才和急需紧缺人才的引进力度。</span><span style="color: rgb(23, 23, 23); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">按照省里推进职称分类评价机制改革的步骤，完善职称评价标准，落实职称制度改革实施意见。</span></span></p><p style="line-height: 37px;"><strong><span style="color: rgb(23, 23, 23); font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">加强人才队伍建设</span></span></strong><strong><span style="color: rgb(23, 23, 23); font-family: 楷体; font-size: 21px; font-weight: bold;"><span style="font-family: 宋体;">。</span></span></strong><span style="color: rgb(23, 23, 23); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">健全人才向基层和艰苦边远地区流动的政策措施。加大事业单位专业技术人员离岗创业政策支持力度。加强专业技术人员继续教育工作，</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">深入实施专业技术人员知识更新工程。</span></span><span style="color: rgb(23, 23, 23); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">大力支持和配合万名专家服务基层工作。</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">扎实开展事业单位新进人员初聘培训、计算机应用能力提高培训、机关事业单位技术工人晋升等级考试培训、离岗培训及各种专项培训工作。</span></span></p><p style="line-height: 37px; text-indent: 42px;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">加强公务员管理工作。</span></span></strong><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">做好公务员培训教育工作，深入开展乡镇公务员培训工作。开展公务员登记审批备案、考核奖励和参照公务员管理等工作，推进公务员平时考核工作全覆盖，探索建立平时考核激励机制，加强评比达标表彰规范管理。进一步健全和完善公务员数据库建设</span></span><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">稳步推进公务员分类管理改</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">革。完善公务员招录信息化系统。稳慎解决参照管理历史遗留问题，探索建立参公单位动态管理机制。</span></span></p><p style="line-height: 37px;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">深化</span></span></strong><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">职称评聘制度改革。</span></span></strong><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">着力提高职称评审质量。落实基层专业技术人员职称评审倾斜政策。大力推进民营经济组织职称评审工作。进一步完善事业单位专业技术职务评聘制度，规范考核评聘工作。</span></span></p><p style="line-height: 37px; text-indent: 42px; margin-top: 0px; margin-bottom: 0px; margin-left: 0px;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">抓好人事考试和军转安置工作。</span></span></strong><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">认真做好事业单位人员招录（聘）考试、职称外语考试、职称计算机考试、全国经济技术资格考试等。</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">做好基层事业单位公开招聘、定向农村教师特设岗位计划、农村订单定向医学生免费培养等有关工作。建立事业单位岗位设置、聘用动态管理机制</span></span><span style="color: rgb(23, 23, 23); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">做好事业单位人事综合管理工作。</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">严肃人事考试纪律，加强人事考试安全管理，确保考试安全。认真落实</span>2017年军转安置任务，做好企业军转干部解困稳定工作。</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">做好军人随军家属就业安置工作。</span></span></p><p style="line-height: 37px; margin-top: 0px; margin-bottom: 0px; margin-left: 1px;"><strong><span style="color: rgb(13, 13, 13); font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">完善机关事业单位工资制度</span></span></strong><strong><span style="color: rgb(13, 13, 13); font-family: 楷体; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">。</span></span></strong><span style="color: rgb(13, 13, 13); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">按照国家统一部署，稳妥实施公务员分类改革配套工资政策，制定实施地区附加津贴制度和完善公务员奖金制度的实施办法，落实工资待遇向基层和艰苦地区倾斜政策。完善事业单位绩效工资制度，探索公立医院薪酬制度改革试点办法，落实事业单位高层次人才激励政策。完善机关事业单位福利费管理办法。继续做好企业工资宏观调控工作，建立企业薪酬调查和信息发布制度，适时发布最低工资标准，测算并发布企业工资指导线。</span></span></p><p style="line-height: 37px; text-indent: 42px; margin-top: 0px; margin-bottom: 0px; margin-left: 0px;"><strong><span style="color: rgb(13, 13, 13); font-family: 黑体; font-size: 21px; font-weight: bold;"><span style="font-family: 黑体;">四、构建和谐劳动关系</span></span></strong></p><p style="line-height: 37px; text-indent: 43px; margin-top: 0px; margin-bottom: 0px; margin-left: 0px;"><strong><span style="color: rgb(13, 13, 13); font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">健全劳动关系协调机制</span></span></strong><span style="color: rgb(13, 13, 13); font-family: 楷体; font-size: 21px;"><span style="font-family: 楷体_GB2312;">。</span></span><span style="color: rgb(13, 13, 13); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">指导企业在化解过剩产能中依法妥善处理职工劳动关系。健全集体协商和集体合同制度。探索完善协调劳动关系三方机制，深入开展和谐劳动关系创建活动。建立和完善用人单位劳动用工信用等级评价制度，建立我县企业劳动保障诚信档案，实现企业分级分类监管。加强劳动用工信息化建设。落实劳动用工信息申报备案制度。推进实施集体合同制度。进一步加强劳务派遣的行业规范和用工管理。依法规范企业裁减人员行为。</span></span></p><p style="line-height: 37px; text-indent: 42px;"><strong><span style="color: rgb(13, 13, 13); font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">加强争议调解仲裁工作</span></span></strong><span style="color: rgb(13, 13, 13); font-family: 楷体_GB2312; font-size: 21px;"><span style="font-family: 楷体_GB2312;">。</span></span><span style="color: rgb(13, 13, 13); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">加大基层劳动人事争议预防调解示范工作力度，探索建立劳动人事争议调解网络平台。推进调解仲裁法律援助窗口机制建设。</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">积极探索</span></span><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 21px;">“流动仲裁庭”模式，促进基层调解组织规范化建设。</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">建立健全争议调解预防体系，持续强化争议联防联调机制。进一步加强调裁衔接、裁审衔接。</span></span><span style="color: rgb(13, 13, 13); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">年底确保仲裁结案率达到</span>90%，调解成功率达到50%。</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">加强调解仲裁员队伍建设，做好调解仲裁信息化建设工作，大力提升调解仲裁工作服务水平。</span></span></p><p style="line-height: 37px; text-indent: 42px;"><strong><span style="color: rgb(13, 13, 13); font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">强化劳动保障监察工作</span></span></strong><span style="color: rgb(13, 13, 13); font-family: 楷体; font-size: 21px;"><span style="font-family: 宋体;">。</span></span><span style="color: rgb(13, 13, 13); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">积极稳妥推进劳动保障监察执法体制改革。深入贯彻实施全面治理农民工工资拖欠</span>“1+8”系列政策文件，组织开展保障农民工工资支付等专项执法检查活动。健全“双随机一公开”机制。积极推进“两网化”建设。确保劳动监察信息系统在全市上线运行使用。</span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">加大欠薪入刑案件移送力度。组织开展农民工工资支付、清理整顿人力资源市场、遵守劳动用工和社会保险法律法规情况专项执法检查活动。切实解决拖欠农民工工资问题。组织开展劳动合同签订、农民工工资支付、清理整顿人力资源市场、遵守劳动用工和社会保险法律法规情况等专项执法检查活动。建立劳动关系、劳动人事争议仲裁、劳动保障监察</span>“三位一体”执法机制。</span></p><p style="line-height: 37px; text-indent: 43px;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">做好农民工工作。</span></span></strong><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">进一步做好为农民工服务工作，切实维护农民工合法权益。推进</span>“雁归兴贵”促进农民工返乡就业创业，加大农民工就业创业培训和农民工创业园区（点）创建工作力度。进一步做好农民工服务工作，配合有关部门落实农民工在城镇落户、随迁子女接受教育等方面政策，积极推进基本公共服务均等化。</span><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">加强农民工权益保障，</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">贯彻执行《贵州省建设工程务工人员工资支付保障金实施办法》，完善联席会议制度、保障金管理制度，</span></span><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">从源头上杜绝拖欠职工工资现象的发生，切实保障农民工的合法权益，维护社会稳定。</span></span></p><p style="line-height: 37px; text-indent: 43px;"><strong><span style="color: rgb(13, 13, 13); font-family: 黑体; font-size: 21px; font-weight: bold;"><span style="font-family: 黑体;">五、加强综合性基础性工作</span></span></strong></p><p style="line-height: 37px; text-indent: 42px;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">加大就业脱贫工作力度。</span></span></strong><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">对建档立卡贫困户劳动力，积极安排参加技能培训促进就业、给予创业服务和扶持。对吸收建档立卡户劳动力就业的非公有制企业给予政策扶持。在就业资金支持、社会保障、人事人才工作方面，积极探索新办法、新措施加大对贫困县、贫困乡镇的支持力度。完成就业脱贫</span>600人。</span></p><p style="line-height: 37px; text-indent: 42px;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">做好宣传和信息公开工作</span></span></strong><strong><span style="font-family: 仿宋_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 仿宋_GB2312;">。</span></span></strong><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">做好新闻宣传和信息公开工作，</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">不断加强和改进政务信息工作。</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">继续抓好信息资源利用和公共服务系统建设，提高服务能力。</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">着力构建门户网站、基层自助服务、微信等相结合的公共信息服务体系。加强网络与信息安全体系建设。</span></span></p><p style="line-height: 37px; text-indent: 42px;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">做好信访维稳工作。</span></span></strong><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">建立完善信访问题处置的有效工作机制，</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">完善接处访工作程序，</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">提高信访工作效率，及时梳理群众反映集中的问题和诉求，从源头上化解信访突出矛盾，</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">落实依法逐级走访制度，构建人社系统大信访格局。</span></span><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">完善应急处理机制，加大群体性事件苗头和隐患的排查力度，及时化解和处置突发事件。</span></span></p><p style="line-height: 37px; text-indent: 43px;"><strong><span style="color: rgb(13, 13, 13); font-family: 黑体; font-size: 21px; font-weight: bold;"><span style="font-family: 黑体;">六、加强党的建设和队伍建设</span></span></strong></p><p style="line-height: 37px; text-indent: 43px;"><strong><span style="color: rgb(13, 13, 13); font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">落实全面从严治党要求。</span></span></strong><span style="color: rgb(13, 13, 13); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">严格执行新形势下党内政治生活若干准则和党内监督条例，</span></span><span style="color: rgb(13, 13, 13); font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">落实主体责任和监督责任。坚持领导干部</span>“一岗双责”，加强党风廉洁建设和廉政风险防控体系建设。推进“两学一做”学习教育常态化制度化。完善民主科学决策机制，加大干部教育培训力度。认真做好同步小康驻村、机关工青妇等工作。</span></p><p style="line-height: 37px; text-indent: 42px;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">做好机关党建工作</span></span></strong><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">。深入学习贯彻党的十八届三中、四中、五中、六中全会和省、市、县全会精神，扎实抓好党员干部思想政治教育，全面加强机关党组织建设。深入贯彻落实中央改进工作作风、密切联系群众</span>“八项规定”、省委“十项规定”和《贵州省党员干部政治纪律“十严禁”》、《贵州省党员干部作风“十不准”》，巩固党的群众路线教育实践活动、“三严三实”专题教育和“两学一做”学习教育成果。认真做好同步建设小康驻村和机关工会、青年、妇女及统战等工作。</span></p><p style="background: rgb(255, 255, 255); text-align: left; line-height: 37px; text-indent: 42px;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">加强自身建设和干部队伍建设。</span></span></strong><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">按照政治坚定、求真务实、开拓创新、勤政廉政、团结协调的要求，加强班子自身建设，强化政治理论学习，提升班子的政治素养和理论水平。加强内部管理，完善学习制度，加大干部教育培训力度，不断提升人社系统干部的整体素质。以</span>“提升工作水平、提升部门形象、提升群众满意度”为抓手，切实改变工作作风，采取大力可行的办法和措施，不断解决群众关心的热点、难点问题。</span></p><p style="line-height: 37px; text-indent: 42px;"><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">加强</span></span></strong><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">党风廉政</span></span></strong><strong><span style="font-family: 楷体_GB2312; font-size: 21px; font-weight: bold;"><span style="font-family: 楷体_GB2312;">建设。</span></span></strong><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">全面落实</span>“两学一做”学习教育要求。切实树立党组对党风廉政建设的主体责任，进一步加强党风廉政建设。积极推进廉政风险防控机制建设，切实加大对重点部位和关键环节的监督检查。着力强化人社系统干部职业道德和党风廉政建设，努力提高党员干部党性修养和廉洁自律意识。深入开展人社系统作风回访，进一步加强窗口单位作风建设。</span></p><p style="margin-right: 14px;"><br></p><p style="text-indent: 42px; margin-right: 14px;"><span style="font-family: 仿宋_GB2312; font-size: 21px;"><span style="font-family: 仿宋_GB2312;">附件：道真自治县</span>2017年就业（再就业）目标任务分解表</span></p><p style="margin-right: 14px;"><br></p><p style="margin-right: 14px;"><br></p><p style="margin-right: 14px;"><br></p><p style="margin-right: 14px;"><br></p><p style="margin-right: 14px;"><br></p><p style="margin-right: 14px;"><br></p><p style="margin-right: 14px;"><br></p><p style="margin-right: 14px;"><br></p><p style="margin-right: 14px;"><br></p><p style="margin-right: 14px;"><br></p><p><br></p></div>
+					</font>
+    			</div>
+   				<div class="KeysList" style="margin-top: 5px;">
+					<div class="jiathis_style">
+						<span class="jiathis_txt">分享到：</span>
+						<a class="jiathis_button_qzone" title="分享到QQ空间" href="javascript:;" onclick="jiathis_sendto('qzone');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_qzone">QQ空间</span>
+						</a>
+						<a class="jiathis_button_tsina" title="分享到微博" href="javascript:;" onclick="jiathis_sendto('tsina');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_tsina">新浪微博</span>
+						</a>
+						<a class="jiathis_button_tqq" title="分享到腾讯微博" href="javascript:;" onclick="jiathis_sendto('tqq');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_tqq">腾讯微博</span>
+						</a>
+						<a class="jiathis_button_renren" title="分享到人人网" href="javascript:;" onclick="jiathis_sendto('renren');return false;">
+							<span class="jiathis_txt jiathis_separator jtico jtico_renren">人人网</span>
+						</a>
+						<a href="javascript:;" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+						<a class="jiathis_counter_style">
+							<span class="jiathis_button_expanded jiathis_counter jiathis_bubble_style" id="jiathis_counter_36" title="累计分享0次">0</span>
+						</a>
+					</div>
+					<script type="text/javascript" src="../../../code/jia.js" ></script>
+				</div>
+   				<div class="KeysList">
+					<div class="right">
+			  			<a href="javascript:;" target="_blank" class="box_02">我要推荐</a>&emsp;
+						<!--a class="box_02" href="/syqt/rssdy/" target="_blank">RSS定制</a>&emsp;-->
+			 			<a class="box_02" href="../../../syqt/wzjc/index.html" target="_blank">网站纠错</a>&emsp;
+						<!--a class="box_02" href="#" target="_blank">返回顶部</a-->
+					</div>
+				</div>
+    			<div class="page">
+					<div id="prevpage">
+						<span>上一篇：</span><a href="javascript:;" id="no1">无</a>
+						
+							<script type="text/javascript">
+								var  str="";
+								var str_1 = "./t20170623_21042553.html";
+								var str_4 = '道真县人力资源网 关于认真做好全县城镇低保户和农村易地搬迁贫困户享受城镇居民基本医疗优惠待遇工作的函';
+								if(str_4!="")
+								{
+									jQuery("#no1").hide();
+									if (str=="") {
+										document.write('<a  href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									} else {
+										document.write('<a  href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'</a>');
+									}
+								}
+							</script>
+						
+					</div>
+					<div id="prevpage">
+						<span>下一篇：</span><a href="javascript:;" id="no2">无</a>
+						
+					</div>
+    			</div>
+   				<div class="xgxx">
+        			<h1><span>相关信息</span></h1>
+					<ul>
+						<script type="text/javascript">
+							var key="";
+							if(key!=''&&key!='null'){
+								
+							}else{
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201810/t20181018_21761544.html";
+									var str_4 = '道真自治县2018年胡遵劳务协作项目补贴实施方案';
+									var str_2 = '2018-10-18';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201807/t20180718_21660969.html";
+									var str_4 = '关于做好2018年工程、农业、民营经济 系列职称申报评审工作的通知';
+									var str_2 = '2018-07-18';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201804/t20180413_21600393.html";
+									var str_4 = '2018年度中心组专题学习实施方案';
+									var str_2 = '2018-04-13';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201804/t20180413_21600389.html";
+									var str_4 = '关于进一步规范2018年社会保险业务工作的通知';
+									var str_2 = '2018-04-13';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+									
+									document.write('<li>');
+									var  str="";
+									var str_1 = "../201804/t20180413_21600387.html";
+									var str_4 = '关于印发《2018年脱贫攻坚“春风行动”工作方案》的通知';
+									var str_2 = '2018-04-13';
+									if (str=="") {
+										document.write('<a TARGET="_blank"   href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									} else {
+										document.write('<a TARGET="_blank"   href="'+str+'" alt="'+str_4+'" title="'+str_4+'">'+str_4+'<i>'+str_2+'</i></a>');
+									}
+									document.write('</li>');
+								
+							}
+						 </script>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="foot_bj">
+	<div class="foot_nr">
+		<p>
+			<a href="../../../syqt/rssdy/index.html">RSS订阅</a>|
+			<a href="../../../syqt/lxfs/index.html">联系方式</a>|
+			<a href="../../../syqt/wzdt/index.html">网站地图</a>
+		</p>
+		<p>Copyright 2010 All Rights Reserved      主办：道真县人力资源网</p>
+		<p>电话：0851-25782065       技术支持：<a href="javascript:;" target="_blank">贵州多彩博虹科技有限公司</a></p>
+		<p>(建议使用1024×768分辨率 IE70以上版本浏览器) </p>
+		<p style="margin-top: 12px;">
+			<!--a target="_blank" href="http://bszs.conac.cn/sitename?method=show&id=04E0DEEC2DCA0288E053022819ACC535">
+				<img src="/images/dz_jg.png" /></a-->
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src=' http://dcs.conac.cn/js/24/356/2168/40584250/CA243562168405842500001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+		</p>
+	</div>
+</div>
+<script id="_trs_ta_js" src="../../../c/js/ta-1290.js" async="async" defer="defer"></script>
+    </body>
+</html>

@@ -1,0 +1,141 @@
+@import url("reset.css");
+@import url("top.css");
+@import url("foot.css");
+body{ background: #e4f1fa;}
+
+.nr{ margin: 10px auto 15px auto;width: 1200px;  overflow: hidden; height: auto;background: #FFFFFF;}
+.nr_div{height: 355px;overflow: hidden; border-bottom: 2px solid #e4f1fa;}
+/*切换内容 左边*/
+.nr_qh{ width: 230px; overflow: hidden;}
+.nr_qh ul li{ width: 170px; height: 39px;overflow: hidden; float: left; padding: 23px 30px; line-height: 39px; margin-bottom: 5px; cursor: pointer;}
+.nr_qh ul li.on{ background: #29b6f6;}
+.nr_qh ul li a{ font-size: 22px; color: #29b6f6;}
+.nr_qh ul li.on a{ color: #FFFFFF;}
+.nr_qh ul li a:hover{ color: #FFFFFF!important;}
+.nr_qh ul li em{ height: 39px; width: 44px; float: left; background: url(nr_qh.png) no-repeat; margin-right: 25px; }
+
+.nr_qh ul li:first-child em{background-position: -56px -10px;}
+.nr_qh ul li:first-child+li em{background-position: -56px -96px;}
+.nr_qh ul li:first-child+li+li em{background-position: -56px -185px;}
+.nr_qh ul li:first-child+li+li+li em{background-position: -54px -274px;}
+
+.nr_qh ul li:first-child.on  em{background-position: -7px -10px;}
+.nr_qh ul li:first-child+li.on em{background-position: -7px -96px;}
+.nr_qh ul li:first-child+li+li.on em{background-position: -7px -185px;}
+.nr_qh ul li:first-child+li+li+li.on em{background-position: -5px -274px;}
+
+/*切换内容 右边*/
+.resimler1{width: 940px; height: 335px; margin: 10px;overflow: hidden;}
+.sy_jdt{width: 460px; padding:5px; background: #e8e7e7; overflow: hidden;position: relative; height: 325px;}
+.yq_img{ position:relative; height:100%; z-index:0;}
+.yq_img li{ zoom:1; vertical-align:middle; }
+.yq_img img{ width:460px; height: 290px;}
+
+.dian{ height:14px; overflow:hidden; position:absolute; left:189px; bottom:10px; z-index:5; }
+.dian ul{ overflow:hidden; zoom:1;}
+.dian ul li{ float:left; margin-right:12px; display:block;width:14px; height:14px; 
+background:url(nr_qh.png) no-repeat -1px -344px; cursor:pointer; }
+.dian ul li.on{ background:url(nr_qh.png) no-repeat -27px -344px;  display: block; }
+
+/*----------------   透明背景文字*/
+.new_bj{position:absolute; zoom:1; left:5; bottom:40px; z-index:2; width:460px; height:42px; line-height:42px; 
+background:#000;opacity:0.6;filter:alpha(opacity=60); /*IE6,7,8兼容*/ overflow:hidden;}
+.new{position:absolute; left:5; bottom:40px; z-index:4;width:460px; text-indent:15px; height:42px;overflow:hidden;}
+.new h3 a{line-height:42px;  color:#FFF;font-weight:normal;}
+.new a:hover{color:#29b6f6;}
+
+/*业务要闻*/
+.yw_yw{ width: 452px; height: 335px; overflow: hidden; }
+.yw_yw h3{ border-bottom: 2px solid #29b6f6; font-weight: normal; height: 38px;}
+.yw_yw h3 a{ display: block;height: 38px; line-height: 38px; text-align: center; width: 113px;float: left; font-size: 16px;}
+.yw_yw h3 a.on{ background: #29b6f6; color: #FFFFFF;}
+.yw_yw h3 a:hover{ color: #FFFFFF!important;}
+.yw_yw ul{ margin: 0 5px; overflow: hidden; margin-top: 5px; }
+.yw_yw ul li{height: 32px;*height:29px; line-height: 32px;*line-height: 29px; overflow: hidden;}
+.yw_yw ul li a{ float: left;}
+.yw_yw ul li span{ float: right; color: #666;}
+
+/*业务工作*/
+.ywwu_gz h3{ border-bottom: 2px solid #29b6f6; font-weight: normal; height: 38px;}
+.ywwu_gz h3 a{ display: block;height: 38px; line-height: 38px; text-align: center; width: 113px;float: left; font-size: 16px;background: #29b6f6; color: #FFFFFF;}
+.ywwu_gz ul{ margin: 0 5px; overflow: hidden; margin-top: 5px; }
+.ywwu_gz ul li{float:left;width:450px;height: 32px;*height:29px; line-height: 32px;*line-height: 29px; overflow: hidden;}
+.ywwu_gz ul li a{ float: left;}
+.ywwu_gz ul li span{ float: right; color: #666;}
+
+/*部门概况*/
+.bum_gk{}
+.bmjk_z{ width:570px; overflow: hidden;}
+.bmjk_z h3{ background: #e8edf1;font-weight: normal; height: 40px;}
+.bmjk_z h3 a{ display: block;height: 40px; line-height: 40px; text-align: center; width: 130px;float: left; font-size: 16px; margin-right: 10px;}
+.bmjk_z h3 a.on{ background: #29b6f6; color: #FFFFFF;}
+.bmjk_z h3 a:hover{ color: #FFFFFF!important;}
+
+.bmjk_z ul{ margin: 0 5px; overflow: hidden; margin-top: 5px; }
+.bmjk_z ul li{ height: 32px;*height:29px; line-height: 32px;*line-height: 29px; overflow: hidden;}
+.bmjk_z ul li em{ float: left; color: #29B6F6;}
+.bmjk_z ul li a{ float: left; margin-left: 10px;}
+.bmjk_z ul li span{ float: right; color: #666;}
+
+.bmgk_y{ width: 350px; overflow: hidden;}
+.bmgk_tb{ overflow: hidden; height: 66px; overflow: hidden;}
+.bmgk_tb ul li{padding: 15px 22px 15px 18px; width: 130px;height: 36px; line-height: 36px;}
+.bmgk_tb ul li a{ color: #FFFFFF; font-size: 18px; float: right; width: 130px; display: block; text-align: right;}
+.bmgk_tb ul li:first-child {background: #ff9000;float: left; }
+.bmgk_tb ul li:first-child+li {background:#ee4747; float: right;}
+.bmgk_tb ul li em{ height: 36px; width: 40px; background: url(nr_qh.png) no-repeat; float: left;}
+.bmgk_tb ul li:first-child em{background-position: 0 -372px;}
+.bmgk_tb ul li:first-child+li em{background-position: -51px -372px;}
+
+.jianc_dd{ margin-top: 22px; overflow: hidden;}
+.jianc_dd h3{ background: #e8edf1;font-weight: normal; height: 40px;}
+.jianc_dd h3 a{ display: block;height: 40px; line-height: 40px; text-align: center; width: 130px;float: left; font-size: 16px; margin-right: 10px; background: #29b6f6; color: #FFFFFF;}
+.jianc_dd h3 a:hover{ color: #FFFFFF!important;}
+
+.jianc_dd ul{ margin: 0 5px; overflow: hidden; margin-top:10px; }
+.jianc_dd ul li{ height: 32px;line-height: 32px; overflow: hidden;}
+
+/*政务公开*/
+.zw_gk{ overflow: hidden;}
+.zwgk_z{ width: 460px; overflow: hidden;}
+.zw_gk h3{ border-bottom: 2px solid #29b6f6; font-weight: normal; height: 38px;}
+.zw_gk h3 a{ display: block;height: 38px; line-height: 38px; text-align: center; width: 115px;float: left; font-size: 16px;}
+.zw_gk h3 a.on{ background: #29b6f6; color: #FFFFFF;}
+.zw_gk h3 a:hover{ color: #FFFFFF!important;}
+.zw_gk ul{ margin: 0 5px; overflow: hidden; margin-top: 8px; }
+.zw_gk ul li{height: 32px;*height:29px; line-height: 32px;*line-height: 29px; overflow: hidden;}
+.zw_gk ul li a{ float: left;}
+.zw_gk ul li span{ float: right; color: #666;}
+
+/*通知公告*/
+.tz_gg{ margin: 5px 2px 0 2px; overflow: hidden; height: 40px;background: #e8f7fb; width: 1196px;}
+.tz_gg h1{ width: 118px; margin: 5px 13px; height: 30px; line-height: 30px; float: left;}
+.tz_gg h1 a{ display: block;width: 115px;height: 30px; background: url(nr_qh.png) no-repeat 0 -415px; color: #4eb2e0; font-size: 18px; text-align: right; font-weight: normal;}
+
+.tzgg_nr{ width: 1040px; height: 40px; line-height: 40px;margin-right:8px; z-index: 0;}
+.tzgg_nr .tempWrap{ width: 1040px!important; z-index: 0;}
+.tzgg_nr ul li{ font-size: 14px; float: left; margin-right: 20px;}
+.tzgg_nr ul li a{margin-right: 25px;  float: left; font-size: 14px; color: #333333;}
+.tzgg_nr ul li em{ float: left; margin-right: 10px;}
+.tzgg_nr ul li span{ float: left;}
+
+/*图标链接*/
+.tub_lj{ height: 80px; margin:20px 2px 10px 2px;overflow: hidden;width: 1196px;}
+.tub_lj ul li{width:168px; height: 42px; padding: 19px 58px; overflow: hidden; margin-right: 20px; float: left; line-height: 42px;}
+.tub_lj ul li:first-child { background: url(tb1.png); }
+.tub_lj ul li:first-child+li {background: url(tb2.png);}
+.tub_lj ul li:first-child+li+li {background: url(tb3.png);}
+.tub_lj ul li:first-child+li+li+li {background: url(tb4.png);}
+.tub_lj ul li:first-child+li a{width: 180px;}
+.tub_lj ul li a{ color: #FFFFFF; font-size: 18px; float: right; width: 168px; display: block; text-align: right;}
+.tub_lj ul li a:hover{ color: #FFFFFF!important;}
+.tub_lj ul li em{ height:42px; width:62px; background: url(nr_qh.png) no-repeat; float: left;}
+.tub_lj ul li:first-child em{background-position: 0 -460px;}
+.tub_lj ul li:first-child+li em{background-position: 0 -512px;}
+.tub_lj ul li:first-child+li+li em{background-position: 0 -564px;}
+.tub_lj ul li:first-child+li+li+li em{background-position: 0 -616px;}
+
+/*友情链接*/
+.yqlj{ height: 40px;border-top: 10px solid #e4f1fa; padding: 10px; width: 1180px; overflow: hidden;}
+.yqlj select{width: 220px; height: 40px;  float: left; line-height: 40px; margin-right: 20px;  padding-left: 10px;*border: none; }
+.yqlj select option{ color: #616161; background: none; border: none;}

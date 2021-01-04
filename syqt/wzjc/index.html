@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+	<title>道真县人力资源网-网站纠错</title>
+	<meta name="Keywords" content="道真人社局,道真县人力资源网,道真人事考试,道真县人力资源与社会保障,道真县人社局组织全体党员参加扫墓活动">
+<script type="text/javascript" src="../../images/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../images/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+    jQuery(function() {
+		jQuery('#j_search_btn').click(function() {
+			var str = jQuery("#keyword").val();
+			checks(str);
+		});
+	});
+	function checks(t) {
+		t = t.replace(/(^\s+)|(\s+$)/g, "");
+		if (t == "" || t == "请输入关键检索字") {
+			alert('请输入有效内容');
+			return false;
+		}
+		szMsg = "[#_%&'/",
+		";:=!^]";
+		alertStr = "";
+		for (i = 1; i < szMsg.length + 1; i++) {
+			if (t.indexOf(szMsg.substring(i - 1, i)) > -1) {
+				alertStr = "请勿包含非法字符如[#_%&'/",
+				";:=!^]";
+				alert(alertStr);
+				// break;
+				return false;
+			}
+		}
+		var key = document.getElementById("keyword").value;
+		window.location.href ="/search.html?keyword=" + key;
+		return true;
+	}
+function sub(){
+    window.location.href ="/search.shtml";
+}
+function AddFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle)
+    } catch (e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, "")
+        } catch (e) {
+            alert("加入收藏失败，请使用Ctrl+D进行添加")
+        }
+    }
+}
+function SetHome(obj, vrl) {
+    try {
+        obj.style.behavior = "url(#default#homepage)";
+        obj.setHomePage(vrl)
+    } catch (e) {
+        if (window.netscape) {
+            try {
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")
+            } catch (e) {
+                alert("此操作被浏览器拒绝！n请在浏览器地址栏输入\"about:config\"并回车n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。")
+            }
+            var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
+            prefs.setCharPref("browser.startup.homepage", vrl)
+        }
+    }
+}
+	//设为首页 
+	function SetHome(url){
+		if (document.all) {
+			document.body.style.behavior='url(#default#homepage)';
+			document.body.setHomePage(url);
+		}else{ 
+			alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+		}
+	}
+</script>
+<script type="text/javascript">
+      function GoTo() {
+          window.open("/syqt/wzjc/index.html?url=" + document.URL);
+      }
+</script>
+	<link rel="stylesheet" type="text/css" href="http://rsj.gzdaozhen.gov.cn/trsapp/web/GZWeb/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="http://rsj.gzdaozhen.gov.cn/trsapp/web/GZWeb/css/layout.css">
+    <link rel="stylesheet" href="../../images/wsjc.css">
+    <script type="text/javascript" src="http://rsj.gzdaozhen.gov.cn/trsapp/web/GZWeb/js/jquery-1.11.1.min.js"></script>
+    <script src="http://rsj.gzdaozhen.gov.cn/trsapp/web/images/jquery.validate.js" type="text/javascript"></script>
+    <script src="http://rsj.gzdaozhen.gov.cn/trsapp/web/images/jquery.validate.mesage_cn.js" type="text/javascript"></script>
+    <script src="http://rsj.gzdaozhen.gov.cn/trsapp/web/images/jquery.metadata.js" type="text/javascript"></script>
+    <style type="text/css">
+    	.main-inner{ padding: 0;}
+		body{font-size:12px;}
+    </style>
+</head>
+<body>
+<!--天气js-->
+<script type="text/javascript">
+	function initArray() {
+		for (i = 0; i < initArray.arguments.length; i++)
+			this[i] = initArray.arguments[i];
+	}
+	var isnMonths = new initArray("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+	var isnDays = new initArray("  星期日", "  星期一", "  星期二", "  星期三", "  星期四", "  星期五", "  星期六", "  星期日");
+	today = new Date();
+	hrs = today.getHours();
+	min = today.getMinutes();
+	sec = today.getSeconds();
+	clckh = "" + ((hrs > 12) ? hrs - 12 : hrs);
+	clckm = ((min < 10) ? "0" : "") + min;
+	clcks = ((sec < 10) ? "0" : "") + sec;
+	clck = (hrs >= 12) ? "下午" : "上午";
+	var stnr = "";
+	var ns = "0123456789";
+	var a = "";
+
+	function getFullYear(d) {
+		yr = d.getYear();
+		if (yr < 1000)
+			yr += 1900;
+		return yr;
+	}
+</script>
+<div class="banner">
+	<!--顶部-->
+	<div class="dingb_bj">
+		<div class="dingb_nr">
+			<!--日期-->
+			<div class="riqi f_l">
+				<ul>
+					<li><span>今天是: </span>
+						<script type="text/javascript">
+							document.write("<div class='time'>" + getFullYear(today) + "年" + "" + isnMonths[today.getMonth()] + "月" + today.getDate() + "日" + isnDays[today.getDay()] + "</div>");
+						</script>
+					</li>
+				</ul>
+			</div>
+			<!--收藏-->
+			<div class="f_r ding_y">
+				<a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>|
+				<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>
+			</div>
+		</div>
+	</div>
+	<!--logo-->
+	<div class="logo_by" style="overflow: initial;">
+		<ul>
+			<li class="f_l"><a href="../../index.html"><img src="../../images/logo.png"></a></li>
+			<li class="f_r"><img src="../../images/biaoyu.png"></li>
+		</ul>
+	</div>
+	<!--导航-->
+	<div class="nav_bj">
+		<div class="nav f_l">
+			<ul>
+				<li><a href="../../index.html">网站首页</a></li>
+				<li><a href="../../gzdt/index.html">工作动态</a></li>
+				<li><a href="../../ywgz/index.html">业务工作</a></li>
+				<li><a href="../../bmgk/index.html">部门概况</a></li>
+				<li><a href="../../zwgk/index.html">政务公开</a></li>
+			</ul>
+		</div>
+		<!--搜索-->
+		<div class="sous f_r">
+    		<dl>
+				<dt><a href="javascript:void(0);" id="j_search_btn"><img src="../../images/sous.png"></a></dt>
+				<dd>
+					<input id="keyword" name="keyword" type="text" class="sous_sy" value="请输入关键字" style="color:#666666; line-height:40px; font-size: 14px;" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#000'}" onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#9e9e9e'}">
+				</dd>
+			</dl>
+    	</div>
+	</div>
+</div>
+<table width="1123" border="0" align="center" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+			
+	<tr>
+		<td height="316" valign="top">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#E7F7FE" class="c_5" style=" margin:20px 0;">
+				<tr>
+					<td width="40" height="40" align="center"><img src="../../images/ico_09.gif" width="24" height="22"></td>
+					<td width="60" align="center" class="c_4">当前位置：</td>
+					<td align="left">
+						<a href="../../index.html" title="首页" class="CurrChnlCls">首页</a>&nbsp;&raquo;&nbsp;<a href="../index.html" title="首页其他" class="CurrChnlCls">首页其他</a>&nbsp;&raquo;&nbsp;<a href="" title="网站纠错" class="CurrChnlCls">网站纠错</a>
+					</td>
+				</tr>
+			</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td valign="top">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+							<tr>
+								<td bgcolor="#00B8EE" style=" padding-left:20px;" height="50" align="left" class="f16 c_2">
+									<strong style="color: #fff;">网站纠错</strong>
+								</td>
+							</tr>
+							<tr>
+								<td height="377" valign="top" style=" padding:10px;" class="f14">
+									<form name="formData" id="formData" action="/trsapp/appWeb.do?method=saveAppData" method="post" enctype="multipart/form-data" onsubmit="setCboxValue();">
+									  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="i_Gr_7 mb10">
+										<tr>
+										  <td width="21%" align="right">错别类：</td>
+										  <td width="79%" align="left">
+											<span>
+											  <input type="checkbox" class="{maxlength:200}" name="TYPE_cbox" value="错别字">错别字
+											  <input type="checkbox" class="{maxlength:200}" name="TYPE_cbox" value="图片显示错误">图片显示错误
+											  <input type="checkbox" class="{maxlength:200}" name="TYPE_cbox" value="页面格式错误">页面格式错误
+											  <input type="checkbox" class="{maxlength:200}" name="TYPE_cbox" value="其他">其他</span>
+											<input id="TYPE" name="TYPE" type="hidden"></td>
+										</tr>
+										<tr>
+										  <td width="21%" align="right">内容标题：</td>
+										  <td width="79%" align="left">
+											<input type="text" name="TITLE" id="title" class="i_Gr_1_ipt2 i_iB {required:true,maxlength:200}">&nbsp;
+											<span class="i_red">*</span></td>
+										</tr>
+										<tr>
+										  <td width="21%" align="right">出错页面地址：</td>
+										  <td width="79%" align="left">
+											<input type="text" name="CCYMDZ" id="CCYMDZ" class="i_Gr_1_ipt2 i_iB {required:true,maxlength:200}">&nbsp;
+											<span class="i_red">*</span></td>
+										</tr>
+										<tr>
+										  <td width="21%" align="right">出错问题描述：</td>
+										  <td width="79%" align="left">
+											<textarea name="CONTENT" cols="" rows="" class="i_Gr_1_ipt4 {required:true,maxlength:200}"></textarea>&nbsp;
+											<span class="i_red">*</span></td>
+										</tr>
+										<tr>
+										  <td width="21%" align="right">姓名：</td>
+										  <td width="79%" align="left">
+											<input type="text" name="NAME" class="i_Gr_1_ipt2 i_iB {maxlength:200}"></td>
+										</tr>
+										<tr>
+										  <td width="21%" align="right">联系电话：</td>
+										  <td width="79%" align="left">
+											<input type="text" name="TEL" class="i_Gr_1_ipt2 i_iB {maxlength:200,phone:true}"></td>
+										</tr>
+										<tr>
+										  <td width="21%" align="right">电子邮箱：</td>
+										  <td width="79%" align="left">
+											<input type="text" name="EMAIL" class="i_Gr_1_ipt2 i_iB {maxlength:200,email:true}"></td>
+										</tr>
+										<tr>
+										  <td width="21%" align="right" valign="top">相关附件：</td>
+										  <td width="79%" align="left" id="appendix">
+											<span id="fileBox">
+											  <input type="file" name="file" value="浏览" class="i_Gr_1_ipt2 i_iB">&nbsp;
+											  <input type="button" class="i_Gr_1_btn1 i_Gr_1_ipt5" value="添加附件" onclick="addFileBox();">&nbsp; 支持zip,rar,txt</span></td>
+										</tr>
+										<tr>
+										  <td width="21%" align="right" valign="top">验证码：</td>
+										  <td width="79%" align="left">
+											<span style="float: left;"><input type="text" id="checkCode" name="checkCode" class="{required:true}"></span>
+											<span style="float: left;"><img name="captchaImg" style=" margin-top: 5px; margin-left: 5px;" id="captchaImg" src="http://rsj.gzdaozhen.gov.cn/trsapp/appadmin/image.jsp?randName=smt_772&" +math.random()="" width="55" height="20" onclick="loadimage();" title="点击刷新验证码"></span>
+										  </td>
+										</tr>
+										<tr>
+										  <td width="21%" align="right"></td>
+										  <td width="79%" align="left">
+											<input type="hidden" name="appId" value="772">
+											<input type="hidden" name="groupId" value="1243">
+											<input type="hidden" name="isNeedTheme" value="">
+											<input type="hidden" name="themeId" value="0">
+											<input type="submit" class="i_Gr_1_btn1" value="发送">&nbsp;
+											<input type="reset" class="i_Gr_1_ipt6" value="重 写"></td>
+										</tr>
+									  </table>
+									</form>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	
+</table>
+<div class="foot_bj">
+	<div class="foot_nr">
+		<p>
+			<a href="../rssdy/index.html">RSS订阅</a>|
+			<a href="../lxfs/index.html">联系方式</a>|
+			<a href="../wzdt/index.html">网站地图</a>
+		</p>
+		<p>Copyright 2010 All Rights Reserved      主办：道真县人力资源网</p>
+		<p>电话：0851-25782065       技术支持：<a href="javascript:;" target="_blank">贵州多彩博虹科技有限公司</a></p>
+		<p>(建议使用1024×768分辨率 IE70以上版本浏览器) </p>
+		<p style="margin-top: 12px;">
+			<!--a target="_blank" href="http://bszs.conac.cn/sitename?method=show&id=04E0DEEC2DCA0288E053022819ACC535">
+				<img src="/images/dz_jg.png" /></a-->
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src=' http://dcs.conac.cn/js/24/356/2168/40584250/CA243562168405842500001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+		</p>
+	</div>
+</div>
+<script id="_trs_ta_js" src="../../c/js/ta-1290.js" async="async" defer="defer"></script>
+<script type="text/javascript">
+    function GetQueryString(name) {
+	   var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
+	   var r = window.location.search.substr(1).match(reg);
+	   if (r!=null) return (r[2]); return null;
+	}
+</script>
+<script type="text/javascript">
+var GetUrl=GetQueryString("url");
+if(GetUrl.length>0){
+ $("#CCYMDZ").val(GetUrl);
+}
+//js动态判断下拉分类所指定的验证类型
+  function loadSelectInput() {
+    var selinput = $(".selecttype").siblings("input.selecttype_inputvalue");
+    var vcheck = $(".selecttype").find("option:selected").attr("vcheck");
+    //添加
+    selinput.rules("remove");
+    if (vcheck.indexOf("required") > -1) {
+      selinput.rules("add", {
+        required: true
+      });
+    }
+    if (vcheck.indexOf("mobile") > -1) {
+      selinput.rules("add", {
+        mobile: true
+      });
+    }
+    if (vcheck.indexOf("idCardNo") > -1) {
+      selinput.rules("add", {
+        idCardNo: true
+      });
+    }
+  }
+
+  $(document).ready(function() {
+    //表單校驗
+    $("#formData").validate();
+    /* 提对应问文本框添加验证条件*/
+    loadSelectInput();
+    $(".selecttype").change(function() {
+      loadSelectInput();
+    });
+    var groupId = getUrlParam("groupId");
+    if (groupId == null || groupId == '') {
+      groupId = 1;
+    }
+    var appId = getUrlParam("appId");
+    if (appId == null || appId == '') {
+      appId = 15;
+    }
+    $("#appId").val(appId);
+    $("#groupId").val(groupId);
+  });
+
+  function getUrlParam(name) {
+    //构造一个含有目标参数的正则表达式对象  
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    //匹配目标参数    
+    var r = window.location.search.substr(1).match(reg);
+    //返回参数值   
+    if (r != null) return unescape(r[2]);
+    return null;
+  }
+
+  function check() {
+    if ($.trim($('#name').val()) == '') {
+      alert('请输入姓名！');
+      return false;
+    }
+    //验证手机号码
+    var re = 0; //验证座机或者手机的标志，默认为0；
+    var shouji = /^(13||14||15||18||17)[0-9]{9}$/;
+    var zuoji = /^[0-9]{3,4}-[0-9]{8}$/;
+    if (shouji.test($("#phone").val())) {
+      re = 1;
+    } else if (zuoji.test($("#phone").val())) {
+      re = 2;
+    }
+    if (re == 0) {
+      alert("手机号码为11数字；座机格式为：028-12345678");
+      return false;
+    }
+    if ($.trim($('#title').val()) == '') {
+      alert('请输入信件主题！');
+      return false;
+    }
+    if ($.trim($('#content').val()) == '') {
+      alert('请输入正文！');
+      return false;
+    }
+    if ($('#type').val() == '') {
+      alert('请选择信件类型！');
+      return false;
+    }
+  }
+
+  function loadimage() {
+    document.getElementById("captchaImg").src = "/trsapp/appadmin/image.jsp?randName=loginCaptcha&" + Math.random();
+  }
+  var _cboxName = 'TYPE,'; //checkbox类型的字段名 
+  //提交时设置checkbox类型的值
+  function setCboxValue() {
+    if (_cboxName) {
+      var _cboxArry = _cboxName.split(',');
+      for (var i = 0; i < _cboxArry.length; i++) {
+        if (_cboxArry[i] == '') continue;
+        var chk_value = new Array();
+        var _value = $('input[name="' + _cboxArry[i] + '_cbox"]:checked').each(function() {
+          chk_value.push($(this).val());
+        });
+        $('#' + _cboxArry[i]).val(chk_value.join(","));
+      }
+    }
+    return true;
+  }
+  function delFileBox(n) {
+    //alert(obj);
+    //$('#appendix').remove(obj);
+    $('#fileBox' + n).remove();
+  }
+  function addFileBox() {
+    var n = $('#appendix span').length;
+    //alert(n);
+    if (n < 5) {
+      var shtml = '<span id="fileBox' + (n + 1) + '"><br/><br/><input type="file" name="file" value="浏览" class="i_Gr_1_ipt2 i_iB" />&nbsp;&nbsp;<input type="button" class="i_Gr_1_btn1 i_Gr_1_ipt5" value="删除附件" onclick="delFileBox(' + (n + 1) + ')" />&nbsp;</span>';
+      $('#fileBox').append(shtml);
+    } else {
+      alert('最多只能上传5个附件！');
+    }
+  }
+  function loadimage() {
+    document.getElementById("captchaImg").src = "/trsapp/appadmin/image.jsp?randName=smt_772&" + Math.random();
+  }
+  var _cboxName = 'TYPE,'; //checkbox类型的字段名 
+  //提交时设置checkbox类型的值
+  function setCboxValue() {
+    if (_cboxName) {
+      var _cboxArry = _cboxName.split(',');
+      for (var i = 0; i < _cboxArry.length; i++) {
+        if (_cboxArry[i] == '') continue;
+        var chk_value = new Array();
+        var _value = $('input[name="' + _cboxArry[i] + '_cbox"]:checked').each(function() {
+          chk_value.push($(this).val());
+        });
+        $('#' + _cboxArry[i]).val(chk_value.join(","));
+      }
+    }
+    return true;
+  }
+  function js_changetab(obj) {
+    $(".js_tab").hide();
+    $("#" + obj).show();
+    var groupName = "";
+    groupName = groupName.split("~");
+    for (i = 0; i < groupName.length; i++) {
+      $("#" + groupName[i] + " input").attr("disabled", "disabled");
+      $("#" + groupName[i] + " select").attr("disabled", "disabled");
+      $("#" + groupName[i] + " textarea").attr("disabled", "disabled");
+    }
+    $("#" + obj + " input").removeAttr("disabled");
+    $("#" + obj + " select").removeAttr("disabled");
+    $("#" + obj + " textarea").removeAttr("disabled");
+  }</script>
+</body>
+</html>

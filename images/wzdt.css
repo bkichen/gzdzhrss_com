@@ -1,0 +1,43 @@
+
+@import url(reset.css);
+@import url(top.css);
+@import url(foot.css);
+
+body{width: 100%;background: url(http://rsj.gzdaozhen.gov.cn/images/bg_02.jpg) center top #fff no-repeat;}
+.dqwz{ height: 40px; line-height: 40px;background:url(dqwz.png) left center no-repeat; padding-left:22px;}
+.content-main{width: 1180px;height: auto;background:#fff;overflow: hidden;padding: 10px;margin: 0 auto;padding-top: 0px;}
+
+.nry_content{ background:#0099cc; margin-top:20px; color:#0099cc; overflow:hidden; text-align:center;}
+.nry_content h2{ padding:10px 0; background: #fff  url(wzdt.png) no-repeat scroll center center;color: #fff; font-size: 37px; height: 85px;
+line-height: 85px;text-align: center;}
+		
+.t_body{ margin:0 auto; background:#FFF;}
+.clear{clear:both;}
+.con_list{ border-left:#ddd solid 1px;border-right:#ddd solid 1px;}
+.sub_list{ border-top: #0099cc solid 3px; border-bottom: #dddddd solid 1px; margin-bottom:0px;}
+.sub_list span{ height:40px;  line-height:40px;  background:right center no-repeat; padding:0 20px;  }
+.sub_list span a{font-family:"微软雅黑"; font-size:16px; color: #0099cc; font-weight: bold;}
+.sub_list ul.sub_menu{border-bottom:#a9a9a9 solid 1px; padding:0 20px;  display:block;}
+.sub_list ul.sub_menu li{ line-height:50px; float:left; width:220px; text-align:center; background:url(http://rsj.gzdaozhen.gov.cn/images/wzdh_R_img03.jpg) right center no-repeat; position:relative; z-index:1; height:50px; margin:5px auto; }
+.sub_list ul.sub_menu li h3{font-weight:normal;}
+.sub_list ul.sub_menu li h3 a{color: #0099cc; font-size:12px; padding: 5px 30px; text-decoration:none;}
+.sub_list ul.sub_menu li h3 a.red{background:#0099cc; color:#FFF;}
+.sub_list ul.sub_menu li h3 a:hover{ background:#0099cc; color:#FFF !important;}
+.sub_list ul.sub_menu li.s {float: left; width: 3px; text-align: center; color: #0099cc;font-size: 12px;}
+.sub_list ul.sub_menu li dl{ position:absolute; border: #0099cc solid 1px; top:37px; left:23px; background:#FFF; text-align:center; display:none; z-index:999; width:165px;}
+.sub_list ul.sub_menu li dl dd{ border-bottom:dashed #0099cc 1px; line-height:30px; }
+.sub_list ul.sub_menu li dl dd.last{ border-bottom:none;}
+.sub_list ul.sub_menu li dl dd a{}
+.sub_list ul.sub_menu .add_a_hover a{background:#0099cc; color:#FFF; width:165px;}
+.sub_list ul.sub_menu .add_a_hover dl dd a{background:none; color:#0099cc; font-size:12px; display:block; text-align:center;}
+.sub_list ul.sub_menu .add_a_hover dl dd a:hover{ background:#0099cc; color:#fff !important;}
+
+
+.zonebox1{width: 1160px; margin: 10px auto 0; padding: 10px; background: #FFFFFF; overflow: hidden;}
+.zonebox1 h3{height: 37px; background: #1DABE5; border-top: solid 3px #0099cc; overflow: hidden; border-left: solid 3px #1DABE5;}
+.zonebox1 h3 li{height: 37px; line-height: 37px; padding: 0 10px; float: left; font-weight: normal; font-size: 14px; color: #FFFFFF; cursor: pointer;}
+.zonebox1 h3 li.on{background: #FFFFFF; color: #1DABE5;}
+.yqlj_cont {overflow: hidden; height: auto !important; padding: 8px 0;}
+.yqlj_cont li{float: left; width: 16%; line-height: 28px;}
+
+.nonav span{padding: 0px 40px; float: left;}

@@ -1,0 +1,28 @@
+
+/* CSS Document */
+@import url(reset.css);
+@import url(top.css);
+@import url(foot.css);
+
+.content{width: 1180px;height: auto;background:#fff;overflow: hidden;padding: 10px;margin: 0 auto;padding-top: 0px;}
+.nry_content{ background:#0099cc; margin-top:20px; color:#0099cc; overflow:hidden; text-align:center;}
+.nry_content h2{ padding:10px 0; background: #fff  url(wzdt.png) no-repeat scroll center center;color: #fff; font-size: 37px; height: 85px;
+line-height: 85px;text-align: center;}
+.main-content{width: 100%;}
+.title{height:32px;line-height:32px;color:#2198e8;font-size:14px;font-weight:bold;}
+.text-a{line-height:30px;margin-top:5px;border-bottom: #ccc solid 1px; padding: 10px;}
+.text-a p{margin:0;}
+
+.lista{margin-top:10px 0;}
+.lista li{padding-left:12px;height:30px;line-height:30px;background:url(http://rsj.gzdaozhen.gov.cn/images/icon-b.jpg) no-repeat 5px center;}
+
+.mbottom-bga{background:url(http://rsj.gzdaozhen.gov.cn/images/botbgc.jpg) repeat-x left top;}
+.mbottom-bgb{background:url(botbga.jpg) no-repeat left top;}
+.mbottom-bgc{background:url(botbgb.jpg) no-repeat right top;height:325px;}
+
+.text-b{padding:26px 26px 28px 32px;line-height:30px; font-size:14px ; border-bottom: #ccc solid 1px;}
+.text-b p{margin:0;}
+
+.listb{margin:0 0 0 37px;}
+.listb li{font-size:14px;float:left;line-height:43px;background:url(http://rsj.gzdaozhen.gov.cn/images/icon-b.jpg) no-repeat left center;padding-left:7px;width:170px;}
+.listb li a{color: #2198e8;}
